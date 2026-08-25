@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Gnuplot by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:52:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Gnuplot - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Gnuplot","wgTitle":"Gnuplot","wgCurRevisionId":4938,"wgRevisionId":4938,"wgArticleId":173,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Gnuplot","wgRelevantArticleId":173,"wgRequestId":"1c339eeae08ab65b91528c19","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load34a1.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Gnuplot rootpage-Gnuplot skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Gnuplot</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Gnuplot_Kurztutorial"><span class="tocnumber">1</span> <span class="toctext">Gnuplot Kurztutorial</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Plotten_von_Daten_aus_einer_Datei"><span class="tocnumber">1.1</span> <span class="toctext">Plotten von Daten aus einer Datei</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Fitten_einer_Funktion"><span class="tocnumber">1.2</span> <span class="toctext">Fitten einer Funktion</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Speichern_des_Plots_als_Bilddatei"><span class="tocnumber">1.3</span> <span class="toctext">Speichern des Plots als Bilddatei</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#N.C3.BCtzliche_Kommandos"><span class="tocnumber">1.4</span> <span class="toctext">Nützliche Kommandos</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Hinweise"><span class="tocnumber">1.5</span> <span class="toctext">Hinweise</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h1><span class="mw-headline" id="Gnuplot_Kurztutorial">Gnuplot Kurztutorial</span></h1>
+<h2><span class="mw-headline" id="Plotten_von_Daten_aus_einer_Datei">Plotten von Daten aus einer Datei</span></h2>
+<p>Bsp. data.txt mit 4 x/y1/y2 Wertepaaren:
+</p>
+<pre>   1  2.0  1.0
+   2  3.0  4.0
+   3  5.5  7.9
+   4  3.1  16.1
+</pre>
+<p>Plotten der Punkte x/y1:
+</p>
+<pre>plot 'data.txt' using 1:2 # 1:2 gibt die 1. und 2. Spalte in der Datei an
+</pre>
+<p>Plotten der Punkte x/y2 mit Verbindungslinien und Legendeneintrag:
+</p>
+<pre>plot 'data.txt' using 1:3 with lines title 'some Data'
+</pre>
+<h2><span class="mw-headline" id="Fitten_einer_Funktion">Fitten einer Funktion</span></h2>
+<pre>f(x) = a*x**2+b*x+c #Definieren der Funktion:
+fit f(x) 'data.txt' using 1:3 via a,b,c #Fit der x/y2 Daten:
+plot 'data.txt' using 1:3, f(x)
+</pre>
+<h2><span class="mw-headline" id="Speichern_des_Plots_als_Bilddatei">Speichern des Plots als Bilddatei</span></h2>
+<pre>set term png size 800,600 #Ausgabeformat auf png Bilddatei mit 800x600 pixeln umstellen
+set output 'plot.png' #Dateiname für Ausgabe festlegen
+replot #vorherigen plotbefehl wiederholen
+set output #offene Bilddatei schließen
+set term wxt #Ausgabe wieder auf Bildschirmausgabe zurückschalten, Alternativ auch: set term x11 oder set term windows
+</pre>
+<h2><span class="mw-headline" id="N.C3.BCtzliche_Kommandos">Nützliche Kommandos</span></h2>
+<pre>set xlabel 'Something' #Setzen der Achsenbeschriftung
+set title 'Bla' #Plot Überschrift
+set logscale y #Y-Achse logarithmisch skalieren
+set xrange [0:10] #Plotbereich auf der X-Achse festlegen
+set grid #Raster anzeigen
+pwd #Anzeige des aktuellen Arbeitsverzeichnisses
+cd 'pfad' #wechsel des aktuellen Arbeitsverzeichnisses
+</pre>
+<h2><span class="mw-headline" id="Hinweise">Hinweise</span></h2>
+<ul><li> Gnuplot benutzt entweder . oder , als Dezimaltrennzeichen (Abhängig von der Spracheinstellung des Systems). Wenn die Werte abgeschnitten werden muss in der Datei mit den Werten . durch , oder anders herum ersetzt werden.</li>
+<li> Alle Plotbefehle können auch in eine Datei (z.B. plot.txt) geschrieben und dann mit load('plot.txt') ausgeführt werden.</li>
+<li> Weitere Informationen und Tipps findet man z.B. bei <a rel="nofollow" class="external text" href="http://t16web.lanl.gov/Kawano/gnuplot/index-e.html">Gnuplot Not-so-FAQ</a> oder <a rel="nofollow" class="external autonumber" href="http://www.gnuplot.info/documentation.html">[1]</a></li>
+<li> Lange Plotbefehle (mit mehreren Kurven/Datensätzen in einem Graph) können mit \ in mehrere Zeilen aufgebrochen werden</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20260825111001
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.002 seconds
+Real time usage: 0.005 seconds
+Preprocessor visited node count: 22/1000000
+Preprocessor generated node count: 28/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:173-0!canonical and timestamp 20260825111001 and revision id 4938
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="indexce56.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Gnuplot&amp;oldid=4938</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="gnuplot.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="index43a4.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index5079.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="indexf3d2.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="index3298.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="gnuplot-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="gnuplot-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="indexd14e.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="indexce56.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index0f38.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 8 May 2012, at 13:41.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.002","walltime":"0.005","ppvisitednodes":{"value":22,"limit":1000000},"ppgeneratednodes":{"value":28,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825111001","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":214});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Gnuplot by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:52:46 GMT -->
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Greedy-Algorithmen_und_Dynamische_Programmierung by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:49:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Greedy-Algorithmen und Dynamische Programmierung - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Greedy-Algorithmen_und_Dynamische_Programmierung","wgTitle":"Greedy-Algorithmen und Dynamische Programmierung","wgCurRevisionId":4639,"wgRevisionId":4639,"wgArticleId":128,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Greedy-Algorithmen_und_Dynamische_Programmierung","wgRelevantArticleId":128,"wgRequestId":"ce241c52c71bc8c232141e6f","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Greedy-Algorithmen_und_Dynamische_Programmierung rootpage-Greedy-Algorithmen_und_Dynamische_Programmierung skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Greedy-Algorithmen und Dynamische Programmierung</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Einf.C3.BChrung"><span class="tocnumber">1</span> <span class="toctext">Einführung</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Beispiel"><span class="tocnumber">1.1</span> <span class="toctext">Beispiel</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Greedy_Algorithmen"><span class="tocnumber">2</span> <span class="toctext">Greedy Algorithmen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Beispiele"><span class="tocnumber">2.1</span> <span class="toctext">Beispiele</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Anwendung_beim_Traveling_Salesman_Problem"><span class="tocnumber">2.1.1</span> <span class="toctext">Anwendung beim Traveling Salesman Problem</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Anwendung_beim_Algorithmus_von_Kruskal_f.C3.BCr_Minium_Spanning_Tree"><span class="tocnumber">2.1.2</span> <span class="toctext">Anwendung beim Algorithmus von Kruskal für Minium Spanning Tree</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Dynamische_Programmierung"><span class="tocnumber">3</span> <span class="toctext">Dynamische Programmierung</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Beispiel_2"><span class="tocnumber">3.1</span> <span class="toctext">Beispiel</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Konzept_der_Dynamische_Programmierung"><span class="tocnumber">3.2</span> <span class="toctext">Konzept der Dynamische Programmierung</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Dynamisch_programmierter_Dijkstra_Alrogithmus"><span class="tocnumber">3.2.1</span> <span class="toctext">Dynamisch programmierter Dijkstra Alrogithmus</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Greedy_oder_Dynamische_Programmierung.3F"><span class="tocnumber">4</span> <span class="toctext">Greedy oder Dynamische Programmierung?</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Anwendungsbeispiel:_Interval_Scheduling"><span class="tocnumber">5</span> <span class="toctext">Anwendungsbeispiel: Interval Scheduling</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#M.C3.B6gliche_L.C3.B6sungsans.C3.A4tze_f.C3.BCr_einen_Greedy_Algorithmus"><span class="tocnumber">5.1</span> <span class="toctext">Mögliche Lösungsansätze für einen Greedy Algorithmus</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Greedy_Stays_Ahead"><span class="tocnumber">6</span> <span class="toctext">Greedy Stays Ahead</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Idee_der_Beweismethode"><span class="tocnumber">6.1</span> <span class="toctext">Idee der Beweismethode</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Beweis_der_Optimalit.C3.A4t_des_2._Ansatzes_mit_Greedy_Stays_Ahead"><span class="tocnumber">6.2</span> <span class="toctext">Beweis der Optimalität des 2. Ansatzes mit <i>Greedy Stays Ahead</i></span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#Ansatz"><span class="tocnumber">6.2.1</span> <span class="toctext">Ansatz</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Ziel"><span class="tocnumber">6.2.2</span> <span class="toctext">Ziel</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Voraussetzungen"><span class="tocnumber">6.2.3</span> <span class="toctext">Voraussetzungen</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Schritt_1"><span class="tocnumber">6.2.4</span> <span class="toctext">Schritt 1</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Beweis_durch_vollst.C3.A4ndige_Induktion"><span class="tocnumber">6.2.5</span> <span class="toctext">Beweis durch vollständige Induktion</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Schritt_2"><span class="tocnumber">6.2.6</span> <span class="toctext">Schritt 2</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Beweis_durch_Widerspruchsannahme"><span class="tocnumber">6.2.7</span> <span class="toctext">Beweis durch Widerspruchsannahme</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="#Beispiel_zur_Dynamischen_Programmierung:_Weighted_Intervall_Scheduling"><span class="tocnumber">6.3</span> <span class="toctext">Beispiel zur Dynamischen Programmierung: Weighted Intervall Scheduling</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="#Ziel_2"><span class="tocnumber">6.3.1</span> <span class="toctext">Ziel</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#Ansatz_2"><span class="tocnumber">6.3.2</span> <span class="toctext">Ansatz</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#Erinnerung:_Intervalle"><span class="tocnumber">7</span> <span class="toctext">Erinnerung: Intervalle</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="#Beispiel_3"><span class="tocnumber">7.1</span> <span class="toctext">Beispiel</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#Zwei_Algorithmen_zum_Finden_der_topologischen_Sortierung"><span class="tocnumber">8</span> <span class="toctext">Zwei Algorithmen zum Finden der topologischen Sortierung</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="#Algorithmus_1"><span class="tocnumber">8.1</span> <span class="toctext">Algorithmus 1</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Algorithmus_2"><span class="tocnumber">8.2</span> <span class="toctext">Algorithmus 2</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#Anwendung:_Sequence_Alignment_.2F_Edit_Distance"><span class="tocnumber">9</span> <span class="toctext">Anwendung: Sequence Alignment / Edit Distance</span></a>
+<ul>
+<li class="toclevel-2 tocsection-33"><a href="#Probleml.C3.B6sung_durch_einen_Entscheidungsbaum"><span class="tocnumber">9.1</span> <span class="toctext">Problemlösung durch einen Entscheidungsbaum</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Einf.C3.BChrung">Einführung</span></h2>
+<dl><dd>Viele Probleme sind durch einen Entscheidungsbaum systematisch lösbar.</dd>
+<dd>Dabei wird die zu suchende Lösung auf den optimalen Weg durch den Entscheidungsbaum reduziert.</dd></dl>
+<h3><span class="mw-headline" id="Beispiel">Beispiel</span></h3>
+<dl><dd><i>Erklärung des Algorithmus ist zu finden in <a href="graphen_und_graphenalgorithmen.html" title="Graphen und Graphenalgorithmen">Graphen und Graphenalgorithmen</a></i></dd>
+<dd>Traveling Salesman Problem mit 4 Knoten</dd></dl>
+<p><a href="file_tsm_points.html" class="image"><img alt="Tsm points.JPG" src="tsm_points.html" width="337" height="190" /></a>
+</p>
+<dl><dd><b>Dabei entsteht folgender Entscheidungsbaum:</b></dd></dl>
+<p><a href="file_tsm4.html" class="image"><img alt="Tsm4.JPG" src="../images/tsm4.jpg" width="395" height="388" /></a>
+</p>
+<dl><dd><dl><dd><b>Vorteil des Entscheidungsbaums:</b> Lösungsmöglichkeiten werden nicht übersehen</dd>
+<dd><b>Nachteil:</b> Eventuell muss der gesamte Baum durchsucht werden (exponentielle Komplexität)</dd></dl></dd>
+<dd>Um diesen Nachteil auszugleichen gibt es verschiedene Verfahren:
+<ul><li> Divide &amp; Conquer (Problem auf triviale Teilprobleme zurückführen, welche jeweils einfach zu lösen sind)</li>
+<li> Greedy Algorithmen</li>
+<li> Dynamische Programmierung</li></ul></dd></dl>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Greedy_Algorithmen">Greedy Algorithmen</span></h2>
+<dl><dd>Greedy (dt. "Gierig") Algorithmen entscheiden an jedem Knoten <b>lokal</b> über die beste Fortsetzung der Suche,</dd>
+<dd>d.h. es wird jeweils die beste Entscheidung im Kleinen getroffen - ohne Rücksicht auf Konsequenzen für den gesamten Suchverlauf.</dd></dl>
+<h3><span class="mw-headline" id="Beispiele">Beispiele</span></h3>
+<h4><span class="mw-headline" id="Anwendung_beim_Traveling_Salesman_Problem">Anwendung beim Traveling Salesman Problem</span></h4>
+<dl><dd><i>Erklärung des Algorithmus ist zu finden in <a href="graphen_und_graphenalgorithmen.html" title="Graphen und Graphenalgorithmen">Graphen und Graphenalgorithmen</a></i></dd>
+<dd>Reise immer zum nächstgelegenen, noch nicht besuchten Knoten:</dd></dl>
+<p><a href="file_tsm_greedyb.html" class="image"><img alt="Tsm greedyb.JPG" src="../images/tsm_greedyb.jpg" width="337" height="190" /></a>
+</p>
+<dl><dd>In diesem Beispiel wurde eine optimale Lösung gefunden. <b>Dies muss im Allgemeinen aber nicht immer der Fall sein!</b></dd></dl>
+<h4><span class="mw-headline" id="Anwendung_beim_Algorithmus_von_Kruskal_f.C3.BCr_Minium_Spanning_Tree">Anwendung beim Algorithmus von Kruskal für Minium Spanning Tree</span></h4>
+<dl><dd><i>Erklärung des Algorithmus ist zu finden in <a href="graphen_und_graphenalgorithmen.html" title="Graphen und Graphenalgorithmen">Graphen und Graphenalgorithmen</a></i>
+<ul><li> Sortiere die Kanten nach Gewicht</li>
+<li> Wähle stets die Kante mit niedrigstem Gewicht (d.h. im Allgemeinen die nächsgelegene), die keinen Zyklus verursacht</li></ul></dd></dl>
+<dl><dd>Hierbei wird der Minimum Spanning Tree stets gefunden.</dd></dl>
+<h2><span class="mw-headline" id="Dynamische_Programmierung">Dynamische Programmierung</span></h2>
+<p>(<i>Programmierung</i> bezieht sich hier nicht auf spezielle Programmiersprachen, sondern meint vielmehr die Optimierung des Programmablaufs)
+</p>
+<dl><dd>Oft ist dasselbe Teilproblem in mehreren Pfaden vorhanden.</dd></dl>
+<h3><span class="mw-headline" id="Beispiel_2">Beispiel</span></h3>
+<p><a href="file_fib1.html" class="image"><img alt="Fib1.JPG" src="../images/fib1.jpg" width="312" height="235" /></a>
+</p>
+<dl><dd>Im Beispiel mit Fibonacci-Zahlen wird Fib(2) gleich dreimal benötigt.</dd></dl>
+<p><br />
+</p>
+<dl><dd>Zur Erinnerung: Die Fibonacci-Folge <img class="mwe-math-fallback-image-inline tex" alt="(f_0, f_1,\ldots)" src="../images/fb84272e51eb7506f6c6af90007dfc99.png" /> ist durch das rekursive Bildungsgesetz</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" f_n = f_{n-1} + f_{n-2}\ " src="../images/571d24f6c8cd533d92f08df72dd0bb39.png" /> &#160; für <img class="mwe-math-fallback-image-inline tex" alt="n\geq 2" src="5d5f448f1528508f27683f57c3c34111.html" /></dd>
+<dd>mit den Anfangswerten</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="f_0=0\ " src="../images/e447a35b0c22e003e9ed66d7435a4500.png" /> &#160; und &#160; <img class="mwe-math-fallback-image-inline tex" alt="f_1=1\ " src="../images/da13a3d38bb0818d7957fd9426c0d79a.png" /></dd>
+<dd>definiert.</dd></dl>
+<h3><span class="mw-headline" id="Konzept_der_Dynamische_Programmierung">Konzept der Dynamische Programmierung</span></h3>
+<dl><dd>Jedes Teilproblem soll nur einmal gelöst werden, d.h. einige Knoten werden mehrmals genutzt:</dd></dl>
+<p><a href="file_fib2.html" class="image"><img alt="Fib2.JPG" src="../images/fib2.jpg" width="235" height="212" /></a>
+</p>
+<dl><dd>Wie im Beispiel erkennbar, hat sich die Zahl der Knoten drastisch reduziert (von 9 auf 5). </dd>
+<dd>Allerdings müssen die <b>Graphen jetzt gerichtet</b> sein.</dd></dl>
+<dl><dd>Wenn der neue Graph <b>azyklisch</b> ist, kann man die Teilprobleme so anordnen, dass jedes
+<ul><li> nur einmal gelöst wird </li>
+<li> nur von bereits gelösten Teilproblemen abhängt</li></ul></dd></dl>
+<dl><dd>Wenn der Graph nicht azyklisch ist (weil z.B. Teilproblem A die Lösung von Teilproblem B erfordert und umgekehrt),</dd>
+<dd>ist die Dynamische Programmierung auf dieses Problem nicht anwendbar.</dd></dl>
+<h4><span class="mw-headline" id="Dynamisch_programmierter_Dijkstra_Alrogithmus">Dynamisch programmierter Dijkstra Alrogithmus</span></h4>
+<dl><dd><i>Erklärung des Algorithmus ist zu finden in <a href="graphen_und_graphenalgorithmen.html" title="Graphen und Graphenalgorithmen">Graphen und Graphenalgorithmen</a></i></dd>
+<dd>Löse Teilprobleme entsprechend ihrer Priorität, d.h. Priorität definiert die Ordnung</dd></dl>
+<dl><dd><b>Problem:</b> Der Suchbaum ist bei diesem Algorithmus ungerichtet</dd></dl>
+<dl><dd><b>Lösung:</b> Die Richtung der Kanten wird festgelegt, wenn man die Nachbarn eines Knotens in die Queue eingefügt</dd>
+<dd>Wenn man den Abstand vom Start bestimmt (Teilproblem), ist der Abstand von allen näher gelegenen bereits bekannt.</dd></dl>
+<p><a href="file_dijkstra.html" class="image"><img alt="Dijkstra.JPG" src="../images/dijkstra.jpg" width="340" height="341" /></a>
+</p>
+<h2><span class="mw-headline" id="Greedy_oder_Dynamische_Programmierung.3F">Greedy oder Dynamische Programmierung?</span></h2>
+<dl><dd>Für viele Probleme gibt es unterschiedliche Entscheidungsräume und/oder unterschiedliche Entscheidungskriterien.</dd>
+<dd>Ein und dasselbe Problem kann also mit einer der Darstellungen (Greedy, Dynamische Programmierung, weitere...) effizient lösbar sein, mit anderen eventuell nicht.</dd>
+<dd>Das finden einer geeigneten Darstellung ist also eine zentrale Herausforderung.</dd></dl>
+<h2><span class="mw-headline" id="Anwendungsbeispiel:_Interval_Scheduling">Anwendungsbeispiel: Interval Scheduling</span></h2>
+<dl><dd><b>gegeben:</b>
+<dl><dd>Mehrere Aufgaben mit unterschiedlichen Anfangszeiten <img class="mwe-math-fallback-image-inline tex" alt="s_i" src="../images/e5a7472d780a5a032c7775cc5e3ce901.png" /> und Endzeiten <img class="mwe-math-fallback-image-inline tex" alt="f_i" src="../images/dbb3b84cea7e7015fb1a591964fbd918.png" />. </dd>
+<dd>Es kann immer nur eine Aufgabe gleichzeitig bearbeitet werden: zwei Aktivitäten sind kompatibel, wenn deren Zeiten sich nicht überlappen.</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="a_k\,\text{komp}\, a_j  \Leftrightarrow  s_k\geq f_j\, \or \, s_j\geq f_k" src="../images/f2823d5541730e05bdcd197fa105bd71.png" /></dd></dl></dd>
+<dd><b>gesucht:</b>
+<dl><dd>Arbeitsplan um möglichst viele Aufgaben nacheinander abzuarbeiten.</dd>
+<dd>Dabei haben alle Aufgaben dieselbe Priorität, obwohl die Dauer oft unterschiedlich ist.</dd></dl></dd></dl>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="M.C3.B6gliche_L.C3.B6sungsans.C3.A4tze_f.C3.BCr_einen_Greedy_Algorithmus">Mögliche Lösungsansätze für einen Greedy Algorithmus</span></h3>
+<dl><dd><ol><li> Wähle (unter kompatiblen) die Aktivität, die als erste startet</li>
+<li> <b>Wähle (unter kompatiblen) die Aktivität, die als erste endet (oder: die als letzte startet)</b></li>
+<li> Wähle (unter kompatiblen) die Aktivität, die am kürzesten dauert</li>
+<li> Wähle (unter kompatiblen) die Aktivität, die die wenigsten Inkompatibilitäten (überlappungen mit anderen Aktivitäten) hat</li></ol></dd></dl>
+<p><b>Ungünstige Ansätze:</b>
+</p>
+<dl><dd>In den folgenden Beispielen werden die Aktivitäten mit | als Anfangs- bzw Endzeit markiert, --- steht für den Verlauf einer Aktivität.</dd>
+<dd>Weiter rechts bedeutet später in der Zeit.</dd>
+<dd><b>Gegenbeispiel zu 1.</b></dd></dl>
+<pre>    <img class="mwe-math-fallback-image-inline tex" alt="L_1=" src="../images/ba0b6404bb9804b0880f2868ae2b75c1.png" />  |--| |--| |--| |--|
+    <img class="mwe-math-fallback-image-inline tex" alt="L_2=" src="../images/8f0e35927463d189c7356a003910d3ae.png" />|---------------------|
+    <img class="mwe-math-fallback-image-inline tex" alt="|L_1|" src="../images/e7f8694d1b747234281cfa19151454c6.png" />=4 <img class="mwe-math-fallback-image-inline tex" alt="|L_2|" src="../images/cb66e9cfe0a3ade53ac93a21bc5c5e73.png" />=1
+</pre>
+<dl><dd>Der Ansatz würde Lösung 2 wählen, da die lange Aktivität am frühesten beginnt. Es wird dann nur 1 statt der optimalen 4 abgearbeitet.</dd>
+<dd><b>Gegenbeispiel zu 3.</b></dd></dl>
+<pre>    <img class="mwe-math-fallback-image-inline tex" alt="L_1=" src="../images/ba0b6404bb9804b0880f2868ae2b75c1.png" />|---------| |---------|
+    <img class="mwe-math-fallback-image-inline tex" alt="L_2=" src="../images/8f0e35927463d189c7356a003910d3ae.png" />        |----|
+    <img class="mwe-math-fallback-image-inline tex" alt="|L_1|" src="../images/e7f8694d1b747234281cfa19151454c6.png" />=2 <img class="mwe-math-fallback-image-inline tex" alt="|L_2|" src="../images/cb66e9cfe0a3ade53ac93a21bc5c5e73.png" />=1
+</pre>
+<dl><dd>Der Ansatz würde Lösung 2 wählen, da die mittlere Aktivität am kürzesten dauert. Es wird dann nur 1 statt der optimalen 2 abgearbeitet.</dd>
+<dd><b>Gegenbeispiel zu 4. (Anzahl der Inkompatibilitäten stehen jeweils in der Mitte der Aktivität)</b></dd></dl>
+<pre>    |-3-| |-4-| |-4-| |-3-|
+       |-4-| |-2-| |-4-|
+       |-4-|       |-4-|
+       |-4-|       |-4-|
+</pre>
+<dl><dd>Der Ansatz würde erst die mit 2, dann die beiden mit 3 Inkompatibilitäten wählen. Es werden dann nur 3 statt der optimalen 4 (obere Zeile) abgearbeitet.</dd></dl>
+<p>Es verbleibt der 2. Ansatz, dessen Optimalität noch zu beweisen ist...
+</p>
+<h2><span class="mw-headline" id="Greedy_Stays_Ahead">Greedy Stays Ahead</span></h2>
+<h4><span class="mw-headline" id="Idee_der_Beweismethode">Idee der Beweismethode</span></h4>
+<p><b>Es genügt zu zeigen:</b> 
+</p>
+<dl><dd>die Greedy-Lösung ist nicht schlechter als die optimale Lösung</dd></dl>
+<h3><span class="mw-headline" id="Beweis_der_Optimalit.C3.A4t_des_2._Ansatzes_mit_Greedy_Stays_Ahead">Beweis der Optimalität des 2. Ansatzes mit <i>Greedy Stays Ahead</i></span></h3>
+<h4><span class="mw-headline" id="Ansatz">Ansatz</span></h4>
+<dl><dd>Wähle (unter kompatiblen) die Aktivität, die als erste endet (oder: die als letzte startet)</dd>
+<dd>Die Wahl dieses Ansatzes sei <img class="mwe-math-fallback-image-inline tex" alt="U={i_1,...,i_k}" src="../images/012c01b8431b55bb3b7abcfd18e26d85.png" />.</dd>
+<dd>Eine (unbekannte) optimale Lösung sei <img class="mwe-math-fallback-image-inline tex" alt="O={j_1,...,j_m}" src="../images/a0eea4e7b2d8416f66b6f8a1ad4edfe7.png" />.</dd></dl>
+<h4><span class="mw-headline" id="Ziel">Ziel</span></h4>
+<dl><dd>Die Lösung des Ansatzes soll genausoviele Aktivitäten schaffen wie die optimale Lösung (d.h. k=m)</dd></dl>
+<h4><span class="mw-headline" id="Voraussetzungen">Voraussetzungen</span></h4>
+<dl><dd><ul><li> Sortiere <img class="mwe-math-fallback-image-inline tex" alt="i_1,...,i_k" src="../images/600b99f814d28f3e4c64e2e61b5e2eb7.png" /> nach aufsteigender Endzeit <img class="mwe-math-fallback-image-inline tex" alt="f_i" src="../images/dbb3b84cea7e7015fb1a591964fbd918.png" /></li>
+<li> Sortiere <img class="mwe-math-fallback-image-inline tex" alt="j_1,...,j_m" src="../images/ae6294b0727861b3bc72ff981fe00691.png" /> nach aufsteigender Endzeit <img class="mwe-math-fallback-image-inline tex" alt="f_j" src="../images/9a117e3374e84fb46920450946569279.png" /></li></ul></dd></dl>
+<p>(Da die Aktivitäten kompatibel sind, werden die Anfangszeiten automatisch auch sortiert)
+</p>
+<h4><span class="mw-headline" id="Schritt_1">Schritt 1</span></h4>
+<dl><dd>Für die Indizes <img class="mwe-math-fallback-image-inline tex" alt="p\leq r" src="../images/62ef598d80883343f8ea4e0a294e2645.png" /> (inbesondere <img class="mwe-math-fallback-image-inline tex" alt="p=r" src="../images/7f610c6798f23e6a189f5a3fca2f3c41.png" />) gilt: <img class="mwe-math-fallback-image-inline tex" alt="f(i_p)\leq f(j_r)" src="../images/06d9de529ef2d5ea8f8406459af28561.png" /></dd></dl>
+<h4><span class="mw-headline" id="Beweis_durch_vollst.C3.A4ndige_Induktion">Beweis durch vollständige Induktion</span></h4>
+<dl><dd><b>Induktions-Anfang:</b>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(i_1)\leq f(j_1)" src="../images/a371fd6ed3b21b0555a2a5f9e6f901b5.png" />, da <img class="mwe-math-fallback-image-inline tex" alt="i_1" src="../images/80e7141eebd5f8442aafd551e54bc6c5.png" /> die erste Aktivität ist, die überhaupt endet</dd></dl></dd>
+<dd><b>Induktions-Voraussetzung:</b>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(i_{r-1})\leq f(j_{r-1})" src="../images/4a9b2ccb3f05fafaf14301b486ba3866.png" /></dd></dl></dd>
+<dd><b>Induktions-Schritt:</b>
+<dl><dd>Wegen Kompatibilität gilt:</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="f(j_{r-1})\leq s(j_r)" src="../images/d8f1d23d0dbbc63af0cb875cdaa7004c.png" /></dd>
+<dd>=&gt; <img class="mwe-math-fallback-image-inline tex" alt="f(i_{r-1})\leq s(j_r)" src="../images/0dfd912838a276f1e06adb5b939831da.png" /></dd>
+<dd>=&gt; Die Greedy Strategie <i>kann</i> Aktivität <img class="mwe-math-fallback-image-inline tex" alt="j_r" src="../images/97a38ca048ee15d42e9ff7649fad13dc.png" /> wählen, denn sie ist kompatibel mit <img class="mwe-math-fallback-image-inline tex" alt="i_{r-1}" src="../images/4e9cae50ef1fcf9614613e880c93cf70.png" />
+<ul><li> Wenn die Greedy Strategie tatsächlich <img class="mwe-math-fallback-image-inline tex" alt="j_r" src="../images/97a38ca048ee15d42e9ff7649fad13dc.png" /> wählt, folgt daraus: </li></ul>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(i_r)=f(j_r)" src="../images/8f3efed6c9fd670954d149a23d9957c3.png" /></dd></dl>
+<ul><li> Wenn nicht, kann nur gelten:</li></ul>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(i_r)\leq f(j_r)" src="../images/05001b555ba246dcb18bb52d6c73f38e.png" /></dd></dl></dd></dl></dd></dl>
+<h4><span class="mw-headline" id="Schritt_2">Schritt 2</span></h4>
+<dl><dd>Zu zeigen: <img class="mwe-math-fallback-image-inline tex" alt="k=m" src="../images/f831bd5f5b8f3f9759dc35dc51e4b11b.png" /></dd></dl>
+<h4><span class="mw-headline" id="Beweis_durch_Widerspruchsannahme">Beweis durch Widerspruchsannahme</span></h4>
+<dl><dd><ul><li> Falls <img class="mwe-math-fallback-image-inline tex" alt="m&lt;k" src="../images/ecef6593c3b5867e579d863a4be21cfe.png" />, wäre die Lösung der Strategie besser als die optimale.</li>
+<li> Angenommen <img class="mwe-math-fallback-image-inline tex" alt="m&gt;k" src="../images/34a5bddfcca51654cf5d12234fc28b9e.png" />, dann enthält <img class="mwe-math-fallback-image-inline tex" alt="O" src="../images/f186217753c37b9b9f958d906208506e.png" /> eine Aktivität <img class="mwe-math-fallback-image-inline tex" alt="j_{k+1}" src="../images/e15bcec2d89261d16fb50ec626fe517c.png" />.</li></ul></dd></dl>
+<dl><dd>Nach Schritt 1 gilt:
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(i_k)\leq f(j_k)\leq f(j_{k+1})" src="../images/9be2284ac75b25116fa1308bd259f2ba.png" /></dd></dl></dd></dl>
+<dl><dd>Wegen Kompatibilität gilt aber:
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="s(j_{k+1})\geq f(j_k)\geq f(i_k)" src="../images/55bb64528185083953fcf06e6c3f8627.png" /></dd></dl></dd>
+<dd>-&gt; Die Greedy Strategie hätte also noch die Aktivität <img class="mwe-math-fallback-image-inline tex" alt="j_{k+1}" src="../images/e15bcec2d89261d16fb50ec626fe517c.png" /> wählen können.</dd>
+<dd>-&gt; Widerspruch zur Annahme, dass die Greedy Strategie durchgelaufen ist, bis keine Aktivität mehr hinzugefügt werden kann</dd>
+<dd>-&gt; m&gt;k ist falsch</dd>
+<dd>-&gt; m=k ist richtig</dd></dl>
+<h3><span class="mw-headline" id="Beispiel_zur_Dynamischen_Programmierung:_Weighted_Intervall_Scheduling">Beispiel zur Dynamischen Programmierung: Weighted Intervall Scheduling</span></h3>
+<dl><dd>Die Problemstellung ähnelt dem des normalen Intervall Scheduling, hier haben die Aktivitäten aber Gewichte <img class="mwe-math-fallback-image-inline tex" alt="w_i" src="../images/dfc96001568235d60dc12dca4b32d260.png" /></dd>
+<dd>(z.B. Bringt eine längere Aufgabe in einem Übunsgzettel in der Regel auch mehr Punkte, d.h. sie hat eine hohe Gewichtung)</dd></dl>
+<h4><span class="mw-headline" id="Ziel_2">Ziel</span></h4>
+<dl><dd>Wähle die Aktivitäten so, dass der Gewinn (Summe der Gewichtungen der bearbeiteten Aktivitäten) maximal wird.</dd></dl>
+<h4><span class="mw-headline" id="Ansatz_2">Ansatz</span></h4>
+<dl><dd><ul><li> Sortiere Aktivitäten nach ihrer Endzeit.</li>
+<li> Definiere eine Funktion <img class="mwe-math-fallback-image-inline tex" alt="p(i)" src="../images/7273fbe052a7414eeed80ef7ff2e167b.png" />, welche für die Aktivität steht, die vor <img class="mwe-math-fallback-image-inline tex" alt="a_i" src="../images/d8dd7d0f3eb7145ca41c711457b7eb8f.png" /> endet, mit <img class="mwe-math-fallback-image-inline tex" alt="a_i" src="../images/d8dd7d0f3eb7145ca41c711457b7eb8f.png" /> kompatibel ist, unter allen Aktivitäten mit diesen Eigenschaften die letzte (d.h. mit der spätesten Endzeit) ist. </li></ul></dd></dl>
+<p>In folgendem Beispiel wird die Aktivität <img class="mwe-math-fallback-image-inline tex" alt="a_i" src="../images/d8dd7d0f3eb7145ca41c711457b7eb8f.png" /> mit der Symbolik |-!-| betrachtet um deren p-Funktion zu evaluieren.
+</p><p>Für die p-Funktion kommen lediglich die Funktionen mit der Symbolik |===| und |====| in Frage, die untere der beiden ist die gesuchte Aktivität.
+</p>
+<pre>   |====|        |-!-| |--|
+       |===| |-----|         |----|
+</pre>
+<dl><dd>Trivial ist, dass <img class="mwe-math-fallback-image-inline tex" alt="a_n" src="../images/9ded7825070b255e7bc092cdc2c8e98a.png" /> entweder zur Lösung gehört, oder nicht:</dd></dl>
+<p><a href="file_wis1.html" class="image"><img alt="Wis1.JPG" src="../images/wis1.jpg" width="272" height="153" /></a>
+</p>
+<dl><dd>Dadurch ergibt sich folgende Funktion:</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="OPT(n)=\begin{cases}&#10;\ \;\, \{a_n\}\cup OPT(p(n))\\&#10;\ \;\, OPT(a_{n-1})&#10;\end{cases}&#10;" src="../images/34112e92ce2b670c9c47a38f97193fce.png" /></dd></dl>
+<dl><dd>Um den höchstmöglichen Gewinn zu erzielen, wird <img class="mwe-math-fallback-image-inline tex" alt="\{a_n\}\cup OPT(p(n))" src="../images/dd2365930fb5cc9ea15fc226332c7eff.png" /> verwendet falls gilt:</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="w_n + Gewinn(OPT(p(n))\leq Gewinn(OPT(n-1))" src="../images/75f30af1e1bc9b6303da1ac71511d8c0.png" /></dd></dl>
+<dl><dd>Ansonsten wird <img class="mwe-math-fallback-image-inline tex" alt="OPT(a_{n-1})" src="../images/446b8ef03591d0a3bb99dcce3779cc6a.png" /> angewandt.</dd></dl>
+<h2><span class="mw-headline" id="Erinnerung:_Intervalle">Erinnerung: Intervalle</span></h2>
+<p><a href="file_bild1.html" class="image"><img alt="Bild1.JPG" src="../images/bild1.jpg" width="444" height="151" /></a>
+</p><p>Sortiere Intervalle nach aufsteigender <img class="mwe-math-fallback-image-inline tex" alt=" f_{i} " src="../images/fca05b01c8645b33c4e3431dbc402509.png" />:
+</p>
+<dl><dd>Gewinn <img class="mwe-math-fallback-image-inline tex" alt="(a_{n})" src="../images/85dc30cd2af5d1f3d4abcd3c2e78aa3f.png" /> = max <img class="mwe-math-fallback-image-inline tex" alt="(w_{n})" src="../images/d1c02ba631acf4a399bf8f38b8881592.png" /> + Gewinn (p(n)), Gewinn <img class="mwe-math-fallback-image-inline tex" alt=" (a_{n-1})" src="../images/5fc545da8dbe50568b02b6338bdf7ada.png" /></dd>
+<dd>Gewinn <img class="mwe-math-fallback-image-inline tex" alt=" (a_{n-1})" src="../images/5fc545da8dbe50568b02b6338bdf7ada.png" /> = max (<img class="mwe-math-fallback-image-inline tex" alt="w_{n-1}" src="../images/d2612adf4420028babebf867cd7a2100.png" /> + Gewinn <img class="mwe-math-fallback-image-inline tex" alt="(p(n-1)" src="../images/4a0dc6a454f3c83a5a8890b8358cf9f9.png" />), Gewinn <img class="mwe-math-fallback-image-inline tex" alt=" (a_{n-2})" src="../images/59bdad069ffc86bec8e6d47f26b3cdd9.png" /></dd>
+<dd>usw.</dd></dl>
+<p><a href="file_bild2.html" class="image"><img alt="Bild2.JPG" src="../images/bild2.jpg" width="316" height="310" /></a>
+</p><p>Bearbeite Teilprobleme in Reihenfolge der Sortierung
+</p>
+<dl><dd>=&gt; azyklischer Graph</dd>
+<dd>(a2 hängt von a1 ab, a3 von a2, a4 von a2 und a3 usw.)</dd></dl>
+<p>Wie erkennt man, ob der Graph azyklisch ist, und wie fndet man die Reihenfolge?
+</p>
+<ul><li> azyklischer, gerichteter Graph: „directed acyclic graph“ – DAG</li>
+<li> Ein Graph ist genau dann ein DAG, wenn es eine topologische Sortierung der Knoten gibt.</li></ul>
+<dl><dd>Def.: Zeichne die Knoten so auf eine Gerade, dass alle Kanten nach rechts/in dieselbe Richtung zeigen</dd></dl>
+<p><a href="file_bild3.html" class="image"><img alt="Bild3.JPG" src="../images/bild3.jpg" width="418" height="115" /></a>
+</p>
+<dl><dd>=&gt; arbeite topologische Sortierung von rechts nach links ab.</dd></dl>
+<h3><span class="mw-headline" id="Beispiel_3">Beispiel</span></h3>
+<p>Wie erklärt man einem zerstreuten Professor, wie er sich morgens anziehen soll?
+</p><p><a href="file_bild4.html" class="image"><img alt="Bild4.JPG" src="../images/bild4.jpg" width="530" height="381" /></a>
+</p>
+<dl><dd>=&gt; Die topologische Sortierung ist hier nicht eindeutig, z.B. ist nicht klar, ob zuerst die Strümpfe angezogen werden sollen oder die Unterhose. Wann die Uhr angelegt werden soll, ist überhaupt nicht festgelegt. Mit dieser Beschreibung käme der arme Professor wohl kaum zurecht.</dd></dl>
+<p><a href="file_bild5.html" class="image"><img alt="Bild5.JPG" src="../images/bild5.jpg" width="398" height="122" /></a>
+</p>
+<h2><span class="mw-headline" id="Zwei_Algorithmen_zum_Finden_der_topologischen_Sortierung">Zwei Algorithmen zum Finden der topologischen Sortierung</span></h2>
+<h3><span class="mw-headline" id="Algorithmus_1">Algorithmus 1</span></h3>
+<ol><li> Suche einen Knoten mit Eingangsgrad 0 (ohne eingehende Pfeile), =&gt; in einem gerichteten azyklischen Graphen gibt es immer einen solchen Knoten</li>
+<li> Platziere diesen Knoten auf der Geraden (beliebig)</li>
+<li> Entferne den Knoten aus dem Graphen zusammen mit den ausgehenden Kanten</li>
+<li> Gehe zu 1., aber platziere in 2. immer rechts der vorhandenen Knoten (also der Knoten, die schon auf der Geraden vorhanden sind)</li></ol>
+<dl><dd> =&gt; Wenn noch Knoten übrig sind, aber keiner Eingangsgrad 0 hat, muss der Graph zyklisch sein.</dd></dl>
+<p><a href="file_bild6.html" class="image"><img alt="Bild6.JPG" src="../images/bild6.jpg" width="117" height="124" /></a>
+</p><p>Bild: Ein zyklischer Graph
+</p>
+<h3><span class="mw-headline" id="Algorithmus_2">Algorithmus 2</span></h3>
+<p>Verwende Tiefensuche, um die Finishing Time zu bestimmen
+</p>
+<dl><dd> =&gt; zeichne Knoten nach abnehmender Finishing Time auf die Gerade</dd></dl>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Anwendung:_Sequence_Alignment_.2F_Edit_Distance">Anwendung: Sequence Alignment / Edit Distance</span></h2>
+<dl><dd>gegeben: zwei Wörter (allgemein: beliebige Zeichenfolgen)</dd>
+<dd>gesucht: Wie kann man die Buchstaben am besten in Übereinstimmung bringen?</dd></dl>
+<dl><dd>Beispiel: worte – norden</dd></dl>
+<p><a href="file_bild7.html" class="image"><img alt="Bild7.JPG" src="../images/bild7.jpg" width="303" height="123" /></a>
+</p><p>Fälle:
+</p>
+<ol><li> Matche a[i] mit b[j]. Falls a[i] == b[j], ist das gut. Andernfalls entstehen Kosten <img class="mwe-math-fallback-image-inline tex" alt="K_{a[i], b[j]}" src="../images/1e4051bcb4774ff3347516c5ded34666.png" /></li>
+<li> Wir überspringen a[i] oder b[j], =&gt; Kosten L</li></ol>
+<dl><dd>gesucht: Alignment mit minimalen Kosten</dd></dl>
+<p><a href="file_bild8.html" class="image"><img alt="Bild8.JPG" src="../images/bild8.jpg" width="368" height="360" /></a>
+</p><p>Lösung:
+</p>
+<dl><dd>Suche kürzesten Pfad von links oben nach rechts unten (z.B. mit dem <a href="graphen_und_graphenalgorithmen.html#Algorithmus_von_Dijkstra" title="Graphen und Graphenalgorithmen">Algorithmus von Dijkstra</a>)</dd>
+<dd>In unserem Beispiel von oben:</dd></dl>
+<p><a href="file_bild9.html" class="image"><img alt="Bild9.JPG" src="../images/bild9.jpg" width="263" height="315" /></a>
+</p>
+<h3><span class="mw-headline" id="Probleml.C3.B6sung_durch_einen_Entscheidungsbaum">Problemlösung durch einen Entscheidungsbaum</span></h3>
+<p>Greedy Algorithm und dynamische Programmierung: 
+Transformationen des Problems, sodass <b>nicht</b> der ganze Entscheidungsbaum durchlaufen werden muss.
+=&gt; effizient
+</p>
+<ul><li> bei vielen Problemen ist keine Möglichkeit bekannt, das vollständige Durchlaufen des Entscheidungsbaumes zu vermeiden, z.B. <a href="graphen_und_graphenalgorithmen.html#Problem_des_Handlungsreisenden" title="Graphen und Graphenalgorithmen"> Problem des Handlungsreisenden</a> (TSP), 3-SAT</li>
+<li> Frage: Gibt es prinzipiell keinen effizienten Algorithmus, oder sind wir nur zu blöd?</li>
+<li> Derzeitiger Stand: viele dieser Probleme sind fundamental äquivalent „NP complete problems“ – „NP vollständig“ (NP = "nicht-deterministisch polynomiell")</li></ul>
+<p><a href="np-vollst%c3%a4ndigkeit.html" title="NP-Vollständigkeit">Nächstes Thema</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825111000
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.065 seconds
+Real time usage: 0.283 seconds
+Preprocessor visited node count: 688/1000000
+Preprocessor generated node count: 1376/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:128-0!canonical!math=0 and timestamp 20260825111000 and revision id 4639
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="indexcd39.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Greedy-Algorithmen_und_Dynamische_Programmierung&amp;oldid=4639</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="greedy-algorithmen_und_dynamische_programmierung.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="index7abc.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index67a1.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="indexf060.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="index7bdf.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="greedy-algorithmen_und_dynamische_programmierung-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="greedy-algorithmen_und_dynamische_programmierung-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="indexa07c.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="indexcd39.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index854f.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 20 August 2009, at 11:53.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.065","walltime":"0.283","ppvisitednodes":{"value":688,"limit":1000000},"ppgeneratednodes":{"value":1376,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825111000","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":429});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Greedy-Algorithmen_und_Dynamische_Programmierung by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:50:11 GMT -->
+</html>

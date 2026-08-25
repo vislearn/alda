@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Korrektheit by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:40:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Korrektheit - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Korrektheit","wgTitle":"Korrektheit","wgCurRevisionId":5696,"wgRevisionId":5696,"wgArticleId":20,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Korrektheit","wgRelevantArticleId":20,"wgRequestId":"6c600dfc1171c0425ec8e617","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Korrektheit rootpage-Korrektheit skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Korrektheit</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Man unterscheidet zwischen Prüfung der Korrektheit (Verifikation) und Prüfung der Spezifikation (Validierung). Ein Algorithmus heißt korrekt, wenn er sich gemäß seiner Spezifikation verhält, auch wenn seine Spezifikation nicht immer die gewünschten Ergebnisse liefert. Die Spezifikation beschreibt die Vorbedingungen (was vor der Anwendung des Algorithmus gilt, so dass der Algorithmus überhaupt angewendet werden darf) und die Nachbedingungen (was nach der Anwendung des Algorithmus gilt, welchen Zustand des Systems der Algorithmus also erzeugt). Hier geht es ausschliesslich um die Prüfung der Korrektheit eines Algorithmus, also darum, ob die spezifizierten Nachbedingungen wirklich gelten.
+</p><p>Nebenbemerkungen
+</p>
+<ol><li> Approximationsalgorithmen liefern nie ein exaktes Ergebnis. Sie gelten als korrekt, wenn der in der Spezifikation angegebene Approximationsfehler nicht überschritten wird.</li>
+<li> Es gibt Algorithmen, die <i>nie</i> mit einer 100-prozentigen Wahrscheinlichkeit richtige Ergebnisse liefern können (z.B. <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Primality_test#Probabilistic_tests">nichtdeterministische Primzahltests</a>). In diesem Fall muss die in der Spezifikation angegebene Erfolgswahrscheinlichleit erreicht werden.</li>
+<li> <b>Korrektheit</b> wird in Algorithmenbüchern meist nur im Zusammenhang mit konkreten Algorithmen behandelt, aber nicht als übergreifendes Problem. Dies erscheint der Bedeutung von Korrektheit nicht angemessen.</li></ol>
+<p>Will man die Korrektheit eines Algorithmus/Programms feststellen, hat man 3 Vorgehensweisen zur Verfügung: Korrektheitsprüfungen durch die Programmiersprache, formaler Korrektheitsbeweis und Softwaretest.
+</p><p><br />
+</p>
+<div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Korrektheitspr.C3.BCfungen_durch_die_Programmiersprache"><span class="tocnumber">1</span> <span class="toctext">Korrektheitsprüfungen durch die Programmiersprache</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Syntaktische_Pr.C3.BCfung"><span class="tocnumber">1.1</span> <span class="toctext">Syntaktische Prüfung</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Typpr.C3.BCfung"><span class="tocnumber">1.2</span> <span class="toctext">Typprüfung</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Pr.C3.BCfen_der_Vorbedingungen_eines_Algorithmus"><span class="tocnumber">1.3</span> <span class="toctext">Prüfen der Vorbedingungen eines Algorithmus</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Formaler_Korrektheitsbeweis"><span class="tocnumber">2</span> <span class="toctext">Formaler Korrektheitsbeweis</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Korrektheitsbeweis_der_Algorithmenidee"><span class="tocnumber">2.1</span> <span class="toctext">Korrektheitsbeweis der Algorithmenidee</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Formales_Beweisen_der_Implementation"><span class="tocnumber">2.2</span> <span class="toctext">Formales Beweisen der Implementation</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Beispiel-Algorithmus"><span class="tocnumber">2.2.1</span> <span class="toctext">Beispiel-Algorithmus</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Aufbau_der_Hoare-Logik"><span class="tocnumber">2.2.2</span> <span class="toctext">Aufbau der Hoare-Logik</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Beweisen_des_Algorithmus"><span class="tocnumber">2.2.3</span> <span class="toctext">Beweisen des Algorithmus</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#.28Halb-.29Automatisches_Verfeinern"><span class="tocnumber">2.3</span> <span class="toctext">(Halb-)Automatisches Verfeinern</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Software-Tests"><span class="tocnumber">3</span> <span class="toctext">Software-Tests</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Beispiel_f.C3.BCr_das_Testen:_Freivalds_Algorithmus"><span class="tocnumber">3.1</span> <span class="toctext">Beispiel für das Testen: Freivalds Algorithmus</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Vergleich_formaler_Korrektheitsbeweis_und_Testen"><span class="tocnumber">3.2</span> <span class="toctext">Vergleich formaler Korrektheitsbeweis und Testen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Anwendung_des_Softwaretestverfahren"><span class="tocnumber">4</span> <span class="toctext">Anwendung des Softwaretestverfahren</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Beispiel_an_Python-Code"><span class="tocnumber">4.1</span> <span class="toctext">Beispiel an Python-Code</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Definition_guter_Tests"><span class="tocnumber">4.2</span> <span class="toctext">Definition guter Tests</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#H.C3.A4ufige_Fehler"><span class="tocnumber">4.2.1</span> <span class="toctext">Häufige Fehler</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Generieren_von_Referenzdaten"><span class="tocnumber">4.2.2</span> <span class="toctext">Generieren von Referenzdaten</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Arten_von_Tests"><span class="tocnumber">4.2.3</span> <span class="toctext">Arten von Tests</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Prinzipien_f.C3.BCr_die_Generierung_von_Testdaten"><span class="tocnumber">4.2.4</span> <span class="toctext">Prinzipien für die Generierung von Testdaten</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Korrektheitspr.C3.BCfungen_durch_die_Programmiersprache">Korrektheitsprüfungen durch die Programmiersprache</span></h2>
+<p>Alle Programmiersprachen beinhalten gewisse Hilfen, um Programmierfehler zu vermeiden, insbesondere die syntaktische Prüfung und die Typprüfung. Zwar kann man dadurch nur relativ einfache Fehler finden (siehe Beispiele unten), aber da diese Prüfungen ohne zusätzlichen Aufwand automatisch passieren, sind sie trotzdem sehr nützlich. Die hier kurz beschriebenen Konzepte werden in den Veranstaltungen zur theoretischen Informatik (Grammatiken) und zum Compilerbau ausführlich behandelt.
+</p>
+<h3><span class="mw-headline" id="Syntaktische_Pr.C3.BCfung">Syntaktische Prüfung</span></h3>
+<p>Es wird eine Grammatik definiert, deren Regeln die Implementation des Algorithmus befolgen muss. Für ein Programm heißt das beispielsweise, dass die Syntax der Programmiersprache eingehalten werden muss.
+</p><p>Vorteile des Verfahrens: die Richtigkeit der Syntax lässt sich leicht vom Compiler/Interpreter überprüfen (mehr dazu in der Theoretischen Informatik und Compilerbau). Somit ist es die einfachste Möglichkeit, viele inkorrekte Programme schnell zu erkennen und zurückzuweisen.
+</p>
+<pre> &gt;&gt;&gt; if a = 0:  # sollte heissen: if a == 0:
+   File "&lt;stdin&gt;", line 1
+     if a = 0:
+          ^
+ SyntaxError: invalid syntax
+</pre>
+<h3><span class="mw-headline" id="Typpr.C3.BCfung">Typprüfung</span></h3>
+<p>Ein Typ definiert Gruppierung der Daten und die Operationen, die für diese Datengruppierung erlaubt sind (konkreter Typ) bzw. die Bedeutung der Daten und die erlaubten Operationen (abstrakter Datentyp, vgl. Dreieck aus der <a href="einf%c3%bchrung.html#Definition_von_Datenstrukturen" title="Einführung">ersten Vorlesung</a>). Typen sind Zusicherungen an den Algorithmus und den Compiler/Interpreter, dass Daten und deren Operationen bestimmte semantische Bedingungen einhalten. Wenn man innerhalb des Algorithmus mit Typen arbeitet, darf man von der semantischen Korrektheit der erlaubten Operationen ausgehen. Umgekehrt können Operationen, die zu Typkonflikten führen würden, leicht als inkorrekt zurückgewiesen werden.
+</p><p>Vorteile des Verfahrens: Typprüfung ist teuerer als syntaktische Prüfung, aber billiger als andere Prüfungen der Korrektheit (mehr dazu im Kapitel <a href="generizit%c3%a4t.html" title="Generizität">Generizität</a>).
+</p>
+<pre> &gt;&gt;&gt; a=3
+ &gt;&gt;&gt; b=None
+ &gt;&gt;&gt; a+b
+ Traceback (most recent call last):
+   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+ TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'
+</pre>
+<p>In python ist (ebenso wie in vielen anderen Programmiersprachen) explizite Typprüfung möglich:
+</p>
+<pre> &gt;&gt;&gt; import types
+ &gt;&gt;&gt; a=3
+ &gt;&gt;&gt; b=None
+ &gt;&gt;&gt; if isinstance(b, types.IntType): # prüft, ob b ein Integer ist
+ ...     print a+b
+ ... else:
+ ...     raise TypeError, "b ist kein Integer" # falls b kein Integer ist, wird ein TypeError ausgelöst
+ ... 
+
+ Traceback (most recent call last):
+   File "&lt;stdin&gt;", line 4, in &lt;module&gt;
+ TypeError: b ist kein Integer
+</pre>
+<h3><span class="mw-headline" id="Pr.C3.BCfen_der_Vorbedingungen_eines_Algorithmus">Prüfen der Vorbedingungen eines Algorithmus</span></h3>
+<p>Manche Programmiersprachen (z.B. <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Eiffel_(programming_language)">Eiffel</a>) testen am Anfang jeder Funktion automatisch alle spezifizierten Vorbedingungen. Dies wird als <i><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Design_by_contract">Programming by Contract</a></i> bezeichnet. In Python hingegen muss man solche Prüfungen, mit Ausnahme der Typprüfungen (die man als Spezialfall der Vorbedingungen betrachten kann), selbst implementieren. Es steht aber mit den <i>Exceptions</i> ein leistungsfähiger Mechanismus zur Verfügung, um eventuelle Fehler in geordneter Weise zu signalisieren, siehe dazu <a rel="nofollow" class="external text" href="http://docs.python.org/tutorial/errors.html">Kapitel 8 (Errors and Exceptions) der Pythondokumentation</a>. Beispielsweise darf die Quadratwurzel nicht für negative Zahlen aufgerufen werden. Man schreibt deshalb:
+</p>
+<pre>def sqrt(x):
+    if x &lt; 0.0:
+        raise ValueError("sqrt() of negative number.")
+</pre>
+<p>Qualitativ hochwertige Software zeichnet sich unter anderem dadurch aus, dass das Programming by Contract konsequent umgesetzt ist, auch wenn die Programmiersprache dafür keine dedizierten Sprachkonstrukte bereitstellt.
+</p>
+<h2><span class="mw-headline" id="Formaler_Korrektheitsbeweis">Formaler Korrektheitsbeweis</span></h2>
+<p>Korrektheitsbeweise können auf drei Arten geführt werden:
+</p>
+<ul><li> In Algorithmenbüchern findet man typischerweise Beweise für die Korrektheit der grundlegenden Idee eines Algorithmus. Diese Beweise werden auf der Pseudocodeebene geführt, so dass bei der Implementation wieder Fehler unterlaufen können.</li>
+<li> Ein formaler Beweis der Korrektheit einer konkreten Implementation erfordert weit größeren Aufwand, sichert aber, dass der Code keine Fehler mehr enthalten kann.</li>
+<li> Werden im Algorithmus reelle Zahlen mit Hilfe von Gleitkommazahlen implementiert, ist der Algorithmus automatisch ein Approximationsalgorithmus, weil die Gleitkommazahlen nur eine Approximation der reellen Zahlen sind. In diesem Falle beweist man, dass der Approximationsfehler bestimmte Schranken nicht überschreitet. Dies ist eine wichtige Aufgabe der <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Numerische_Mathematik">Numerischen Mathematik</a> und wird hier nicht weiter vertieft.</li></ul>
+<h3><span class="mw-headline" id="Korrektheitsbeweis_der_Algorithmenidee">Korrektheitsbeweis der Algorithmenidee</span></h3>
+<p>Hier ist die entscheidende Technik die Identifikation von <i>Invarianten</i>, die (dank der Vorbedingungen) am Anfang und während der gesamten Ausführung des Algorithmus gelten. Kann man die Erhaltung der Invarianten nachweisen, folgen daraus die Nachbedingungen des Algorithmus und somit dessen Korrektheit. Die Identifikation geeigneter Invarianten ist häufig eine schwierige Aufgabe. Hat man einen Kandidaten gefunden, geht man zum Beweis ähnlich vor wie beim mathematischen Verfahren der vollständigen Induktion: Man beweist zunächst, dass die Invariante am Anfang gilt (<i>initialization</i>). Dann nimmt man an, dass die Invariante vor einem bestimmten Statement (z.B. vor der i-ten Iteration einer Schleife) gilt, und beweist, dass daraus die Gültigkeit am Ende des Statement (also nach der i-ten Iteration) folgt (<i>maintainance</i>). Kann man außerdem zeigen, dass der Algorithmus terminiert, folgt aus initialization und maintainance die Gültigkeit der Invariante am Ende des Algorithmus.
+</p><p>Wir wollen das Verfahren am Beispiel des <b>Selection Sort</b>-Algorithmus vorführen. Um den Beweis zu vereinfachen, definieren wir die folgenden Konventionen:
+</p>
+<ul><li> Ein leeres Array <tt>[]</tt> ist sortiert.</li>
+<li> Das Minimum eines leeren Arrays ist <img class="mwe-math-fallback-image-inline tex" alt="+\infty" src="../images/28cfe0a2608499ff5984a938e0d16d64.png" />, und das Maximum ist <img class="mwe-math-fallback-image-inline tex" alt="-\infty" src="../images/beab416080922c84a90ba092f7734fe5.png" />.</li></ul>
+<p>Der selection sort-Algorithmus hat zwei Invarianten:
+</p>
+<ul><li> <b>I1:</b> Vor der i-ten Iteration der äußeren Schleife ist das linke Teilarray <tt>a[:i]</tt> sortiert.</li></ul>
+<ul><li> <b>I2:</b> Vor der i-ten Iteration der äußeren Schleife ist das Maximum des linken Teilarrays <tt>max(a[:i])</tt> kleiner oder gleich dem Minimum des rechten Teilarrays <tt>min(a[i:])</tt>.</li></ul>
+<p>Der Beweis der Initialisierung (Fall <tt>i==0</tt>) ist sehr einfach, weil das linke Teilarray zunächst leer und somit sortiert ist (<b>I1</b>). Außerdem ist sein Maximum <img class="mwe-math-fallback-image-inline tex" alt="-\infty" src="../images/beab416080922c84a90ba092f7734fe5.png" /> and damit sicherlich kleiner als jedes Element im Array (<b>I2</b>).
+</p><p>Wir nehmen nun an, dass die Invarianten für ein gewisses <tt>i</tt> gelten und beweisen, dass sie dann auch für <tt>i+1</tt> gelten. Das heißt, wir nehmen an, dass <tt>a[:i]</tt> sortiert ist (<b>I1</b>), und dass <tt>max(a[:i]) &#8804; min(a[i:])</tt> (<b>I2</b>). Da das Element <tt>a[i]</tt> zum rechten Teilarray gehört, gilt insbesondere auch <tt>max(a[:i]) &#8804; a[i]</tt>, und daraus folgt sofort, dass das um ein Element vergrößerte linke Teilarray <tt>a[:i+1]</tt> ebenfalls sortiert ist (<b>I1</b>), unabhängig davon, welches Element sich an Position <tt>i</tt> befindet. Um aber auch die zweite Invariante zu erfüllen, müssen wir zusätzlich sicherstellen, dass <tt>a[i] &#8804; min(a[i:])</tt> gilt, dass sich also ein minimales Element des rechten Teilarrays an Position <tt>i</tt> befindet. Entfernt man nämlich das minimale Element aus einer Menge, wird das neue Minimum der verkleinerten Menge sicherlich nicht kleiner sein als das alte. Die innere Schleife sucht nun gerade das Minimum und verschiebt es an Position <tt>i</tt>. Nach dem Swap gilt somit: <tt> max(a[:i]) &#8804; a[i] = min(a[i:]) &#8804; min(a[i+1:])</tt> und damit auch <tt>max(a[:i+1]) = a[i] &#8804; min(a[i+1:])</tt> (<b>I2</b>). Außerdem ist klar, dass der Algorithmus terminiert, weil jede Schleife nur endlich viele Schritte ausführt (Iteration bis <tt>len(a)</tt>). Durch Induktion auf den Fall <tt>i == len(a)</tt> folgt aus Invariante <b>I1</b>, dass das Teilarray <tt>a[:len(a)]</tt> sortiert ist. Dies ist aber gerade das gesamte Array, was zu beweisen war.
+</p><p>Zehlreiche Beweise nach diesem Muster findet man z.B. bei Cormen et al.
+</p>
+<h3><span class="mw-headline" id="Formales_Beweisen_der_Implementation">Formales Beweisen der Implementation</span></h3>
+<p>Man versucht, die Hypothese H: <i>die Implementation ist korrekt</i> entweder mathematisch zu beweisen oder zu widerlegen. Dieses Beweisverfahren heißt automatisch, wenn es allein von einem Computer durchgeführt wird, und halbautomatisch, wenn der Mensch in den Entscheidungsprozess miteinbezogen ist. Allerdings sind solche Beweise sehr aufwändig und werden daher nur für sicherheitskritische Software verwendet, z.B. für
+</p>
+<ul><li> die automatische Steuerung der fahrerlosen U-Bahnlinie 14 in Paris (vgl. Lecomte et al.: <i><a rel="nofollow" class="external text" href="../images/fm_sc_rs_v2.pdf">Formal Methods in Safety-Critical Railway Systems</a></i> and Su et al.: <i><a rel="nofollow" class="external text" href="modes_version_55.html">From Requirements to Development: Methodology and Example</a></i> - die Autoren der Steuersoftware versichern, dass in 10 Jahren Betrieb der U-Bahn kein Softwarefehler aufgetreten ist),</li>
+<li> die Sicherheitsmerkmale von <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Smart_card">Chipkarten</a> und</li>
+<li> das Flugzeugbetriebssystem <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/INTEGRITY-178B">INTEGRITY 178B</a>, das z.B. im Airbus A380 und in der Boeing 787 eingesetzt wird.</li></ul>
+<p>Um den Beweis durchführen zu können, ist folgendes nötig:
+</p>
+<dl><dt>eine <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Formal_specification">formale Spezifikation</a> des Algorithmus</dt>
+<dd> eine formale Spezifikation wird in einer <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Specification_language">Spezifikationssprache</a> geschrieben (z.B. der <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/B-Method">B-Methode</a> oder der <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Z_notation">Z-Notation</a>). Sie ist 
+<ul><li> deklarativ (d.h. beschreibt, was das Programm tun soll, ist selbst aber nicht ausführbar)</li>
+<li> formal präzise (kann nur auf eine einzige Weise interpretiert werden)</li>
+<li> hierarchisch aufgebaut (eine Spezifikation für einen komplizierten Algorithmus greift auf Spezifikationen für einfache Bestandteile dieses Algorithmus zurück)</li>
+<li> so einfach, dass ihre Korrektheit für einen Menschen mit entsprechender Erfahrung unmittelbar einsichtig ist (denn eine Spezifikation kann nicht formal bewiesen werden - dafür wäre eine weitere Spezifikation nötig, die auch bewiesen werden müsste usw.)</li></ul></dd></dl>
+<dl><dt>ein axiomatisiertes Programmiermodell</dt>
+<dd> zum Beispiel
+<ul><li> eine axiomatisierbare Programmiersprache, wie z.B. WHILE-Programm (s. <a href="einf%c3%bchrung.html#Zur_Frage_der_elementaren_Schritte" title="Einführung">erste Vorlesung</a>), Pascal (siehe dazu Hoare's <a rel="nofollow" class="external text" href="http://dl.acm.org/doi/10.5555/63445">grundlegenden Artikel</a>) und rein funktionale Programmiersprachen</li>
+<li> ein axiomatisierbares Subset einer Programmiersprache (die meisten Programmiersprachen sind zu komplex, um als Ganzes axiomatisierbar zu sein)</li>
+<li> endliche Automaten</li></ul></dd></dl>
+<p><br />
+Der Korrektheitsbeweis kann beispielsweise mit dem Hoare-Kalkül (Hoare-Logik) durchgeführt werden (Hoare erfand u.a. den Quicksort-Algorithmus). Diese Methode wurde in 
+</p>
+<dl><dd>  C.A.R. Hoare: <i>"An Axiomatic Basis for Computer Programming"</i>, Communications of the ACM, 1969 <a rel="nofollow" class="external autonumber" href="../images/hoare69.pdf">[1]</a> </dd></dl>
+<p>erstmalig beschrieben. Im folgenden wird das Verfahren an einem Beispiel erläutert.
+</p>
+<h4><span class="mw-headline" id="Beispiel-Algorithmus">Beispiel-Algorithmus</span></h4>
+<p>Zuerst brauchen wir einen Algorithmus, den wir auf Korrektheit prüfen wollen. Wir nehmen als Beispiel die Division x/y durch sukzessives Subtrahieren.
+</p>
+<pre>Vorbedingungen:
+   int x,y
+  0 &lt; y &lt;= x
+Gesucht:
+   Quotient q, Rest r
+Algorithmus:
+   r = x
+   q = 0
+   while y &lt;= r:
+       r = r - y
+       q = q + 1
+Nachbedingungen:
+   x == r + y*q and r &lt; y
+</pre>
+<h4><span class="mw-headline" id="Aufbau_der_Hoare-Logik">Aufbau der Hoare-Logik</span></h4>
+<p>Grundlegende syntaktische Struktur:
+</p>
+<dl><dd> p {Q} r</dd></dl>
+<p>mit <b>p</b>:Vorbedingung, <b>Q</b>: Operation, <b>r</b>: Nachbedingung.
+Es bedeutet also schlicht: wenn man im Zustand <b>p</b> ist und eine Operation <b>Q</b> ausführt, kommt man in den Zustand <b>r</b>. Hat eine Operation keine Vorbedingung, schreibt man 
+</p>
+<dl><dd> true {Q} r</dd></dl>
+<p>Die Hoare-Logik besteht aus 5 Axiomen:
+</p>
+<dl><dt>D0 - Axiom der Zuweisung</dt>
+<dd> (Rule of Assignment)
+<dl><dd> R[t] {x=t} R[x]</dd></dl></dd></dl>
+<dl><dd> <b>Beispiel:</b> t==5 {x=t} x==5</dd></dl>
+<dl><dd>Vorbedingung und Nachbedingung sind gleich, mit Ausnahme der Variablen x und t, die in der Zuweisung verknüpft werden: Man erhält die Vorbedingung, wenn man in der Nachbedingung alle Vorkommen von x (bzw. allgemein: alle Vorkommen der linken Variable der Zuweisung) durch t (bzw. allgemein: durch die rechte Variable der Zuweisung) ersetzt.</dd></dl>
+<dl><dt>D1 - Konsequenzregeln</dt>
+<dd> (Rules of Consequence, besteht aus zwei Axiomen)</dd>
+<dd><b>D1(a):</b> wenn gilt
+<dl><dd> P {Q} R und R &#8658; S</dd></dl></dd>
+<dd>dann gilt auch
+<dl><dd> P {Q} S</dd></dl></dd>
+<dd><b>D1(b):</b> wenn gilt 
+<dl><dd> P {Q} R und S &#8658; P</dd></dl></dd>
+<dd>dann gilt auch
+<dl><dd> S {Q} R</dd></dl></dd>
+<dd><b>Beispiel:</b> Für jede ganze Zahl gilt (x&gt;5) &#8658; (x&gt;0). Gilt außerdem (x&gt;5) dann gilt erst recht (x&gt;0).</dd></dl>
+<dl><dt>D2 - Sequenzregel</dt>
+<dd> (Rule of Composition)</dd>
+<dd>wenn gilt
+<dl><dd> P {Q<sub>1</sub>} R<sub>1</sub> und R<sub>1</sub> {Q<sub>2</sub>} R </dd></dl></dd>
+<dd>dann gilt auch
+<dl><dd> P {Q<sub>1</sub>, Q<sub>2</sub>} R</dd></dl></dd>
+<dd>Das heißt: wenn man P hat und Q<sub>1</sub> darauf anwendet, kommt man zu R<sub>1</sub>. Wenn man R<sub>1</sub> hat und Q<sub>2</sub> darauf anwendet, kommt man zu R. Deshalb kann man das so verkürzen: wenn man P hat und nacheinander Q<sub>1</sub> und Q<sub>2</sub> darauf anwendet, kommt man zu R.</dd></dl>
+<dl><dt>D3 - Iterationsregel</dt>
+<dd> (Rule of Iteration)</dd>
+<dd>wenn gilt
+<dl><dd> (P &#8743; B) {S} P</dd></dl></dd>
+<dd>dann gilt auch
+<dl><dd> P { while B do S } (&#172;B &#8743; P)</dd></dl></dd>
+<dd>P wird dabei als <b>Schleifeninvariante</b> bezeichnet, weil es sowohl in der Vor- als auch in der Nachbedingung gilt. B ist die <b>Schleifenbedingung</b> - solange B erfüllt ist, wird die Schleife weiter ausgeführt.</dd></dl>
+<p>Da wir in dem Divisions-Algorithmus mit dem Typ <b>int</b> arbeiten, brauchen wir außerdem die für diesen Typ erlaubten Operationen, also die Axiome der ganzen Zahlen.
+</p>
+<dl><dd> <b>A1:</b> Kommutativität  x+y=y+x, x*y=y*x</dd>
+<dd> <b>A2:</b> Assoziativität  (x+y)+z=x+(y+z), (x*y)*z=x*(y*z)</dd>
+<dd> <b>A3:</b> Distributivität  x*(y+z)=x*y+x*z</dd>
+<dd> <b>A4:</b> Subtraktion (Inverses Element)  y&#8804;x &#8658; (x-y)+y=x</dd>
+<dd> <b>A5:</b> Neutrale Elemente  x+0=x, x*0=0, x*1=x</dd></dl>
+<h4><span class="mw-headline" id="Beweisen_des_Algorithmus">Beweisen des Algorithmus</span></h4>
+<p>Vorbedingung: 0 &lt; y,x
+</p><p>Schleifeninvariante P (gleichzeitig Nachbedingung): x == y*q + r
+</p>
+<pre> (1)  true                    &#8658;                x==x+y*0           y*0==0 und x==x+0 folgen aus A5
+ (2)  x==x+y*0              {r=x}               x==r+y*0          D0: ersetze x durch r
+ (3)  x==r+y*0              {q=0}               x==r+y*q          D0: ersetze 0 durch q
+ (4)  true                  {r=x}               x==r+y*0          D1(b): kombiniere (1) und (2)
+ (5)  true                  {r=x, q=0}          x==r+y*q          D2: kombiniere (4) und (3)
+ (6)  x==r+y*q &#8743; y&#8804;r          &#8658;                x==(r-y)+y*(1+q)  folgt aus A1...A5
+ (7)  x==(r-y)+y*(1+q)      {r=r-y}             x==r+y*(1+q)      D0: ersetze (r-y) durch r
+ (8)  x==r+y*(1+q)          {q=q+1}             x==r+y*q          D0: ersetze (q+1) durch q
+ (9)  x==(r-y)+y*(1+q)      {r=r-y, q=q+1}      x==r+y*q          D2: kombiniere (7) und (8)
+ (10) x==r+y*q &#8743; y&#8804;r        {r=r-y, q=q+1}      x==r+y*q          D1(b): kombiniere (6) und (9)
+ (11) x==r+y*q    {while y&#8804;r do (r=r-y, q=q+1)} x==r+y*q &#8743; &#172;(y&#8804;r) D3: transformiere (10)
+ (12) true        {r=x, q=0, 
+                   while y&#8804;r do (r=r-y, q=q+1)} x==r+y*q &#8743; &#172;(y&#8804;r) D2: kombiniere (5) und (11)
+</pre>
+<p>Im obigen Beweis ergibt sich sogar <i>true</i> als Vorbedingung (i.e. es gibt keine Vorbedingung). Dies liegt daran, dass Hoare in seinem Artikel durchweg von nicht-negativen Zahlen ausgeht. Diese Annahme wird beim Beweis von Zeile (6) benutzt.
+</p><p>In der Praxis führt man solche Beweise natürlich nicht von Hand, sondern benutzt geeignete Programme, sogenannte <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Automated_theorem_proving">automatische Beweiser</a>, die man allerding oft interaktiv steuern muss, weil der Beweis ohne diese Hilfe zu lange dauern würde.
+</p>
+<h3><span class="mw-headline" id=".28Halb-.29Automatisches_Verfeinern">(Halb-)Automatisches Verfeinern</span></h3>
+<p>Dieses Verfahren ist beliebter, als das (halb-)automatische Beweisen. Die formale Spezifikation wird nach bestimmten, semantik-erhaltenden Transformationsregeln in ein ausführbares Programm umgewandelt. Mehr dazu z.B. in der <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Program_refinement">Wikipedia (Program refinement)</a>. Der Vorteil dieser Methode besteht darin, dass man die Transformationsregeln so definieren kann, dass nur das axiomatisierte Subset der Zielsprache benutzt wird. Dadurch wird der Korrektheitsbeweis stark vereinfacht.
+</p>
+<h2><span class="mw-headline" id="Software-Tests">Software-Tests</span></h2>
+<p>Dijkstra <a rel="nofollow" class="external autonumber" href="http://de.wikipedia.org/wiki/Edsger_Wybe_Dijkstra">[2]</a> ließ einmal den Satz verlauten: "Tests können nie die Abwesenheit von Fehlern beweisen [Anwesenheit schon]"
+</p><p>Nach solch einer Aussage stellt sich die Frage, ob es sich überhaupt lohnt, mit dem Testverfahren die Korrektheit eines Algorithmus zu zeigen. Es erscheint einem doch plausibler sich auf die "formalen Methoden" zu berufen, mit dem Wissen, dass diese uns tatsächlich einen Beweis liefern können, ob nun H oder nicht H gilt. Zudem kommt noch erschwerend hinzu, dass es bei Tests bisher keine Theorie gibt, die sicherstellt, dass das Testprogramm einen vorhandenen Fehler zumindest mit hoher Wahrscheinlichkeit findet.
+</p><p>Ein <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Softwaretest">Software-Test</a> versucht, ein Gegenbeispiel zur Hypothese H "der Algorithmus ist korrekt" zu finden. Dabei gibt es 4 Möglichkeiten:
+</p>
+<pre>  Algorithmus	   Testantwort	
+     +	               +	        Algorithmus ist richtig, kein Gegenbeispiel gefunden
+     -	               -	        Alg. ist falsch, und der Test erkennt den Fehler
+     +	               -	        Bug im Test (Gegenbeispiel, obwohl Alg. richtig ist)
+     -	               +	        Test hat versagt, da er den Fehler im Alg. nicht erkannt hat
+</pre>
+<p><br />
+Wenn ein Gegenbeispiel zu H gefunden wird, kann man den Algorithmus (oder den Test) debuggen. Wird hingegen keines gefunden, nimmt man an, dass der Algorithmus korrekt ist. Man sieht, dass diese Annahme im Fall 4 nicht stimmt. Da Softwaretests jedoch in der Praxis sehr erfolgreich verwendet werden, ist dieser Fall offenbar nicht so häufig, dass man das Testen als Methode generell ablehnen müßte.
+</p>
+<h3><span class="mw-headline" id="Beispiel_f.C3.BCr_das_Testen:_Freivalds_Algorithmus">Beispiel für das Testen: Freivalds Algorithmus</span></h3>
+<p>Wir wollen die Wahrscheinlichkeit, dass ein Test einen vorhandenen Fehler übersieht, am Beispiel des <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Freivald's_algorithm">Algorithmus von Freivald</a> studieren. Es handelt sich dabei um einen randomisierten Algorithmus zum Testen der Matrixmultiplikation (siehe J. Hromkovič: <i>"Randomisierte Algorithmen"</i>, Teubner 2004). Ziel dieses Algorithmuses ist es, die Hypothese H: "C ist das Produkt der Matrizen A und B" durch ein Gegenbeispiel zu widerlegen, wobei der Test einen anderen Algorithmus verwendet, um Vergleichsdaten zu gewinnen.
+</p>
+<pre> gegeben:
+      Matrizen A, B, C  der Größe NxN 
+      Testhypothese H:  <tt>A*B == C</tt>  Matrixmultiplikation (d.h. C wurde vorher durch C = mmul(A, B) berechnet, 
+                                           wobei mmul() der zu testende Multiplikationsalgorithmus ist).
+
+ (1) Initialisierung      
+      wähle Zufallsvektor der Länge N aus Nullen und Einsen: <img class="mwe-math-fallback-image-inline tex" alt="\alpha \in \{0, 1\}^N " src="../images/13472cf5215e84f3748713b175edc7ce.png" />  
+ (2) Matrix-Vektor-Multiplikation (keine Matrix-Matrix-Multiplikation, denn die soll ja gerade verifiziert werden)
+
+      <img class="mwe-math-fallback-image-inline tex" alt="\left.\begin{array}{l}&#10;                \beta = B*\alpha \\&#10;                \gamma=A*\beta&#10;                \end{array}\right\}A*(B*\alpha) == (A*B)*\alpha&#10;       " src="../images/81cf118b0c3f2c80afe43f96b39df268.png" /> 
+
+      <img class="mwe-math-fallback-image-inline tex" alt="\delta=C*\alpha" src="../images/5f943b7df22d80b7a37adbc99ecd02ab.png" />
+
+ (3) Test der Korrektheit: falls <tt>A*B == C</tt>, liefert der folgende Test stets <tt>true</tt>:
+
+      return   γ==δ
+</pre>
+<p>Wir analysieren nun, mit welcher Wahrscheinlichkeit der Algorithmus den Fehler findet, wenn es denn einen gibt, d.h.
+</p>
+<ul><li>Wahrscheinlichkeit <b>p</b>, dass Freivalds Algorithmus den Fehler findet<br /></li></ul>
+<p>oder<br />
+</p>
+<ul><li>Wahrscheinlichkeit <b>q = 1 - p</b>, dass Freivalds Algorithmus den Fehler <b>nicht</b> findet.</li></ul>
+<p>Wir schätzen diese Wahrscheinlichkeit ab für den einfachen Fall N=2. Wir definieren:
+</p>
+<pre>  <img class="mwe-math-fallback-image-inline tex" alt="C=&#10;  \begin{pmatrix} &#10;    c_{11} &amp; c_{12}  \\ &#10;    c_{21} &amp; c_{22}  &#10;  \end{pmatrix},\qquad&#10;\alpha=\begin{pmatrix}&#10;    \alpha_1 \\&#10;    \alpha_2 &#10;     \end{pmatrix},\qquad&#10; \delta=\begin{pmatrix}&#10;    \delta_1 \\&#10;    \delta_2&#10; \end{pmatrix}&#10;  = \begin{pmatrix}&#10;    c_{11}\alpha_1 + c_{12}\alpha_2 \\&#10;    c_{21}\alpha_1 + c_{22}\alpha_2&#10;   \end{pmatrix}" src="../images/1a3ff7faa54546176bb18b0d863f36ec.png" />
+</pre>
+<p><b>Fallunterscheidung:</b>
+</p><p><b>Fall 1:</b>  C enthält genau 1 Fehler, z.B. <img class="mwe-math-fallback-image-inline tex" alt="c_{11}" src="../images/a141d4c0ec2bb8cd1415c1439ba96bb2.png" /> hat falschen Wert
+</p>
+<dl><dd>Der Fehler wird gefunden, wenn <img class="mwe-math-fallback-image-inline tex" alt="\delta_1 \ne \gamma_1 \Leftrightarrow\alpha_1\ne 0" src="../images/054700fb1d1158e7ba2f3dc5b5dd9e63.png" />. Da <img class="mwe-math-fallback-image-inline tex" alt="\alpha_1" src="../images/b3f5f33c109a4724e67a30dccb803ba9.png" /> eine Zufallszahl aus <img class="mwe-math-fallback-image-inline tex" alt="\{0,1\}" src="../images/b38d90f7e51a6ad43644de01f3e85423.png" /> ist, folgt daraus, dass <b>p</b> = <b>q</b> = <img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{2}" src="../images/3dcde285c447d48b6bc42bb636112d6c.png" /></dd></dl>
+<p><b>Fall 2:</b>  C enthält 2 Fehler
+</p>
+<dl><dd>(a)   in verschiedenen Zeilen und Spalten, z.B. <img class="mwe-math-fallback-image-inline tex" alt="c_{11}" src="../images/a141d4c0ec2bb8cd1415c1439ba96bb2.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="c_{22}" src="../images/8f09b4b4f87694fe0b1124fde6b217ea.png" />. Es gilt: Der Fehler in <img class="mwe-math-fallback-image-inline tex" alt="c_{11}" src="../images/a141d4c0ec2bb8cd1415c1439ba96bb2.png" /> wird gefunden, wenn <img class="mwe-math-fallback-image-inline tex" alt="\delta_1 \ne \gamma_1 \Leftrightarrow \alpha_1\ne 0" src="../images/054700fb1d1158e7ba2f3dc5b5dd9e63.png" />. Unabhängig davon wird der Fehler in <img class="mwe-math-fallback-image-inline tex" alt="c_{22}" src="../images/8f09b4b4f87694fe0b1124fde6b217ea.png" /> gefunden, wenn <img class="mwe-math-fallback-image-inline tex" alt="\delta_2 \ne \gamma_2 \Leftrightarrow \alpha_2\ne 0" src="../images/01c6a8a75c44ce7f117c625a9bb6558d.png" />. Da <img class="mwe-math-fallback-image-inline tex" alt="\alpha_1" src="../images/b3f5f33c109a4724e67a30dccb803ba9.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="\alpha_2" src="../images/3a2906b4f60cab6de9c7fe8de5eb7b97.png" /> statistisch unabhängig sind, ist die Wahrscheinlichkeit für jedes dieser Ereignisse <img class="mwe-math-fallback-image-inline tex" alt="q_1" src="../images/2563198fdfafae0dbdc71cbec9000b60.png" /> bzw. <img class="mwe-math-fallback-image-inline tex" alt="q_2" src="../images/898e2b16fee5e957710eec6c39399024.png" /> jeweils <img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{2}" src="../images/3dcde285c447d48b6bc42bb636112d6c.png" />, und die Gesamtwahrscheinlichkeit <b>q</b>, dass <i>keiner</i> der beiden Fehler gefunden wird, ist deren Produkt: <b>q</b> = <img class="mwe-math-fallback-image-inline tex" alt="q_1*q_2 = \frac{1}{2}* \frac{1}{2} = \frac{1}{4}" src="../images/fb39b2f90f9a623fa03222cc3a615aa8.png" />.        </dd></dl>
+<dl><dd>(b) in verschiedenen Zeilen, gleichen Spalten, z.B. <img class="mwe-math-fallback-image-inline tex" alt="c_{11}" src="../images/a141d4c0ec2bb8cd1415c1439ba96bb2.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="c_{21}" src="../images/63898f588dd8221030d04019b03d192f.png" />. Es gilt: Der Fehler in <img class="mwe-math-fallback-image-inline tex" alt="c_{11}" src="../images/a141d4c0ec2bb8cd1415c1439ba96bb2.png" /> wird gefunden, wenn <img class="mwe-math-fallback-image-inline tex" alt="\delta_1 \ne \gamma_1 \Leftrightarrow \alpha_1\ne 0" src="../images/054700fb1d1158e7ba2f3dc5b5dd9e63.png" />. Das gleiche gilt für den Fehler in <img class="mwe-math-fallback-image-inline tex" alt="c_{21}" src="../images/63898f588dd8221030d04019b03d192f.png" />. Die Wahrscheinlichkeit <b>q</b>, dass <i>keiner</i> der beiden Fehler gefunden wird, ist demzufolge: <b>q</b> = <img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{2}" src="../images/3dcde285c447d48b6bc42bb636112d6c.png" />.</dd></dl>
+<dl><dd>(c) in der gleichen Zeile, z.B. <img class="mwe-math-fallback-image-inline tex" alt="c_{11}" src="../images/a141d4c0ec2bb8cd1415c1439ba96bb2.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="c_{12}" src="../images/8345cef5d51379d99a891f98678fdb97.png" />. Es gilt: Der Fehler wird gefunden, wenn <img class="mwe-math-fallback-image-inline tex" alt="\delta_1 \ne \gamma_1 \Leftrightarrow \alpha_1*c_{11}+\alpha_2*c_{12}\ne 0" src="../images/87cf490e4373225fb34b89b7b74dcec8.png" />. Hier treten nun zwei ungünstige Fälle auf: 
+<dl><dd>1) Der Fehler wird u.a. dann nicht gefunden, wenn <img class="mwe-math-fallback-image-inline tex" alt="\alpha_1 = \alpha_2=0" src="../images/ab6920522bcb02afdc65e2e4da71065a.png" />. Die Wahrscheinlichkeit dafür ist  wieder <b>q</b>=<img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{4}" src="../images/5e1f9f7bb7a4598e9053848c42af89d2.png" /></dd>
+<dd>2) <img class="mwe-math-fallback-image-inline tex" alt="\alpha_1=\alpha_2=1" src="../images/e20fa5108380115bcf83740d57bf3bab.png" /> (dies geschieht ebenfalls mit Wahrscheinlichkeit <img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{4}" src="../images/5e1f9f7bb7a4598e9053848c42af89d2.png" />), aber die Werte <img class="mwe-math-fallback-image-inline tex" alt="c_{11}" src="../images/a141d4c0ec2bb8cd1415c1439ba96bb2.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="c_{12}" src="../images/8345cef5d51379d99a891f98678fdb97.png" /> sind "zufälligerweise" so falsch, dass sich die Fehler gegenseitig aufheben. Die Wahrscheinlichkeit, dass beide Bedingungen gelten, ist auf jeden Fall <b>q</b> =  <img class="mwe-math-fallback-image-inline tex" alt="\epsilon&lt;\frac{1}{4}" src="../images/0d1dd995fc3070eba61d6c87c67010b7.png" />.</dd></dl></dd></dl>
+<p>Analog behandelt man die Fälle, dass C drei oder vier Fehler enthält. Fasst man die Fälle zusammen, ergibt sich, dass die Wahrscheinlichkeit, einen vorhandenen Fehler <b>nicht</b> zu entdecken, sicher kleiner als <img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{2}" src="../images/3dcde285c447d48b6bc42bb636112d6c.png" /> ist. Dies gilt auch allgemein:
+</p>
+<dl><dt>Satz</dt>
+<dd></dd></dl>
+<ul><li>Die Wahrscheinlichkeit, dass Freivalds Algorithmus einen vorhandenen Fehler <b>nicht</b> findet, ist <b>q</b> &lt; <img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{2}" src="../images/3dcde285c447d48b6bc42bb636112d6c.png" />. Wir haben diesen Satz oben für N=2 bewiesen, ein vollständiger Beweis findet sich in der <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Freivald's_algorithm#Error_Analysis">Wikipedia</a>.</li></ul>
+<dl><dt>Folgerung</dt>
+<dd> </dd></dl>
+<ul><li>Lässt man Freivalds Algorithmus mit verschiedenen <img class="mwe-math-fallback-image-inline tex" alt="\alpha" src="../images/bccfc7022dfb945174d9bcebad2297bb.png" /> k-mal laufen, gilt <img class="mwe-math-fallback-image-inline tex" alt="q_k &lt; 2^{-k}" src="../images/f74398d45736fa88556c34b0f0119397.png" /> für die Wahrscheinlichkeit, dass <b>keiner</b> der k Durchläufe einen vorhandenen Fehler findet. Diese Wahrscheinlichkeit konvergiert sehr schnell gegen 0. Das heißt, der Algorithmus findet mit beliebig hoher Wahrscheinlichkeit ein Gegenbeispiel zu H (falls es eins gibt), wenn man ihn nur genügend oft mit jeweils anderen Zufallszahlen wiederholt. Daraus folgt, dass Testen ein effektives Fehlersuchverfahren sein kann -- die oben erwähnte Einschränkung von Dijktra trifft zwar zu, aber Tests, die mit so hoher Wahrscheinlichkeit funktionieren, sind für die Praxis meistens vollkommen ausreichend.</li></ul>
+<h3><span class="mw-headline" id="Vergleich_formaler_Korrektheitsbeweis_und_Testen">Vergleich formaler Korrektheitsbeweis und Testen</span></h3>
+<p>Nachdem nun die formalen Methoden sowie der Software-Test vorgestellt worden sind, ist nun die Frage aufzugreifen, welcher der beiden Vorgänge der bessere ist. Allgemein gilt:
+</p>
+<dl><dt>randomisierte Algorithmen</dt></dl>
+<ul><li>sind schnell und einfach:</li></ul>
+<ol><li>da die Operationen einfach sind und wenig Zeit kosten</li>
+<li>des öfteren eine Auswahl vorgenommen wird ohne die Gesamtmenge näher zu betrachten</li>
+<li>die Auswahl selbst aufgrund einfacher Kriterien (bspw. zufällige Auswahl) erfolgt</li></ol>
+<ul><li>können Lösungen approximieren und liefern gute approximative Lösungen</li></ul>
+<dl><dt>formaler Korrektheitsbeweis mit deterministischen Algorithmen (siehe auch <a rel="nofollow" class="external autonumber" href="http://de.wikipedia.org/wiki/Determinismus_(Algorithmus)">[3]</a>)</dt></dl>
+<ul><li>bei jedem Aufruf des Beweisers werden immer die selben Schritte durchlaufen</li>
+<li>keine Zufallswerte</li>
+<li>komplexer Aufbau</li>
+<li>oft sehr lange Laufzeit, z.B. mehrere Tage oder gar Monate</li></ul>
+<p>Für die formalen Methoden spricht, dass man mit ihnen im Prinzip beweisen kann, dass H nun entweder tatsächlich falsch oder richtig ist. Die formalen Beweise bei realen Problemen sind allerdings so kompliziert, dass sie ebenfalls mit Computerhilfe erbracht werden müssen. Dadurch liegt auch hier keine 100%-ige Korrektheitsgarantie vor: Auch formale Methoden können zum falschen Ergebnis kommen, z.B. durch Hardwarefehler, Compilerbugs, oder unvorhergesehenes Umkippen von Bits (z.B. durch kosmische Strahlung -- diese Gefahr ist im Weltall sehr ernst zu nehmen). Die Möglichkeit von Hardwarefehlern wirkt sich auf die formalen Methoden wesentlich stärker aus, weil diese typischerweise wesentlich längere Laufzeiten haben als entsprechende Testalgorithmen. Es kann deshalb durchaus vorkommen, dass Tests eine höhere Erfolgswahrscheinlichkeit haben als ein formaler Beweis, wie die folgende Beispielrechnung zeigt. Wir nehmen an, dass die Hardware eine "Halbwertszeit" von 50 Millionen Sekunden hat, d.h. ein Hardwarefehler tritt im Durchschnitt etwa alle 20 Monate auf. Dann ist die Wahrscheinlichkeit, dass ein deterministischer Algorithmus <b>nicht</b> zum Ergebnis (oder zum falschen Ergebnis) kommt:
+</p>
+<ul><li> <img class="mwe-math-fallback-image-inline tex" alt="q_{\mathrm{Beweis}} \approx 0.001" src="../images/25377bef51886de90da6c0714494ec7b.png" />, falls der Beweisalgorithmus 1 Tag benötigt,</li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="q_{\mathrm{Beweis}} \approx 0.01" src="../images/42c8ed4e9a9b1bae3f072111fb633c59.png" />, falls der Beweisalgorithmus 1 Woche benötigt,</li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="q_{\mathrm{Beweis}} \approx 0.035" src="../images/9eb5b2a8b053440010043564073de63e.png" />, falls der Beweisalgorithmus 1 Monat benötigt.</li></ul>
+<p>Zum Vergleich nehmen wir an, dass der entsprechende Softwaretest einmal pro Sekunde ausgeführt werden kann, und dass jeder Durchlauf den Fehler mit einer Wahrscheinlichkeit von <img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{2}" src="../images/3dcde285c447d48b6bc42bb636112d6c.png" /> <b>nicht</b> findet. Unter gleichzeitiger Berücksichtigung der Wahrscheinlichkeit von Hardwarefehlern gilt dann
+</p>
+<ul><li> <img class="mwe-math-fallback-image-inline tex" alt="q_{\mathrm{Test}} \approx 0.5" src="../images/2a07e1d2156ed3b25a33ac788a41b4fd.png" />, falls der Test 1-mal wiederholt wird,</li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="q_{\mathrm{Test}} \approx 0.001" src="../images/9cbab91a610ffe31cbbbbbc0124c7ffa.png" />, falls der Test 10-mal wiederholt wird,</li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="q_{\mathrm{Test}} \approx 10^{-6}" src="../images/ac63739284edefe8fd868c62a6770d8a.png" />, falls der Test 100-mal wiederholt wird.</li></ul>
+<p>Mit anderen Worten: hier ist das Testen vorzuziehen, weil es unter realistischen Bedingungen eine höhere Erfolgswahrscheinlichkeit hat als der formale Beweis. Leider gibt es bisher keine Theorie, mit deren Hilfe man für ein gegebenes Problem systematisch Tests konstruieren kann, deren Misserfolgswahrscheinlichkeit bei wiederholter Anwendung garantiert so schnell gegen Null konvergiert wie die des Freivalds Algorithmus. Dies ist ein offenes Problem der Informatik.
+</p>
+<h2><span class="mw-headline" id="Anwendung_des_Softwaretestverfahren">Anwendung des Softwaretestverfahren</span></h2>
+<h3><span class="mw-headline" id="Beispiel_an_Python-Code">Beispiel an Python-Code</span></h3>
+<p>Man betrachte die Aufgabe, aus einer Zahl x die Wurzel zu ziehen. Dies kann man erreichen, indem man mit Hilfe des Newtonschen Iterationsverfahrens eine Nullstelle des Polynoms 
+</p>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(y) = x - y^2 = 0" src="../images/e0fcb7c8d888777f7338c05154c87cd1.png" /> </dd></dl>
+<p>sucht. Ist eine Näherungslösung <img class="mwe-math-fallback-image-inline tex" alt="y^{(t)}" src="../images/f4bb5ad789b38a58c6ab3f98558bdf17.png" /> bekannt, erhält man eine bessere Näherung durch
+</p>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="y^{(t+1)} = y^{(t)} - \frac{f(y^{(t)})}{f&#39;(y^{(t)})}" src="../images/019f90a06bca7c1696379a354e43506e.png" />.</dd></dl>
+<p>Mit <img class="mwe-math-fallback-image-inline tex" alt="f\,&#39;(y) = -2y" src="../images/afac356ffe322685c5fb5751b40fd922.png" /> wird das zu
+</p>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="y^{(t+1)} = y^{(t)} + \frac{x-(y^{(t)})^2}{2y^{(t)}}=\frac{y^{(t)}+x/y^{(t)}}{2}" src="../images/2b484d4a46b7010d8b9f1b32cb3f2620.png" />. </dd></dl>
+<p>Im Spezialfall des Wurzelziehens war diese Newton-Iteration übrigens bereits im Altertum als <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Babylonian_method#Babylonian_method">Babylonische Methode</a> bekannt. Man kann dieselbe durch das folgende (allerdings noch nicht korrekte) Pythonprogramm realisieren:
+</p>
+<pre>          1   def sqrt(x):
+          2       if (x&lt;0):
+          3           raise ValueError("sqrt of negative number")
+          4       y = x / 2
+          5       while y*y&#160;!= x:
+          6           y =(y + x/y) / 2
+          7       return y:
+</pre>
+<p>Für den oben aufgeführten Pythoncode können Tests mit Hilfe des Python-Moduls "<a rel="nofollow" class="external text" href="http://docs.python.org/library/unittest.html">unittest</a>" geschrieben werden (siehe auch Übungsaufgaben). Wir erklären hier die wichtigsten Befehle aus diesem Modul. Wir implementieren eine Testfunktionen (diese muss, wie im Python-Handbuch beschrieben, Methode einer Testklasse sein).
+</p>
+<pre>  class SqrtTest(unittest.TestCase):
+    def testsqrt(self): 
+        ...
+</pre>
+<p>Zunächst muss man prüfen, ob die Vorbedingung korrekt getestet wird, d.h. ob bei einer negativen Zahl x eine Exception ausgelöst wird; dafür benötigt man 
+</p>
+<pre>        self.assertRaises(ValueError, sqrt, -1) 
+</pre>
+<p>Sollte keine Exception vom Type <tt>ValueError</tt> ausgelöst werden, dann würde der Test hier einen Fehler signalisieren. Dieser Test funktioniert aber.
+</p><p>Weiter testen wir einige Beispiele, deren Wurzel wir kennen:
+</p>
+<pre>        self.assertEqual(sqrt(9),3) 
+</pre>
+<p>Wäre hier das Ergebnis ungleich 3, würde ebenfalls ein Fehler signalisiert, aber es funktioniert in unserem Falle. Der Test
+</p>
+<pre>        self.assertEqual(sqrt(1),1)
+</pre>
+<p>schlägt jedoch mit <tt>ZeroDivisionError</tt> fehl! Wir sehen, dass in Zeile 4 eine Ganzzahldivision durchgeführt wird, deren Ergebnis stets abgerundet wird, was hier zu <tt>y = 0</tt> und damit zum Fehler in Zeile 6 führt. Wieso hat dann aber der erste Test <tt>sqrt(9) == 3</tt> funktioniert? Hier gilt <tt>x / 2 == 4</tt> und <tt>x / y == 2</tt> (jeweils nach Abrunden), und der Mittelwert der beiden Schätzungen ist gerade <tt>y == 3</tt>, also zufällig das richtige Ergebnis. Allgemein sehen wir jedoch, dass es nicht korrekt ist, mit ganzen Zahlen zu rechnen. Wir müssen also den Input zunächst in einen Gleitkommawert umwandeln:
+</p>
+<pre>          1   def sqrt(x):
+          1a      x = float(x)
+          2       if (x&lt;0):
+          3           raise ValueError("sqrt of negative number")
+          4       y = x / 2
+          5       while y*y&#160;!= x:
+          6           y =(y + x/y) / 2
+          7       return y:
+</pre>
+<p>Jetzt funktionieren die vorhandenen Tests, aber bei anderen Zahlen (z.B. <tt>x = 1.21</tt>) läuft das Programm in eine Endlosschleife. Dies liegt daran, dass durch die beschränkte Genauigkeit der Gleitkomma-Darstellung selten exakte Gleichheit in der <tt>while</tt>-Bedingung erreicht wird. Man darf nicht auf Gleichheit prüfen, sondern muss den relativen Fehler beschränken:
+</p>
+<pre>          1   def sqrt(x):
+          1a      x = float(x)
+          2       if (x&lt;0):
+          3           raise ValueError("sqrt of negative number")
+          4       y = x / 2
+          5       while abs(1.0 - x / y**2) &gt; 1e-15:  # check for relative difference
+          6           y =(y + x/y) / 2
+          7       return y:
+</pre>
+<p>Jetzt terminiert das Programm, aber der Test
+</p>
+<pre>       self.assertEqual(sqrt(1.21)**2, 1.21)  # schlägt fehl
+</pre>
+<p>schlägt wegen der beschränkten Genauigkeit der Gleitkommadarstellung fehl. Man umgeht dieses Problem, indem man im Test selbst nur näherungsweise Gleichheit fordert, z.B. auf 15 Dezimalstellen genau (bei 16 Dezimalen würde es nicht mehr funktionieren):
+</p>
+<pre>       self.assertAlmostEqual(sqrt(1.21)**2, 1.21, 15)
+</pre>
+<p>Wenden wir jetzt das <i>Prinzip der Condition Coverage</i> an (siehe unten), sehen wir, dass die <tt>while</tt>-Bedingung bei allen bisherigen Tests zunächst mindestens einmal <tt>true</tt> gewesen ist. Ein weiterer sinnvoller Tests ist deshalb einer, der diese Bedingung sofort <tt>false</tt> macht. Dies trifft z.B. bei <tt>x == 4</tt> zu, weil <tt>y = x / 2</tt> hier gerade die korrekte Wurzel liefert. Wir fügen deshalb den Test
+</p>
+<pre>        self.assertEqual(sqrt(4), 2) 
+</pre>
+<p>hinzu, der erfolgreich verläuft. Das <i>Prinzip der Domänen-Zerlegung</i> (siehe unten) führt uns weiter dazu, die Wurzel aus Null als sinnvollen Test zu betrachten, weil die Null am Rand des erlaubten Wertebereichs liegt. Der Test
+</p>
+<pre>       self.assertEqual(sqrt(0), 0)  # schlägt fehl
+</pre>
+<p>schlägt in der Tat mit einem <tt>ZeroDivisionError</tt> fehl: In der Abfrage der <tt>while</tt>-Bedingung wird jetzt durch <tt>y == 0</tt> geteilt. Wir können diesen Fehler beheben, indem wir die Division aus der Bedingung eliminieren:
+</p>
+<pre>          1   def sqrt(x):
+          1a      x = float(x)
+          2       if (x&lt;0):
+          3           raise ValueError("sqrt of negative number")
+          4       y = x / 2
+          5       while abs(y**2 - x) &gt; 1e-15*x:  # check for relative difference without division
+          6           y =(y + x/y) / 2
+          7       return y:
+</pre>
+<p>Damit ist auch dieses Problem behoben. Wir sehen also, wie das systematische Testen uns dabei hilft, Fehler im Programm zu finden und zu eliminieren. Eine ausführbare Version dieses Beispiels finden Sie im File <a rel="nofollow" class="external text" href="http://hci.iwr.uni-heidelberg.de/Staff/ukoethe/lehre/Algorithmen2012/SquareRootDebugging.py">SquareRootDebugging.py</a>.
+</p>
+<h3><span class="mw-headline" id="Definition_guter_Tests">Definition guter Tests</span></h3>
+<p>Wir haben gezeigt, dass Testen eine effektive Methode ist, um Fehler in Algorithmen zu finden. Allerdings gilt das nur, wenn Tests und Testdaten geschickt gewählt werden. Wir zeigen bewährte Methoden dafür. 
+</p>
+<h4><span class="mw-headline" id="H.C3.A4ufige_Fehler">Häufige Fehler</span></h4>
+<p>Einige Fehlerklassen treten sehr häufig auf und sollten deshalb beim Testen besondere Aufmerksamkeit genießen:
+</p>
+<dl><dt> <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Off-by-one_error">Off-by-One</a>&#160;</dt>
+<dd> Dieser Fehler bezeichnet den Fall, dass eine Berechnung oder Bedingung um Eins neben dem korrekten Wert liegt. Dies passiert besonders bei Schleifenindizes. Man schreibt beispielsweise <tt>if i &lt; j:</tt> wenn <tt>if i &lt;= j:</tt> richtig gewesen wäre, oder <tt>a[i] = a[i+1]</tt> wenn <tt>a[i-1] = a[i]</tt> gemeint war. Die beste Methode um solche Fehler zu finden ist das manuelle Nachvollziehen des Algorithmus auf Papier für kleine Eingaben. Wenn die Schleife, die den Fehler enthält, beispielsweise nur bis zum Index 3 geht, erkennt man den off-by-one-Error meistens sofort, weil offensichtlich auf das falsche Element zugegriffen oder die Schleife zu früh abgebrochen wird.</dd>
+<dt> Integer-Überlauf&#160;</dt>
+<dd> In vielen Sprachen (z.B. C und C++) sind die Integer-Datentypen so definiert, dass die Berechnung auf die kleinstmöglichen Zahl zurückspringt, wenn man zur größtmöglichen Zahl eins addiert (zyklisches Verhalten). Im Falle eines 8-bit Intergertyps gilt z.B.</dd></dl>
+<pre>uint8 i = 255; // größtmögliche 8-bit Zahl
+i += 1;
+assert(i == 0); // zyklisches Verhalten
+</pre>
+<dl><dd>und entsprechend:</dd></dl>
+<pre>uint8 i = 0;
+i -= 1;
+assert(i == 255);
+</pre>
+<dl><dd>Solche Fehler äußern sich typischerweise, wenn man versucht, viele kleine Zahlen zu addieren. Dieses Problem kann allerdings in Python nicht auftreten, weil Python automatisch zum Type <tt>long</tt> (für beliebig große Zahlen) wechselt, wenn die Werte zu groß werden.</dd>
+<dt> Float-Überlauf&#160;</dt>
+<dd> Ein ähnlicher Fehler kann auch bei Gleitkommazahlen auftreten, wenn man zur größten exakt darstellbaren ganzen Zahl eins addiert. Die Grenze hängt hier von der Länge der Mantisse ab. Für 32-bit Gleitkommazahlen (23 bit Mantisse) gilt beispielsweise:</dd></dl>
+<pre>float32 f = pow(2.0, 24); // dies ist die größte ganze Zahl, die float32 exakt darstellen kann
+f += 1.0;
+assert(f == pow(2.0, 24));
+</pre>
+<dl><dd>Im Unterschied zum Integerverhalten hat die Addition hier gar keinen Effekt. Bei 64-bit Gleitkommazahlen tritt der Fehler entsprechend bei <tt>pow(2.0, 53)</tt> auf. </dd>
+<dt> <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Loss_of_significance">Loss-of-Precision</a>&#160;</dt>
+<dd> Dieser Fehler besagt, dass Gleitkommazahlen unter bestimmten Bedingungen ihre Genauigkeit verlieren und dann ungenaue oder sogar unsinnige Ergenisse herauskommen. Dies passiert beispielsweise, wenn man fast gleich große Zahlen voneinander subtrahiert. Dann sind die höherwertigen Bits der Eingaben gleich und löschen sich bei der Subtraktion aus, so dass das Ergebnis nur noch sehr wenige gültige Bits hat und somit sehr ungenau ist. Bei 6-stelliger Dezimaldarstellung wäre z.B. <tt>100.003 - 100.002 = 0.001</tt>, und das Ergebnis hat nur noch eine gültige Dezimalstelle. Dies ist ungünstig, weil die Eingaben ja nur gerundete Darstellungen der wahren Werte sind. Mit 12-stelliger Arithmetik hätte man vielleicht die Zahlen <tt>100.002634611 - 100.002456354 = 0.000178257</tt> erhalten, und das ursprüngliche Resultat <tt>0.001</tt> ist mehr als 5-mal zu groß. In der Praxis beobachtet man dieses Problem z.B. beim Lösen von quadratischen Gleichungen. <br /></dd>
+<dd>Ein verwandtes Problem tritt auf, wenn das exakte Ergebniss gleich Null sein sollte. Durch die begrenzte Genauigkeit der Gleitkommaoperationen kommen dann häufig von Null verschiedene kleine Zahlen heraus. Beispielsweise erhält man unter Python <tt>sin(pi) = 1.2246467991473532e-16</tt>, obwohl das Ergebnis Null sein sollte. Daraus folgt, dass man Gleitkommazahlen nicht zuverlässig auf Gleichheit testen kann, weil der Test <tt>f1 == f2</tt> equivalent zum Test <tt>(f1 - f2) == 0.0</tt> ist und meistens fehlschlägt, auch wenn die Zahlen theoretisch gleich sein müssten. <br /></dd>
+<dd>Man vermeidet derartige Probleme durch geschicktes algebraisches Umformen der Formeln und durch das Einbauen geeigneter Fehlertoleranzen (z.B. testet man statt auf Gleichheit auf den Ausdruck <tt>abs(f1 -f2) &lt;= 3e-16</tt>, siehe das Beispiel zum <tt>sqrt()</tt>-Algorithmus oben).</dd>
+<dt> Randwertfehler&#160;</dt>
+<dd> Wenn ein Algorithmus verschiedene Eingabedomänen hat, für die er sich prinzipiell anders verhält (der Algorithmus für die Quadratwurzel berechnet z.B. das Ergebnis für nicht-negative Eingaben, aber signalisiert einen Fehler für negative Eingaben), dann treten Bugs besonders gern an der Domänengrenze auf. Bei der Wurzel wäre das der Randwert 0, das heisst <tt>sqrt(0)</tt> verhält sich anders als erwartet (z.B. könnte es einen <tt>ValueError</tt> auslösen, weil der Test <tt>if x &lt; 0.0:</tt> fälschlicherweise als <tt>if x &lt;= 0.0:</tt> geschrieben wurde, oder es passiert eine Division durch Null, weil der Spezialfall nicht richtig abgefangen wurde - siehe das tt&gt;sqrt()&lt;/tt&gt;-Beispiel oben). Gute Testprogramme enthalten immer auch Tests für die Randwerte.</dd></dl>
+<h4><span class="mw-headline" id="Generieren_von_Referenzdaten">Generieren von Referenzdaten</span></h4>
+<p>Wie immer man die Tests definiert hat, muss man am Ende die Ausgabe des Algorithmus mit dem korrekten Ergebnis vergleichen. Man bezeichnet ein bekanntes korrektes Ergebnis als <i>Referenz-Ergebnis</i>. Dieses muss man aber erst einmal kennen, was sich mitunter als schwierig erweist. Folgende Verfahren haben sich als zweckmäßig erwiesen:
+</p>
+<ul><li> Bei bestimmten Eingaben ist das Ergebnis für den Menschen einfach zu bestimmen, für den Algorithmus ist diese Eingabe aber ebenso schwierig wie jede andere. Dies gilt zum Beispiel für die Quadratzahlen im obigen Beispiel: der Algorithmus kennt keine Quadratzahlen und behandelt sie wie jede andere reelle Zahl. Deshalb eignen sich die Quadratzahlen zum Testen. Auch beim Sortieren kleiner Listen kann die korrekte Sortierung leicht bestimmt und als Referenz-Ergebnis abgespeichert werden. Der Test vergleicht dann einfach die Ausgabe des Sortieralgorithmus mit dem Referenz-Ergebnis.</li>
+<li> Oft kann man das korrekte Ergenis mit einem alternativen Verfahren berechnen. Dies gilt insbesondere, wenn man einen effizienten, aber komplizierten Algorithmus testen will. Dann berechnet man die Referenz-Ergebnisse mit einem langsamen, aber einfachen Verfahren. Dies ist möglich, weil man die Referenz-Ergebnisse ja abspeichern kann und der langsame Algorithmus daher nur wenige Male benutzt werden muss. Beispielsweise kann man einen komplizierten Sortieralgorithmus (Quicksort) mit Hilfe von selection sort testen.</li>
+<li> In vielen Fällen steht ein alternatives Programm zur Verfügung, z.B. eine ältere Version des zu testenden Programms, oder ein kommerzielles Programm (bzw. eine Demoversion), das dasselbe Problem löst, aber im aktuellen Kontext nicht verwendet werden kann (weil es z.B. zu teuer ist, oder nur auf einem Mac läuft). Diese Methode bietet sich auch an, wenn man einen Algorithmus aus einer Programmiersprache in eine andere portieren muss. </li>
+<li> Manchmal kann das korrekte Ergebnis nicht direkt angegeben werden, aber man kennt bestimmte Eigenschaften. Beim Sortieren kann man z.B. testen, dass kein Element des sortierten Arrays größer ist als das darauffolgende. Man testet also die Nachbedingungen. Eine abgeschwächte Versionen dieser Methode wird für randomisierte Algorithmen verwendet: Ist die Wahrscheinlichkeitsverteilung der Testeingaben bekannt, kann man die Wahrscheinlichkeitsverteilung der Ergebnisse, oder zumindest wichtige Eigenschaften wie z.B. den Mittelwert, mathematisch vorhersagen. Der Test ermittelt dann, ob die Ausgaben über viele Durchläufe des Algorithmus diese statistischen Eigenschaften aufweisen.</li></ul>
+<h4><span class="mw-headline" id="Arten_von_Tests">Arten von Tests</span></h4>
+<p>Man unterscheidet 3 grundlegende Arten von Tests:
+</p>
+<dl><dt>Black-box Tests <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Black_box_testing">[4]</a></dt>
+<dd> Hier ist dem Tester nur die Spezifikation, aber nicht die Implementation des Algorithmus bekannt. Alle Tests sowie die Eingaben und Referenz-Ergebnisse müssen aus der Spezifikation abgeleitet werden. Die automatisierte Generierung guter Tests aus der Spezifikation ist ein aktives Forschungsgebiet.</dd>
+<dt>Gray-box Tests (auch Glass-box Tests) <a rel="nofollow" class="external autonumber" href="http://www.cse.fau.edu/~maria/COURSES/CEN4010-SE/C13/glass.htm">[5]</a></dt>
+<dd> Hier kennt der Tester auch die Implementation und kann dadurch Tests entwerfen, die für diese spezielle Implementation besonders aussagekräftig sind. Es besteht allerdings die Gefahr, dass der Tester nicht mehr unvoreingenommen an das Testproblem herangeht, und Zustände, die seiner Meinung nach gar nicht vorkommen können, auch nicht testet (erst später stellt sich heraus, dass diese Zustände doch vorkommen).</dd>
+<dt>White-box Tests <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/White_box_testing">[6]</a></dt>
+<dd> Hier kann der Tester die Implementation sogar in geeigneter Weise verändern, z.B. 
+<ul><li> explizite Tests für Vor- und Nachbedingungen ("Assertions") einbauen. Dies bietet sich insbesondere in der alpha- und beta-Testphase eines Programms an, um Fehler schnell zu lokalisieren. Auch die unter Windows bekannte Dialogbox "Diesen Fehler bitte auch an Microsoft melden" wird durch solche eingebauten Assertions ausgelöst, wenn das Programm in einen illegalen Zustand geraten ist und abgebrochen werden muss.</li>
+<li> zusätzlichen Code einbauen, der feststellt, ob alle Teile des Programms auch tatsächlich getestet wurden ("<a rel="nofollow" class="external text" href="http://blogs.msdn.com/phuene/archive/2007/05/03/code-coverage-instrumentation.aspx">code coverage instrumentation</a>"). Dieser Code gibt nach dem Testen z.B. aus, welche Programmzeilen von keinem existierenden Test aufgerufen worden sind. Wenn der ausgeführte Code sehr stark von den Daten abhängt (z.B. bei interaktiven Programmen), kann es sehr schwierig sein, die <i>coverage</i> auf andere Weise festzustellen.</li>
+<li> absichtlich Bugs einbauen (die automatisch wieder abgeschaltet werden, wenn das Testen vorbei ist). Durch diese "<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Fault_injection">fault injection</a>" kann man herausfinden, ob die Tests mächtig genug sind, vorhandene Bugs zu finden.</li></ul></dd></dl>
+<h4><span class="mw-headline" id="Prinzipien_f.C3.BCr_die_Generierung_von_Testdaten">Prinzipien für die Generierung von Testdaten</span></h4>
+<dl><dt>Prinzip der Regressionstests ("<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Regression_testing">Regression testing</a>")</dt>
+<dd> Häufig werden Tests während der Programmentwicklung verwendet, um einen Algorithmus zu debuggen. Sobald der Algorithmus aber funktioniert werden die Tests gelöscht, denn sie werden ja jetzt nicht mehr gebraucht. Dies ist ein schwerwiegender <i>Fehler</i>: Jedes erfolgreiche Programm muss früher oder später weiterentwickelt werden (zumindest die Anpassung an eine neue Betriebssystemversion ist ab und zu notwendig). Jede Änderung birgt aber die Gefahr, dass sich neue Bugs in bisher funktionierenden Code einschleichen. Man sollte deshalb alle Tests aufheben und in einer <i>test suite</i> sammeln. Durch diese "regression tests" kann man nach jeder Änderung feststellen, ob die alte Funktionalität noch intakt ist, und gegebenenfalls die letzte Änderung einfach rückgängig machen. Tut man dies nicht, kann die Gefahr von unbeabsichtigten destruktiven Änderungen so groß werden, dass das Programm gar nicht mehr weiterentwickelt werden kann. Dies wird drastisch durch den bekannten Spruch "never change a running program" ausgedrückt.</dd></dl>
+<dl><dt>Prinzip der äquivalenten Eingaben (Domain Partitioning oder Equivalence Partitioning) <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Equivalence_partitioning">[7]</a></dt>
+<dd> Für ähnliche Eingaben verhält sich ein Algorithmus normalerweise ähnlich, und es hat keinen Sinn, alle diese Eingaben zu testen. Statt dessen teilt (partitioniert) man die Eingabedomäne in Äquivalenzklassen, die vom Algorithmus im wesentlichen gleich behandelt werden. Im obigen Beispiel der Wurzelberechnung ergeben sich zwei Klassen aus der Spezifikation: die negativen Zahlen (für die die Wurzel undefiniert ist und deshalb ein Fehler signalisiert werden muss) und die nicht-negativen Zahlen. Wenn man auch den Quellcode kennt (gray-box testing), kann man die Eingaben oft feiner unterteilen. Z.B. werden häufig unterschiedliche Algorithmen für kleine und für große Eingaben benutzt. Viele Quicksort-Implementationen verwenden beispielsweise für Arrays mit höchstens vier Elementen ein explizites Sortierverfahren, für Arrays der Länge 5 bis 25 selection sort, und erst für größere Arrays das eigentliche Quicksort. Aus der Einteilung der Eingabedomäne ergeben sich zwei wichtige Regeln für die Wahl der Testdaten:
+<ul><li> Aus jeder Äquivelenzklasse wählt man mindestens einen typischen Vertreter, um das normale Verhalten des Algorithmus in jedem Fall zu testen.</li>
+<li> Aus jeder Äquivelenzklasse wählt man Randwerte, weil gerade bei diesen Werten am häufigsten Fehler gemacht werden. Im obigen Wurzelbeispiel ist der Randwert die Null, die in der Tat in einer Version des Algorithmus zu einem <tt>ZeroDivisionError</tt> geführt hat. Andere typische Randfehler sind, dass Randelemente dem falschen Algorithmenzweig zugeordnet werden (z.B. wenn bei unserem Wurzelbeispiel die Abfrage am Anfang <tt>if x &lt;= 0:</tt> statt <tt>if x &lt; 0:</tt> gewesen wäre), dass Schleifen um einen Index zu spät beginnen oder zu früh abbrechen ("<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Off-by-one_error">Off-by-one errors</a>"), oder dass ein seltener Randfall gar nicht implementiert ist und einfach zum Absturz führt.</li></ul></dd></dl>
+<dl><dt>Prinzip, den Fehler zu reproduzieren (Failure Reproduction)</dt>
+<dd> Wenn ein Bug gemeldet wird, welches die Tests bisher übersehen haben, fügt man einen Test hinzu, der dieses Bug findet. Im Zusammenhang mit regression tests ist damit sichergestellt, dass dasselbe Bug nicht noch einmal auftreten kann.</dd></dl>
+<dl><dt>Prinzip der Code Coverage <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Code_coverage">[8]</a></dt>
+<dd> Hier stellt man sicher, dass tatsächlich der gesamte Code (oder ein vorher festgelegter hoher Prozentsatz) getestet wurde. Gerade bei komplizierten interaktiven Programmen ist diese "code coverage" mitunter nicht leicht zu erreichen, weil manche Programmteile nur bei sehr seltenen oder obskuren Eingaben ausgeführt werden. Eine minimale code coverage erreicht man allerdings bereits, wenn man in einem black-box-Test die Testdaten nach dem Prinzip der äquivalenten Eingaben auswählt, weil dann aus jeder Äquivalenzklasse mindestens ein Vertreter getestet wird. Im Allgemeinen muss man aber den Quellcode zumindest kennen (gray-box-Test), um geeignete Testdaten für code coverage zu identifizieren. Code coverage kann in verschiednen Graden angestrebt werden
+<ul><li> Function coverage: Jede Funktion eines Programms sollte mindestens einmal aufgerufen werden.</li>
+<li> Statement coverage: Jedes Statement (d.h. im wesentlichen jede Programmzeile) sollte mindestens einmal ausgeführt werden. Im obigen Wurzelbeispiel erfordert dies, dass z.B. mindestens einmal eine negative Zahl getestet wird, um die Exception zu prüfen.</li>
+<li> Condition coverage: Jede Bedingung (explizit in <tt>if</tt>-Bedingungen, implizit in den Abbruchbedingungen von <tt>for</tt>- und <tt>while</tt>-Schleifen) sollte mindestens einmal mit dem Ergebnis <tt>True</tt> und einmal mit dem Ergebnis <tt>False</tt> durchlaufen werden. Im Wurzelbeispiel haben wir die Eingabe <tt>x = 4</tt> gewählt, damit die <tt>while</tt>-Schleife auch einmal beim ersten Aufruf sofort <tt>False</tt> liefert.</li>
+<li> Path coverage: Jeder Programmpfad (d.h. jede Kombination von Wahrheitswerten bei allen Bedingungen) sollte einmal ausgeführt werden. Dies ist im Allgemeinen unerreichbar, weil es unendlich viele, oder zumindest zu viele verschiedene Pfade gibt.</li></ul></dd>
+<dd>Die Qualität der Tests steigt, wenn eine hohe Coverage (am besten 100%) erreicht wird, und/oder man eine mächtigere Art von Coverage fordert.</dd></dl>
+<dl><dt>Prinzip der erschöpfenden Tests</dt>
+<dd> Wenn ein Algorithmus nur wenige mögliche Eingaben hat, kann man sämtliche Eingaben testen. Bei sehr wichtigen Algorithmen kann das auch dann noch sinnvoll sein, wenn es relativ viele mögliche Eingaben gibt. In den meisten Fällen ist es jedoch zu aufwändig.</dd></dl>
+<dl><dt>Prinzip der vollständigen Paarung (Pair-wise coverage) <a rel="nofollow" class="external autonumber" href="http://citeseer.ist.psu.edu/78354.html">[9]</a></dt>
+<dd> Wenn ein Algorithmus N Eingabeparameter hat, und jeder Parameter hat K<sub>i</sub> mögliche Werte, müssen bei der erschöpfenden Suche K<sub>1</sub>*...*K<sub>N</sub> Kombinationen getestet werden. Beschränkt man sich in jedem Parameter auf typische Werte und Randwerte jeder Äquivalenzklasse, kann man K<sub>i</sub> zwar drastisch reduzieren, aber das Produkt K<sub>1</sub>*...*K<sub>N</sub> wird immer noch sehr groß (bei 4 Parametern und nur 3 möglichen Werten pro Parameter hat man bereits 3<sup>4</sup>=81 mögliche Kombinationen). Sei v<sub>ij</sub> der j-te Wert des Parameters i. Anstatt zu versuchen, alle Kombinationen zu testen, kann man fordern, dass zumindest alle möglichen Paare v<sub>ij</sub> und v<sub>mj</sub> (i&#8800;m) in mindestens einem Test vorkommen. Gibt es nur zwei Parameter, gewinnt man durch diese Einschränkung natürlich nichts, denn man muss mindestens K<sub>1</sub>*K<sub>2</sub> Tests durchführen. Hat man jedoch 3 Parameter, kann man mit weniger Tests auskommen als zuvor, da jeder Test bis zu drei verschiedene Paarungen abdecken kann (eine für den ersten und zweiten Parameter, eine für den ersten und dritten, eine für den zweiten und dritten). Bei vier Parametern werden sogar sechs Paarungen pro Test abgearbeitet usw. Die Theorie des "experimental design" beschreibt nun, wie man systematisch alle möglichen Paarungen mit möglichst wenigen Tests erzeugt. Es stellt sich heraus, dass man alle Paarungen von 3, 4 oder mehr Parametern oft mit genauso vielen Tests erzeugen kann wie bei 2 Parametern nötig wären. Dazu verwendet man die Methode der <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Latin_square">Latin Squares</a>.  Wir beschreiben diese Methode für den einfachen Fall von 3 möglichen Werten pro Parameter.</dd></dl>
+<dl><dd>Ein Latin Square der Größe 3 ist eine 3x3 Matrix, deren Einträge die Zahlen 1...3 sind, und zwar so, dass jede Zahl genau einmal in jeder Zeile und Spalte vorkommt (ähnlich wie beim Sudoku). Eine mögliche Matrix ist z.B.</dd></dl>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="P=\begin{pmatrix}1 &amp; 2 &amp; 3 \\&#10;                      2 &amp; 3 &amp; 1 \\&#10;                      3 &amp; 1 &amp; 2\end{pmatrix}" src="../images/dd4aa7e655abcbb4975d5a22ac4d8d6d.png" /></dd>
+<dd>Man bildet jetzt 9 Kombinationen der Zahlen 1...3, indem man zeilenweise durch die Matrix P geht, und den Zeilenindex (die Nummer der aktuellen Zeile) als erste Zahl, den Spaltenindex als zweite Zahl, und den Eintrag an der aktuallen Position als dritte Zahl verwendet. Man erhält</dd></dl>
+<table border="1" cellspacing="0" cellpadding="7" align="center">
+
+<tr align="center">
+<td>
+</td>
+<th> Komb. 1
+</th>
+<th> Komb. 2
+</th>
+<th> Komb. 3
+</th>
+<th> Komb. 4
+</th>
+<th> Komb. 5
+</th>
+<th> Komb. 6
+</th>
+<th> Komb. 7
+</th>
+<th> Komb. 8
+</th>
+<th> Komb. 9
+</th></tr>
+<tr>
+<th>Zahl 1 (Zeilenindex)
+</th>
+<td align="center"> 1
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 3
+</td></tr>
+<tr>
+<th> Zahl 2 (Spaltenindex)
+</th>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td></tr>
+<tr>
+<th> Zahl 3 (aktueller Matrixeintrag von P)
+</th>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td></tr></table>
+<dl><dd>Diese Tabelle bestimmt, welcher Wert in jedem Test für jeden Parameter verwendet wird. Z.B. wird der erste Test mit v<sub>11</sub> (erster Wert des ersten Parameters), v<sub>21</sub> (erster Wert des zweiten Parameters), v<sub>31</sub> (erster Wert des dritten Parameters) aufgerufen</dd></dl>
+<pre>      assertEqual( foo(v11, v21, v31), foo_reference1)
+</pre>
+<dl><dd>(reference1 ist das korrekte Referenz-Ergebnis für diese Parameterbelegung). Der letzte Test hat die Parameter v<sub>13</sub>, v<sub>23</sub>, v<sub>32</sub></dd></dl>
+<pre>      assertEqual( foo(v13, v23, v32), foo_reference9)
+</pre>
+<dl><dd>Man überzeugt sich leicht, dass diese 9 Tests jede mögliche Paarung genau einmal enthalten. Hat der Algorithmus 4 Parameter, benötigt man einen zweiten Latin Square, der zum ersten orthogonal ist. Zwei Latin Squares P und Q heißen orthogonal, wenn alle Paare c<sub>ij</sub>=(P<sub>ij</sub>, Q<sub>ij</sub>) eindeutig sind, d.h. es gilt c<sub>ij</sub>&#8800;c<sub>kl</sub> falls i&#8800;k und j&#8800;l. Ein zu dem obigen P orthogonales Q ist z.B.</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="Q=\begin{pmatrix}1 &amp; 2 &amp; 3 \\&#10;                        3 &amp; 1 &amp; 2 \\&#10;                        2 &amp; 3 &amp; 1\end{pmatrix}" src="../images/449176089cb872eb68e8717b09330f40.png" /></dd>
+<dd> Jetzt bildet man Kombinationen aus 4 Zahlen, indem man zur obigen Tabelle noch eine vierte Zeile hinzufügt, die die aktuellen Einträge von Q für den jeweiligen Zeilen- und Spaltenindex enthält:</dd></dl>
+<table border="1" cellspacing="0" cellpadding="7" align="center">
+
+<tr align="center">
+<td>
+</td>
+<th> Komb. 1
+</th>
+<th> Komb. 2
+</th>
+<th> Komb. 3
+</th>
+<th> Komb. 4
+</th>
+<th> Komb. 5
+</th>
+<th> Komb. 6
+</th>
+<th> Komb. 7
+</th>
+<th> Komb. 8
+</th>
+<th> Komb. 9
+</th></tr>
+<tr>
+<th>Zahl 1 (Zeilenindex)
+</th>
+<td align="center"> 1
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 3
+</td></tr>
+<tr>
+<th> Zahl 2 (Spaltenindex)
+</th>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td></tr>
+<tr>
+<th> Zahl 3 (aktueller Matrixeintrag von P)
+</th>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td></tr>
+<tr>
+<th> Zahl 4 (aktueller Matrixeintrag von Q)
+</th>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 1
+</td></tr></table>
+<dl><dd>Es sind immer noch nur 9 Tests nötig, um alle Paarungen zu erzeugen. Der erste und letzte Test sind nun:</dd></dl>
+<pre>      assertEqual( bar(v11, v21, v31, v41), bar_reference1)
+      ...
+      assertEqual( bar(v13, v23, v32, v41), bar_reference9)
+</pre>
+<dl><dd>Die Methode der Latin Squares  funktioniert auch, wenn mehr als 3 Belegungen für jeden Parameter möglich sind, und wenn es mehr als 4 Parameter gibt. Für die Einzelheiten verweisen wir auf die Literatur, z.B. <a rel="nofollow" class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.54.3892">Practical Strategy for Testing Pair-wise Coverage of Network Interfaces</a>, <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Latin_square">[10]</a>. Empirische Untersuchungen haben ergeben, dass die Methode der vollständigen Paarung oft über 90% der Fehler in einem Programm finden kann.</dd></dl>
+<p><a href="effizienz.html" title="Effizienz">Nächstes Thema</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825110954
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.048 seconds
+Real time usage: 0.221 seconds
+Preprocessor visited node count: 593/1000000
+Preprocessor generated node count: 1248/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:20-0!canonical!math=0 and timestamp 20260825110954 and revision id 5696
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index8216.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Korrektheit&amp;oldid=5696</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="korrektheit.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="talk_korrektheit.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index907c.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="index58a5.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="indexcdc3.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="korrektheit-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="korrektheit-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="index4800.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="index8216.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="indexf18c.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 2 May 2019, at 12:04.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.048","walltime":"0.221","ppvisitednodes":{"value":593,"limit":1000000},"ppgeneratednodes":{"value":1248,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825110954","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":385});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Korrektheit by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:40:42 GMT -->
+</html>

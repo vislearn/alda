@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Sortieren by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:38:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Sortieren - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Sortieren","wgTitle":"Sortieren","wgCurRevisionId":5633,"wgRevisionId":5633,"wgArticleId":17,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Sortieren","wgRelevantArticleId":17,"wgRequestId":"74d0abc7963fe71088a471e2","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Sortieren rootpage-Sortieren skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Sortieren</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><hr />
+<div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Laufzeitmessung_in_Python"><span class="tocnumber">1</span> <span class="toctext">Laufzeitmessung in Python</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Sortierverfahren"><span class="tocnumber">2</span> <span class="toctext">Sortierverfahren</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Motivation"><span class="tocnumber">2.1</span> <span class="toctext">Motivation</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Vorraussetzungen"><span class="tocnumber">2.2</span> <span class="toctext">Vorraussetzungen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Ordnungsrelation"><span class="tocnumber">2.2.1</span> <span class="toctext">Ordnungsrelation</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Datenspeicherung"><span class="tocnumber">2.2.2</span> <span class="toctext">Datenspeicherung</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Nachbedingungen"><span class="tocnumber">2.2.3</span> <span class="toctext">Nachbedingungen</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Stabilit.C3.A4t"><span class="tocnumber">2.2.4</span> <span class="toctext">Stabilität</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Selection_Sort"><span class="tocnumber">3</span> <span class="toctext">Selection Sort</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Algorithmus"><span class="tocnumber">3.1</span> <span class="toctext">Algorithmus</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Laufzeit"><span class="tocnumber">3.2</span> <span class="toctext">Laufzeit</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Stabilit.C3.A4t_2"><span class="tocnumber">3.3</span> <span class="toctext">Stabilität</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Insertion_Sort"><span class="tocnumber">4</span> <span class="toctext">Insertion Sort</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Algorithmus_2"><span class="tocnumber">4.1</span> <span class="toctext">Algorithmus</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Laufzeit_2"><span class="tocnumber">4.2</span> <span class="toctext">Laufzeit</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#G.C3.BCnstiger_Fall"><span class="tocnumber">4.2.1</span> <span class="toctext">Günstiger Fall</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Ung.C3.BCnstiger_Fall"><span class="tocnumber">4.2.2</span> <span class="toctext">Ungünstiger Fall</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Typischer_Fall"><span class="tocnumber">4.2.3</span> <span class="toctext">Typischer Fall</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href="#Stabilit.C3.A4t_3"><span class="tocnumber">4.3</span> <span class="toctext">Stabilität</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Mergesort"><span class="tocnumber">5</span> <span class="toctext">Mergesort</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#Algorithmus_3"><span class="tocnumber">5.1</span> <span class="toctext">Algorithmus</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="#Zusammenf.C3.BChren_--_merge"><span class="tocnumber">5.1.1</span> <span class="toctext">Zusammenführen -- merge</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Rekursives_Sortieren"><span class="tocnumber">5.1.2</span> <span class="toctext">Rekursives Sortieren</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="#Laufzeit_3"><span class="tocnumber">5.2</span> <span class="toctext">Laufzeit</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="#Ung.C3.BCnstiger_Fall_2"><span class="tocnumber">5.2.1</span> <span class="toctext">Ungünstiger Fall</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#G.C3.BCnstiger_Fall_2"><span class="tocnumber">5.2.2</span> <span class="toctext">Günstiger Fall</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-27"><a href="#Stabilit.C3.A4t_4"><span class="tocnumber">5.3</span> <span class="toctext">Stabilität</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Weitere_Eigenschaften_von_MergeSort"><span class="tocnumber">5.4</span> <span class="toctext">Weitere Eigenschaften von MergeSort</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Merge_Sort_in_Python"><span class="tocnumber">5.5</span> <span class="toctext">Merge Sort in Python</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-30"><a href="#Quicksort"><span class="tocnumber">6</span> <span class="toctext">Quicksort</span></a>
+<ul>
+<li class="toclevel-2 tocsection-31"><a href="#Algorithmus_4"><span class="tocnumber">6.1</span> <span class="toctext">Algorithmus</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Laufzeit_4"><span class="tocnumber">6.2</span> <span class="toctext">Laufzeit</span></a>
+<ul>
+<li class="toclevel-3 tocsection-33"><a href="#Ung.C3.BCnstiger_Fall_3"><span class="tocnumber">6.2.1</span> <span class="toctext">Ungünstiger Fall</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="#G.C3.BCnstiger_Fall_3"><span class="tocnumber">6.2.2</span> <span class="toctext">Günstiger Fall</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#Typischer_Fall_2"><span class="tocnumber">6.2.3</span> <span class="toctext">Typischer Fall</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-36"><a href="#Stabilit.C3.A4t_5"><span class="tocnumber">6.3</span> <span class="toctext">Stabilität</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#Verbesserungen_des_Quicksort-Algorithmus"><span class="tocnumber">6.4</span> <span class="toctext">Verbesserungen des Quicksort-Algorithmus</span></a>
+<ul>
+<li class="toclevel-3 tocsection-38"><a href="#G.C3.BCnstige_Selektion_des_Pivot-Elements"><span class="tocnumber">6.4.1</span> <span class="toctext">Günstige Selektion des Pivot-Elements</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#Alternatives_Sortieren_kleiner_Intervalle"><span class="tocnumber">6.4.2</span> <span class="toctext">Alternatives Sortieren kleiner Intervalle</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#Beseitigung_der_Rekursion"><span class="tocnumber">6.4.3</span> <span class="toctext">Beseitigung der Rekursion</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="#Quick_Sort_in_C.2B.2B"><span class="tocnumber">6.4.4</span> <span class="toctext">Quick Sort in C++</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Laufzeitmessung_in_Python">Laufzeitmessung in Python</span></h2>
+<p>Verwendung der <b>timeit-Bibliothek</b> für die Hausaufgabe. 
+</p>
+<ul><li> Importiere das timeit-Modul: <tt>import timeit</tt></li>
+<li> Teile den Algorithmus in die Initialisierungen und den Teil, dessen Geschwindigkeit gemessen werden soll. Beide Teile werden in jeweils einen (mehrzeiligen) String eingeschlossen:</li></ul>
+<pre> +--------+     +----+            setup = """            prog = """
+ |  algo  | --&gt; |init|                +----+                 +----+
+ |        |     +----+                |init|                 |prog|
+ |        |                           +----+                 +----+
+ |        |     +----+             """                     """
+ |        | --&gt; |prog|            
+ +--------+     +----+            
+</pre>
+<ul><li> aus den beiden Strings wird ein Timeit-Objekt erzeugt: <tt>t = timeit.Timer(prog, setup)</tt></li>
+<li> Frage: Wie oft soll die Algorithmik wiederholt werden</li></ul>
+<dl><dd>z.B. N = 1000</dd></dl>
+<ul><li> Zeit in Sekunden für N Durchläufe: <tt>K = t.timeit(N)</tt></li></ul>
+<dl><dd>Zeit für 1 Durchlauf: K/N</dd></dl>
+<h2><span class="mw-headline" id="Sortierverfahren">Sortierverfahren</span></h2>
+<h3><span class="mw-headline" id="Motivation">Motivation</span></h3>
+<p><b>Def:</b>
+Ein Sortierverfahren ist ein Algorithmus, der dazu dient, die Elemente in einem Container in eine aufsteigende Reihenfolge zu bringen (siehe <a rel="nofollow" class="external text" href="https://de.wikipedia.org/wiki/Sortierverfahren">Wikipedia</a>).
+</p><p><b>Anwendungen</b>
+</p>
+<ul><li> Sortierte Daten sind häufig Vorbedingungen für Suchverfahren (Speziell für effiziente Suchalgorithmen mit Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(log(N))" src="322bafbd7008a7c1913e2e44abc5a4d2.html" />)</li>
+<li> Darstellung von Daten gemäß menschlicher Wahrnehmung</li>
+<li> Aus programmiertechnischer Anwendungssicht hat das Sortierproblem allerdings heute an Relevanz verloren, weil
+<ul><li> gängige Programmiersprachen heute bereits geeignete Sortierfunktionen zur Verfügung stellen. Der Programmierer braucht sich deshalb in den meisten Fällen nicht mehr um die Implementierung von Sortieralgorithmen zu kümmern. In C/C++ sorgt dafür beispielsweise die Funktion <a rel="nofollow" class="external text" href="http://www.cplusplus.com/reference/algorithm/sort/">std::sort</a>.</li>
+<li> die Hardware (z.B. Größe des RAM und der Festplatte) heute weniger limitierenden Charakter hat als vor 50 Jahren, so dass Standardsortierverfahren meist ausreichen, während komplizierte (z.B. speicher-sparende) Algorithmen nur noch in Ausnahmefällen nötig sind.</li></ul></li>
+<li> Die Kenntnis grundlegender Sortieralgorithmen ist trotzdem immer noch nötig: Einerseits kann man vorgefertigte Bausteine nur dann optimal einsetzen, wenn man weiß, was hinter den Kulissen passiert und andererseits verdeutlicht gerade das Sortierproblem wichtige Prinzipien der Algorithmenentwicklung und -analyse in sehr anschaulicher Form.</li></ul>
+<h3><span class="mw-headline" id="Vorraussetzungen">Vorraussetzungen</span></h3>
+<h4><span class="mw-headline" id="Ordnungsrelation">Ordnungsrelation</span></h4>
+<p>Über den zu sortierenden Elementen muss eine Relation <img class="mwe-math-fallback-image-inline tex" alt="\le" src="49dc1443f33cf63082d6e193dd2af78f.html" /> definiert sein, die die Axiome einer <i>totalen Ordnung</i> erfüllt (siehe <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Ordnungsrelation">Wikipedia</a>). Eine totale Ordnung über einer Menge <img class="mwe-math-fallback-image-inline tex" alt="M" src="69691c7bdcc3ce6d5d8a1361f22d04ac.html" /> ist eine binäre Relation <img class="mwe-math-fallback-image-inline tex" alt="R \subseteq M \times M" src="77b3cd2442fb5933fa331d568f03ee1a.html" />, die transitiv, antisymmetrisch und total ist. Dass heißt, für alle <img class="mwe-math-fallback-image-inline tex" alt=" a,b,c \ \in M " src="8b9090278927aef6b133dcdd55e89f94.html" /> gilt:
+</p>
+<ol>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="a \le b \wedge b \le a \Rightarrow a=b " src="0e7fb890d23fabd93dfe72ee80f7f5fd.html" /> (antisymmetrisch)</li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="a \le b \wedge b \le c \Rightarrow a \le c " src="007e07d66631f606dcd29fcef1b3f446.html" /> (transitiv)</li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="a \le b \vee b \le a " src="64b547adb255afd849e1e9791841b518.html" /> (total)</li>
+</ol>
+<p>Bemerkung: aus 3. folgt <img class="mwe-math-fallback-image-inline tex" alt=" a \le a " src="e46e2286ae6fc78ade9cd694d7d35d34.html" /> (reflexiv) <br />
+</p><p>Die Forderung, dass die Ordnung <i>total</i> sein muss, wird verständlich, wenn man ihr Gegenteil betrachtet: Ist die Ordnung nämlich nur partiell, gibt es Elemente <img class="mwe-math-fallback-image-inline tex" alt="a, b" src="b345e1dc09f20fdefdea469f09167892.html" />, die nicht vergleichbar sind. Die Relation <img class="mwe-math-fallback-image-inline tex" alt="a \le b" src="d7356d20677cd7949b92ae77480fe9fe.html" /> kann dann das Ergebnis "<tt>unknown</tt>" liefern (statt <tt>true</tt> oder <tt>false</tt>), und das ist beim Sortieren nicht erlaubt.
+</p><p>Aus der Definition der Relation <img class="mwe-math-fallback-image-inline tex" alt="\le " src="49dc1443f33cf63082d6e193dd2af78f.html" /> folgen automatisch Definitionen für die anderen Vergleichsrelationen <img class="mwe-math-fallback-image-inline tex" alt="&lt;, \ge, &gt;, =, \ne" src="afe4088fa5832535b29ddc215d6fbe38.html" />, siehe Hausaufgabe.
+</p>
+<h4><span class="mw-headline" id="Datenspeicherung">Datenspeicherung</span></h4>
+<p>Wir nehmen an, dass die Daten in einem Array <tt>a</tt> vorliegen:
+</p>
+<dl><dt>Array</dt>
+<dd></dd></dl>
+<pre>       +---+---+---+---+---+---+---+---+---+
+       |   |   |   |   |   |   |   |   |   |
+       +---+---+---+---+---+---+---+---+---+
+      \________________  ____________________/
+                       \/
+                   N Elemente
+</pre>
+<p>Datenelemente können über Indexoperation <tt>a[i]</tt> gelesen, überschrieben und miteinander vertauscht werden. Das hat den Vorteil, dass wir auf die Elemente in beliebiger Reihenfolge effizient zugreifen können. Dies ist für fast alle Sortieralgorithmen nützlich.
+</p><p>Früher wurden Daten oft in verketteten Listen gespeichert:
+</p>
+<dl><dt>Vekettete Liste</dt>
+<dd></dd></dl>
+<pre>       +---+     +---+     +---+
+       |   | --&gt; |   | --&gt; |   | --&gt; Ende
+       +---+     +---+     +---+
+</pre>
+<p>Jeder Knoten der Liste enthält ein Datenelement und einen Zeiger auf den nächsten Knoten. Dadurch ist ein effizienter Zugriff nur auf den Nachfolger eines gegebenen Elements möglich. Zum effizienten Sortieren ist dann vor allem <i>merge sort</i> geeignet. Wir gehen in der Vorlesung nicht weiter auf verkettete Listen ein.
+</p>
+<h4><span class="mw-headline" id="Nachbedingungen">Nachbedingungen</span></h4>
+<p>Nach dem Sortieren erfüllen alle Elemente des Arrays folgendes Axiom:
+</p><p>Für beliebige Indizes <img class="mwe-math-fallback-image-inline tex" alt="0 \le j &lt; k \le N-1" src="aad391cbf73bac7284edeee49cdef3a3.html" /> gilt: <img class="mwe-math-fallback-image-inline tex" alt="a[j] \le a[k]" src="8e3d2efbcf7e3280c82169f677db2b22.html" />.
+</p><p>Ein Testprogramm kann somit die korrekte Sortierung überprüfen, indem es die Bedingung <img class="mwe-math-fallback-image-inline tex" alt="a[j] \le a[k]" src="8e3d2efbcf7e3280c82169f677db2b22.html" /> für alle <img class="mwe-math-fallback-image-inline tex" alt="N(N-1)/2" src="1f76062b0901740d5c15d6163d5ced1b.html" /> möglichen Paare von Indizes <img class="mwe-math-fallback-image-inline tex" alt="j &lt; k" src="../images/beceb1763ab289f11fd6d77764407b8f.png" /> prüft. In Wirklichkeit sind allerdings <img class="mwe-math-fallback-image-inline tex" alt="N-1" src="../images/5b1ba2fe7e642d05d58d3df27466b069.png" /> Tests ausreichend, siehe Hausaufgabe.
+</p>
+<h4><span class="mw-headline" id="Stabilit.C3.A4t">Stabilität</span></h4>
+<p>Oft werden Arrays sortiert, die strukturierte Datenelemente enthalten. Beispielsweise könnten die Datenelemente den Typ <tt>Student</tt> haben, der aus dem Namen und der AlDa-Note zusammengesetzt ist. Das Array sei zunächst alphabetisch nach Namen sortiert:
+</p>
+<pre> [("Adam", 1.3), ("Albrecht", 1.0), ("Meier", 1.3), ("Müller", 2.0), ("Wolf", 1.0)]
+</pre>
+<p>Wir wollen das Array nun nach Noten sortieren. Da aber einige Teilnehmer die gleiche Note haben, stellen wir zusätzlich die Forderung auf, dass die Namen mit <i>gleicher Note</i> alphabetisch sortiert bleiben sollen. Allgemein definiert man:
+</p><p><b>Def:</b> Ein Sortierverfahren heißt <i>stabil</i>, wenn die relative Reihenfolge gleicher Schlüssel durch die Sortierung nicht verändert wird.
+</p><p>Im Beispiel erzeugt ein stabiles Sortierverfahren die Ausgabe
+</p>
+<pre> [("Albrecht", 1.0), ("Wolf", 1.0), ("Adam", 1.3), ("Meier", 1.3), ("Müller", 2.0)]
+</pre>
+<p>während die Ausgabe
+</p>
+<pre> [("Albrecht", 1.0), ("Wolf", 1.0), ("Meier", 1.3), ("Adam", 1.3), ("Müller", 2.0)]
+</pre>
+<p>nicht stabil ist (die Elemente <tt>("Adam", 1.3), ("Meier", 1.3)</tt> sind vertauscht).
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Selection_Sort">Selection Sort</span></h2>
+<p>Selection Sort ist der wohl einfachste Sortieralgorithmus, den man sich dadurch sehr leicht merken kann. Er sortiert ein gegebenes Array <i>in-place</i>. Das heißt, das Sortieren verändert das gegebene Array direkt und erzeugt kein neues sortiertes Array. Wen man die Daten in der ursprünglichen Reihenfolge noch benötigt, muss man sich vor dem Sortieren eine Kopie anlegen.
+</p>
+<h3><span class="mw-headline" id="Algorithmus">Algorithmus</span></h3>
+<pre>def selectionSort(a): # sort array 'a' in-place
+    N = len(a)        # number of elements
+    
+    for i in range(N):
+        # find the smallest element in the remaining array from i to N
+        min = i       # initial guess: a[i] is the smallest element
+        for j in range(i+1, N):
+            if a[j] &lt; a[min]:
+                min = j   # element a[j] is smaller =&gt; remember its index
+        a[i], a[min] = a[min], a[i]  # swap a[i] with a[min], the smallest element to its right
+                                     # (has no effect if i == min)
+                                     # now, all elements up to a[i] are at their final position
+</pre>
+<p>Beispiel: Sortieren des Arrays <tt>[S,O,R,T,I,N,G]</tt>.
+</p>
+<pre>erste Iteration der äußeren Schleife, Zustand <i>vor</i> dem <tt>swap</tt>:
+ i=0                     min
++---+---+---+---+---+---+---+
+| S | O | R | T | I | N | G |
++---+---+---+---+---+---+---+
+</pre>
+<pre>erste Iteration der äußeren Schleife, Zustand <i>nach</i> dem <tt>swap</tt>:
++---|---+---+---+---+---+---+
+| G | O | R | T | I | N | S |
++---|---+---+---+---+---+---+
+</pre>
+<pre>zweite Iteration der äußeren Schleife:
+     i=1         min
++---|---+---+---+---+---+---+
+| G | O | R | T | I | N | S |
++---|---+---+---+---+---+---+
+</pre>
+<pre>weitere Iterationen:
+         i=2         min
++---+---|---+---+---+---+---+
+| G | I | R | T | O | N | S |
++---+---|---+---+---+---+---+
+</pre>
+<pre>             i=3 min
++---+---+---|---+---+---+---+
+| G | I | N | T | O | R | S |
++---+---+---|---+---+---+---+
+</pre>
+<pre>                 i=4 min
++---+---+---+---+---+---+---+
+| G | I | N | O | T | R | S |
++---+---+---+---+---+---+---+
+</pre>
+<pre>                     i=5 min
++---+---+---+---+---+---+---+
+| G | I | N | O | R | T | S |
++---+---+---+---+---+---+---+
+</pre>
+<pre>                         i=6
+                         min
++---+---+---+---+---+---+---+
+| G | I | N | O | R | S | T |
++---+---+---+---+---+---+---+
+</pre>
+<h3><span class="mw-headline" id="Laufzeit">Laufzeit</span></h3>
+<p>Da in jeder Iteration der <i>inneren</i> Schleife ein Vergleich <tt>a[j]&lt; a[min]</tt> durchgeführt wird, ist die Anzahl der Vergleiche ein gutes Maß für den Aufwand des Algorithmus und damit für die Laufzeit. Sei C(N) die Anzahl der notwendigen Vergleiche, um ein Array der Größe N zu sortieren. Die Arbeitsweise des Algorithmus kann dann so beschrieben werden: Führe N-1 Vergleiche aus, bringe das kleinste Element an die erste Stelle, und fahre mit dem Sortieren des Rest-Arrays (Größe N-1) rechts des ersten Elements fort. Dafür sind nach Definition noch C(N-1) Vergleiche nötig. Es gilt also:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C(N) = C(N-1) + (N-1)" src="../images/4baf165f643767f1eab53408d9bc7da9.png" /></dd></dl></dd></dl></dd></dl>
+<p>C(N-1) können wir nach der gleichen Formel einsetzen, und erhalten:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C(N) = C(N-2) + (N-2) + (N-1)" src="../images/9ac51a8faecdcfd84d9c6ff79dea884d.png" /></dd></dl></dd></dl></dd></dl>
+<p>Wir können in dieser Weise weiter fortfahren. Bei C(1) wird das Einsetzen beendet, denn für ein Array der Länge 1 sind keine Vergleiche mehr nötig, also C(1) = 0. Wir erhalten somit
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C(N) = C(N-3) + (N-3) + (N-2) + (N-1)" src="../images/ab143fd4d586a47df28b2a122c28b2e6.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="..." src="../images/2f43b42fd833d1e77420a8dae7419000.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="C(N) = C(1) + 1 + 2 + ...+ (N-2)+ (N-1)" src="../images/cc54e16430f5e09a176ccd5d445305b7.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="C(N) = 0 + 1 + 2 + ...+ (N-2)+ (N-1)" src="../images/200687f93fd58ca8385e078d00540aa5.png" /></dd></dl></dd></dl></dd></dl>
+<p>Nach der Gaußschen Summenformel ist dies
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C(N) = \frac {(N-1)N}{2}\approx \cfrac {N^2}{2}" src="../images/1fc176949cd8fc2aa8d5fba1e2c63911.png" /> (für große N).</dd></dl></dd></dl></dd></dl>
+<p>In jedem Durchlauf der äußeren Schleife werden außerdem zwei Elemente ausgetauscht. Es gilt für die Anzahl der Austauschoperationen
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="A(N)= N-1" src="../images/9a8ad55fbd2ba45aee43768ae227909a.png" /></dd></dl></dd></dl></dd></dl>
+<h3><span class="mw-headline" id="Stabilit.C3.A4t_2">Stabilität</span></h3>
+<p>Selection Sort ist nicht stabil, weil die swap-Operation das Element <tt>a[i]</tt> nach hinten kopiert. Falls es ein Element <tt>a[k]</tt> gibt, so dass <tt>a[i] == a[k]</tt> und <tt>i &lt; k &lt; min</tt>, gelangt <tt>a[i]</tt> durch das swap hinter <tt>a[k]</tt>, was nach Definition der Stabilität verboten ist.
+</p>
+<h2><span class="mw-headline" id="Insertion_Sort">Insertion Sort</span></h2>
+<p>Insertion Sort ist fast so einfach wie Selection Sort, hat aber den Vorteil, <i>stabil</i> zu arbeiten (wenn es korrekt implementiert ist). Man stellt sich vor, dass die Daten ein Spielkartenblatt bilden, das man nach dem mischen unsortiert aufgenommen hat. Dann geht man die Karten von links nach rechts durch und steckt jede Karte in die passende Lücke, so dass das Blatt am Ende sortiert ist. Bei einem Array muss man die Lücke jeweils erzeugen, indem man Elemente noch rechts verschiebt. Insertion Sort arbeitet ebenfalls <i>in-place</i>.
+</p>
+<h3><span class="mw-headline" id="Algorithmus_2">Algorithmus</span></h3>
+<pre>def insertionSort(a):   # sort 'a' in-place
+    N = len(a)          # number of elements
+    
+    for i in range(N):
+        current = a[i]  # remember the current element
+        # find the position of the gap where 'current' is supposed to go
+        j = i       # initial guess: 'current' is already at the correct position
+        while j &gt; 0:
+            if current &lt; a[j-1]:  # a[j-1] should be on the right of 'current'
+                a[j] = a[j-1]     # move a[j-1] to the right
+            else:
+                break             # gap is at correct position
+            j -= 1                # shift gap one index to the left
+        a[j] = current            # place 'current' into appropriate gap
+</pre>
+<p>Beispiel: Sortieren des Arrays <tt>[S,O,R,T,I,N,G]</tt>.
+</p>
+<pre>erste Iteration der äußeren Schleife hat keinen Effekt:
+ i=0
+ j=0
++---+---+---+---+---+---+---+
+| S | O | R | T | I | N | G |
++---+---+---+---+---+---+---+
+</pre>
+<pre>zweite Iteration der äußeren Schleife, Zustand <i>nach</i> dem break:
+     i=1 (current='O')
+ j=0
++---+---+---+---+---+---+---+
+| S | S | R | T | I | N | G |
++---+---+---+---+---+---+---+
+  ^ Lücke
+</pre>
+<pre>zweite Iteration der äußeren Schleife, Zustand 'am Ende:
++---+---+---+---+---+---+---+
+| O | S | R | T | I | N | G |
++---+---+---+---+---+---+---+
+</pre>
+<pre>dritte Iteration nach dem break und am Ende:
+         i=2 (current='R')
+     j=1
++---+---+---+---+---+---+---+
+| O | S | S | T | I | N | G |
++---+---+---+---+---+---+---+
+      ^ Lücke
++---+---+---+---+---+---+---+
+| O | R | S | T | I | N | G |
++---+---+---+---+---+---+---+
+</pre>
+<pre>vierte Iteration nach dem break und am Ende:
+             i=3 (current='T')
+             j=3 (unverändert, da 'T' &lt; 'S' sofort false liefert)
++---+---+---+---+---+---+---+
+| O | R | S | T | I | N | G |
++---+---+---+---+---+---+---+
+              ^ Lücke
++---+---+---+---+---+---+---+
+| O | R | S | T | I | N | G |
++---+---+---+---+---+---+---+
+</pre>
+<pre>fünfte Iterationen nach dem break und am Ende:
+                 i=4 (current='I')
+ j=0
++---+---+---+---+---+---+---+
+| O | O | R | S | T | N | G |
++---+---+---+---+---+---+---+
+  ^ Lücke
++---+---+---+---+---+---+---+
+| I | O | R | S | T | N | G |
++---+---+---+---+---+---+---+
+</pre>
+<pre>sechste Iterationen nach dem break und am Ende:
+                     i=5 (current='N')
+     j=1
++---+---+---+---+---+---+---+
+| I | O | O | R | S | T | G |
++---+---+---+---+---+---+---+
+      ^ Lücke
++---+---+---+---+---+---+---+
+| I | N | O | R | S | T | G |
++---+---+---+---+---+---+---+
+</pre>
+<pre>letzte Iterationen nach dem break und am Ende:
+                         i=6 (current='G')
+ j=0
++---+---+---+---+---+---+---+
+| I | I | N | O | R | S | T |
++---+---+---+---+---+---+---+
+  ^ Lücke
++---+---+---+---+---+---+---+
+| G | I | N | O | R | S | T |
++---+---+---+---+---+---+---+
+</pre>
+<h3><span class="mw-headline" id="Laufzeit_2">Laufzeit</span></h3>
+<p>Bei Selection Sort hängt die Anzahl der notwendigen Vergleiche und damit die Laufzeit davon ab, wie die Elemente <i>vor</i> dem Sortieren angeordnet waren. Wir unterscheiden drei Fälle:
+</p>
+<h4><span class="mw-headline" id="G.C3.BCnstiger_Fall">Günstiger Fall</span></h4>
+<p>Der günstige Fall tritt ein, wenn das <tt>break</tt> sofort nach dem ersten Vergleich ausgeführt wird. Dann ist in der inneren Schleife jeweils nur ein Vergleich nötig. Es ist leicht zu erkennen, dass das genau dann passiert, wenn das Array schon vor dem Aufruf von <tt>insertionSort</tt> sortiert war - dann ist das linke Element von <tt>current</tt> niemals größer, und somit liefert der Vergleich sofort <tt>false</tt>. Die Laufzeit <img class="mwe-math-fallback-image-inline tex" alt="C_g" src="../images/44c808ee9cf2dd1c575ad864122ff158.png" /> (für "günstig") der letzten Iteration setzt sich somit aus dem Sortieren des Teilarrays bis zur vorletzten Position und dem zusätzlichen Vergleich zusammen:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_g(N) = C_g(N-1) + 1" src="../images/967e9b69ac32690d49ded974af34cd5e.png" /></dd></dl></dd></dl></dd></dl>
+<p>Wir setzen <img class="mwe-math-fallback-image-inline tex" alt="C_g(N-1)" src="../images/b4c888336e4f8fb5f653494364b64d7b.png" /> wieder nach der gleichen Formel ein und erhalten:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_g(N) = C_g(N-2) + 1 + 1" src="../images/9bb6493a3e94f8c273fc621ded150d4c.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="..." src="../images/2f43b42fd833d1e77420a8dae7419000.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="C_g(N) = C(1) + 1 + 1 + ...+ 1" src="../images/4ab8ba88a2304a1a1d9b942c91ab8806.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="C_g(N) = 0 + 1 + 1 + ...+ 1" src="../images/811f5f4a9e7df1c8cbeb7edef9885318.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="C_g(N) = N - 1" src="../images/eefc8b73ff5db5c339193b1cd56fd08d.png" /></dd></dl></dd></dl></dd></dl>
+<p>Im günstigen Fall werden also etwa soviele Vergleiche wie die Anzahl der Arrayelemente benötigt.
+</p>
+<h4><span class="mw-headline" id="Ung.C3.BCnstiger_Fall">Ungünstiger Fall</span></h4>
+<p>Der ungünstige Fall tritt ein, wenn die Lücke in jeder Iteration ganz nach links, also auf die Position <tt>j = 0</tt> geschoben werden muss. Das ist der Fall, wenn das Array anfangs umgekehrt (also absteigend) sortiert war. In der letzten Iteration sind dann <img class="mwe-math-fallback-image-inline tex" alt="N-1" src="../images/5b1ba2fe7e642d05d58d3df27466b069.png" /> nötig, nachdem das linke Teilarray der Größe <img class="mwe-math-fallback-image-inline tex" alt="N-1" src="../images/5b1ba2fe7e642d05d58d3df27466b069.png" /> bereits sortiert wurde. Die Laufzeit <img class="mwe-math-fallback-image-inline tex" alt="C_u" src="../images/de85c8a2b7e2c70031168a2145271b44.png" /> (für "ungünstig") der letzten Iteration ist somit:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(N) = C_u(N-1) + (N-1)" src="../images/3cd7e1a6bad4660d5ec3dd51269b5245.png" /></dd></dl></dd></dl></dd></dl>
+<p>Sukzessives Ersetzen von <img class="mwe-math-fallback-image-inline tex" alt="C_u(N-1)" src="../images/0ff6ead2045079f580ad394f3c8d7020.png" /> ergibt:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(N) = C_u(N-2) + (N-2) + (N-1)" src="../images/bdf7389228be5157880ce0dfaa86f4ad.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="..." src="../images/2f43b42fd833d1e77420a8dae7419000.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(N) = C(1) + 1 + 2 + ...+ (N-1)" src="../images/0f5aabd9fd9f540a5b24a46d81f44bcf.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(N) = 0 + 1 + 2 + ...+ (N-1)" src="../images/603c2627bfb7db7d571ebd2c04dd2d53.png" /></dd></dl></dd></dl></dd></dl>
+<p>Nach der Gaußschen Summenformel ist dies wiederum
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(N) = \frac {(N-1)N}{2}\approx \cfrac {N^2}{2}" src="../images/1981f2f94b34cfd22a56a68d3427cc78.png" /> (für große N).</dd></dl></dd></dl></dd></dl>
+<p>wie bei Selection Sort.
+</p>
+<h4><span class="mw-headline" id="Typischer_Fall">Typischer Fall</span></h4>
+<p>Im typischen Fall sind die Daten anfangs zufällig angeordnet, und die innere Schleife bricht manchmal schnell, aber manchmal auch spät ab. Bei zufälliger Anordnung ist beides gleich wahrscheinlich, und die erwartete Laufzeit der inneren Schleife ergibt sich als Durschnitt aller Möglichkeiten <img class="mwe-math-fallback-image-inline tex" alt="k \in 1 ... (N-1)" src="../images/875fe75086dfc13b1514d9aecda66f88.png" />. Die Laufzeit <img class="mwe-math-fallback-image-inline tex" alt="C_t" src="../images/f55687cbb0078a8017c408cfb7a0dfe4.png" /> (für "typisch") der letzten Iteration ist jetzt:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_t(N) = C_t(N-1) + \frac{1}{N-1}\sum_{k=1}^{N-1} k " src="../images/eec0f47527420e8e202523adc818f027.png" /></dd></dl></dd></dl></dd></dl>
+<p>Den Durchschnitt kann man nach der Gaußschen Summenformel analytisch ausrechnen und erhält
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_t(N) = C_t(N-1) + \frac{1}{N-1}\frac{N(N-1)}{2} = C_t(N-1) + \frac{N}{2}" src="../images/b1883f26fb7515207e45ce65cc321b6a.png" /></dd></dl></dd></dl></dd></dl>
+<p>Sukzessives Ersetzen von <img class="mwe-math-fallback-image-inline tex" alt="C_u(N-1)" src="../images/0ff6ead2045079f580ad394f3c8d7020.png" /> ergibt:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_t(N) = C_t(N-2) + \frac{N-1}{2} + \frac{N}{2}" src="../images/dbc18f3c78c195324423ffc960791dc6.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="C_t(N) = C(1) + \frac{2}{2} + ... + \frac{N-1}{2} + \frac{N}{2}" src="../images/1ba995e8e55c6e66c2535a4fe84f4ee8.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="C_t(N) &lt; \frac{1}{2}(1 + ... + N)" src="../images/a5af6e3a9e6630d28be1201ba8c0209e.png" /></dd></dl></dd></dl></dd></dl>
+<p>Die Gaußsche Summenformel ergibt jetzt
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_t(N) &lt; \frac {(N+1)N}{4}\approx \cfrac {N^2}{4}" src="../images/e4a7fcb43ac337b0ce2993db48aabf46.png" /> (für große N).</dd></dl></dd></dl></dd></dl>
+<p>Im typischen Fall benötigt man also halb so viele Vergleiche wie im ungünstigen Fall.
+</p>
+<h3><span class="mw-headline" id="Stabilit.C3.A4t_3">Stabilität</span></h3>
+<p>Insertion Sort ist stabil, weil die Lücke nicht weiter nach links verschoben wird, wenn <tt>a[j] == current</tt> gilt. Gleiche Elemente links von <tt>current</tt> bleiben dadurch links.
+</p><p><br />
+Erweiterung: <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Shell_sort">Shell sort</a>
+</p>
+<h2><span class="mw-headline" id="Mergesort">Mergesort</span></h2>
+<h3><span class="mw-headline" id="Algorithmus_3">Algorithmus</span></h3>
+<p>Zugrunde liegende Idee: 
+</p>
+<ul><li> Zerlege das Problem in zwei möglichst gleich große Teilprobleme ("Teile und herrsche"-Prinzip -- divide and conquer)</li>
+<li> Löse die Teilprobleme rekursiv</li>
+<li> Führe die Teillösungen über Mischen (merging) in richtig sortierter Weise zusammen.</li></ul>
+<p>Der Algorithmus besteht somit aus zwei Teilen
+</p>
+<h4><span class="mw-headline" id="Zusammenf.C3.BChren_--_merge">Zusammenführen -- merge</span></h4>
+<p><tt>left</tt> und <tt>right</tt> sind zwei sortierte Arrays, die in ein sortiertes Ergebnisarray kombiniert werden, das dann zurückgegeben wird:
+</p>
+<pre>def merge(left, right):
+    res = []     # the result array is initially empty
+    i, j = 0, 0  # i and j always point to the first element in left and 
+                 #  right that has not yet been processed (= added to res)
+    while i &lt; len(left) and j &lt; len(right):
+        if left[i] &lt;= right[j]:    # compare the first unprocessed elements of left and right
+             res.append(left[i])   # the smallest remaining element is in left =&gt; add to res
+             i += 1                # go to next element in left
+        else:
+             res.append(right[j])  # the smallest remaining element is in right =&gt; add to res
+             j += 1                # go to next element in right
+   # either left or right has been used up, add the remaining elements of the other
+   while i &lt; len(left):
+       res.append(left[i])
+       i += 1
+   while j &lt; len(right):
+       res.append(right[j])
+       j += 1
+   # the latter two while loops can be abbreviated by Python's slice syntax
+   # res += left[i:len(left)] + right[j:len(right)]
+   # (syntax: array[m:n] returns the subarray from index m (inclusive) to index n (exclusive))
+   return res
+</pre>
+<h4><span class="mw-headline" id="Rekursives_Sortieren">Rekursives Sortieren</span></h4>
+<pre>def mergeSort(a):  # sort 'a' out-of-place (i.e. a new sorted array is returned, 'a' is unchanged)
+    N = len(a)     # number of elements
+    if N &lt;= 1:
+        return a   # arrays with 0 or 1 elements are already sorted =&gt; stop recursion
+    else:
+        left  = a[0:N//2]   # slice syntax: left subarray
+                            # N//2 is Python's 'floor division'
+        right = a[N//2:N]   # slice syntax: right subarray
+        leftSorted  = mergeSort(left)  # recursively sort left and ...
+        rightSorted = mergeSort(right) # ... right subarrays
+        return merge(leftSorted, rightSorted)  # merge the sorted parts and return result
+</pre>
+<p>Bei der Sortierung mit Mergesort wird das Array immer in zwei fast gleich große Teile geteilt. → Es entsteht ein Binärbaum der Tiefe <img class="mwe-math-fallback-image-inline tex" alt="\log_2 N" src="../images/fe36608d3d8dfe2525f5b9b13b3f8d4a.png" />.
+</p><p>Beispiel: Sortieren des Arrays <tt>[S,O,R,T,I,N,G]</tt>.
+</p><p>Der Algorithmus zerlegt das Array zunächst in immer kürzere Teilarrays, bis die Länge 1 erreicht wird. Danach werden die Teilarrays Schritt für Schritt sortiert zusammengefügt:
+</p>
+<pre>                            SORTING
+Zerlegen:                  /       \
+                        SOR         TING
+                       /   \       /    \
+                      S    OR     TI     NG
+                     /    /  \   /  \   /  \
+                    S    O    R T    I N    G
+Zusammenfügen:       \    \  /   \  /   \  /
+Schritt 1             S    OR     IT     GN     Arraylänge: N/8 =&gt; N/4, Vergleiche: 1*0 + 3*1 = 3
+                       \   /       \    /  
+Schritt 2               ORS         GINT        Arraylänge: N/4 =&gt; N/2, Vergleiche: 1*2 + 1*3 = 5
+                           \       /
+Schritt 3                   GINORST             Arraylänge: N/2 =&gt; N,   Vergleiche: 1*6 = 6
+</pre>
+<h3><span class="mw-headline" id="Laufzeit_3">Laufzeit</span></h3>
+<p>Man erkennt an der Skizze, dass der Rekursionsbaum für ein Array der Länge N die Tiefe log N hat. Auf jeder Ebene werden weniger als N Vergleiche ausgeführt, so dass insgesamt weniger als N*log N Vergleiche benötigt werden. Dies ist natürlich wesentlich effizienter als die (N-1)*N/2 Vergleiche von Selection oder Insertion Sort. 
+</p>
+<h4><span class="mw-headline" id="Ung.C3.BCnstiger_Fall_2">Ungünstiger Fall</span></h4>
+<p>Im ungünstigen Fall kommt in <tt>merge()</tt> das kleinste Element immer abwechselnd aus <tt>left</tt> und <tt>right</tt>. Dann werden für das Zusammenfügen genau N-1 Vergleiche benötigt. Die Rechnung vereinfacht sich allerdings deutlich, wenn wir von N Vergleichen ausgehen (alternativ kann man hier die Anzahl der 'append'-Operationen als Maß des Aufwands verwenden. Dann bekommt man immer N Operationen pro Aufruf von <tt>merge()</tt>). Der Gesamtaufwand ergibt sich aus dem Aufwand für die beiden Teilprobleme plus dem Aufwand für N Vergleiche bzw. Appends. Damit erhält man die folgende Rekursionsformel:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(N) = C_u(\lfloor N/2\rfloor) + C_u(\lceil N/2\rceil) + N" src="../images/df9214154d1563c7df7fdfd4707a01fc.png" /></dd></dl></dd></dl></dd></dl>
+<p>Dabei stehen die Zeichen <img class="mwe-math-fallback-image-inline tex" alt="\lfloor \rfloor" src="../images/ecfbb5f0e0f282397415bc30fbca5892.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="\lceil \rceil" src="../images/f9aae602c29287bbd33d8b2589518f65.png" /> für abrunden bzw. aufrunden, weil ein Problem mit ungeradem N nicht in zwei exakt gleiche Teile zerlegt werden kann. Um diese Komplikation zu vermeiden, beschränken wir uns im folgenden auf den Fall <img class="mwe-math-fallback-image-inline tex" alt="N = 2^n" src="../images/781f7afa0aca5c69728bd4a8bf707e52.png" /> (mit etwas höherem Aufwand kann man zeigen, dass diese Einschränkung nicht notwendig ist und die Resultate für alle N gelten). Die vereinfachte Aufwandsformel lautet:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(N) = 2\cdot C_u(N/2) + N" src="../images/562c4528acb068b4596ad15afe1f2ad9.png" /></dd></dl></dd></dl></dd></dl>
+<p>Durch Einsetzen der Formel für N/2 erhalten wir:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{array}{rcl}&#10;C_u(N) &amp;=&amp; 2 \left(2\cdot C_u(N/4) + N/2\right) + N = 4\cdot C_u(N/4) + N + N \\&#10;       &amp;=&amp; 4 \left(2\cdot C_u(N/8) + N/4\right) + N + N = 8\cdot C_u(N/8) + N + N + N \\&#10;       &amp;=&amp; N\cdot C(1) + N + ... + N&#10;\end{array}" src="../images/5cbb30de664eb18497cfb7ddf9676845.png" /></dd></dl></dd></dl></dd></dl>
+<p>Die Rekursion endet, weil für ein Array der Größe <img class="mwe-math-fallback-image-inline tex" alt="N=1" src="../images/a9a738ef9d4e46360dd9b87b39c691bf.png" /> keine Vergleiche mehr benötigt werden, also <img class="mwe-math-fallback-image-inline tex" alt="C(1) = 0" src="../images/c42d2eca531e7bb6a8329d3111da396b.png" /> gilt. Mit <img class="mwe-math-fallback-image-inline tex" alt="N=2^n" src="../images/781f7afa0aca5c69728bd4a8bf707e52.png" /> ist dies aber gerade nach <img class="mwe-math-fallback-image-inline tex" alt="n = \log_2(N)" src="../images/4cd27290943f4a170f25ec42b428adc3.png" /> Zerlegungen der Fall. Das entspricht gerade der Anzahl der Summanden N in obiger Formel. Merge Sort benötigt also im ungünstigen Fall
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(N) = n \cdot N = N\cdot \log_2 N" src="../images/1abfeb750d165c92d4207d77ae6207a2.png" /></dd></dl></dd></dl></dd></dl>
+<p>Operationen.
+</p>
+<h4><span class="mw-headline" id="G.C3.BCnstiger_Fall_2">Günstiger Fall</span></h4>
+<p>Dieser Fall tritt ein, wenn das Array bereits sortiert war. Dann werden in <tt>merge()</tt> zuerst alle Elemente des linken Teilarrays gewählt, und danach wird das gesamte rechte Teilarray an <tt>res</tt> angefügt. Dafür benötigt man N/2 Vergleiche. Damit ist die Anzahl der Vergleiche genau halb so groß wie im ungünstigen Fall. Die Anzahl der Kopieroperationen ist aber in beiden Fällen gleich. Diese Operationen dominieren die Laufzeit, die sich somit im günstigen und ungünstigen Fall nicht wesentlich unterscheidet.
+</p>
+<h3><span class="mw-headline" id="Stabilit.C3.A4t_4">Stabilität</span></h3>
+<p>Merge Sort ist stabil, weil <tt>merge()</tt> bei gleichen Elementen in <tt>left</tt> und <tt>right</tt> dem Element aus <tt>left</tt> den Vorzug gibt (wegen <tt>left[i] &lt;= right[j]</tt>). Da die Elemente des linken Teilarrays vor der Sortierung <i>vor</i> den Elementen des rechten Teilarrays legen, bleibt die Reihenfolge gleicher Elemente somit erhalten.
+</p>
+<h3><span class="mw-headline" id="Weitere_Eigenschaften_von_MergeSort">Weitere Eigenschaften von MergeSort</span></h3>
+<ul><li> Mergesort ist im Wesentlichen <b>unempfindlich gegenüber der ursprünglichen Reihenfolge der Eingabedaten</b>. Grund dafür ist
+<ul><li> die vollständige Aufteilung des Ausgangsarrays in Arrays der Länge 1 und</li>
+<li> dass <tt>merge(left, right)</tt> die Vorsortierung nicht ausnutzt, d.h. die Komplexität von <tt>merge(left, right)</tt> ist sortierungsunabhängig.</li></ul></li>
+<li> Diese Eigenschaft kann unerwünscht sein, wenn ein Teil des Arrays oder gar das ganze Array schon sortiert ist. Es wird nämlich in jedem Fall das ganze Array neu sortiert. Die Python-Sortierfunktion (<tt>list.sort()</tt>), die Merge Sort verwendet, implementiert deshalb eine Reihe von Optimierungen, damit das Sortieren von (teilweise) sortierten Arrays schneller geht als das Sortieren zufälliger Arrays, weil dieser Fall in der Praxis sehr häufig vorkommt.</li>
+<li> Merge Sort eignet sich für das Sortieren von <b>verketteten Listen</b>, weil die Listenelemente stets von vorn nach hinten durchlaufen werden. In diesem Fall muss <tt>merge(left, right)</tt> keine neue Liste <tt>res</tt> für das Ergebnis anlegen, sondern kann einfach die Verkettung der Listenelemente von <tt>left</tt> und <tt>right</tt> entsprechend anpassen. In diesem Sinne arbeitet Merge Sort auf verketten Listen "in-place", d.h. es wird kein zusätzlicher Speicher benötigt.</li>
+<li> Im Gegensatz dazu benötigt die Array-Version von <tt>merge(left, right)</tt>, die wir hier verwenden, zusätzlichen Speicher für das Ergebnis <tt>res</tt>.</li></ul>
+<h3><span class="mw-headline" id="Merge_Sort_in_Python">Merge Sort in Python</span></h3>
+<p>Die Funktion <tt>list.sort()</tt> in Python benutzt intern Merge Sort, allerdings in einer hochoptimierten Fassung. Die Optimierungen betreffen die Beschleunigung der Sortierung von teilweise sortierten oder kleinen Arrays sowie die Verringerung des Speicherverbrauchs. Eine ausführliche Diskussion der Python-Lösung findet man im File <a rel="nofollow" class="external text" href="../images/listsort.txt">listsort.txt</a> im Python-SVN.
+</p>
+<h2><span class="mw-headline" id="Quicksort">Quicksort</span></h2>
+<ul><li> Quicksort wurde in den 60er Jahren von <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/C._A._R._Hoare">Charles Antony Richard Hoare</a> entwickelt. Es gibt viele Implementierungen von Quicksort (vgl. <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Quicksort">Quicksort in Wikipedia</a>).</li>
+<li> Dieser Algorithmus gehört zu den "Teile und herrsche"-Algorithmen (divide-and-conquer) und ist der Standardalgorithmus für Sortieren.</li>
+<li> Im Gegensatz zu Merge Sort wird das Problem aber nicht immer in zwei fast gleich große Teilprobleme zerlegt. Dadurch vermeidet man, dass zusätzlicher Speicher benötigt wird (Quick Sort arbeitet auch für Arrays "in place"). Allerdings erkauft man sich dies dadurch, dass Quick Sort bei ungünstigen Eingaben (die Bedeutung von "ungünstig" ist je nach Implementation verschieden) nicht effizient arbeitet. Da solche Eingaben jedoch in der Praxis fast nie vorkommen, tut dies der Beliebtheit von Quicksort keinen Abbruch.</li></ul>
+<h3><span class="mw-headline" id="Algorithmus_4">Algorithmus</span></h3>
+<p>Wie Merge Sort arbeitet Quick Sort rekursiv, d.h. Quick Sort wird auf wiederholt auf immer kleinere Teilprobleme angewendet. Damit dies in-place geschehen kann, muss der Algorithmus die Grenzen das aktuell zu bearbeitenden Teilarrays kennen. Damit der Benutzer die Grenzen nicht explizit angeben muss, implementieren wir zunächst eine <i>convenience function</i>, die die eigentliche Funktionalität kapselt:
+</p>
+<pre>def quickSort(a):                 # sortiere Array 'a' in-place
+    quickSortImpl(a, 0, len(a)-1) # rufe den eigentlichen Algorithmus mit Arraygrenzen auf  
+</pre>
+<p><tt>quickSortImpl()</tt> bereitet in der Funktion <tt>partition()</tt> die Daten zuerst vor und ruft sich danach rekursiv für das linke und rechte Teilarray auf:
+</p>
+<pre>def quickSortImpl(a, l, r): 
+    """a ist das zu sortierende Array, 
+       l und r sind die linke und rechte Grenze (inklusive) des zu sortierenden Bereichs"""
+
+    if r &gt; l:                     # Rekursionsabschluss: wenn r &lt;= l, enthält der Bereich höchstens ein Element
+                                  # und muss nicht mehr sortiert werden
+        k = partition(a, l, r)    # k ist der Index des sog. Pivot-Elements (s. u.)
+        quickSortImpl(a, l, k-1)  # rekursives Sortieren des linken ... 
+        quickSortImpl(a, k+1, r)  # ... und rechten Teilarrays
+</pre>
+<p>Der Schlüssel des Algorithmus ist offensichtlich die Funktion <tt>partition</tt>. Diese wählt ein Element des Arrays aus (das Pivot-Element) und bringt es an die richtige Stelle (also an den Index <tt>k</tt>, der von <tt>partition</tt> zurückgegeben wird). Außerdem stellt sie sicher, dass alle Elemente in der linken Teilliste (Index &lt; <tt>k</tt>) kleiner als <tt>a[k]</tt>, und alle Elemente in der rechten Teilliste größer als <tt>a[k]</tt> sind. Nach <tt>partition</tt> gelten also die folgenden Axiome:
+</p>
+<ol><li> <img class="mwe-math-fallback-image-inline tex" alt="a[k]" src="../images/817d60e86d902af587a64436ed4b593e.png" /> ist sortiert, d.h. dieses Element ist am endgültigen Platz.</li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="\forall i \in l, ..., k-1 : a[i] \leq a[k]" src="../images/81c8da5b54c4fa6c64322b51ccc3b4cb.png" /></li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="\forall i \in k+1, ..., r : a[i] \geq a[k]" src="../images/0a2757c094cd645e35979a2bf7995026.png" /></li></ol>
+<pre>         l                               r
+       +---+---+---+---+---+---+---+---+---+
+Array: |   |   |   |   |\\\|   |   |   |   |
+       +---+---+---+---+---+---+---+---+---+
+        \______  _____/  k  \______  _____/ 
+               \/                  \/
+            &lt;=a[k]               &gt;=a[k]             (a[k] ist das Pivot-Element)
+</pre>
+<p>Die Position von <tt>k</tt> richtet sich also offensichtlich danach, wie viele Elemente im Bereich <tt>l</tt> bis <tt>r</tt> kleiner bzw. größer als das gewählte Pivot-Element sind. Der Wahl eines guten Pivot-Elements kommt demnach eine große Bedeutung zu (s.u.). 
+</p><p>In der einfachsten Version wird <tt>partition</tt> wie folgt definiert:
+</p>
+<pre>def partition(a, l, r):
+    pivot = a[r]     # Pivot-Element. Hier wird willkürlich das letzte Element verwendet.
+    i  = l           # i und j sind Laufvariablen
+    j  = r - 1
+
+    while True:
+        while i &lt; r and a[i] &lt;= pivot:
+            i += 1               # finde von links das erste Element &gt; pivot
+        while j &gt; l and a[j] &gt;= pivot:
+            j -= 1               # finde von rechts das ersten Element &lt; pivot
+                                 # (von links gesehen ist dies das letzte Element &lt; pivot)
+        if i &lt; j:                # a[i] und a[j] sind beide auf der falschen Seite des Pivot
+            a[i], a[j] = a[j], a[i]  # =&gt; vertausche sie
+        else:                    # alle Elemente sind auf der richtigen Seite
+            break                # =&gt; Schleife beenden      
+    a[r] = a[i]                  # schaffe eine Lücke für das Pivot
+                                 # wegen a[i] &gt;= pivot gehört das bisherige a[i] auf die rechte Seite
+                                 # wegen a[j] &lt;= pivot und i &gt;= j ist i die richtige Position
+    a[i] = pivot                 # bringe das Pivot an seine endgültige Position i
+    return i                     # gib die engültige Position des Pivots zurück
+</pre>
+<p>Die folgende Skizze verdeutlicht das Austauschen
+</p>
+<pre>                                         p
+       +---+---+---+---+---+---+---+---+---+
+Array: |   |   |   |   |   |   |   |   |\\\|
+       +---+---+---+---+---+---+---+---+---+
+       ------&gt; a[i]&gt;p          a[j]&lt;p &lt;-----
+                 |               |
+                 +---------------+
+      Diese zwei Elemente werden ausgetauscht.
+
+</pre>
+<p>Dies wird wiederholt, bis sich die Indizes <tt>i</tt> und <tt>j</tt> treffen oder einander überholen. Am Schluss wird das Pivot-Element an die richtige Stelle verschoben:
+</p>
+<pre>                         p
+       +---+---+---+---+---+---+---+---+---+
+Array: |   |   |   |   |\\\|   |   |   |   |
+       +---+---+---+---+---+---+---+---+---+
+                         i
+       -----------------&gt; &lt;-----------------
+ 
+</pre>
+<p>Beispiel: Partitionieren des Arrays <tt>[A,S,O,R,T,I,N,G,E,X,A,M,P,L,E]</tt> mit Pivot 'E'.
+</p>
+<pre> l,i --&gt;                                          &lt;-- j   r
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| A | S | O | R | T | I | N | G | E | X | A | M | P | L | E |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+      i &lt;--------- Vertauschen ---------&gt; j               r
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| A | S | O | R | T | I | N | G | E | X | A | M | P | L | E |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+          i &lt;--- Vertauschen ---&gt; j                       r
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| A | A | O | R | T | I | N | G | E | X | S | M | P | L | E |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+          j   i  (j hat i überholt)                       r
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| A | A | E | R | T | I | N | G | O | X | S | M | P | L | E |   --&gt; Hier wird die 
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+       Schleife verlassen.
+
+              i &lt;------------- Vertauschen -------------&gt; r
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| A | A | E | R | T | I | N | G | O | X | S | M | P | L | E |   
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+             k=i                                            
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| A | A | E | E | T | I | N | G | O | X | S | M | P | L | R |   --&gt; Hier wird partition() beendet.
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+</pre>
+<p><br />
+Das Element 'E' in <tt>a[k]</tt> (das ehemalige Pivot) ist jetzt an seiner endgültigen Position. Alle Elemente links von <tt>a[k]</tt> sind kleiner oder gleich 'E', alle Elemente rechts davon sind größer. Weitere ausführliche Erklärungen der Implementation findet man bei Sedgewick.
+</p>
+<h3><span class="mw-headline" id="Laufzeit_4">Laufzeit</span></h3>
+<p>Die allgemeine Rekursionsformel für die Laufzeit der äußeren Schleife lautet
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C(N) = (N+1) + C(k-1) + C(N-k)" src="../images/0d292599fce56fd9e573ebc61b0b3b27.png" /></dd></dl></dd></dl></dd></dl>
+<p>wobei <img class="mwe-math-fallback-image-inline tex" alt="k" src="../images/8ce4b16b22b58894aa86c421e8759df3.png" /> der Index des Pivotelements nach der Ausführung von <tt>partition()</tt> ist. Der Term <img class="mwe-math-fallback-image-inline tex" alt="N+1" src="../images/bac1ab1b8ec3a251cabf813431c52f19.png" /> ist die Anzahl der Vergleiche, die <tt>partition()</tt> benötigt: Da normalerweise (falls es keine weiteren Elemente mit dem Wert des Pivots gibt) am Ende von <tt>partition()</tt> die Bedingung <tt>j == i-1</tt> gilt, wurden die Elemente <tt>a[i]</tt> und <tt>a[j]</tt> jeweils zweimal mit dem Pivot verglichen (einmal in der <tt>i</tt>-Schleife und einmal in der <tt>j</tt>-Schleife), während die übrigen <img class="mwe-math-fallback-image-inline tex" alt="N-3" src="../images/0cb86121f1cfee5cd701479b1fa081d4.png" /> Elemente nur einmal verglichen wurden. Das sind insgesamt <img class="mwe-math-fallback-image-inline tex" alt="N-3+4=N+1" src="e8e80fe3af43c8131cbc53921d191e57.html" /> Vergleiche.
+</p><p>Allerdings können wir die Rekursionsformel nicht auflösen, ohne <img class="mwe-math-fallback-image-inline tex" alt="k" src="../images/8ce4b16b22b58894aa86c421e8759df3.png" /> zu kennen. Wir müssen deshalb Annahmen über <img class="mwe-math-fallback-image-inline tex" alt="k" src="../images/8ce4b16b22b58894aa86c421e8759df3.png" /> machen und untersuchen wieder den ungünstigen, günstigen und typischen Fall.
+</p>
+<h4><span class="mw-headline" id="Ung.C3.BCnstiger_Fall_3">Ungünstiger Fall</span></h4>
+<p>Der ungünstige Fall tritt ein, wenn <img class="mwe-math-fallback-image-inline tex" alt="k" src="../images/8ce4b16b22b58894aa86c421e8759df3.png" /> immer am Rand des Bereichs liegt. Dies tritt z.B. dann ein, wenn das Array bereits vor Beginn sortiert war. Dann ist das Pivot-Element <tt>a[r]</tt> immer das größte Element jedes Bereichs und verbleibt nach der Ausführung von <tt>partition()</tt> an dieser Position, so dass <img class="mwe-math-fallback-image-inline tex" alt="k=N" src="0c5f6f09098a49b8143693323b2c1d58.html" /> gilt. Entsprechendes gilt für absteigend sortierte Arrays: Hier ist das Pivot immer das kleinste Element und wird an den Anfang des Bereichs verschoben. Die Rekursion spezialisiert sich dann als
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(N) = (N+1) + C_u(N-1) + C_u(0)" src="../images/e2cc7e198285bbe1a44762b9452a52ad.png" /></dd></dl></dd></dl></dd></dl>
+<p>Das Sortieren eines leeren Arrays erfordert gar keine Vergleiche, es gilt also
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(0) = 0" src="../images/b9ade6022d0f24dc1d99ed9c7439d18b.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(N) = (N+1) + C_u(N-1)" src="../images/7d9ad7abde4e4c756a0d8b835af8a71c.png" /></dd></dl></dd></dl></dd></dl>
+<p>Dies ist fast die gleiche Formel wie bei Selection Sort, und durch sukzessives Einsetzen erhalten wir:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_u(N) = (N+1) + (N) + (N-1) + ... + 1 = (N+2)(N+1) / 2" src="../images/27b4e435c3bf251999fa58ca5881905a.png" /></dd></dl></dd></dl></dd></dl>
+<p>Unter diesen Bedingungen ist Quick Sort also noch langsamer als Selection Sort. Wir beschreiben unten, wie man verhindert, dass dieser ungünstige Fall jemals auftritt. 
+</p>
+<h4><span class="mw-headline" id="G.C3.BCnstiger_Fall_3">Günstiger Fall</span></h4>
+<p>Der bestmögliche Fall tritt ein, wenn <tt>partition()</tt> das Array in zwei gleich große Hälften teilt, so dass <img class="mwe-math-fallback-image-inline tex" alt="k=N / 2" src="../images/bfba66aa2fafdd54595df57f185ae288.png" /> gilt. Dann ist die Anzahl der Vergleiche
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{array}{rcl}&#10;C_g(N) &amp;=&amp;       (N+1) + C_g(N/2-1) + C_g(N/2) \\&#10;       &amp;\approx&amp; N + 2 C_g(N/2)&#10;\end{array}" src="../images/db972668fe3e838773ba4bf06ac3fb62.png" /></dd></dl></dd></dl></dd></dl>
+<p>Dies ist die gleiche Formel wie bei Merge Sort, und durch sukzessives Einsetzen erhalten wir
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_g(N) \approx N\log_2(N)" src="../images/1fba268e753217e3a2218e96652a687e.png" /></dd></dl></dd></dl></dd></dl>
+<p>In der Praxis ist Quick Sort sogar noch etwas schneller als Merge Sort, weil die Daten nicht in ein temporäres Array kopiert werden müssen. Man sagt, dass Quick Sort "in-place", also im zu sortierenden Array selbst, operiert.
+</p>
+<h4><span class="mw-headline" id="Typischer_Fall_2">Typischer Fall</span></h4>
+<p>Es stellt sich nun die Frage, welcher Fall in der Praxis typischerweise auftritt - der schlechte oder der günstige? Als "typischen Fall" betrachten wir die Situation, dass das Array zu Beginn zufällig sortiert war. Bei zufälliger Sortierung hat jeder Index die gleiche Wahrscheinlichkeit, im Ende von <tt>partition()</tt> als Pivot-Position herauszukommen. Wir mitteln deshalb über alle möglichen Positionen:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_t(N) = (N+1) + \frac{1}{N} \sum_{k=1}^{N} \left[ C_t(k-1) + C_t(N-k) \right]" src="../images/2536557025d64612fe1cc41f889a612b.png" /> für <img class="mwe-math-fallback-image-inline tex" alt=" N&gt;0" src="../images/e40b53e14e3d3c13fa7bdea5a55d75e1.png" /></dd></dl></dd></dl></dd></dl>
+<p>wobei  <img class="mwe-math-fallback-image-inline tex" alt="k" src="../images/8ce4b16b22b58894aa86c421e8759df3.png" /> über alle möglichen Teilungspunkte läuft. Die Summe (der mittlere Aufwand über alle möglichen Zerlegungen) kann vereinfacht werden zu
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{N} \sum_{k=1}^{N} \left[ C_t(k-1) + C_t(N-k) \right] = \frac{2}{N} \sum_{k=1}^{N} C_t(k-1) " src="../images/50d8b878f679456839b75c63464071d7.png" /></dd></dl></dd></dl></dd></dl>
+<p>weil alle Terme der Summe zweimal vorkommen (beispielsweise ergibt sich <img class="mwe-math-fallback-image-inline tex" alt="C_t(1)" src="../images/9ce741d56a667f6f91ab442e6d4a452b.png" /> einmal aus <img class="mwe-math-fallback-image-inline tex" alt="C_t(k-1)" src="../images/5f0cf84b99307e0571d1f3d674a874d5.png" /> für <img class="mwe-math-fallback-image-inline tex" alt="k=2" src="../images/38c9abaca4c0e762d42281e967e45959.png" />, und einmal aus <img class="mwe-math-fallback-image-inline tex" alt="C_t(N-k)" src="../images/c782b5dd4ff9af602590bfa6d30ff0cb.png" /> für <img class="mwe-math-fallback-image-inline tex" alt="k=N-2" src="../images/29f88e244fe9c57b4f9e5f3a3ae3799f.png" />). Die Auflösung der Formel ist etwas trickreich. Wir multiplizieren zunächst beide Seiten mit N:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="&#10;N \cdot C_t(N) = N \left[ (N+1) + \frac{2}{N} \sum_{k=1}^{N} C_t(k-1) \right] = N (N+1) + 2\; \sum_{k=1}^{N} C_t(k-1)" src="../images/ce5afe958e11e015be147df07e72f167.png" /></dd></dl></dd></dl></dd></dl>
+<p>Durch die Substitution <img class="mwe-math-fallback-image-inline tex" alt="N \rightarrow N-1" src="../images/72f5ab28d4751ab959018c01d04eadf6.png" /> erhalten wir die entsprechende Formel für N-1:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="&#10;(N-1) \cdot C_t(N-1) = (N-1) N + 2\; \sum_{k=1}^{N-1} C_t(k-1)" src="../images/f499c3baebbb2e88cd402f05fb4d0382.png" /></dd></dl></dd></dl></dd></dl>
+<p>Wir subtrahieren die Formel für N-1 von der Formel für N und eliminieren dadurch die Summe (nur der letzte Summand der ersten Summe bleibt übrig):
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="&#10;\begin{array}{rcl}&#10;N \cdot C_t(N) - (N-1) \cdot C_t(N-1) &amp;=&amp; N(N+1) + 2\;\sum_{k=1}^{N} C_t(k-1)  - (N-1) N - 2\;\sum_{k=1}^{N-1} C_t(k-1)\\&#10;&amp;&amp;\\&#10;N \cdot C_t(N) - (N-1) \cdot C_t(N-1) &amp;=&amp; N(N+1) - (N-1) N + 2 C_t(N-1)&#10;\end{array}&#10;" src="../images/a1e5c17d0dbc2b686f000570a335222b.png" /></dd></dl></dd></dl></dd></dl>
+<p>Nach Vereinfachung erhalten wir die rekurrente Beziehung
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="&#10;N \cdot C_t(N) = (N+1)\cdot C_t(N-1) + 2 N" src="../images/348fdc06f43b92b09b2f1991f526038e.png" /></dd></dl></dd></dl></dd></dl>
+<p>Wir teilen jetzt beide Seiten durch <img class="mwe-math-fallback-image-inline tex" alt="N" src="../images/8d9c307cb7f3c4a32822a51922d1ceaa.png" />
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="&#10;C_t(N) = \frac{N+1}{N}C_t(N-1) + 2 = \frac{N+1}{N}C_t(N-1) + 2\frac{N+1}{N+1}" src="../images/f07558173c6b60bb4b69272b29d7715f.png" /></dd></dl></dd></dl></dd></dl>
+<p>Sukzessives Einsetzen der Formel für <img class="mwe-math-fallback-image-inline tex" alt="C_t(N-1)" src="../images/118ff99d6e679e0a884223e5fe1cf415.png" />, <img class="mwe-math-fallback-image-inline tex" alt="C_t(N-2)" src="../images/6620dd3c4756dbd4c9b4bc78c758f5df.png" /> etc. bis <img class="mwe-math-fallback-image-inline tex" alt="C(1)=0" src="../images/c42d2eca531e7bb6a8329d3111da396b.png" /> liefert
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="&#10;\begin{array}{rcl}&#10;C_t(N) &amp;=&amp; \frac{N+1}{N}\left(\frac{N}{N-1}C_t(N-2) + 2\right) + 2\frac{N+1}{N+1} \\&#10;       &amp;&amp; \\&#10;       &amp;=&amp; \frac{N+1}{N-1}C_t(N-2) + 2(N+1)\left(\frac{1}{N}+\frac{1}{N+1}\right)\\&#10;       &amp;&amp; \\&#10;       &amp;=&amp; \frac{N+1}{N-1}\left(\frac{N-1}{N-2}C_t(N-3) + 2\right) + 2(N+1)\left(\frac{1}{N}+\frac{1}{N+1}\right)\\&#10;       &amp;&amp; \\&#10;       &amp;=&amp; \frac{N+1}{N-2}C_t(N-3) + 2(N+1)\left(\frac{1}{N-1}+\frac{1}{N}+\frac{1}{N+1}\right)\\&#10;       &amp;&amp; \\&#10;       &amp;=&amp; \frac{N+1}{2}C(1) + 2(N+1)\left(\frac{1}{3}+...+\frac{1}{N+1}\right)\\&#10;       &amp;&amp; \\&#10;       &amp;=&amp; 2(N+1)\left(\frac{1}{3}+...+\frac{1}{N+1}\right)\\&#10;       &amp;&amp; \\&#10;       &amp;&lt;&amp; 2(N+1)\sum_{k=1}^{N+1} \frac{1}{k} = 2(N+1) H_{N+1}&#10;\end{array}&#10;" src="../images/3d776d9cbd29a91e18f29330496ab3cc.png" /></dd></dl></dd></dl></dd></dl>
+<p>Die Zahl <img class="mwe-math-fallback-image-inline tex" alt="H_{N+1}" src="../images/7d11b7eb806a7f3869f99dc846fba0e0.png" /> ist die <img class="mwe-math-fallback-image-inline tex" alt="(N+1)" src="../images/5a289eb3a7b3e2e148693369f50666ad.png" />-te <i>harmonic number</i> (d.h. Partialsumme der harmonischen Reihe, siehe <a rel="nofollow" class="external text" href="https://de.wikipedia.org/wiki/Harmonische_Reihe">Wikipedia</a>), die man für hinreichend große N gut durch ein Integral approximieren kann:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="H_{N+1}=\sum_{k=1}^{N+1} \frac{1}{k}\approx\int_1^{N+1}\frac{1}{k}dk=\ln(N+1)" src="../images/e153cf70f2ceb0dc71fce0e42b57e256.png" /></dd></dl></dd></dl></dd></dl>
+<p>Somit benötigt Quick Sort im typischen Fall
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="C_t(N)\approx 2 (N+1) \cdot\ln(N+1) \approx 1.38 N\cdot\log_2(N)" src="../images/d3ad26078564fc2b3caa0be74e9cec19.png" /></dd></dl></dd></dl></dd></dl>
+<p>Vergleiche. Quick Sort ist demnach für den praktischen Einsatz geeignet, weil es sich im typischen Fall fast genauso verhält wie im günstigen Fall.
+</p>
+<h3><span class="mw-headline" id="Stabilit.C3.A4t_5">Stabilität</span></h3>
+<p>Quick Sort ist nicht stabil, weil beim Vertauschen in <tt>partition()</tt> die Reihenfolge von Elementen mit gleichem Schlüssel umgekehrt werden kann.
+</p>
+<h3><span class="mw-headline" id="Verbesserungen_des_Quicksort-Algorithmus">Verbesserungen des Quicksort-Algorithmus</span></h3>
+<h4><span class="mw-headline" id="G.C3.BCnstige_Selektion_des_Pivot-Elements">Günstige Selektion des Pivot-Elements</span></h4>
+<p>Durch geschickte Wahl des Pivot-Elements kann man erreichen, dass der ungünstige Fall (quadratische Laufzeit) nur mit extrem kleiner Wahrscheinlichkeit eintritt. Zwei Möglichkeiten haben sich bewährt:
+</p>
+<ol><li> Anstatt des letzten Elements des Teilarrays wählt man mit Hilfe eines Zufallszahlengenerators einen zufälligen Index <img class="mwe-math-fallback-image-inline tex" alt="m \in l,...,r" src="../images/e3b7250b0a75f4c33dd43fe35951ddde.png" /> (in Python: <tt>m = random.randint(l, r)</tt>) und wählt das Element <tt>a[m]</tt> als Pivot. Dadurch wird Quick Sort unempfindlich gegenüber bereits sortierten Arrays, weil die Teilung im Mittel wie bei einem zufällig sortierten Array erfolgt. Die Laufzeit entspricht dann dem typischen Fall in obiger Laufzeitberechnung.</li>
+<li> Median (mittlerer Wert) von drei Kandidaten: Sortiere zunächst nur 3 willkürlich gewählte Elemente (z.B. <tt>a[l]</tt>, <tt>a[(l+r)/2]</tt> und <tt>a[r]</tt>) und wähle den nach der Sortierung mittleren als Pivot ("median-of-three"-Methode). Dadurch wird es sehr unwahrscheinlich, dass man immer ein ungünstiges Pivot erwischt. Ist das Array z.B. bereits sortiert, kommt als Median immer das Element <tt>a[(l+r)/2]</tt> heraus, so dass alle Abschnitte in der Mitte geteilt werden - der günstige Fall. Um noch sicherer zu gehen, kann man auch mehr Kandidaten (z.B. neun) wählen.</li></ol>
+<p>In beiden Fällen ist es praktisch ausgeschlossen, dass ein Eingabearray so angeordnet ist, dass in jedem Teilarray gerade das kleinste oder größte Element als Pivot gewählt wird. Nur dann könnte der ungünstige Fall jedoch eintreten, was somit effektiv verhindert wird. Sollte es dennoch einmal schief gehen, kann man immer noch die Anzahl der Aufrufe von <tt>partition()</tt> mitzählen und zu einem anderen Sortieralgorithmus wechseln (z.B. zu Merge Sort oder Heap Sort, die auch im schlechtesten Fall schnell sind), wenn diese Zahl eine kritische Grenze (z.B. <img class="mwe-math-fallback-image-inline tex" alt="a \cdot \log_2 N" src="../images/e4b78f1af5d4c62ee88874c919ea7061.png" /> für ein geeignetes <img class="mwe-math-fallback-image-inline tex" alt="a" src="../images/0cc175b9c0f1b6a831c399e269772661.png" />) überschreitet. Fast immer wird aber Quick Sort schneller sein als die Alternativen.
+</p>
+<h4><span class="mw-headline" id="Alternatives_Sortieren_kleiner_Intervalle">Alternatives Sortieren kleiner Intervalle</span></h4>
+<p>Für kleine Arrays (bis zu einer gegebenen Größe K) ist das "Teile und herrsche"-Prinzip nicht die effizienteste Herangehensweise, weil der höhere Verwaltungsaufwand dieser Algorithmen nicht mehr durch den Geschwindigkeitsgewinn kompensiert wird. In der Praxis hat sich gezeigt, dass für Arrays bis zur Größe <img class="mwe-math-fallback-image-inline tex" alt="N_{max}\approx 30" src="../images/4eb0b6d063cc33651d14e632ef83393f.png" /> <i>Insertion Sort</i> am schnellsten arbeitet. Man modifiziert Quick Sort deshalb wie folgt:
+</p>
+<pre>def quickSortImpl(a, l, r): 
+    if r-l &lt;= 30:               # sortiere kleine (Sub-)Arrays mit Insertion Sort ...
+        insertionSortSubarray(a, l, r)
+    else:                       # ... und große mit Quick Sort
+        k = partition(a, l, r)
+        quickSortImpl(a, l, k-1)
+        quickSortImpl(a, k+1, r)
+</pre>
+<p>Die Erweiterung von Insertion Sort für beliebige Subarrays ist trivial:
+</p>
+<pre>def insertionSortSubarray(a, l, r):
+    for i in range(l+1, r+1):
+        current = a[i]
+        j = i
+        while j &gt; l:
+            if current &lt; a[j-1]:
+                a[j] = a[j-1]
+            else:
+                break
+            j -= 1
+        a[j] = current
+</pre>
+<p>Im Spezialfall <img class="mwe-math-fallback-image-inline tex" alt="N\le 3" src="../images/62635395cfd668422855219c84700cf7.png" /> (Array mit maximal 3 Elementen) kann man sogar die Schleifen eliminieren (sogenanntes <i>loop unrolling</i>):
+</p>
+<pre>def sortThree(a, l, r):
+    if r &gt; l and a[l+1] &lt; a[l]:          # Stelle sicher, dass a[l] und a[l+1] relativ zueinander sortiert sind.
+        a[l], a[l+1] = a[l+1], a[l]
+    if r == l + 2:
+        if a[r] &lt; a[l]:                  # Stelle sicher, dass a[l] und a[r] relativ zueinander sortiert sind.
+            a[l], a[r] = a[r], a[l]      # Danach ist a[l] auf jeden Fall das kleinste Element.
+        if a[r] &lt; a[r-1]:                # Stelle sicher, dass a[r-1] und a[r] relativ zueinander sortiert sind.
+            a[r], a[r-1] = a[r-1], a[r]  # Jetzt ist a[r] auf jeden Fall das größte Element und das Array damit sortiert.
+</pre>
+<p>Die Optimierung für kleine Arrays wird für alle komplexen Sortieralgorithmen (also auch Merge Sort) gern verwendet.
+</p>
+<h4><span class="mw-headline" id="Beseitigung_der_Rekursion">Beseitigung der Rekursion</span></h4>
+<p>Rekursive Funktionsaufrufe sind typischerweise teurer als Schleifen. Wir lernen im Kapitel <a href="iteration_versus_rekursion.html" title="Iteration versus Rekursion">Iteration versus Rekursion</a>, dass man <i>Endrekursion</i> stets durch die Verwendung eines Stacks in eine Schleife umwandeln kann. Im Vorgriff auf dieses. Nach jeder Partitionierung wird das größere Teilintervall auf dem Stack abgelegt und das kleinere Teilintervall direkt weiterverarbeitet (hierdurch wird sichergestellt, dass die maximale Größe des Stacks minimiert wird).
+</p>
+<pre>def quicksortNonRecursive(a, l, r):
+    stack = [(l,r)]  # initialisiere den Stack
+    while len(stack) &gt; 0:
+        if r &gt; l:
+            k = partition(a, l, r)
+            if (k-l) &gt; (r-k):
+                stack.append((l,k-1))  # remember bigger subproblem on stack
+                l = k+1                # and solve smaller one directly
+            else:
+                stack.append((k+1, r)) # remember bigger subproblem on stack
+                r = k-1                # and solve smaller one directly
+        else:
+            l, r = stack.pop()         # get next subproblem from stack
+</pre>
+<p>Die folgende Skizze verdeutlicht die Verwendung des Stacks.
+</p>
+<pre>+---+---+---+---+---+---+---+
+| Q | U | I | C | K | S | O |
++---+---+---+---+---+---+---+
+
+             
++---+---+---+===+---+---+---+
+| K | C | I |=O=| Q | S | U |
++---+---+---+===+---+---+---+
+                 \_________/
+                     push
+
++---+===+---+
+| C |=I=| K |
++---+===+---+
+         \_/
+         push
+
++===+
+|=C=|
++===+
+
+        +===+
+        |=K=|
+        +===+
+
+                +---+---+===+
+                | Q | S |=U=|
+                +---+---+===+
+
+                +---+===+
+                | Q |=S=|
+                +---+===+
+
+                +===+
+                |=Q=|
+                +===+
+        
++---+---+---+---+---+---+---+
+| C | I | K | O | Q | S | U |  
++---+---+---+---+---+---+---+
+</pre>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Quick_Sort_in_C.2B.2B">Quick Sort in C++</span></h4>
+<p>Die Implementation der C++-Standardfunktion <tt>std::sort()</tt>, die mit dem Gnu-Compiler mitgeliefert wird, benutzt intern <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Introsort">Introsort</a>, eine hochoptimierte Kombination von Quicksort und Heap Sort.
+</p><p><a href="korrektheit.html" title="Korrektheit">Nächstes Thema</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825110954
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.095 seconds
+Real time usage: 1.302 seconds
+Preprocessor visited node count: 1191/1000000
+Preprocessor generated node count: 2452/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:17-0!canonical!math=0 and timestamp 20260825110952 and revision id 5633
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index3173.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Sortieren&amp;oldid=5633</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="sortieren.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk"><a href="talk_sortieren.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index4e5e.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="index2c7f.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="index94ca.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="sortieren-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="sortieren-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="index9709.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="index3173.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index4858.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 4 May 2017, at 15:31.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.095","walltime":"1.302","ppvisitednodes":{"value":1191,"limit":1000000},"ppgeneratednodes":{"value":2452,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825110954","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1459});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Sortieren by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:40:18 GMT -->
+</html>

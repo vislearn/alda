@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Generizität by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:46:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Generizität - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Generizität","wgTitle":"Generizität","wgCurRevisionId":5529,"wgRevisionId":5529,"wgArticleId":75,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Generizität","wgRelevantArticleId":75,"wgRequestId":"bcb9f5f58c0658b8fc83d44d","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Generizität rootpage-Generizität skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Generizität</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Generische_Programmierung_-_Definition_und_Motivation"><span class="tocnumber">1</span> <span class="toctext">Generische Programmierung - Definition und Motivation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Beispiel_eines_nicht-generischen_Algorithmus"><span class="tocnumber">1.1</span> <span class="toctext">Beispiel eines nicht-generischen Algorithmus</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Kopie_Array_.E2.86.92_Array"><span class="tocnumber">1.1.1</span> <span class="toctext">Kopie Array &#8594; Array</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Kopie_Array_.E2.86.92_verkettete_Liste"><span class="tocnumber">1.1.2</span> <span class="toctext">Kopie Array &#8594; verkettete Liste</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Kopie_verkettete_Liste_.E2.86.92_Array"><span class="tocnumber">1.1.3</span> <span class="toctext">Kopie verkettete Liste &#8594; Array</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Entscheidende_Beobachtung"><span class="tocnumber">1.1.4</span> <span class="toctext">Entscheidende Beobachtung</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Transformation_in_eine_generische_Form"><span class="tocnumber">2</span> <span class="toctext">Transformation in eine generische Form</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Vereinheitlichung_der_Zieldatenstruktur_durch_standardisierte_Einf.C3.BCgefunktion"><span class="tocnumber">2.1</span> <span class="toctext">Vereinheitlichung der Zieldatenstruktur durch standardisierte Einfügefunktion</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Vereinheitlichung_der_Quelldatenstruktur_durch_Iteratoren"><span class="tocnumber">2.2</span> <span class="toctext">Vereinheitlichung der Quelldatenstruktur durch Iteratoren</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Iterator_f.C3.BCr_die_doppelt_verkettete_Liste"><span class="tocnumber">2.2.1</span> <span class="toctext">Iterator für die doppelt verkettete Liste</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Generische_Kopierfunktion"><span class="tocnumber">2.3</span> <span class="toctext">Generische Kopierfunktion</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Was_tut_Python_bei_.22for_k_in_quelle:.22_.3F"><span class="tocnumber">2.3.1</span> <span class="toctext">Was tut Python bei "for k in quelle:"&#160;?</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Kopieren_einer_Sequenz_in_umgekehrter_Reihenfolge"><span class="tocnumber">2.3.2</span> <span class="toctext">Kopieren einer Sequenz in umgekehrter Reihenfolge</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Funktoren"><span class="tocnumber">3</span> <span class="toctext">Funktoren</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Verwandte_generische_Funktionen"><span class="tocnumber">3.1</span> <span class="toctext">Verwandte generische Funktionen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Definition_von_Generischen_Schittstellen_zwischen_Algorithmen_und_Datenstrukturen"><span class="tocnumber">4</span> <span class="toctext">Definition von Generischen Schittstellen zwischen Algorithmen und Datenstrukturen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Abstrakte_Datentypen"><span class="tocnumber">4.1</span> <span class="toctext">Abstrakte Datentypen</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Offered_Interface_versus_Required_Interface"><span class="tocnumber">4.2</span> <span class="toctext">Offered Interface versus Required Interface</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#Wichtige_Konzepte"><span class="tocnumber">4.2.1</span> <span class="toctext">Wichtige Konzepte</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Generische_Programmierung_-_Definition_und_Motivation">Generische Programmierung - Definition und Motivation</span></h2>
+<p>Ziel von <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Generische_Programmierung">generischer Programmierung</a> ist es, Algorithmen und Datenstrukturen so zu entwerfen und zu implementieren, dass sie möglichst <b>vielfältig verwendbar</b> sind.
+</p><p>Vielfältig verwendbar meint hierbei, dass generische Algorithmen und Datenstrukturen <b>ohne Neumiplementation</b> in
+</p>
+<ul><li> den verschiedensten Anwendungen eingesetzt,</li>
+<li> vielseitig miteinander kombiniert und</li>
+<li> als wiederverwendbare Bibliotheken zur Verfügung gestellt werden können.</li></ul>
+<p>Dadurch gelingt es, auch sehr komplizierte Algorithmen und Datenstrukturen praktisch nutzbar zu machen. Ohne Generizität müssten diese jedesmal neu implementiert und getestet werden, wofür der Aufwand oft zu hoch wäre. Außerdem muss derselbe Algorithmus dann oft in vielen Varianten implementiert werden, ohne dass sich die Varianten auf interessante Weise unterscheiden.
+</p>
+<h3><span class="mw-headline" id="Beispiel_eines_nicht-generischen_Algorithmus">Beispiel eines nicht-generischen Algorithmus</span></h3>
+<p>Wir demonstrieren am folgenden Beispiel, wie es ohne Generizität nötig wird, denselben Algorithmus 'kopiere Container' für jede Kombination von Quell- und Zielcontainer neu zu implementieren. Dies ist besonders störend, weil die Unterschiede der Varianten trivial sind. Wir zeigen weiter unten, dass mit Generizität eine einzige Implementation ausreichend ist.
+</p>
+<h4><span class="mw-headline" id="Kopie_Array_.E2.86.92_Array">Kopie Array &#8594; Array</span></h4>
+<p>Die folgende einfache Funktion kopiert die Daten aus einem gegebenen Array a in ein (dynamisches) Array r:
+</p>
+<pre>def copyArray(a):
+  r =[]
+  for k in a:
+     r.append(k)
+  return r
+</pre>
+<h4><span class="mw-headline" id="Kopie_Array_.E2.86.92_verkettete_Liste">Kopie Array &#8594; verkettete Liste</span></h4>
+<p>Um in eine verkettete Liste kopieren zu können, definieren wir zunächst den Knotentyp der Liste:
+</p>
+<pre>class Node&#160;:
+ def __init__(self, data, next)
+    self.data = data
+    self.next = next
+</pre>
+<p>Die Kopie aus einem Array in eine Liste kann dann wie folgt implementiert werden:
+</p>
+<pre>def copyArrayToList(a)&#160;:
+   if len(a) == 0&#160;: 
+        return None
+   first = last = Node (a[0], None)
+   for k in a[1:] &#160;:
+      last.next = Node(k, None)
+      last = last.next
+   return first
+</pre>
+<h4><span class="mw-headline" id="Kopie_verkettete_Liste_.E2.86.92_Array">Kopie verkettete Liste &#8594; Array</span></h4>
+<p>Eine wieder andere Implementation benötigt man, wenn man umgekehrt von einer Liste in ein Array kopieren möchte:
+</p>
+<pre>def copyListToArray(l):
+    r = []
+    while l is not None&#160;:
+        r.append(l.data)
+        l = l.next
+    return r
+</pre>
+<h4><span class="mw-headline" id="Entscheidende_Beobachtung">Entscheidende Beobachtung</span></h4>
+<p>Für <b>N Datenstrukuren</b> ist der Implementationsaufwand <img class="mwe-math-fallback-image-inline tex" alt="O(N^2)" src="../images/fcfcbd130c01389717669e8a2772703b.png" />, wenn man alle Paare von Datenstrukturen ineinander umwandeln können will.
+Alle Funktionen machen das Gleiche, mit nur uninteressanten Unterschieden. Wir wollen daher im Folgenden eine Möglichkeit angeben, das Kopieren der Daten zu vereinheitlichen, so dass nur noch eine generische Kopierfunktion benötigt wird. Das Kopieren ist natürlich dabei nur ein Beispiel -- die verwendeten Programiertechniken sind sehr allgemein und können bei eine Vielzahl von Algorithmen zu generischen Lösungen führen.
+</p>
+<h2><span class="mw-headline" id="Transformation_in_eine_generische_Form">Transformation in eine generische Form</span></h2>
+<p>Die Kopierfunktion enthält zwei wesentliche Funktionalitäten:
+</p>
+<ul><li> das Navigieren durch die Quelldaten und</li>
+<li> das Aufbauen der Zieldatenstruktur</li></ul>
+<p>Wenn wir die Implementation generisch gestalten wollen, müssen wir diese beiden Aspekte des Kopierens <b>verallgemeinern</b>.
+</p>
+<h3><span class="mw-headline" id="Vereinheitlichung_der_Zieldatenstruktur_durch_standardisierte_Einf.C3.BCgefunktion">Vereinheitlichung der Zieldatenstruktur durch standardisierte Einfügefunktion</span></h3>
+<p>Wir beginnen mit dem Aufbauen der Zieldatenstruktur. Hier brauchen wir eine verallgemeinerte Methode, neue Elemente an eine bereits existierende Datenstruktur anzuhängen. Dazu bietet es sich an, eine
+</p>
+<ul><li>standardisierte Funktion <tt>append</tt> zu verwenden.</li></ul>
+<p>Das dynamische Array hat diese Funktion bereits. Für eine einfach verkettete Liste kann sie nicht ohne weiteres effizient implementiert werden (einfach verkettete Listen unterstützen in erster Linie das Einfügen eines neuen Elements am <i>Anfang</i> der Liste, also <tt>prepend</tt>). Wir implementieren deshalb eine neue Datenstruktur <tt>DoublyLinkedList</tt>, die eine in beiden Richtungen verkettete Liste realisiert. 
+</p><p>Um Anfang und Ende der Liste zu markieren, verwenden wir eine spezielle Sentinel-Datenstruktur. Da sie nur als Markierung dient, benötigt sie keine eigenen Daten.
+</p>
+<pre>class SentinelTag&#160;: pass     # keine Daten
+</pre>
+<p>Der Knotentyp einer <tt>DoublyLinkedList</tt> enthält zwei Verkettungen: <tt>prev</tt> und <tt>next</tt>. Falls im Konstruktor kein Nachfolger <tt>next</tt> angegeben wird, werden die Verkettungen auf <tt>self</tt> initialisiert (dies bedeutet, dass der Knoten eine leere Liste repräsentiert), andernfalls werden alle Verkettungen so aktualisiert, dass der neue Knoten Vorgänger von <tt>next</tt> wird. Ein Sentinel-Knoten wird dadurch gekennzeichnet, dass sein Datenfeld den Typ <tt>SentinelTag</tt> hat. Dies ist auch die Initialisierung, falls im Konstruktor keine Daten übergeben werden:
+</p>
+<pre>class DoublyLinkedNode:
+
+    def __init__(self, data = SentinelTag(), next = None)
+        self.data = data
+        if next is None&#160;:
+            self.prev = self.next = self
+        else:
+            self.next = next
+            self.prev = next.prev
+            next.prev.next = self
+            next.prev = self
+
+   def isSentinel(self )&#160;: 
+        return isinstance( self.data, SentinelTag) # Python-Standardfunktion zum Prüfen des Typs einer Variable
+</pre>
+<p>Die Klasse <tt>DoublyLinkedList</tt> kapselt nun die Verwaltung der Knoten. Die Liste selbst wird dabei als doppelt verbundene, kreisförmige Kette mit dem Sentinel als "Anker" realisiert. Dies hat den Vorteil, dass man das erste bzw. letzte Element der Liste einfach als Nachfolger bzw. Vorgänger des Ankerelements abfragen kann. Ein weiterer Vorteil besteht darin, dass auch die leere Liste noch ein Element enthält (nämlich den Sentinel), so dass beim Einfügen und Löschen von Elementen keine Spezialbehandlung für die leere Liste notwendig ist.
+</p>
+<pre>class DoublyLinkedList&#160;: 
+
+    def __init__(self):        # Konstruktor initialisert leere Liste, die nur aus dem Sentinel besteht
+        self.sentinel = DoublyLinkedNode()
+        self.size = 0
+
+    def __len__(self):         # wird ausgeführt, wenn man 'len(list)' aufruft
+        return self.size 
+
+    def append(self, value):   # value am Ende anhängen, d.h. Sentinel soll <i>Nachfolger</i> des neuen Elements sein
+        DoublyLinkedNode(value, self.sentinel)  # die Verkettungen werden im Konstruktor automatisch aktualisiert
+        self.size += 1
+
+    def prepend(self, value):  # value am Anfang (= <i>nach</i> dem Sentinel, d.h. vor dessen Nachfolger) einfügen
+        DoublyLinkedNode(value, self.sentinel.next)  
+        self.size += 1
+
+    def __iter__(self):        # Iterator für die Liste erzeugen (siehe unten)
+        return ListIterator(self.sentinel.next)
+
+    def reverseIterator(self): # Rückwärts-Iterator für die Liste erzeugen (siehe unten)
+        return ReverseListIterator(self.sentinel.prev)
+</pre>
+<p>Damit können wir die Zieldatenstruktur einheitlich durch <tt>ziel.append(value)</tt> aufbauen, unabhängig davon, ob <tt>ziel</tt> nun ein Array oder eine doppelt verkettete Liste ist.
+</p>
+<h3><span class="mw-headline" id="Vereinheitlichung_der_Quelldatenstruktur_durch_Iteratoren">Vereinheitlichung der Quelldatenstruktur durch Iteratoren</span></h3>
+<p>Die Vereinheitlichung der Quelldatenstruktur ist komplizierter, weil die Navigationmethoden sich von Datenstruktur zu Datenstruktur sehr stark unterscheiden. Ein einheitlicher, standardisierter Funktionenname tut es hier nicht. Der Schlüssel für die Lösung besteht in der Beobachtung, dass wir, unabhängig von der Art der Datenstruktur, immer sequentiell auf die Datenelemente zugreifen. Man definiert deshalb eine Hilfsklasse <b>Iterator</b>, die die Elemente in der richtigen Reihenfolge heraussucht, die aber verbirgt (kapselt), wie jedes Datenelement konkret gefunden wird. 
+</p>
+<dl><dt>Definition Iterator</dt>
+<dd> </dd></dl>
+<p>Ein Iterator ist ein Objekt,
+</p>
+<ul><li> das auf ein Element des Containers zeigt und die Daten aus diesem Element an den aufrufenden Algorithmus übergeben kann</li>
+<li> das zum nächsten Element weiter rücken kann</li>
+<li> das anzeigt, wenn das Ende der Sequenz erreicht ist </li></ul>
+<p>(siehe dazu auch die <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Iterator">Wikipedia</a>).
+</p><p>Die Syntax dieser Funktionalitäten muss natürlich standardisiert sein, damit man das Ziel der Generizität erreicht. Wie genau die Standardisierung erfolgt, ist von Programmiersprache zu Programmiersprache unterschiedlich (falls die Sprache überhaupt Iteratoren unterstützt -- das gilt z.B. für C++ und Java). In Python gelten folgende Konventionen:
+</p>
+<ul><li> Das Weiterrücken zum nächsten Element erfolgt durch die Funktion <tt>next()</tt> (in Python 2) bzw. <tt>__next__()</tt> (in Python 3). Diese Funktion gibt gleichzeitig die Daten desjenigen Elements zurück, das man gerade <i>verlassen</i> hat.</li>
+<li> Alle Datenstrukturen, die Iteratoren anbieten, sowie die Iteratoren selbst, müssen eine Funktion <tt>__iter__()</tt> haben, die einen neuen Iterator (bzw. eine Kopie des schon vorhandenen Iterators) zurückgibt. Diese Funktion wird von Python intern benutzt (siehe unten).</li>
+<li> Das Ende der Sequenz ist erreicht, wenn die Funktion <tt>next</tt> bzw. <tt>__next__</tt> mit einer <tt>StopIteration</tt>-Exception verlassen wird.</li></ul>
+<p>Die Array-Datenstruktur in Python bietet einen solchen Iterator bereits an.
+</p>
+<h4><span class="mw-headline" id="Iterator_f.C3.BCr_die_doppelt_verkettete_Liste">Iterator für die doppelt verkettete Liste</span></h4>
+<p>Aufgrund dieser Konventionen können wir den Iterator für die Klasse <tt>DoublyLinkedList</tt> wie folgt implementieren:
+</p>
+<pre>class ListIterator:
+      def __init__(self, node):          # Iterator zeigt anfangs auf den angegebenen Knoten
+          self.node = node
+
+      def next(self):  # in Python 3:  def __next__(self):
+          if self.node.isSentinel():
+              raise StopIteration()      # Pythonkonvention: Ende der Sequenz erreicht
+          v = self.node.data             # speichere die Daten des aktuellen Knotens ...
+          self.node = self.node.next     # ... und rücke zum nächsten Knoten weiter ...
+          return v                       # ... und gebe vorigen Wert zurück (Pythonkonvention)
+
+      def __iter__(self):
+          return ListIterator(self.node) # Pythonkonvention, Kopie des Iterators zurückgeben
+</pre>
+<p>Die Funktion <tt>DoublyLiinkedList.__iter__()</tt> erzeugt einen solchen Iterator und setzt ihn auf das erste Element der Liste.
+</p>
+<h3><span class="mw-headline" id="Generische_Kopierfunktion">Generische Kopierfunktion</span></h3>
+<p>Mit den so definierten Schnittstellen genügt nun eine einzige Methode zum Kopieren eines Containers: 
+</p>
+<pre>def genericCopy (quelle, ziel)&#160;:
+    for k in quelle&#160;:
+        ziel.append(k)
+    return ziel
+</pre>
+<p>Diese Funktion kann an Stelle der spezialisierten Kopierfunktionen verwendet werden. Das zweite Argument von <tt>genericCopy</tt> zeigt an, in welche Zieldatenstruktur kopiert werden soll:
+</p>
+<pre>liste  = genericCopy(array, DoublyLinkedList())      # statt copyArrayToList
+array2 = genericCopy(array, [])                      # statt copyArray 
+array3 = genericCopy(liste, [])                      # statt copyListToArray
+</pre>
+<h4><span class="mw-headline" id="Was_tut_Python_bei_.22for_k_in_quelle:.22_.3F">Was tut Python bei "<tt>for k in quelle:</tt>"&#160;?</span></h4>
+<p>Will man in Python alle Elemente eines Containers durchlaufen, so tut man dies leicht mit einem Statement der Form <code>for k in quelle:</code>. Was passiert dabei eigentlich? (Die folgende Darstellung ist etwas vereinfacht und zeigt die Python-Funktionalität nur für den Fall, dass die Quelldatenstruktur einen Iterator anbietet. In Wirklichkeit unterstützt <tt>for k in quelle:</tt> noch weitere Arten von Datenstrukturen.)
+</p><p>Das Schlüsselwort <code>for</code> ruft die Methode <code>__iter__()</code> des Objekts <code>quelle</code> auf, die eine Referenz auf ein Iterator-Objekt zurückgibt. Dieses Objekt definiert eine Methode <code>next()</code>. Der von <code>next()</code> zurückgegebene Wert wird an die Laufvariable <tt>k</tt> zugewiesen, mit der dann der eigentliche Schleifeninhalt ausgefürt wird. Wenn keine weiteren Elemente mehr vorhanden sind, wird die Schleife durch die Exception <code>StopIteration</code> beendet.
+</p>
+<pre>iter = quelle.__iter__()
+try&#160;:
+       while True&#160;:
+             k = iter.next() # löst am Ende die Exception 'StopIteration' aus
+             ...             # Schleifeninhalt
+except StopIteration: pass   # alle anderen Expcetions werden normal weitergereicht
+</pre>
+<h4><span class="mw-headline" id="Kopieren_einer_Sequenz_in_umgekehrter_Reihenfolge">Kopieren einer Sequenz in umgekehrter Reihenfolge</span></h4>
+<p>Die Funktion <tt>genericCopy</tt> ist jetzt mächtig genug, um auch Kopiervorgänge zu unterstützen, an die wir anfangs gar nicht gedacht haben. Ein Beispiel dafür ist das Kopieren der Sequenz in umgekehrter Reihenfolge. Man könnte dies erreichen, indem man die Aufrufe von <tt>append</tt> durch Aufrufe von <tt>prepend</tt> unterstützt, aber dann hätte man eine neue Funktion <tt>reverseCopy</tt>. Viel eleganter ist es, das Auslesen der Quellsequenz zu manipulieren, indem man einen Iterator programmiert, der die Sequenz rückwärts durchläuft. 
+</p><p>Für die doppelt verkettete Liste unterscheidet sich ein solcher Rückwärtsiterator fast gar nicht vom normalen Vorwärtsiterator:
+</p>
+<pre>class ReverseListIterator:
+      def __init__(self, node):         
+          self.node = node
+
+      def next(self):    # in Python 3:   def __next__(self):
+          if self.node.isSentinel():
+              raise StopIteration()      
+          v = self.node.data             
+          self.node = self.node.prev     # gehe zum <i>Vorgängerknoten</i> - einziger wesentlicher Unterschied zum ListIterator
+          return v                       
+
+      def __iter__(self):
+          return ReverseListIterator(self.node) # die Kopie des Iterators muss natürlich auch vom richtigen Typ sein
+</pre>
+<p>Der Rückwärtsiterator wird genau wie der Vorwärtsiterator verwendet. Man beachte aber, dass <tt>list.reverseIterator()</tt> den Iterator auf das letzte Element der Liste initialisieren muss (siehe oben in der Implementation von <tt>DoublyLinkedList</tt>):
+</p>
+<pre>reverseArray = genericCopy(list.reverseIterator(), []),          # Liste rückwärts in ein Array kopieren
+</pre>
+<p>Die Syntax <code>for k in quelle:</code> funktioniert weiterhin, weil auch der Iterator die dazu notwendige Funktion <tt>__iter__</tt> anbietet. 
+</p><p>Soll ein Array rückwärts kopiert werden, verwendet man die Python-Standardfunktion <tt>reversed</tt>, um den passenden Iterator zu erzeugen:
+</p>
+<pre>reverseList  = genericCopy(reversed(array), DoublyLinkedList())  # Array rückwärts in eine Liste kopieren
+</pre>
+<h2><span class="mw-headline" id="Funktoren">Funktoren</span></h2>
+<p>Nachdem wir die Kopierfunktion erfolgreich verallgemeinert haben, liegt die Frage nahe, ob dies auch für andere Funktionen funktioniert, die in der inneren Schleife kompliziertere Dinge tun als einfach die Daten zu kopieren. Bei näherem Hinschauen bemerkt man auch bei solchen Funktionen viele Gemeinsamkeiten.
+</p><p>Betrachten wir z.B. eine Funktion, die die Summe der Elemente eines Arrays berechnet:
+</p>
+<pre>def sumArray(a):
+    k, sum = 0, 0
+    while k &lt; len(a):
+        sum = sum + a[k]  # wird später in der generischen Version durch 'sum = add(sum, a[k])' ersetzt
+        k += 1
+    return sum
+</pre>
+<p>Das Maximum der Werte in einer Liste kann man wie folgt berechnen:
+</p>
+<pre>def maxList(node):
+    m = -999999999999999       # eine Zahl, die hoffentlich kleiner ist als das gesuchte Maximum
+    while not node.isSentinel():
+        m = max(m, node.data)  # max() ist eingebaute Funktion in Python
+        node = node.next
+    return m
+</pre>
+<p>Offensichtlich sind sich diese Funktionen strukturell sehr ähnlich. Außerdem wissen wir bereits, wie wir die Navigation durch die Datenstruktur mit Hilfe von Iteratoren verallgemeinern können. Es bleibt noch, die Funktionalität in der Schleife generisch zu machen. Dies geschieht mit Hilfe des Konzepts der <b>Funktoren</b> (auch Funktionsobjekte genannt, siehe auch in der <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Function_object">Wikipedia</a>).
+</p>
+<dl><dt>Definition Funktor</dt>
+<dd></dd></dl>
+<p>Ein Objekt wird <i>Funktor</i> genannt, wenn es sich syntaktisch wie eine Funktion verwenden, das heißt mit Argumentklammer aufrufen, läßt. Wenn <tt>f</tt> ein Funktor ist, unterstützt er also Ausdrücke der Form
+</p>
+<pre>    f(a)      # unärer Funktor
+    f(a, b)   # binärer Funktor
+</pre>
+<p>Das betreffende Objekt <tt>f</tt> wird dann auch als <i>callable</i> bezeichnet. Je nach Anzahl der erlaubten Funktionsargumente unterscheidet man <i>unäre</i> Funktoren (ein Argument), <i>binäre</i> Funktoren (zwei Argumente) usw.
+</p><p>In Python ist jede Funktion trivialerweise ein Funktor, denn man kann sie "wie eine Funktion" aufrufen. Anstelle des in <tt>sumArray</tt> verwendeten Additionsoperator kann man z.B. folgenden Funktor verwenden:
+</p>
+<pre>def add(a, b):
+    return a + b
+</pre>
+<p>Es ist aber auch möglich, Objekte als Funktoren zu verwenden. Dazu muss die entsprechende Klasse eine Funktion <tt>__call__</tt> bereitstellen. Die Summation kann so auch als Klassenfunktor implementiert werden:
+</p>
+<pre>class AddFunctor: 
+    def __call__(self, a, b):
+        return a + b
+
+addf = AddFunctor()  # Funktorobjekt erzeugen
+print addf(1, 2)     # AddFunctor.__call__ wird aufgerufen und gibt 3 aus
+</pre>
+<p>Die obigen Funktionen <tt>sumArray</tt> und <tt>maxList</tt> werden nun generisch verallgemeinert, indem man die Funktionalität in der Schleife als Funktor bereitstellt. Die Datenstruktur wird durch einen Iterator repräsentiert. Die Variable, die die Berechnungen in der Schleife akkumuliert, muss jetzt von außen an die Funktion übergeben und passend initialisiert werden:
+</p>
+<pre>def doSomethingGeneric(functor, iterator, accumulator):
+    for k in iterator:
+        accumulator = functor(accumulator, k)
+    return accumulator
+</pre>
+<p>Damit erhalten wir folgende generische Aufrufe:
+</p>
+<pre>sum = doSomethingGeneric(add,  array, 0)             # statt sumArray()
+sum = doSomethingGeneric(addf, array, 0)             # dito, aber mit Funktorobjekt
+
+
+m = doSomethingGeneric(max, list, -999999999999999)  # statt maxList()
+
+
+def append(x, y):   # Kapselt das Anfügen an eine Datenstruktur in einem Funktor
+     x.append(y)
+     return x
+
+array4 = doSomethingGeneric(append, array, [])       # statt genericCopy()
+
+</pre>
+<p>Aufgrund ihrer großen Allgemeinheit und Nützlichkeit gibt es eine zu <b>doSomethingGeneric</b> äquivalente Funktion in vielen Programmiersprachen. Nur die Namen der Funktion und andere Details unterscheiden sich, z.B.:
+</p>
+<ul><li>in Python und Lisp: <tt>reduce</tt> (in Python sind <tt>doSomethingGeneric</tt> und <tt>reduce</tt> vollkommen äquivalent, außer in der Geschwindigkeit, weil <tt>reduce</tt> in C implementiert ist.)</li>
+<li>in C++&#160;: <tt>std::accumulate</tt></li>
+<li>in Haskell: <tt>foldl</tt></li></ul>
+<h4><span class="mw-headline" id="Verwandte_generische_Funktionen">Verwandte generische Funktionen</span></h4>
+<p>Einige mit <tt>reduce</tt> eng verwandte Funktionen werden ebenfalls in vielen Programmiersprachen häufig angeboten. In Python gibt es z.B. die folgenden Funktionen
+</p>
+<dl><dt>map</dt>
+<dd> </dd></dl>
+<p>Gegeben eine Sequenz, erzeugt <tt>map</tt> eine neue Sequenz, wo ein Funktor auf jedes Element der ursprünglichen Sequenz angewendet wurde
+</p>
+<pre>  res = map(f, [x1, x2,...])    # gibt [f(x1), f(x2),...] zurück
+</pre>
+<p>Der Funktor f muss hier ein unärer Funktor sein. Angewendet auf ein Array, ist die Funktion <tt>map</tt> damit äquivalent zu
+</p>
+<pre>  def apply_f(x, y):
+      x.append(f(y))
+      return x
+
+  res = reduce(apply_f, array, [])
+</pre>
+<dl><dt>filter</dt>
+<dd></dd></dl>
+<p>Gegeben eine Sequenz, erzeugt <tt>filter</tt> eine neue Sequenz, die nur diejenigen Elemente enthält, bei denen der Funktor den Wert 'True' zurückgegeben hat (f wird dann auch als <i>unäres Prädikat</i> bezeichnet):
+</p>
+<pre>  res = filter(f, [x1, x2, x3, x4,...])   # gibt [x2, x3,...] zurück, wenn f(x1) und f(x4) 'False' war
+</pre>
+<p>Angewendet auf ein Array, ist die Funktion <tt>filter</tt> damit äquivalent zu
+</p>
+<pre>  def copy_if(x, y):
+      if f(y):
+          x.append(y)
+      return x
+
+  res = reduce(copy_if, array, [])
+</pre>
+<h2><span class="mw-headline" id="Definition_von_Generischen_Schittstellen_zwischen_Algorithmen_und_Datenstrukturen">Definition von Generischen Schittstellen zwischen Algorithmen und Datenstrukturen</span></h2>
+<p>Eine Schnittstelle (Interface) standardisiert die Kommunikation zwischen einem Algorithmus und einer Datenstruktur. Die Schnittstelle ist generisch, wenn sie nur generische Funktionalität wie z.B. standardisierte Einfügeoperationen (<tt>append</tt>), Iteratoren und Funktoren verwendet. Generischer Scnittstelle ist eng mit der Definition von <i>Abstrakten Datentypen</i> verwandt.
+</p>
+<h3><span class="mw-headline" id="Abstrakte_Datentypen">Abstrakte Datentypen</span></h3>
+<p>Abstrakte Datentypen sind, wie im Kapitel <a href="einf%c3%bchrung.html#Definition_von_Datenstrukturen" title="Einführung">Einführung</a> bereits erwähnt, durch abstrake Operationen und deren Semantik (Bedeutung ) charakterisiert. Genauer muss ein abstrakter Datentyp folgendes definieren:
+</p>
+<ul><li> Ein <i>Universum</i> legaler Werte für die Objekte des Datentyps. Beim Datentyp <tt>int</tt> sind dies z.B. gewöhnlich die ganzen Zahlen zwischen -2147483648 und 2147483647, in Python jedoch alle ganzen Zahlen, soweit sie mit dem verfügbaren Hauptspeicher darstellbar sind (ein solcher Datentyp wird auch als <i>big int</i> bezeichnet).</li>
+<li> Ein (oder mehrere) Konstruktoren, die ein Objekt des Typs erzeugen, das einen legalen Initialwert repräsentiert (bei <tt>int</tt> gewöhnlich die 0).</li>
+<li> Eventuell Destruktoren, die die Resourcen von nicht mehr benötigten Objekten (insbesondere ihren Speicher) wieder freigeben.</li>
+<li> Eine Menge von Operatoren, die Objekte des Datentyps in einen anderen legalen Zustand transformieren (bei <tt>int</tt> z.B. <tt>k += 1</tt>) bzw. neue Objekte des Typs erzeugen (z.B. <tt>k + l</tt>). Die Operatoren müssen zwei Eigenschaften haben:</li></ul>
+<dl><dd><ul><li> Sie müssen vollständig sein, d.h. jeder legale Zustand muss durch eine geeignete Sequenz von Operatoraufrufen erreichbar sein.</li>
+<li> Sie müssen abgeschlossen sein, d.h. kein Zustand außerhalb des legalen Universums darf jemals entstehen.</li></ul></dd>
+<dd>Beispielsweise erfüllen die gewöhnlichen arithmetischen Operationen diese Anforderungen beim Datentyp <tt>int</tt>.</dd></dl>
+<p>Für mathematische Interessierte: Der Datentyp <tt>int</tt> implementiert das mathematische Konzept eines <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Ring_(mathematics)">kommutativen Rings</a>. Darüber hinaus bietet er eine Divisionsoperation, die aber nicht die Anforderungen an einen algebraischen Zahlenkörper (engl. <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Field_(mathematics)">field</a>) erfüllt.
+</p><p>Ein anderer typischer abstrakter Datentyp ist der <i>Stack</i>: Das Universum ist hier die Menge aller geordneten Folgen von Elementen (soweit sie in den Hauptspeicher passen), und die Operationen sind der Konstruktor (erzeugt einen leeren Stack), <tt>push</tt> (fügt ein Element ein) und <tt>pop</tt> (entfernt das zuletzt eingefügte Element). Die Abgeschlossenheit wird sichergestellt, indem der Aufruf von <tt>pop</tt> bei einem leeren Stack eine Exception auslöst.
+</p>
+<h3><span class="mw-headline" id="Offered_Interface_versus_Required_Interface">Offered Interface versus Required Interface</span></h3>
+<p>Wenn man Schnittstellen vom Standpunkt der generischen Programmierung betrachtet, fällt auf, das man eine grundlegende Unterscheidung zwischen <i>Offered Interfaces</i> (d.h. was eine Datenstruktur anbietet) und <i>Required Interfaces</i> (d.h. was ein Algorithmus tatsächlich verwendet) treffen muss.
+</p>
+<dl><dt>Definition Offered Interface</dt>
+<dd></dd></dl>
+<p>Das <i>Offered Interface</i> umfaßt die gesamte standardisierte Funktionalität, die eine Datenstruktur <i>anbietet</i>. 
+</p><p>Damit eine Datenstruktur möglichst vielseitig verwendbar ist, kann ihr Offered Interface sehr breit angelegt sein. Es ist z.B. typisch, dass eine gegeben Datenstruktur <b>mehrere abstrakte Datentypen gleichzeitig</b> implementiert. Das Python-Array (Datentyp <tt>list</tt>) unterstützt beispielsweise die Funktionalität: 
+</p>
+<ul><li> dynamisches Array (<tt>a[i]</tt>, <tt>a.append(x)</tt> etc.)</li>
+<li> Stack (<tt>a.pop()</tt> und <tt>a.append(x)</tt> statt <tt>push</tt>)</li>
+<li> Queue und Deque (via <tt>a.insert(0, x)</tt>)</li>
+<li> verkettete Liste (Einfügen und Löschen an beliebiger Stelle via <tt>a.insert(index, x)</tt> und <tt>del a[index]</tt>)</li></ul>
+<p>Die beiden letzten Punkte sind allerdings (gegenüber spezialisierten Datenstrukturen) mit Abstrichen in der Performanz verbunden -- diese Operationen erfordern beim Python-Array lineare Zeit, anstatt konstanter wie bei einer echten Queue oder verketten Liste.
+</p><p>Oft bietet ein Offered Interface auch die gleiche Funktionalität unter mehreren Namen, damit die Datenstruktur in verschiedenen Umgebungen verwendbar ist (beispielsweise kann eine Funktion zum Zwecke der Rückwärtskompatibiltät beibehalten werden, obwohl sie inzwischen als <i>deprecated</i> gekennzeichnet wurde). Häufig findet man auch sogenannte <i>convenience functions</i>, die im strengen Sinne nicht notwendig sind (weil sie aus bereits vorhandenen Funktionen zusammengebaut werden können), aber trotzdem das Leben des Programmierers erleichtern. Beispielsweise würde es beim Datentyp <tt>int</tt> vollkommen ausreichen, wenn nur der Vergleichsoperator "&lt;" angeboten würde, denn alle anderen Vergleiche kann man leicht damit implementieren:
+</p>
+<dl><dd><dl><dd><dl><dd>a = b &#8660; &#172;(a &lt; b) &#8743; &#172;(b &lt; a)</dd>
+<dd>a &#8800; b &#8660; (a &lt; b) &#8744; (b &lt; a)</dd>
+<dd>a &#8804; b &#8660; &#172;(b &lt; a)</dd>
+<dd>a &gt; b &#8660; b &lt; a</dd>
+<dd>a &#8805; b &#8660; &#172;(a &lt; b)</dd></dl></dd></dl></dd></dl>
+<p>Trotzdem bietet <tt>int</tt> alle Vergleichsoperatoren, weil obige Ersetzungen unbequem und schwerer lesbar wären. 
+</p>
+<dl><dt>Definition Required Interface</dt>
+<dd></dd></dl>
+<p>Das <i>Required Interface</i> umfasst die Funktionalität einer Datenstruktur, die ein Algorithmus tatsächlich <i>benutzt</i>.
+</p><p>Das Required Interface umfasst gewöhnlich nur einen (evtl. kleinen) Teil des Offered Interface. Ein typischer Fall ist es beispielsweise, dass ein Algorithmus nur lesend auf eine Datenstruktur zugreift, obwohl die Datenstruktur auch schreibenden Zugriff anbietet. Bei Zahlen kommt es häufig vor, dass nur die Addition benutzt wird, obwohl <tt>int</tt> auch die Subtraktion und Multiplikation etc. unterstützt.
+</p><p>Der entscheidende Punkt besteht nun darin, dass Required Interfaces <b>minimal</b> sein sollten und <b>getrennt</b> von den Offered Interfaces (welche ja gerade nicht minimal sind) standardisiert werden müssen, damit Algorithmen ihre volle Generizität erreichen. Beispielsweise unterstützen alle Python-Containerdatentypen, so verschieden sie sonst auch sind, die Funktion <tt>len(container)</tt>. Die Standardisierung des Required Interface fordert nun, dass diese Funktion auch tatsächlich bei allen Containern <tt>len</tt> heißt, und nicht einmal <tt>size</tt>, und dann wieder <tt>numberOfElements</tt>. Man beachte, dass diese Standardisierung in der Tat unabhängig von den Offered Interfaces ist, weil dieselbe Datenstruktur durchaus <tt>size</tt>, <tt>length</tt> und <tt>numberOfElements</tt> gleichzeitig anbieten kann, wenn sie in mehreren Algorithmenumgebungen lauffähig sein soll, deren Required Interfaces verschiedenen Standards unterliegen. 
+</p><p>Im Sinne der Minimalität kann sich ein Algorithmus z.B. darauf beschränken, nur den Vergleichsoperator "&lt;" zu verwenden, und die anderen Vergleichsoperatoren wie oben beschrieben zu ersetzen, auch wenn dies weniger bequem ist. Dann wäre der Algorithmus immer noch lauffähig, wenn eine Datenstruktur nur "&lt;" implementiert, auch wenn dies ein eher hypothetischer Fall ist.
+</p><p>Required Interfaces werden häufig in Form von <b>Konzepten</b> standardisiert. Ein Konzept umfaßt eine Menge von Operationen, die ein Algorithmus typischerweise zusammen benötigt. Konzepte sind damit das Gegenstück zu Abstrakten Datentypen, da letztere Operationen enthalten, die Datenstrukturen typischerweise zusammen <i>anbieten</i>. Das Konzept für Container, die die Funktion <tt>len(container)</tt> unterstützen, könnte z.B. <tt>Sized</tt> genannt werden (falls es Algorithmen gibt, die sonst weiter nichts von einer Datenstruktur fordern. Andernfalls wäre die Einführung eines separaten Konzepts hierfür überflüssig.) Die Entwicklung einer Menge von sorgfältig aufeinander abgestimmten Konzepten, und ihre Organisation in Konzepthierarchien, ist zur Zeit ein aktives Forschungsgebiet. Die <a rel="nofollow" class="external text" href="http://www.sgi.com/tech/stl/">Standard Template Library</a> der Progammiersprache C++ muss in dieser Hinsicht als vorbildlich bezeichnet werden. Hier sind die Konzepte extrem sorgfältig definiert, und Offered Interfaces sind konsequent als Sammlung aller Konzepte definiert, die eine gegebene Datenstruktur effizient unterstützen kann.
+</p>
+<h4><span class="mw-headline" id="Wichtige_Konzepte">Wichtige Konzepte</span></h4>
+<p>Einige wichtige Konzepte sollen hier erwähnt werden:
+</p>
+<ul><li> <b>Copy Constructible:</b> Objekte, die man kopieren kann (in Python durch <tt>copy.deepcopy</tt>).</li>
+<li> <b>Singleton:</b> Objekte, die man <i>nicht</i> kopieren kann (z.B. weil sie einen Drucker repräsentieren, der physisch nur einmal vorhanden ist).</li>
+<li> <b>Default Constructible:</b> Klassen, die einen Konstruktor ohne Argumente unterstützen, welcher ein Objekt in einem Standardzustand initialisiert (in Python z.B. <tt>list()</tt> für ein leeres Array, <tt>int()</tt> für die Zahl 0, und allgemein <tt>v1 = v.__class__()</tt> für beliebige Klassen).</li>
+<li> Vergleiche:</li></ul>
+<dl><dd><ul><li><b>Equality Comparable:</b> unterstützt <tt>a == b</tt></li>
+<li><b>LessThan Comparable:</b> unterstützt <tt>a &lt; b</tt></li>
+<li><b>ThreeWay Comparable:</b> unterstützt <tt>cmp(a, b)</tt> mit Ergebnis -1, falls a &lt; b, 0 falls a = b und +1 falls a &gt; b.</li></ul></dd></dl>
+<ul><li> <b>Indexable:</b> unterstützt <tt>x = a[k]</tt> und <tt>a[k] = x</tt>, wobei <tt>k</tt> ein Integer im Bereich 0, ..., len(a)-1 ist.</li>
+<li> <b>Mapping:</b> unterstützt <tt>x = a[key]</tt> und <tt>a[key] = x</tt>, wobei der Typ von <tt>key</tt> beliebig sein kann, solange er <i>Hashable</i> ist.</li>
+<li> <b>Hashable:</b> <tt>key</tt> unterstützt <tt>hash(key)</tt>, so dass <tt>key</tt> als Schlüssel in einer Hashtabelle verwendet werden kann.</li>
+<li> Iteratoren: </li></ul>
+<dl><dd><ul><li><b>ForwardIterator</b> unterstützt <tt>iter.next()</tt> um zum nächsten Element zu gelangen</li>
+<li><b>BidirectionalIterator</b> unterstützt zusätzlich <tt>iter.prev()</tt> um zum vorhergehenden Element zu gelangen</li>
+<li><b>RandomAccessIterator</b> unterstützt zusätzlich <tt>iter.next(k)</tt> und <tt>iter.prev(k)</tt> um vorwärts oder rückwärts <tt>k</tt> Elemente zu überspringen</li></ul></dd>
+<dd>Die beiden letzeren Konzepte sind zur Zeit in Python nicht standardisiert, jedoch z.B. in <a rel="nofollow" class="external text" href="http://www.sgi.com/tech/stl/Iterators.html">C++</a>. Forward Iteratoren werden normalerweise von allen Containern unterstützt (manche bieten sogar mehrere, je nach gewünschter Reihenfolge, z.B. Preorder-, Inorder-, und Postordertraversal bei einem Binärbaum). Bidirektionale Iteratoren werden typischerweise von doppelt verketteten Listen unterstützt, random access Iteratoren typischerweise von statischen und dynamischen Arrays. Wenn man für eine Datenstruktur mindestens einen bidirektionalen Iterator hat, kann man stets einen Rückwärtsiterator implementieren (indem man <tt>next</tt> und <tt>prev</tt> vertauscht).</dd></dl>
+<ul><li> Funktoren: </li></ul>
+<dl><dd><ul><li><b>Unary Functor:</b> unterstützt <tt>y = f(x)</tt></li>
+<li><b>Binary Functor:</b> unterstützt <tt>y = f(x1, x2)</tt></li>
+<li><b>Unary Predicate:</b> unterstützt <tt>f(x) &#8594; {True, False}</tt></li></ul></dd>
+<dd>etc.</dd></dl>
+<ul><li> Mathematische Konzepte:  </li></ul>
+<dl><dd><ul><li><b>Addable:</b> unterstützt <tt>a + b</tt></li>
+<li><b>Subtractable:</b> unterstützt <tt>a - b</tt></li>
+<li><b>Multiplicable:</b> unterstützt <tt>a * b</tt></li>
+<li><b>Dividable:</b> unterstützt <tt>a / b</tt> </li></ul></dd>
+<dd>etc.</dd></dl>
+<p>Wenn man in Python eine <i>Klasse</i> implementieren will, die eins der genannten Konzepte unterstützt, gibt es standardisierte Funktionennamen, die mit zwei Unterstrichen beginnen und enden, wie z.B. <tt>__init__</tt> (Konstruktor), <tt>__cmp__</tt> (3-Wege-Vergleich), <tt>__hash__</tt> (Hashwert), <tt>__getitem__</tt> und <tt>__setitem__</tt> (lesender und schreibender Arrayzugriff) , <tt>__iter__</tt> (Iterator), <tt>__add__</tt> (Addition),  <tt>__sub__</tt> (Subtraktion), <tt>__mul__</tt> (Multiplikation), <tt>__div__</tt> (Division) etc (eine vollständige Liste findet man im <a rel="nofollow" class="external text" href="http://docs.python.org/lib/genindex.html">Python Index</a>). Der Python-Interpreter transformiert die normale Pythonsyntax automatisch in Aufrufe dieser Funktionen, falls ein Ausdruck Objekte enthält, die die entsprechenden Konzepte unterstützen.
+</p><p><a href="graphen_und_graphenalgorithmen.html" title="Graphen und Graphenalgorithmen">Nächstes Thema</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825110959
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.012 seconds
+Real time usage: 0.051 seconds
+Preprocessor visited node count: 83/1000000
+Preprocessor generated node count: 100/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:75-0!canonical!math=0 and timestamp 20260825110959 and revision id 5529
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index1752.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Generizität&amp;oldid=5529</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="generizit%c3%a4t.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="indexb06d.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="indexf4fe.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="indexdb79.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="index3eb0.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="generizit%c3%a4t-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="generizit%c3%a4t-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="indexd814.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="index407e.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="indexc9e8.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 26 June 2014, at 17:21.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.012","walltime":"0.051","ppvisitednodes":{"value":83,"limit":1000000},"ppgeneratednodes":{"value":100,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825110959","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":170});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Generizität by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:46:45 GMT -->
+</html>

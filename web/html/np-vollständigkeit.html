@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/NP-Vollständigkeit by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:50:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>NP-Vollständigkeit - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"NP-Vollständigkeit","wgTitle":"NP-Vollständigkeit","wgCurRevisionId":5717,"wgRevisionId":5717,"wgArticleId":142,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"NP-Vollständigkeit","wgRelevantArticleId":142,"wgRequestId":"137771d099e4d05e76442c6f","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-NP-Vollständigkeit rootpage-NP-Vollständigkeit skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">NP-Vollständigkeit</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Das_Problem_des_Handlungsreisenden"><span class="tocnumber">1</span> <span class="toctext">Das Problem des Handlungsreisenden</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Approximationsalgorithmus"><span class="tocnumber">1.1</span> <span class="toctext">Approximationsalgorithmus</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Systematisches_Erzeugen_aller_Permutationen"><span class="tocnumber">1.2</span> <span class="toctext">Systematisches Erzeugen aller Permutationen</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Stirling.27sche_Formel"><span class="tocnumber">1.3</span> <span class="toctext">Stirling'sche Formel</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Anwendung:_Das_Erf.C3.BCllbarkeitsproblem_in_Implikationengraphen"><span class="tocnumber">1.4</span> <span class="toctext">Anwendung: Das Erfüllbarkeitsproblem in Implikationengraphen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Das_Erf.C3.BCllbarkeitsproblem"><span class="tocnumber">1.4.1</span> <span class="toctext">Das Erfüllbarkeitsproblem</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Normalformen_f.C3.BCr_logische_Ausdr.C3.BCcke"><span class="tocnumber">1.4.2</span> <span class="toctext">Normalformen für logische Ausdrücke</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#L.C3.B6sung_des_2-SAT-Problems_mit_Implikationgraphen"><span class="tocnumber">1.4.3</span> <span class="toctext">Lösung des 2-SAT-Problems mit Implikationgraphen</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Die_Problemklassen_P_und_NP"><span class="tocnumber">2</span> <span class="toctext">Die Problemklassen P und NP</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Einleitung"><span class="tocnumber">2.1</span> <span class="toctext">Einleitung</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Erf.C3.BCllbarkeitsproblem"><span class="tocnumber">2.2</span> <span class="toctext">Erfüllbarkeitsproblem</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#3-SAT_ist_NP_vollst.C3.A4ndig"><span class="tocnumber">2.3</span> <span class="toctext">3-SAT ist NP vollständig</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#k-SAT.2C_k.3D2_in_pol._Zeit_l.C3.B6sbar"><span class="tocnumber">2.4</span> <span class="toctext">k-SAT, k=2 in pol. Zeit lösbar</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Alg._1"><span class="tocnumber">2.4.1</span> <span class="toctext">Alg. 1</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Alg._2_.28det._Alg._f.C3.BCr_k.3D2_mittels_SZK_in_gerichtetem_Graphen.29"><span class="tocnumber">2.4.2</span> <span class="toctext">Alg. 2 (det. Alg. für k=2 mittels SZK in gerichtetem Graphen)</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Anwendung_auf_TSP"><span class="tocnumber">2.4.3</span> <span class="toctext">Anwendung auf TSP</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Das_Problem_des_Handlungsreisenden">Das Problem des Handlungsreisenden</span></h2>
+<p><b>(engl.: Traveling Salesman Problem; abgekürzt: TSP)</b>&lt;br\&gt;
+<a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Problem_des_Handlungsreisenden">Wikipedia (de)</a>
+<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Prim%27s_algorithm">(en)</a>
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="file_tsp_deutschland_3.html" class="image"><img alt="" src="../images/thumb5e6e.png" width="200" height="215" class="thumbimage" srcset="/thumb.php?f=TSP_Deutschland_3.PNG&amp;width=300 1.5x, /images/TSP_Deutschland_3.PNG 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="file_tsp_deutschland_3.html" class="internal" title="Enlarge"></a></div>Optimaler Reiseweg eines Handlungsreisenden(<a rel="nofollow" class="external text" href="http://de.wikipedia.org/w/index.php?title=Bild:TSP_Deutschland_3.PNG&amp;filetimestamp=20070110124506">Quelle</a>)</div></div></div>
+<ul><li>Eine der wohl bekanntesten Aufgabenstellungen im Bereich der Graphentheorie ist das Problem des Handlungsreisenden. </li>
+<li>Hierbei soll ein Handlungsreisender nacheinander <i>n</i> Städte besuchen und am Ende wieder an seinem Ausgangspunkt ankommen. Dabei soll jede Stadt nur einmal besucht werden und der Weg mit den minimalen Kosten gewählt werden. </li>
+<li>Alternativ kann auch ein Weg ermittelt werden, dessen Kosten unter einer vorgegebenen Schranke liegen.</li></ul>
+<p><br />
+</p>
+<dl><dd><u><i>gegeben</i></u>: zusammenhängender, gewichteter Graph (oft vollständiger Graph)</dd>
+<dd><u><i>gesucht</i></u>: kürzester Weg, der alle Knoten genau einmal (falls ein solcher Pfad vorhanden) besucht (und zum Ausgangsknoten zurückkehrt)&lt;br\&gt;</dd></dl>
+<dl><dd>auch genannt: kürzester Hamiltonkreis 
+<dl><dd>- durch psychologische Experimente wurde herausgefunden, dass Menschen (in 2D) ungefähr proportionale Zeit zur Anzahl der Knoten brauchen, um einen guten Pfad zu finden, der typischerweise nur <img class="mwe-math-fallback-image-inline tex" alt="\lesssim 5%" src="../images/6e136da3e2a409748d0805d9365292f3.png" /> länger als der optimale Pfad ist&lt;br\&gt;</dd></dl></dd>
+<dd><u><i>vorgegeben</i></u>: Startknoten (kann willkürlich gewählt werden), vollständiger Graph</dd></dl>
+<dl><dd><dl><dd><dl><dd><dl><dd><dl><dd> =&gt; v-1 Möglichkeiten für den ersten Nachfolgerknoten =&gt; je v-2 Möglichkeiten für dessen Nachfolger...</dd>
+<dd>also <img class="mwe-math-fallback-image-inline tex" alt="\frac{(v-1)!}{2}" src="../images/0981fc86109710ff3efa80c7f05e5a5c.png" /> mögliche Wege in einem vollständigen Graphen</dd></dl></dd></dl></dd></dl></dd></dl></dd></dl>
+<p><br />
+</p>
+<ul><li>Ein naiver Ansatz zur Lösung des TSP Problems ist das erschöpfende Durchsuchen des Graphen, auch "brute force" Algorithmus ("mit roher Gewalt"), indem alle möglichen Rundreisen betrachtet werden und schließlich die mit den geringsten Kosten ausgewählt wird. </li>
+<li>Dieses Verfahren versagt allerdings bei größeren Graphen, aufgrund der hohen Komplexität.</li></ul>
+<h3><span class="mw-headline" id="Approximationsalgorithmus">Approximationsalgorithmus</span></h3>
+<p>Für viele Probleme in der Praxis sind keine effizienten Algorithmen bekannt
+(NP-schwer). Diese (z.B. TSP) werden mit Approximationsalgorithmen berechnet,
+die effizient berechenbar sind, aber nicht unbedingt die optimale
+Lösung liefern. Beispielsweise ist es relativ einfach, eine Tour zu finden, die höchstens um den Faktor zwei länger ist als die optimale Tour. Die Methode beruht darauf, dass einfach der minimale Spannbaum ermittelt wird. 
+</p><p><b>Approximationsalgorithmus für TSP</b>&lt;br\&gt;
+</p>
+<ul><li> TSP für <i>n</i> Knoten sei durch Abstandsmatrix D = <img class="mwe-math-fallback-image-inline tex" alt="(d_{ij}) 1 \le i, j \le n" src="../images/5a8b7ba3c0285e69a5a23cf23dbb696b.png" /> </li></ul>
+<dl><dd>gegeben (vollständiger Graph mit <i>n</i> Knoten, <img class="mwe-math-fallback-image-inline tex" alt="d_{ij}" src="../images/0c4b9c9cd5524aa9646468bf36bc8eec.png" /> = Kosten der Kante (i,j)) &lt;br\&gt;</dd>
+<dd><i>gesucht:</i> Rundreise mit minimalen Kosten. Dies ist NP-schwer!&lt;br\&gt;</dd></dl>
+<ul><li> D erfüllt die Dreiecksungleichung  <img class="mwe-math-fallback-image-inline tex" alt=" \Leftrightarrow d_{ij} + d_{jk} \geq d_{ik} \text{ fuer } \forall{i, j, k} \in \lbrace 1, ..., n  \rbrace" src="../images/9c77bda206d64219ef734a4b08841590.png" /> &lt;br\&gt; </li>
+<li> Dies ist insbesondere dann erfüllt, wenn D die Abstände bezüglich einer Metrik darstellt oder D Abschluss einer beliebigen Abstandsmatrix C ist, d.h.&#160;:<img class="mwe-math-fallback-image-inline tex" alt="d_{ij}" src="../images/0c4b9c9cd5524aa9646468bf36bc8eec.png" /> = Länge des kürzesten Weges (bzgl. C) von i nach j.</li></ul>
+<ul><li>Die ”Qualität”der Lösung mit einem Approximationsalgorithmus ist höchstens um einen konstanten Faktor schlechter ist als die des Optimums.</li></ul>
+<h3><span class="mw-headline" id="Systematisches_Erzeugen_aller_Permutationen">Systematisches Erzeugen aller Permutationen</span></h3>
+<ul><li>Allgemeines Verfahren, wie man von einer gegebenen Menge verschiedene Schlüssel - in diesem Fall: Knotennummern - sämtliche Permutationen systematisch erzeugen kann. &lt;br\&gt;</li>
+<li><b>Trick</b>: interpretiere jede Permutation als Wort und betrachte dann deren lexikographische ("wie im Lexikon") Ordnung.&lt;br\&gt;</li>
+<li>Der erste unterschiedliche Buchstabe unterscheidet. Wenn die Buchstaben gleich sind, dann kommt das kürzere Wort zuerst. </li></ul>
+<p><u><i>gegeben</i></u>: zwei Wörter a, b der Länge n=len(a) bzw. m=len(b). Sei k = min(n,m) (im Spezialfall des Vergleichs von Permutationen gilt k = n = m)&lt;br\&gt;
+Mathematische Definition, wie die Wörter im Wörterbuch sortiert sind: &lt;br\&gt;
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="a&lt;b \Leftrightarrow &#10;\begin{cases}&#10;n &lt; m &amp; \text{ falls fuer } 0 \le i \le k-1 \text{ gilt: } a[i] = b[i] \\&#10;a[j] &lt; b[j] &amp; \text{ falls fuer } 0 \le i \le j-1 \text{ gilt: } a[i] = b[i], \text{ aber fuer ein } j&lt;k: a[j] \ne b[j]&#10;\end{cases}" src="../images/ddda63314a015fc52fc45e04d27ea1e9.png" />&lt;br\&gt;</dd></dl></dd></dl></dd></dl>
+<p>Algorithmus zur Erzeuguung aller Permutationen:
+</p>
+<ol><li> beginne mit dem kleinsten Wort bezüglich der lexikographischen Ordnung =&gt; das ist das Wort, wo a aufsteigend sortiert ist</li>
+<li> definiere Funktion "next_permutation", die den Nachfolger in lexikographischer Ordnung erzeugt</li></ol>
+<p>Beispiel: Die folgenden Permutationen der Zahlen 1,2,3 sind lexikographisch geordnet
+</p>
+<pre>1 2 3    6 Permutationen, da 3! = 6
+1 3 2
+2 1 3
+2 3 1
+3 1 2
+3 2 1
+-----
+0 1 2 Position
+</pre>
+<p>Die lexikographische Ordnung wird deutlicher, wenn wir statt dessen die Buchstaben a,b,c verwenden:
+</p>
+<pre>abc
+acb
+bac
+bca
+cab
+cba
+</pre>
+<p>Eine Funktion, die aus einer gegebenen Permutation die in lexikographischer Ordnung nächst folgende erzeugt, kann mit dem Algorithmus von Pandita (Indien, 1325-1400) -- dem (mehrmals wiederentdeckten) Standardalgorithmus für diese Aufgabe -- implementiert werden:
+</p>
+<pre>def next_permutation(a):
+	i = len(a) -1  #letztes Element; man arbeitet sich von hinten nach vorne durch
+	while True:  # keine Endlosschleife, da i dekrementiert wird und damit irgendwann 0 wird
+		if i &lt;= 0: return False  # a ist letzte Permutation
+		i -= 1
+		if a[i]&lt;a[i+1]: break
+	#lexikogr. Nachfolger hat größeres a[i]
+	j = len(a)
+	while True:
+		j -= 1
+		if a[i] &lt; a[j]: break
+	a[i], a[j] = a[j], a[i] #swap a[i], a[j]
+	#sortiere aufsteigend zwischen a[i+1] und Ende
+	#zur Zeit absteigend sortiert =&gt; invertieren
+	i += 1
+	j = len(a) -1
+	while i &lt; j:
+		a[i], a[j] = a[j], a[i]
+		i += 1
+		j-= 1
+	return True  # eine weitere Permutation gefunden
+ 	
+ def naiveTSP(graph):
+	start = 0
+	result = range(len(graph))+[start]
+	rest = range(1,len(graph))
+	c = pathCost(result, graph)
+	while next_permutation(rest):
+		r = [start]+rest+[start]
+		cc = pathCost(r, graph)
+		if cc &lt; c:
+			c = cc
+			result = r
+		return c, result
+</pre>
+<p><br />
+<b>Komplexität</b>: <img class="mwe-math-fallback-image-inline tex" alt="(v-1)!" src="../images/034f21418c81d541a9e93b23b865aa14.png" /> Schleifendurchläufe (=Anzahl der Permutationen, da die Schleife abgebrochen wird, sobald es keine weiteren Permutationen mehr gibt), also 
+	<img class="mwe-math-fallback-image-inline tex" alt="O(v!) = O(v^v)" src="../images/4e6063924f1ab9321f36fd24ff46eb49.png" />
+</p><p><br />
+</p>
+<dl><dt>Beispiel</dt>
+<dd></dd></dl>
+<table>
+
+<tr>
+<td> i = 0 </td>
+<td>  </td>
+<td>  </td>
+<td> j = 3 </td>
+<td>
+</td></tr>
+<tr>
+<td> &#8595; </td>
+<td> </td>
+<td> </td>
+<td> &#8595; </td>
+<td>
+</td></tr>
+
+<tr>
+<td style="background:silver; color:white"> 1 </td>
+<td style="background:silver; color:white"> 4 </td>
+<td style="background:silver; color:white"> 3 </td>
+<td style="background:silver; color:white"> 2 </td>
+<td> #input für next_permutation
+</td></tr>
+
+
+<tr>
+<td>  </td>
+<td> i = 2 </td>
+<td> </td>
+<td>  j = 3 </td>
+<td>
+</td></tr>
+<tr>
+<td>  </td>
+<td> &#8595;</td>
+<td> </td>
+<td> &#8595; </td>
+<td>
+</td></tr>
+
+
+
+<tr>
+<td style="background:silver; color:white"> 2 </td>
+<td style="background:silver; color:white"> 4 </td>
+<td style="background:silver; color:white"> 3 </td>
+<td style="background:silver; color:white"> 1</td>
+<td> # vertauschen der beiden Elemente
+</td></tr>
+
+
+<tr>
+<td>  </td>
+<td>  </td>
+<td>i = 2 </td>
+<td>   </td>
+<td>
+</td></tr>
+<tr>
+<td>  </td>
+<td>  </td>
+<td>j = 2 </td>
+<td>   </td>
+<td>
+</td></tr>
+<tr>
+<td>  </td>
+<td> </td>
+<td> &#8595;</td>
+<td> </td>
+<td>
+<p><br />
+</p>
+</td></tr>
+<tr>
+<td style="background:silver; color:white"> 1 </td>
+<td style="background:silver; color:white"> 2 </td>
+<td style="background:silver; color:white"> 3 </td>
+<td style="background:silver; color:white"> 4</td>
+<td> #absteigend sortiert
+</td></tr></table>
+<h3><span class="mw-headline" id="Stirling.27sche_Formel">Stirling'sche Formel</span></h3>
+<p><a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Stirling-Formel">Wikipedia (de)</a>
+<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Stirling%27s_approximation">(en)</a>
+</p><p>Die Stirling-Formel ist eine mathematische Formel, mit der man für große Fakultäten Näherungswerte berechnen kann. Die Stirling-Formel findet überall dort Verwendung, wo die exakten Werte einer Fakultät nicht von Bedeutung sind. Damit lassen sich durch die Stirling'sche Formel z.T. starke Vereinfachungen erzielen. 
+<img class="mwe-math-fallback-image-inline tex" alt="v! \approx \sqrt{2 \pi v} \left(\frac{v}{e}\right)^v" src="../images/c4f573a6731c212488896fd216310f81.png" />
+</p>
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="O(v!) = O\left(\sqrt{v}\left(\frac{v}{e}\right)^v\right) \approx O(v^v)" src="../images/75c4af3fca73966b36e5775d86c35bf1.png" /></dd></dl>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Anwendung:_Das_Erf.C3.BCllbarkeitsproblem_in_Implikationengraphen">Anwendung: Das Erfüllbarkeitsproblem in Implikationengraphen</span></h3>
+<p>Das Erfüllbarkeitsproblem hat auf den ersten Blick nichts mit Graphen zu tun, denn es geht um Wahrheitswerte logischer Ausdrücke. Man kann logische Ausdrücke jedoch unter bestimmten Bedingungen in eine Graphendarstellung überführen und somit das ursprüngliche Problem auf ein Problem der Graphentheorie reduzieren, für das bereits ein Lösungsverfahren bekannt ist. In diesem Abschnitt wollen wir dies für die sogenannten Implikationengraphen zeigen, ein weiteres Beispiel findet sich im Kapitel <a class="mw-selflink selflink">NP-Vollständigkeit</a>.
+</p>
+<h4><span class="mw-headline" id="Das_Erf.C3.BCllbarkeitsproblem">Das Erfüllbarkeitsproblem</span></h4>
+<p>(vgl. <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Erfüllbarkeitsproblem_der_Aussagenlogik">WikiPedia (de)</a>)
+</p><p>Das Erfüllbarkeitsproblem (SAT-Problem, von <i>satisfiability</i>) befasst sich mit logischen (oder Booleschen) Funktionen: Gegeben sei eine Menge <img class="mwe-math-fallback-image-inline tex" alt="\{x_1, ... ,x_n\}" src="../images/7fb1228330457b21cf9120567002c9e4.png" /> Boolscher Variablen (d.h., die <img class="mwe-math-fallback-image-inline tex" alt="x_i" src="../images/05e42209d67fe1eb15a055e9d3b3770e.png" /> können nur die Werte True oder False annehmen), sowie eine logische Formel, in der die Variablen mit den üblichen logischen Operatoren 
+</p>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\neg\quad" src="87483b5766512e89080fb7273eb5bfdc.html" />: Negation ("nicht", in Python: <tt>not</tt>)</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\vee\quad" src="../images/1fd9566aa7fc049aceb95fa4c04d5108.png" />: Disjunktion ("oder", in Python: <tt>or</tt>)</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\wedge\quad" src="../images/740df84c23d31cc5e1007541892d36d2.png" />: Konjuktion ("und", in Python: <tt>and</tt>)</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\rightarrow\quad" src="7c3674d59a4b7a6de9685190c3c96eee.html" />: Implikation ("wenn, dann", in Python nicht als Operator definiert)</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\leftrightarrow\quad" src="../images/1e59dd0e5d4d139467177f9828ae3b4e.png" />: Äquivalenz ("genau dann, wenn", in Python: <tt>==</tt>)</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\neq\quad" src="b69ef4fbf4eb68ba57ef1d309229c164.html" />: exklusive Disjunktion ("entweder oder", in Python: <tt>!=</tt>)</dd></dl>
+<p>verknüpft sind. Klammern definieren die Reihenfolge der Auswertung der Operationen. Für jede Belegung der Variablen <img class="mwe-math-fallback-image-inline tex" alt="x_i" src="../images/05e42209d67fe1eb15a055e9d3b3770e.png" /> mit True oder False liefert die Formel den Wert der Funktion, der natürlich auch nur True oder False sein kann. Wenn Formel und Belegung gegeben sind, ist die Auswertung der Funktion ein sehr einfaches Problem: Man transformiert die Formel in einen Parse-Baum (siehe Übungsaufgabe "Taschenrechner) und wertet jeden Knoten mit Hilfe der üblichen Wertetabellen für logische Operatoren aus, die wir hier zur Erinnerung noch einmal angeben:
+</p>
+<table cellspacing="0" border="1">
+
+<tr style="text-align:center;background-color:#ffffcc;width:50px">
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="a" src="../images/0cc175b9c0f1b6a831c399e269772661.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="b" src="../images/92eb5ffee6ae2fec3ad71c777531578f.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="a \vee b " src="../images/50ddb475ce61684d9dace1f3ed6cc135.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="a \wedge b" src="../images/2087fb4763a6e238d1917e47e2a5aa29.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="a \rightarrow b" src="../images/2b5dcd2237fc21384192db95ef005a62.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="b \rightarrow a" src="380e74c19188eacdebf657be3813f8bc.html" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="a \leftrightarrow b" src="../images/6a327f560eec7e8d27c870ff139d09f0.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="a \neq b" src="../images/dc3203c92c1e38e7956be2b7ae4189de.png" />
+</td></tr>
+<tr align="center">
+<td> 0 </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0
+</td></tr>
+<tr align="center">
+<td> 0 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0 </td>
+<td> 1 </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 1
+</td></tr>
+<tr align="center">
+<td> 1 </td>
+<td> 0 </td>
+<td> 1 </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 1 </td>
+<td> 0 </td>
+<td> 1
+</td></tr>
+<tr align="center">
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0
+</td></tr></table>
+<p>Beim Erfüllbarkeitsproblem wird die Frage umgekehrt gestellt: 
+</p>
+<dl><dd>Gegeben sei eine logische Funktion. Ist es möglich, dass die Funktion jemals den Wert True annimmt? </dd></dl>
+<p>Das heisst, kann man die Variablen <img class="mwe-math-fallback-image-inline tex" alt="x_i" src="../images/05e42209d67fe1eb15a055e9d3b3770e.png" /> so mit True oder False belegen, dass die Formel am Ende wahr ist? Im Prinzip kann man diese Frage durch erschöpfende Suche leicht beantworten, indem man die Funktion für alle <img class="mwe-math-fallback-image-inline tex" alt="2^n" src="../images/9aa0ec0374c89d2f7f3d9cd2e05a4bc5.png" /> möglichen Belegungen einfach ausrechnet, aber das dauert für große n (ab ca. <img class="mwe-math-fallback-image-inline tex" alt="n\ge 40" src="../images/34c1bfc0ff0304749b3a57db02f42589.png" />) viel zu lange. Erstaunlicherweise ist es aber noch niemanden gelungen, einen Algorithmus zu finden, der für beliebige logische Funktionen schneller funktioniert. Im Gegenteil wurde gezeigt, dass das Erfüllbarkeitsproblem <a class="mw-selflink selflink">NP-vollständig</a> ist, so dass wahrscheinlich kein solcher Algorithmus existiert. Trotz (oder gerade wegen) seiner Schwierigkeit hat das Erfüllbarkeitsproblem viele Anwendungen gefunden, vor allem beim Testen logischer Schaltkreise ("Gibt es eine Belegung der Eingänge, so dass am Ausgang der verbotene Wert X entsteht?") und bei der Planerstellung in der künstlichen Intelligenz ("Kann man ausschließen, dass der generierte Plan Konflikte enthält?"). Es ist außerdem ein beliebtes Modellproblem für die Erforschung neuer Ideen und Algorithmen für schwierige Probleme.
+</p>
+<h4><span class="mw-headline" id="Normalformen_f.C3.BCr_logische_Ausdr.C3.BCcke">Normalformen für logische Ausdrücke</span></h4>
+<p>Um die Beschreibung von Erfüllbarkeitsproblemen zu vereinfachen und zu vereinheitlichen, hat man verschiedene <i>Normalformen</i> für logische Ausdrücke eingeführt. Die wichtigste ist die <i>Konjuktionen-Normalform</i> (CNF - conjunctive normal form). Ein Ausdruck in <i>Konjuktionen-Normalform</i> ist eine UND-Verknüpfung von M <i>Klauseln</i>:
+</p>
+<pre>(CLAUSE<sub>1</sub>) <img class="mwe-math-fallback-image-inline tex" alt="\wedge" src="../images/1ba4f06f68614e5da79a8ebd378d532a.png" /> (CLAUSE<sub>2</sub>) <img class="mwe-math-fallback-image-inline tex" alt="\wedge" src="../images/1ba4f06f68614e5da79a8ebd378d532a.png" /> ...  <img class="mwe-math-fallback-image-inline tex" alt="\wedge" src="../images/1ba4f06f68614e5da79a8ebd378d532a.png" /> (CLAUSE<sub>M</sub>)
+</pre>
+<p>Jede Klausel ist wiederum ein logischer Ausdruck, der aber sehr einfach sein muss: Er darf nur noch k Variablen enthalten, die nur mit den Operatoren NICHT und ODER verknüpft werden dürfen, z.B.
+</p>
+<pre> CLAUSE<sub>1</sub>&#160;:= <img class="mwe-math-fallback-image-inline tex" alt="x_1 \vee \neg x_3 \vee x_8" src="../images/0d4020e3f8c2ad021644fd59e63b2a47.png" />
+</pre>
+<p>Je nachdem, wie viele Variablen pro Klausel erlaubt sind, spricht man von <b>k-CNF</b> und entsprechend von einem <b>k-SAT</b> Problem. Es ist außerdem üblich, die Menge der Variablen und die Menge der negierten Variablen zusammen als Menge der <i>Literale</i> zu bezeichnen:
+</p>
+<pre> LITERALS&#160;:= <img class="mwe-math-fallback-image-inline tex" alt="\{x_1,...,x_n\} \cup \{\neg x_1,...,\neg x_n\}" src="../images/247a81d785c620fe8bd31016df2e6d47.png" />
+</pre>
+<p>Formal definiert man die <b>k-Konjunktionen-Normalform (k-CNF)</b> am besten durch eine Grammatik in <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Backus-Naur-Form">Backus-Naur-Form</a>:
+</p>
+<pre>   k_CNF   &#160;::=  CLAUSE | k_CNF <img class="mwe-math-fallback-image-inline tex" alt="\wedge" src="../images/1ba4f06f68614e5da79a8ebd378d532a.png" /> CLAUSE
+   CLAUSE  &#160;::= (LITERAL <img class="mwe-math-fallback-image-inline tex" alt="\vee" src="../images/727ea4c8c49862411edae46adf506e3e.png" /> ... <img class="mwe-math-fallback-image-inline tex" alt="\vee" src="../images/727ea4c8c49862411edae46adf506e3e.png" /> LITERAL)  # genau k Literale pro Klausel
+   LITERAL &#160;::=  VARIABLE | <img class="mwe-math-fallback-image-inline tex" alt="\neg" src="../images/a0c4c2ce7f9c78efeedd2bfb53ab9f3e.png" />VARIABLE
+   VARIABLE&#160;::=  <img class="mwe-math-fallback-image-inline tex" alt="x_1" src="../images/f9a3b8e9e501458e8face47cae8826de.png" /> | ... | <img class="mwe-math-fallback-image-inline tex" alt="x_n" src="../images/67b68721103b5a16194f4b3e3ec222db.png" />
+</pre>
+<p>Beispiele:
+</p>
+<ul><li> 3-CNF: <img class="mwe-math-fallback-image-inline tex" alt="(x_1 \vee \neg x_2 \vee x_4) \wedge (x_2 \vee x_3 \vee \neg x_4) \wedge (\neg x_1 \vee x_4 \vee \neg x_5)" src="../images/f70e4fb4914e237d70179a68bb812c8d.png" /></li>
+<li> 2-CNF: <img class="mwe-math-fallback-image-inline tex" alt="(x_1 \vee \neg x_2) \wedge (x_3 \vee x_4)" src="../images/27d9edd3899731a89a2c8b509d6b9454.png" /> ...</li></ul>
+<p><b>Gesucht</b> ist eine Belegung der Variablen mit True und False, so dass der Ausdruck den Wert True hat. Aus den Eigenschaften der UND- und ODER-Verknüpfungen folgt, dass ein Ausdruck in k-CNF genau dann True ist, wenn jede einzelne Klausel True ist. In jeder Klausel wiederum hat man k Chancen, die Klausel True zu machen, indem man eins der Literale zu True macht. Eventuell werden dadurch aber andere Klauseln wieder zu False, was die Aufgabe so schwierig macht. Die Bedeutung der k-CNF ergibt sich aus folgendem
+</p>
+<dl><dt>Satz</dt>
+<dd> Jeder logische Ausdruck kann effizient nach 3-CNF transformiert werden, jedoch im allgemeinen nicht nach 2-CNF.</dd></dl>
+<p>Man kann sich also auf Algorithmen für 3-SAT-Probleme konzentrieren, ohne dabei an Ausdrucksmächtigkeit zu verlieren. 
+</p><p>Leider gilt der entsprechende Satz nicht für k=2: Ausdrücke in 2-CNF sind weit weniger mächtig, weil man in jeder Klausel nur noch zwei Wahlmöglichkeiten hat. Bestimmte logische Ausdrücke sind aber auch nach 2-CNF transformierbar, beispielsweise die Bedingung, dass zwei Literale u und v immer den entgegegesetzten Wert haben müssen. Dies ergibt ein Paar von ODER-Verknüpfungen:
+</p>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="(u \leftrightarrow \neg v) \equiv (u \vee \neg v) \wedge (\neg u \vee v)" src="../images/81c6bec0e6e77f5b3bb399eae48c5324.png" /></dd></dl>
+<p>Die 2-CNF hat den Vorteil, dass es effiziente Algorithmen für das 2-SAT-Problem gibt, die wir jetzt kennenlernen wollen. Es zeigt sich, dass man Ausdrücke in 2-CNF als Graphen repräsentieren kann, indem man sie zunächst in die <i>Implikationen-Normalform</i> (INF für <i>implicative normal form</i>) überführt. Die Implikationen-Normalform besteht ebenfalls aus einer Menge von Klauseln, die durch UND-Operationen verknüpft sind, aber jede Klausel ist jetzt eine Implikation. 
+Die Grammatik der <b>Implikationen-Normalform (INF)</b> lautet:
+</p>
+<pre>   INF     &#160;::=  CLAUSE | INF <img class="mwe-math-fallback-image-inline tex" alt="\wedge" src="../images/1ba4f06f68614e5da79a8ebd378d532a.png" /> CLAUSE
+   CLAUSE  &#160;::= (LITERAL <img class="mwe-math-fallback-image-inline tex" alt="\rightarrow" src="../images/83e37b7246fdfcb99b2754210ebeae27.png" /> LITERAL)  # genau 2 Literale pro Implikation
+   LITERAL &#160;::=  VARIABLE | <img class="mwe-math-fallback-image-inline tex" alt="\neg" src="../images/a0c4c2ce7f9c78efeedd2bfb53ab9f3e.png" />VARIABLE
+   VARIABLE&#160;::=  <img class="mwe-math-fallback-image-inline tex" alt="x_1" src="../images/f9a3b8e9e501458e8face47cae8826de.png" /> | ... | <img class="mwe-math-fallback-image-inline tex" alt="x_n" src="../images/67b68721103b5a16194f4b3e3ec222db.png" />
+</pre>
+<p>und ein gültiger Ausdruck wäre z.B.
+</p>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="(x_1 \to x_2) \wedge (x_2 \to \neg x_3) \wedge (x_4 \to x_3)" src="../images/1f9b71a799f847c96f54bafe4ecee2ba.png" /></dd></dl>
+<p>Die Umwandlung von 2-CNF nach INF beruht auf folgender Äquivalenz, die man sich aus der obigen Wahrheitstabelle leicht herleitet:
+</p>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="(x \vee y) \equiv (\neg x \rightarrow y) \equiv (\neg y \rightarrow x)" src="../images/d0507c20da402d87671a708c22fe8ec3.png" /></dd></dl>
+<p>Aus dieser Äquivalenz folgt der 
+</p>
+<dl><dt>Satz</dt>
+<dd> Ein Ausdruck in 2-CNF kann nach INF transformiert werden, indem man jede Klausel <img class="mwe-math-fallback-image-inline tex" alt="(x \vee y)" src="../images/dcf528f9edd561c54ef4c0276c0cc2cc.png" /> durch das Klauselpaar <img class="mwe-math-fallback-image-inline tex" alt="(\neg x \rightarrow y) \wedge (\neg y \rightarrow x)" src="../images/82ee84b0f91bc070bdca8997ab2a4be5.png" /> ersetzt.</dd></dl>
+<p>Man beachte, dass man für jede ODER-Klausel des ursprünglichen Ausdrucks <i>zwei</i> Implikationen (eine für jede Richtung des "wenn, dann") einfügen muss, um die Symmetrie des Problems zu erhalten.
+</p>
+<h4><span class="mw-headline" id="L.C3.B6sung_des_2-SAT-Problems_mit_Implikationgraphen">Lösung des 2-SAT-Problems mit Implikationgraphen</span></h4>
+<p>Jeder Ausdruck in INF kann als gerichteter Graph dargestellt werden:
+</p>
+<ol><li> Für jedes Literal wird ein Knoten in den Graphen eingefügt. Es gibt also für jede Variable und für ihre Negation jeweils einen Knoten, d.h. 2n Knoten insgesamt.</li>
+<li> Jede Implikation ist eine gerichtete Kante.</li></ol>
+<p>Implikationengraphen eignen sich, um Ursache-Folge-Beziehungen oder Konflikte zwischen Aktionen auszudrücken. Beispielsweise kann man die Klausel <img class="mwe-math-fallback-image-inline tex" alt="(x \rightarrow \neg y)" src="../images/eb6b8132c682390c286f9d5aa19bb509.png" /> als "wenn man x tut, darf man y nicht tun" interpretieren. Ein anderes schönes Beispiel findet sich in Übung 12.
+</p><p>Für die Implementation eines Implikationengraphen in Python empfiehlt es sich, die Knoten geschickt zu numerieren: Ist die Variable <img class="mwe-math-fallback-image-inline tex" alt="x_i" src="../images/05e42209d67fe1eb15a055e9d3b3770e.png" /> dem Knoten i zugeordnet, so sollte die negierte Variable <img class="mwe-math-fallback-image-inline tex" alt="\neg x_i" src="../images/4f3b70b09de32cde439d9e2d23f4854f.png" /> dem Knoten (i+n) zugeordnet werden. Zu jedem gegebenen Knoten i findet man dann den negierten Partnerknoten j leicht durch die Formel <tt>j = (i + n )&#160;% (2*n)</tt>.
+</p><p>Die Aufgabe besteht jetzt darin, folgende Fragen zu beantworten:
+</p>
+<ol><li> Ist der durch den Implikationengraphen gegebene Ausdruck erfüllbar?</li>
+<li> Finde eine geeignete Belegung der Variablen, wenn der Ausduck erfüllbar ist.</li></ol>
+<p>Die erste Frage beantwortet man leicht, indem man die stark zusammenhängenden Komponenten des Implikationengraphen bildet. Dann gilt folgender
+</p>
+<dl><dt>Satz</dt>
+<dd> Seien u und v zwei Literale, die sich in der selben stark zusammenhängenden Komponente befinden. Dann müssen u und v stets den selben Wert haben, damit der Ausdruck erfüllt sein kann.</dd></dl>
+<p>Die Korrektheit des Satzes folgt aus der Definition der stark zusammenhängenden Komponenten: Da u und v in der selben Komponente liegen, gibt es im Implikationengraphen einen Weg <img class="mwe-math-fallback-image-inline tex" alt="u \rightsquigarrow v" src="../images/eee5674996b38c0a346ecce1975a6638.png" /> sowie einen Weg <img class="mwe-math-fallback-image-inline tex" alt="v \rightsquigarrow u" src="../images/9d20d1ab5dd69c5ef7f9f783eed887bf.png" />. Wegen der Transitivität der "wenn, dann" Relation kann man die Wege zu zwei Implikationen verkürzen, die gleichzeitig gelten müssen: <img class="mwe-math-fallback-image-inline tex" alt="(u \rightarrow v) \wedge (v \rightarrow u)" src="../images/5addb2aaee1766d78cff9762168f31b6.png" /> (die Verkürzung von Wegen zu direkten Kanten entspricht gerade der Bildung der transitiven Hülle für die Knoten u und v). In der obigen Wertetabelle für logische Operatoren erkennt mann, dass dies äquivalent zur Bedingung <img class="mwe-math-fallback-image-inline tex" alt="(u \leftrightarrow v)" src="../images/092f44ade9d7fcc060552948dd9e2299.png" /> ist. Dies ist aber gerade die Behauptung des Satzes.
+</p><p>Die Erfüllbarkeit des Ausdrucks ist nun ein einfacher Spezialfall dieses Satzes. 
+</p>
+<dl><dt>Korrolar</dt>
+<dd> Der gegebene Ausdruck ist genau dann erfüllbar, wenn die Literale <img class="mwe-math-fallback-image-inline tex" alt="x_i" src="../images/05e42209d67fe1eb15a055e9d3b3770e.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="\neg x_i" src="../images/4f3b70b09de32cde439d9e2d23f4854f.png" /> sich für kein i in derselben stark zusammenhängenden Komponente befinden.</dd></dl>
+<p>Setzt man nämlich im Satz <img class="mwe-math-fallback-image-inline tex" alt="u = x_i" src="../images/1e0c0d96b8c09416483beebe49b69942.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="v = \neg x_i" src="../images/1484e730cc3d3570c78159c0c67e1040.png" />, und beide Knoten befinden sich in der selben Komponente, dann müsste gelten <img class="mwe-math-fallback-image-inline tex" alt="x_i \leftrightarrow\neg x_i" src="../images/2576c51b38dad3457f7e3b79d667879f.png" />, was offensichtlich ein Widerspruch ist. Damit kann der Ausdruck nicht erfüllbar sein. Umgekehrt gilt, dass der Ausdruck immer erfüllbar ist, wenn <img class="mwe-math-fallback-image-inline tex" alt="x_i" src="../images/05e42209d67fe1eb15a055e9d3b3770e.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="\neg x_i" src="../images/4f3b70b09de32cde439d9e2d23f4854f.png" /> stets in verschiedenen Komponenten liegen, weil der folgende Algorithmus von Aspvall, Plass und Tarjan in diesem Fall stets eine gültige Belegung aller Variablen liefert:
+</p>
+<ol><li> Bestimme die stark zusammenhängenden Komponenten und bilde den Komponentengraphen. Ordne die Knoten des Komponentengraphen (also die stark zusammenhängenden Komponenten des Originalgraphen) in topologische Sortierung an.</li>
+<li> Betrachte die Komponenten in der topologischen Sortierung von hinten nach vorn und weise ihnen einen Wert nach folgenden Regeln zu (zur Erinnerung: alle Literale in der selben Komponente haben den selben Wert):
+<ul><li> Wenn die Komponente noch nicht betrachtet wurde, setze ihren Wert auf True, und den Wert der komplementären Komponente (derjenigen, die die negierten Literale enthält) auf False.</li>
+<li> Andernfalls, gehe zur nächsten Komponente weiter.</li></ul></li></ol>
+<p>Der Algorithmus beruht auf der Symmetrie des Implikationengraphen: Weil Kanten immer paarweise <img class="mwe-math-fallback-image-inline tex" alt="(\neg u \rightarrow v) \wedge (\neg v \rightarrow u)" src="../images/18816b458a83ee93148db30f80cf16ff.png" /> eingefügt werden, ist der Graph <i>schiefsymmetrisch</i> (skew symmetric): die eine Hälfte das Graphen ist die transponierte Spiegelung der anderen Hälfte. Enthält eine stark zusammenhängende Komponente <img class="mwe-math-fallback-image-inline tex" alt="C_i" src="../images/6839c253419b2770304593fac4ef3ce5.png" /> die Knoten <tt>i1, i2, ...</tt>, so gibt es stets eine komplementäre Komponente <img class="mwe-math-fallback-image-inline tex" alt="C_j = \neg C_i" src="../images/5df4c41fc2c83d2f05e89c6c1ac0d1ac.png" />, die die komplementären Knoten <tt>j1 = (i1 + n)&#160;% (2*n), j2 = (i2 + n)&#160;% (2*n), ...</tt> enthält. Gilt <img class="mwe-math-fallback-image-inline tex" alt="C_i = \neg C_i" src="../images/d4d6425392a4071f909338cbb781aed4.png" /> für irgendein i, so ist der Ausdruck nicht erfüllbar. Den Beweis für die Korrektheit des Algorithmus findet man im <a rel="nofollow" class="external text" href="../images/2sat.pdf">Originalartikel</a>. Leider funktioniert dies nicht für k-SAT-Probleme mit <img class="mwe-math-fallback-image-inline tex" alt="k &gt; 2" src="../images/022a32b622291f9215bb9f3e62cbe044.png" />.
+</p><p>Will man nur die Erfüllbarkeit prüfen, vereinfacht sich der Algorithmus zu:
+</p>
+<ol><li> Bestimme die stark zusammenhängenden Komponenten.</li>
+<li> Teste für alle <tt>i = 0,...,n-1</tt>, dass Knoten <tt>i</tt> und Knoten <tt>(i+n)</tt> in unterschiedlichen Komponenten liegen.</li></ol>
+<p>Ist der Ausdruck erfüllbar, kann man eine gültige Belegung der Variablen jetzt mit dem randomisierten Algorithmus bestimmen, den wir im Kapitel <a href="randomisierte_algorithmen.html" title="Randomisierte Algorithmen">Randomisierte Algorithmen</a> behandeln.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Die_Problemklassen_P_und_NP">Die Problemklassen P und NP</span></h2>
+<ul><li>für viele Probleme kein effizienter Algorithmus bekannt (effizient = polynomielle Komplexität</li></ul>
+<dl><dd> O(<img class="mwe-math-fallback-image-inline tex" alt="n^p" src="../images/2b31dfca0dceb7e3e176a596d1d096c8.png" />), für ein beliebig großes festes D; nicht effizient: langsamer als polynomiell, </dd>
+<dd> z.b. O(<img class="mwe-math-fallback-image-inline tex" alt="2^N" src="../images/51a00a634fd5e0ad8b398a5d65c9cd6d.png" />))</dd></dl>
+<p><br />
+</p><p>Bsp:
+</p>
+<ul><li>Problem des Handlungsreisenden</li>
+<li>Steine Bäume verallg. MST: man darf zusätzliche Punkte hinzufügen</li>
+<li>Clique - Problem: Clique in Graph G: maximaler vollständiger Teilgraph, trivial: 2 Kinder (gibt es eine Clique mit k Mitgliedern?)</li>
+<li>Integer Linear Programming <img class="mwe-math-fallback-image-inline tex" alt="\hat{x}" src="../images/8baf9dc7043aae61e37e171dc9f537e9.png" /> = arg max <img class="mwe-math-fallback-image-inline tex" alt="c^T" src="../images/0217fc7bbb36c854bee02018d75c6de0.png" />x [c,x Spaltenvektoren der Länge N] </li></ul>
+<dl><dd> (s.t. A*x <img class="mwe-math-fallback-image-inline tex" alt="\leq" src="49dc1443f33cf63082d6e193dd2af78f.html" /> b [A, Matrix MxN, b Spaltenvektor von M]</dd>
+<dd> x<img class="mwe-math-fallback-image-inline tex" alt="\in \mathbb{N}^N, \mathbb{Z}^N" src="../images/1f77f70b11c915c342bfb83aae41bb52.png" />, {0, 1}<img class="mwe-math-fallback-image-inline tex" alt="^N" src="../images/527a63ca3ce1d8381c40e131d238cf36.png" /> <img class="mwe-math-fallback-image-inline tex" alt="\implies" src="../images/c217c3ce5d41f7fa38673cc1de1f1385.png" /> nicht effizient</dd>
+<dd> x<img class="mwe-math-fallback-image-inline tex" alt="\in \mathbb{R}^N \implies" src="../images/7da187112e354fdc989a4253820bdd8a.png" /> effizient)</dd></dl>
+<h3><span class="mw-headline" id="Einleitung">Einleitung</span></h3>
+<ul><li>Komplexitätsklasse P: Effiziente Lösung bekannt (sortieren, MST, Dijkstra)</li></ul>
+<ul><li>Komplexitätsklasse NP: Existiert ein effizienter Algorithmus um einen <b>geratenen</b> Lösungsvorschlag zu überprüfen.</li></ul>
+<dl><dd> geraten durch "Orakel" -&gt; Black Box, nicht bekannt wie!</dd>
+<dd> offensichtlich gilt P<img class="mwe-math-fallback-image-inline tex" alt="\subset" src="../images/7afa88c2877d79e6a8a190b360edfcd6.png" />NP (bekannter Lösungsalgorithmus kann immer als Orakel dienen). Offen ob:
+<dl><dd> -P<img class="mwe-math-fallback-image-inline tex" alt="\subset" src="../images/7afa88c2877d79e6a8a190b360edfcd6.png" />NP (es gibt Probleme ohne effizienten Alg)</dd>
+<dd> -oder P=NP (effizienter Algorithmus nur noch nicht entdeckt)</dd></dl></dd></dl>
+<ul><li>Komplexitätsklasse NP-Vollständig (NP-C [complete]): Schwierigste Probleme in NP, wenn Q<img class="mwe-math-fallback-image-inline tex" alt="\in" src="../images/8c20c78b364ed5dbadd49e5b997aa1cc.png" />NP-C kann man mit Algorithmus für Q indirekt auch jedes andere Problem in NP lösen</li></ul>
+<dl><dd> R<img class="mwe-math-fallback-image-inline tex" alt="\in" src="../images/8c20c78b364ed5dbadd49e5b997aa1cc.png" />NP <img class="mwe-math-fallback-image-inline tex" alt="\rightsquigarrow" src="../images/11596a6ed2f8c0b32f58fda0c736530c.png" />Q(R)<img class="mwe-math-fallback-image-inline tex" alt="\in" src="../images/8c20c78b364ed5dbadd49e5b997aa1cc.png" />NP-C (Reduktion)
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="\downarrow" src="../images/42f4ac9a26f75eda6a7716993026a6c8.png" /> </dd></dl></dd>
+<dd> Lösung (R) <img class="mwe-math-fallback-image-inline tex" alt="\rightsquigarrow" src="../images/11596a6ed2f8c0b32f58fda0c736530c.png" /> Lösung Q(R)</dd>
+<dd> Reduktion muss effizient funktionieren, d.h. O(<img class="mwe-math-fallback-image-inline tex" alt="\N^D" src="../images/925aea65a19dc16931bd831cd103ed54.png" />)</dd></dl>
+<ul><li>Komplexitätsklasse NP-Schwer (NP-hard): mindestens so schwer wie NP-C, aber nicht unbedingt <img class="mwe-math-fallback-image-inline tex" alt="\in" src="../images/8c20c78b364ed5dbadd49e5b997aa1cc.png" />NP</li></ul>
+<p><a href="file_diagramnp.html" class="image"><img alt="DiagramNP.jpg" src="../images/diagramnp.jpg" width="114" height="159" /></a> <u>Vereinfachung</u>: NP enthält nur Entscheigungsprobleme: Fragen mit Ja/Nein-Antwort.
+</p>
+<dl><dd><dl><dd><dl><dd><dl><dd><dl><dd> z.B. </dd>
+<dd> TSP-Optimierungsproblem (NP-Schwer):
+<dl><dd> gegeben: gewichteter Graph</dd>
+<dd> gesucht: kürzeste Rundreise</dd></dl></dd>
+<dd> TSP-Entscheidungsproblem (NP-Vollständig):
+<dl><dd> gegeben: gewichteter Graph</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="\exist" src="../images/93ebe8636e1f8d60004fe33d1321674e.png" />Rundreise <img class="mwe-math-fallback-image-inline tex" alt="\le" src="49dc1443f33cf63082d6e193dd2af78f.html" /> 200kM, ist das wahr oder falsch?</dd></dl></dd></dl></dd></dl></dd></dl></dd></dl></dd>
+<dd> Orakel: "Rundreise Z ist <img class="mwe-math-fallback-image-inline tex" alt="\le" src="49dc1443f33cf63082d6e193dd2af78f.html" />200kM" <img class="mwe-math-fallback-image-inline tex" alt="\implies" src="../images/c217c3ce5d41f7fa38673cc1de1f1385.png" />leicht &amp; effizient zu testen</dd></dl>
+<p><br />
+Klassische Definition von NP: Probleme die von einer nicht-deterministischen Turingmaschine gelöst werden können (N = Nicht deterministisch, P = Polynomiell).
+</p>
+<dl><dd> nicht deterministische Turingmaschine: formale Definition kompliziert <img class="mwe-math-fallback-image-inline tex" alt="\rightarrow" src="../images/83e37b7246fdfcb99b2754210ebeae27.png" /> Theoretische Informatik
+<dl><dd> anschaulich: TM kann in kritischen Situationen das Orakel fragen und sich vorsagen lassen</dd></dl></dd></dl>
+<p>moderne Definition: "polynomiell Verifizierbar": es gibt effizienten Algorithmus, der für Probleme X und Entscheidungsfrage Y und Kandidatenlösung Z entscheidet, ob Z eine "ja-Antwort" bei Y impliziert.
+</p>
+<dl><dd> <u>Fall 1</u>: korrekte Antwort auf Y ist "ja" (wissen wir aber nicht): <img class="mwe-math-fallback-image-inline tex" alt="\exist" src="../images/93ebe8636e1f8d60004fe33d1321674e.png" />z: V(X, Y, Z) <img class="mwe-math-fallback-image-inline tex" alt="\implies" src="../images/c217c3ce5d41f7fa38673cc1de1f1385.png" /> OK
+<dl><dd> Z ist Beweis (proof/witness/certificate) dafür, dass Y die Antwort "ja" hat</dd>
+<dd> liefert V(X, Y, Z) <img class="mwe-math-fallback-image-inline tex" alt="\implies" src="../images/c217c3ce5d41f7fa38673cc1de1f1385.png" /> falsch, ist Z kein Beweis und wir wissen noch nicht, ib Y mit "ja" oder "nein" zu beantworten ist.</dd></dl></dd>
+<dd> <u>Fall 2</u>: korrekte Antwort auf Y ist "nein": <img class="mwe-math-fallback-image-inline tex" alt="\forall" src="../images/d4d49bead125261b226eaa867bd016ce.png" />Z V(X, Y, Z) <img class="mwe-math-fallback-image-inline tex" alt="\implies" src="../images/c217c3ce5d41f7fa38673cc1de1f1385.png" /> falsch</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="\implies" src="../images/c217c3ce5d41f7fa38673cc1de1f1385.png" /> hat man einen Überprüfungsalgorithmus V, kann man X mit Y stets duch erschöpfende Suche ("brute-force") lösen</dd></dl>
+<dl><dd> für jede mögliche Kandidatenlösung Z:
+<dl><dd> falls V(X, Y, Z) <img class="mwe-math-fallback-image-inline tex" alt="\implies" src="../images/c217c3ce5d41f7fa38673cc1de1f1385.png" /> ok: 
+<dl><dd>return "ja"</dd></dl></dd>
+<dd> return "nein"</dd></dl></dd></dl>
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="\uparrow" src="f045028b3e31841b22efbbb9a0911dc0.html" /> ineffizient, da es meist exponentiell viele Kandidaten Z gibt.</dd></dl>
+<h3><span class="mw-headline" id="Erf.C3.BCllbarkeitsproblem">Erfüllbarkeitsproblem</span></h3>
+<p>(SAT-satisfyability) ist das kanonische NP-Vollständige Problem (Satz von Cook 1971)
+</p>
+<ul><li>boolsche Variable x1 <img class="mwe-math-fallback-image-inline tex" alt="\in" src="../images/8c20c78b364ed5dbadd49e5b997aa1cc.png" />{true, false}, i=1,...,N (Problemgröße N-Bits)</li>
+<li>logische Ausdrücke Y über X mit Operatoren <img class="mwe-math-fallback-image-inline tex" alt="\lnot" src="../images/8efca960b209402104b448a5ad9486a8.png" />, <img class="mwe-math-fallback-image-inline tex" alt="\and" src="../images/9cae4437756a15b8e44ec23e07fb1f65.png" />, <img class="mwe-math-fallback-image-inline tex" alt="\or" src="../images/5addb134385e47a2efa484f6306e75a1.png" />, <img class="mwe-math-fallback-image-inline tex" alt="\implies" src="../images/c217c3ce5d41f7fa38673cc1de1f1385.png" />, <img class="mwe-math-fallback-image-inline tex" alt="\leftrightarrow" src="../images/1b18a4c4fc578ef4cfd1cc0eb0daa473.png" />, <img class="mwe-math-fallback-image-inline tex" alt="\neq" src="bd0d5f08997b7a4ad8598963f7e50231.html" />, ()</li></ul>
+<dl><dd> z.B. N= 3, Y=(x1<img class="mwe-math-fallback-image-inline tex" alt="\or" src="../images/5addb134385e47a2efa484f6306e75a1.png" />x2)<img class="mwe-math-fallback-image-inline tex" alt="\and" src="../images/9cae4437756a15b8e44ec23e07fb1f65.png" />(<img class="mwe-math-fallback-image-inline tex" alt="\lnot" src="../images/8efca960b209402104b448a5ad9486a8.png" />x1<img class="mwe-math-fallback-image-inline tex" alt="\or" src="../images/5addb134385e47a2efa484f6306e75a1.png" />x2) <img class="mwe-math-fallback-image-inline tex" alt="\implies" src="../images/c217c3ce5d41f7fa38673cc1de1f1385.png" /> Z=(true[x1], true[x2], true[x3])</dd></dl>
+<ul><li> Entscheidungsfrage: Gibt es eine Belegung con X sodass Y wahr ist?</li>
+<li> Bei komplizierten Problemen ist kein besserer Algorithmus bekannt als alle <img class="mwe-math-fallback-image-inline tex" alt="2^N" src="../images/51a00a634fd5e0ad8b398a5d65c9cd6d.png" /> Möglichkeiten zu probieren. </li>
+<li>Jede CPU kann als logische Schaltung geschrieben werden (damit auch jedes while-Programm)</li></ul>
+<dl><dd> Mit Gattern: <a href="file_bild_11.html" class="image"><img alt="Bild 11.jpg" src="../images/bild_11.jpg" width="364" height="175" /></a></dd>
+<dd> Jede logische Schaltung kann als SAT-Ausdruck geschrieben werden.</dd></dl>
+<ul><li> Bsp.: Zuordnung von Heim und Auswärtsspielen beim Fußball</li></ul>
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="x_{it} = \begin{cases} &#10;true,  &amp; \mbox{Mannschaft i hat am Spieltag t Heimspiel} \\&#10;false, &amp; \mbox{Mannschaft i hat am Spieltag t Auswärtsspiel} &#10;\end{cases}&#10;" src="../images/34e12b4c8baacc0c2ed3f18f5ce7c25e.png" /></dd>
+<dd> 1. Nebenbedingung: spielt Mannschaft i am Spieltag t gegen Mannschaft j, muss gelten <img class="mwe-math-fallback-image-inline tex" alt=" x_{it} = \lnot x_{jt}" src="../images/a2b1392d83154d4fe75b69eab4feaddd.png" /> </dd>
+<dd> 2. Nebenbedingung: Jede Mannschaft spielt gegen jede</dd>
+<dd> 3. Nebenbedingung: Jede Mannschaft spielt abwechselnd Heim und auswärts <img class="mwe-math-fallback-image-inline tex" alt=" x_{it} \neq x_{i(t+1)} " src="../images/cc47bc4e5e6a549ef7fb9158e921f8c8.png" /></dd>
+<dd> Alle Bedingungen sollen gleichzeitig Erfüllt sein: 
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="y = \begin{cases} (x_{11} \neq x_{21}) \and (x_{31} \neq x_{41}) \and ... \\ &#10;( x_{12} \neq x_{32} ) \and ... \\&#10;( x_{11} \neq x_{12} ) \and ( x_{12} \neq x_{13} ) \and ...&#10;\end{cases}" src="../images/662c7d78a217e794e112ea3d3a308979.png" /></dd></dl></dd>
+<dd> Frage: Kann man X so belegen, dass Y wahr ist? </dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="\rightarrow" src="../images/83e37b7246fdfcb99b2754210ebeae27.png" /> Nein, nur möglich wenn es nur 2 Mannschaften gibt und diese abwechselnd gegeneinander antreten. </dd></dl>
+<p>Normalformen für logische Ausdrücke zur Vereinfachung und Systematisierung
+</p>
+<ul><li> 3-CNF (Konjunktionen-NF)
+<ul><li> jede Klausel enthält max 3 Variablen (genau 3 mit dummy Variablen)</li>
+<li> jede Klausel enthält nur <img class="mwe-math-fallback-image-inline tex" alt=" \or " src="../images/5addb134385e47a2efa484f6306e75a1.png" /> und <img class="mwe-math-fallback-image-inline tex" alt=" /lnot " src="../images/42b1dab92e8efaead7072b2361490ec9.png" /></li>
+<li> alle Klauseln sind durch <img class="mwe-math-fallback-image-inline tex" alt=" \and " src="../images/9cae4437756a15b8e44ec23e07fb1f65.png" /> verknüpft.</li></ul></li></ul>
+<p>z.B. <img class="mwe-math-fallback-image-inline tex" alt=" ( x_1 \or x_2 \or \lnot x_4 ) \and ( \lnot x_2 \or x_3 \or x_4) \and (...) \and " src="../images/e3f4e40a986f638e01ecb317ffcb5c9e.png" />
+</p><p><img class="mwe-math-fallback-image-inline tex" alt=" \Rightarrow " src="df09aea884019cb88a2957126faba316.html" /> Ausdruck ist wahr, wenn jede Klausel wahr ist. 
+</p>
+<dl><dd> In jeder Klausel hat man 3 Chancen die Klausel wahr zu machen. </dd>
+<dd> Aber: Klauseln können sich widersprechen und nicht erfüllbar sein!</dd></dl>
+<p><b><u>Satz:</u></b> Jeder logische Ausdruck effizient (in pol. Zeit) in 3-CNF umwandelbar.
+</p><p><b><u>Satz v. Cook: </u></b> 3-SAT (Erfüllbarkeitsproblem für Ausdrücke in 3-CNF) ist NP-vollständig
+</p><p>zur Zeit ist kein effizienterer Algorithmus bekannt, als im schlechtesten Fall alle <img class="mwe-math-fallback-image-inline tex" alt="2^N" src="../images/51a00a634fd5e0ad8b398a5d65c9cd6d.png" /> Belegungen von {<img class="mwe-math-fallback-image-inline tex" alt="x_i" src="../images/05e42209d67fe1eb15a055e9d3b3770e.png" />} auszuprobieren 
+</p><p>2-CNF: wie 3-CNF, nur 2 Variablen pro Klausel
+<img class="mwe-math-fallback-image-inline tex" alt="\implies" src="../images/c217c3ce5d41f7fa38673cc1de1f1385.png" /> effiziente Alg existieren, aber nicht jeder logische Ausdruck in 2-CNF transformierbar.
+</p>
+<dl><dd> z.B. Heim-Auswärtsproblem</dd></dl>
+<p>INF (Implikationen-NF):
+</p>
+<ul><li> 2 Variablen pro Klausel, Operatoren <img class="mwe-math-fallback-image-inline tex" alt=" \implies und \lnot " src="../images/6ec76801e0ecdf9bf1286cae1448c35a.png" /></li>
+<li> Klauseln mit <img class="mwe-math-fallback-image-inline tex" alt=" \and " src="../images/9cae4437756a15b8e44ec23e07fb1f65.png" /> verknüpft. </li></ul>
+<p>Satz: jede 2-CNF effizient in INF umwandelbat.
+</p>
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt=" ( x_i \or x_j ) \rightsquigarrow ( \lnot x_i \implies x_j ) \and ( \lnot x_j \implies x_i )&#10;" src="../images/c3e1ff9ea8e7d4bdfd891ba5020baa8c.png" /></dd></dl>
+<p><img class="mwe-math-fallback-image-inline tex" alt="\implies" src="../images/c217c3ce5d41f7fa38673cc1de1f1385.png" />  INF als gerichteter Graph schreibbar und mittels starker Zusammenhangskomponenten lösbar. 
+</p>
+<table cellspacing="0" border="1">
+
+<tr style="text-align:center;background-color:#ffffcc;width:50px">
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="x_1" src="../images/f9a3b8e9e501458e8face47cae8826de.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="x_2" src="../images/8f43fce8dbdf3c4f8d0ac91f0de1d43d.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="x_1 \or x_2" src="../images/2b6665273571a5e0934b4a758dbada28.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="x_1 \implies x_2" src="../images/1d4c6aaa0fee8ffeea4c29e2bac9fc8f.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="\lnot x_1 \implies x_2 (A)" src="../images/7a4e04d1b43f51a7efb12b8dcfe7e868.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="\lnot x_2 \implies x_1 (B)" src="../images/2f9a129d66b217745e7819f0b3e0ca41.png" />
+</td>
+<td width="70px"> <img class="mwe-math-fallback-image-inline tex" alt="A \and B" src="../images/dcc5adb397904e74d55243892fe80340.png" />
+</td></tr>
+<tr align="center">
+<td> 0 </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 1 </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 0
+</td></tr>
+<tr align="center">
+<td> 0 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1
+</td></tr>
+<tr align="center">
+<td> 1 </td>
+<td> 0 </td>
+<td> 1 </td>
+<td> 0 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1
+</td></tr>
+<tr align="center">
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1
+</td></tr></table>
+<p><br />
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="3-SAT_ist_NP_vollst.C3.A4ndig">3-SAT ist NP vollständig</span></h3>
+<p>Skizze des Beweises:
+</p>
+<ol><li> Unsere Algorithmen können auf einer Turingmaschine ausgeführt werden (äquivalent zur Turingmaschine: λ-Kalkül, while-Programm usw.)</li>
+<li> Die Turingmaschine und ein gegebenes (festes) Programm können als logische Schaltung (Schaltnetz) implementiert werden, „Algorithmus in Hardware gegossen“</li>
+<li> Jedes Schaltnetzwerk kann als logische Formel geschrieben werden.</li></ol>
+<dl><dd> 4.   Jede logische Formel kann in 3-CNF umgewandelt werden</dd></dl>
+<dl><dd>=&gt; Jedes algorithmische Entscheidungsproblem kann als 3-SAT-Problem geschrieben werden.</dd></dl>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="k-SAT.2C_k.3D2_in_pol._Zeit_l.C3.B6sbar">k-SAT, k=2 in pol. Zeit lösbar</span></h3>
+<h4><span class="mw-headline" id="Alg._1">Alg. 1</span></h4>
+<p>(f. bei k) (nur für k=2 effizient) <b>Randomisiert</b>
+</p>
+<ul><li> (0) initialisiere <img class="mwe-math-fallback-image-inline tex" alt="x_i" src="../images/05e42209d67fe1eb15a055e9d3b3770e.png" /> beliebig</li>
+<li> (1) wiederhole <img class="mwe-math-fallback-image-inline tex" alt="T_{max}" src="../images/bd165c72083247ae705142e0602e1ba4.png" /> - mal
+<ul><li> (a) wenn das aktuelle x den Ausdruck erfüllt: return x (x=[<img class="mwe-math-fallback-image-inline tex" alt=" x_1" src="../images/f9a3b8e9e501458e8face47cae8826de.png" />, ... , <img class="mwe-math-fallback-image-inline tex" alt="x_N" src="../images/fae0cb55362fb97a05a362a5ee425432.png" />])</li>
+<li> (b) wähle zufällig eine Klausel, die nicht erfüllt ist</li>
+<li> (c) wähle in dieser Klausel zufällig eine der k Variablen und invertiere sie =&gt; Klausel ist jetzt erfüllt</li></ul></li></ul>
+<dl><dd><dl><dd><dl><dd> (andere können jetzt false geworden sein) </dd>
+<dd> (<img class="mwe-math-fallback-image-inline tex" alt="x_1 \or x_2 ) \and ( x_1 \or \lnot x_2 )" src="../images/0dfdc2e83b9c6f5cf3107988ca98a72f.png" />&#160;&#160;&#160;&#160;&#160;&#160;<img class="mwe-math-fallback-image-inline tex" alt=" x_1 = 0, x_2 = 0," src="../images/2aad211e96ab14ca864f887e9022eca0.png" />&#160;&#160;&#160;&#160;&#160;&#160;<img class="mwe-math-fallback-image-inline tex" alt=" x_2" src="../images/8f43fce8dbdf3c4f8d0ac91f0de1d43d.png" /> auf 1 =&gt; 1. Klausel wahr, 2. falsch</dd></dl></dd></dl></dd></dl>
+<ul><li> (2) return "keine Lösung gefunden"</li></ul>
+<p>Nach wie vielen Iterationen wird im Mittel eine Lösung gefunden?
+</p>
+<ul><li> Ausdruck unerfüllbar =&gt; Endlosschleife, Timeout nach <img class="mwe-math-fallback-image-inline tex" alt="T_{max}" src="../images/bd165c72083247ae705142e0602e1ba4.png" /> Iterationen </li>
+<li> Ausrduck erfüllbar:
+<ul><li> falls k<img class="mwe-math-fallback-image-inline tex" alt="\geq" src="../images/8fbe2a506fe3db0835548e1b648ec977.png" />3: nach <img class="mwe-math-fallback-image-inline tex" alt="O((\frac{2(k-1)}{k})^N)" src="../images/6e9a6238b16b2967c9a1eeb5e3ef8e9e.png" /> Iterationen wird Lösung gefunden</li>
+<li> k=3: <img class="mwe-math-fallback-image-inline tex" alt="O((\frac{4}{3})^N)" src="../images/a43a9db45b275da7ab9dba906bf39eff.png" /> exponentielle Zeit, wie zu erwarten für NP-vollständiges Problem</li>
+<li> k=2: <img class="mwe-math-fallback-image-inline tex" alt="O(N^2)" src="../images/fcfcbd130c01389717669e8a2772703b.png" /> Iterationen bis Lösung</li></ul></li></ul>
+<p>Beweis: Algorithmus entspricht im Wesentlichen dem <b>Random Walk</b>
+</p>
+<dl><dd> Sei <img class="mwe-math-fallback-image-inline tex" alt="x^*" src="../images/d282fd3350bb3ec2d1e940574e8fd42d.png" /> die korrekte Lösung und x die aktuelle Belegung</dd>
+<dd> RW: Stuhl i <img class="mwe-math-fallback-image-inline tex" alt="\mathrel{\hat=}" src="../images/454560a7906902243126388d6193625d.png" /> i Variablen zwischen <img class="mwe-math-fallback-image-inline tex" alt="x^*" src="../images/d282fd3350bb3ec2d1e940574e8fd42d.png" /> und x stimmen überein =&gt; Ziel: erreiche Stuhl N </dd></dl>
+<ul><li> (c):
+<ul><li> Fall 1: beide Variablen falsch =&gt; egal welche wir invertieren, bewegen wir uns von Stuhl i zu i+1</li>
+<li> Fall 2: eine Variable ist falsch: 
+<ul><li> mit Wahrscheinlichkeit 1/2 wählen wir diese und gehen von i nach i+1</li>
+<li> mit Wahrscheinlichkeit 1/2 wählen wir die andere und gehen von i nach i-1</li></ul></li></ul></li></ul>
+<p>schlechtester Fall: Es existiert keine Lösung <img class="mwe-math-fallback-image-inline tex" alt="x^*" src="../images/d282fd3350bb3ec2d1e940574e8fd42d.png" /> und wir haben immer Fall 2
+</p>
+<dl><dd> =&gt;RW braucht <img class="mwe-math-fallback-image-inline tex" alt="O(N^2 - i^2)" src="../images/a12c0467193d8f8dfbabb50215df26a1.png" /> Schritte zum Stuhl N <img class="mwe-math-fallback-image-inline tex" alt="\mathrel{\hat=} O(N^2)" src="../images/7d947dfbd56261016bb61a393b560ad7.png" /> falls i anfangs zufällig ist </dd></dl>
+<h4><span class="mw-headline" id="Alg._2_.28det._Alg._f.C3.BCr_k.3D2_mittels_SZK_in_gerichtetem_Graphen.29">Alg. 2 (det. Alg. für k=2 mittels SZK in gerichtetem Graphen)</span></h4>
+<dl><dd> geg.: Ausdruck 2-CNF</dd></dl>
+<ul><li> (1) wandle nach INF: ersetze jede Klausel <img class="mwe-math-fallback-image-inline tex" alt="(x_i \or x_j)" src="../images/9ee3f65b806fc565538aeca484963334.png" /> durch <img class="mwe-math-fallback-image-inline tex" alt="(\lnot x_i \Rightarrow x_j) \and (\lnot x_j \Rightarrow x_i)" src="../images/79fcb330ce3932c9743b9a5fdad4bee2.png" /></li></ul>
+<dl><dd> (entsprechend, wenn in Originalklausel <img class="mwe-math-fallback-image-inline tex" alt="\lnot" src="../images/8efca960b209402104b448a5ad9486a8.png" /> vorkommen)</dd></dl>
+<ul><li> (2) repräsentiere den Ausdruck als Graph: 
+<ul><li> (a) 2 Knoten pro Var:<img class="mwe-math-fallback-image-inline tex" alt="v_i \mathrel{\hat=} x_i , v_{i+N} \mathrel{\hat=} \lnot x_i " src="16e0837c11c72a0ca166b9a84d2909fa.html" /></li>
+<li> (b) Verbindung für jede Implikation durch korrespondierenden Knoten durch gerichtete Kante</li></ul></li></ul>
+<p>Bsp.:
+<img class="mwe-math-fallback-image-inline tex" alt="C_1 \and C_2 \Leftrightarrow (\lnot x_1 \Rightarrow x_2 ) \and (\lnot x_2 \Rightarrow x_1) \and (x_2 \Rightarrow x_3) \and (\lnot x_3 \Rightarrow \lnot x_2)" src="a10c0fbc3d6698ec3c324ad507e89bcf.html" />
+</p>
+<ul><li> (3) Prüfe ob der Ausdruck erfüllbar ist. Bilde SZK des Graphen</li></ul>
+<dl><dd> <b>Satz</b>: Ausdruck erfüllbar <img class="mwe-math-fallback-image-inline tex" alt="\Leftrightarrow \forall" src="../images/db5964150d3f7550151e547889500e87.png" />i: <img class="mwe-math-fallback-image-inline tex" alt=" v_i" src="../images/f0e66f55342ef85ba8be3415dd92d8e2.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="v_{i+N}" src="../images/7e63620db91dc9e83aff25df5a54bf37.png" /> sind in verschiedenen Komponenten</dd></dl>
+<p>Beweis: in jeder SZK gilt: <img class="mwe-math-fallback-image-inline tex" alt="u,v \in SZK: \exists u \rightsquigarrow v und v \rightsquigarrow u" src="../images/de8f41bc69fb06d90db9652e4175daf9.png" />
+</p>
+<dl><dd> Kanten <img class="mwe-math-fallback-image-inline tex" alt="\to" src="../images/da558173e1f2ddfeb273751d481f9a52.png" /> Implikationen, Implikationen sind transitiv</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="\Rightarrow u \rightsquigarrow v \mathrel{\hat=} u \to v " src="../images/5d35203f30b16b3b0c5c6f1c983e5586.png" /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <img class="mwe-math-fallback-image-inline tex" alt="\to u \leftrightarrow v" src="../images/fe213d719d0832a88f425adbd7f73edc.png" /> &#160; bzw. &#160; u == v
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt=" v \rightsquigarrow u \mathrel{\hat=} v \to u " src="../images/de9a38132f07d2c24aca02907cc1b1af.png" /></dd></dl></dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="\Rightarrow" src="df09aea884019cb88a2957126faba316.html" /> alle Knoten in einer SZK haben den gleichen Wahrheitswert true oder false</dd>
+<dd> aber <img class="mwe-math-fallback-image-inline tex" alt="v_i" src="../images/f0e66f55342ef85ba8be3415dd92d8e2.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="v_{i+N} \mathrel{\hat=} x_i" src="../images/2292ddb82ee8f2b46ccf1bda244f11fa.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="\lnot x_i" src="../images/1ca9538cdd5f22509e2c96c4ce4aa3c9.png" /> haben immer verschiedene Werte</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="\Rightarrow v_i" src="../images/005cad82bd199a99fee064c9a655a9c6.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="v_{i+N}" src="../images/7e63620db91dc9e83aff25df5a54bf37.png" /> dürfen nicht in selber SZK sein, andernfalls fordert der Graph <img class="mwe-math-fallback-image-inline tex" alt="x_i == \lnot x_i" src="../images/72d5eeadb4c32339d31c78bfc69323a5.png" />, was unmöglich ist.</dd></dl>
+<p><br />
+</p>
+<ul><li> (4) Bilde den Komponentengraphen <img class="mwe-math-fallback-image-inline tex" alt="\to" src="../images/da558173e1f2ddfeb273751d481f9a52.png" /> azyklisch (zu jedem Knoten existiert Komplementärknoten mit negierter Variable)[jede SZK in je 1 Knoten kontrahieren]
+<ul><li> (b) bestehende topologische Sortierung</li>
+<li> (c) gehe in topologischer Sortierung von hinten nach vorne 
+<ul><li> (I) wenn aktueller Knoten noch keinen Wert hat: setze ihn auf true und Komplementoren false</li>
+<li> (II) sonst: überspringe Knoten</li></ul></li></ul></li></ul>
+<p>Beweis, dass ein Problem aus NP auch NP-vollständig ist
+</p>
+<ul><li> Möglichkeit 1: z.B. 3-SAT (Satz von Cook): mühsam, aber mindestens für ein Problem unbermeidbar (für erstes)</li>
+<li> Möglichkeit 2: zeige dass  jedes Problem vom Typ A in eines von Typ B umwandelbar (in pol. Zeit)
+<ul><li> <img class="mwe-math-fallback-image-inline tex" alt="\Rightarrow" src="df09aea884019cb88a2957126faba316.html" /> Problem Type B nicht einfacher als Typ A</li>
+<li> falls Typ A NP-vollständig <img class="mwe-math-fallback-image-inline tex" alt="\Rightarrow" src="df09aea884019cb88a2957126faba316.html" /> Typ B auch</li></ul></li></ul>
+<h4><span class="mw-headline" id="Anwendung_auf_TSP">Anwendung auf TSP</span></h4>
+<p>3-SAT <img class="mwe-math-fallback-image-inline tex" alt="\le" src="49dc1443f33cf63082d6e193dd2af78f.html" /> Hamiltonzyklus im gerichteten Graph <img class="mwe-math-fallback-image-inline tex" alt="\le" src="49dc1443f33cf63082d6e193dd2af78f.html" /> Hamiltonzyklus im ungerichteten Graph <img class="mwe-math-fallback-image-inline tex" alt="\le" src="49dc1443f33cf63082d6e193dd2af78f.html" /> TSP im gerwichteten ungerichteten Graph
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825111001
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.105 seconds
+Real time usage: 0.309 seconds
+Preprocessor visited node count: 1720/1000000
+Preprocessor generated node count: 3792/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:142-0!canonical!math=0 and timestamp 20260825111001 and revision id 5717
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="indexce1e.html">https://alda.iwr.uni-heidelberg.de/index.php?title=NP-Vollständigkeit&amp;oldid=5717</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="np-vollst%c3%a4ndigkeit.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="talk_np-vollst%c3%a4ndigkeit.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="indexf39f.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="index5070.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="indexd4cf.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="np-vollst%c3%a4ndigkeit-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="np-vollst%c3%a4ndigkeit-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="indexf8f4.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="index6e68.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="indexbb8e.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 22 July 2020, at 00:40.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.105","walltime":"0.309","ppvisitednodes":{"value":1720,"limit":1000000},"ppgeneratednodes":{"value":3792,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825111001","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":419});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/NP-Vollständigkeit by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:52:40 GMT -->
+</html>

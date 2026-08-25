@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Hashing_und_Hashtabellen by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:45:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Hashing und Hashtabellen - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Hashing_und_Hashtabellen","wgTitle":"Hashing und Hashtabellen","wgCurRevisionId":5703,"wgRevisionId":5703,"wgArticleId":195,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Hashing_und_Hashtabellen","wgRelevantArticleId":195,"wgRequestId":"30d4fd5937519cc89f454224","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Hashing_und_Hashtabellen rootpage-Hashing_und_Hashtabellen skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Hashing und Hashtabellen</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Die Mitschrift gibts auch als <a rel="nofollow" class="external text" href="index.html">PDF</a>.
+</p>
+<div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Hashing"><span class="tocnumber">1</span> <span class="toctext">Hashing</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Hashfunktionen"><span class="tocnumber">1.1</span> <span class="toctext">Hashfunktionen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Perfektes_Hashing"><span class="tocnumber">1.1.1</span> <span class="toctext">Perfektes Hashing</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Universelles_Hashing"><span class="tocnumber">1.1.2</span> <span class="toctext">Universelles Hashing</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Kryptographische_Hashfunktionen"><span class="tocnumber">1.1.3</span> <span class="toctext">Kryptographische Hashfunktionen</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Beliebte_Standard-Hashfunktionen"><span class="tocnumber">1.1.4</span> <span class="toctext">Beliebte Standard-Hashfunktionen</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Hashtabellen"><span class="tocnumber">2</span> <span class="toctext">Hashtabellen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Hashtabelle_mit_linearer_Verkettung_.28offenes_Hashing.2Fgeschlossene_Adressierung.29"><span class="tocnumber">2.1</span> <span class="toctext">Hashtabelle mit linearer Verkettung (offenes Hashing/geschlossene Adressierung)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Komplexit.C3.A4t_der_linearen_Verkettung_und_Wahl_der_Kapazit.C3.A4t"><span class="tocnumber">2.1.1</span> <span class="toctext">Komplexität der linearen Verkettung und Wahl der Kapazität</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Hashtabelle_mit_offener_Adressierung_.28geschlossenes_Hashing.29"><span class="tocnumber">2.2</span> <span class="toctext">Hashtabelle mit offener Adressierung (geschlossenes Hashing)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Vorgehen_bei_Kollisionen"><span class="tocnumber">2.2.1</span> <span class="toctext">Vorgehen bei Kollisionen</span></a>
+<ul>
+<li class="toclevel-4 tocsection-12"><a href="#Sequentielles_Sondieren"><span class="tocnumber">2.2.1.1</span> <span class="toctext">Sequentielles Sondieren</span></a></li>
+<li class="toclevel-4 tocsection-13"><a href="#Doppeltes_Hashing"><span class="tocnumber">2.2.1.2</span> <span class="toctext">Doppeltes Hashing</span></a></li>
+<li class="toclevel-4 tocsection-14"><a href="#Beispiel_f.C3.BCr_doppeltes_Hashing"><span class="tocnumber">2.2.1.3</span> <span class="toctext">Beispiel für doppeltes Hashing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-15"><a href="#Komplexit.C3.A4t_der_offenen_Adressierung"><span class="tocnumber">2.2.2</span> <span class="toctext">Komplexität der offenen Adressierung</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Wahl_der_Kapazit.C3.A4t"><span class="tocnumber">2.2.3</span> <span class="toctext">Wahl der Kapazität</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Anwendungen_von_Hashing"><span class="tocnumber">3</span> <span class="toctext">Anwendungen von Hashing</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Rabin_Karp_Algorithmus"><span class="tocnumber">3.1</span> <span class="toctext">Rabin Karp Algorithmus</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#Naive_Implementierung_der_Textsuche"><span class="tocnumber">3.1.1</span> <span class="toctext">Naive Implementierung der Textsuche</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Idee_des_Rabin_Karp_Algorithmus"><span class="tocnumber">3.1.2</span> <span class="toctext">Idee des Rabin Karp Algorithmus</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Implementation"><span class="tocnumber">3.1.3</span> <span class="toctext">Implementation</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Hashing">Hashing</span></h2>
+<p>Wir haben im Abschnitt <a href="assoziative_arrays.html" title="Assoziative Arrays">Assoziative Arrays</a> gezeigt, dass man assoziative Arrays effizient mit Hilfe von Suchbäumen realisieren kann, so dass die Zugriffszeit auf ein Element in O(log(len(a))) ist. Genau wie beim Sortierproblem stellt sich jetzt die Frage, ob die Zugriffszeit noch verbessert werden kann, idealerseise auf O(1) wie beim gewöhnlichen Array. Die Antwort lautet: Ja, wenn für die Schlüssel eine Hashfunktion definiert ist.
+</p>
+<h3><span class="mw-headline" id="Hashfunktionen">Hashfunktionen</span></h3>
+<p>Hashfunktionen sind eine weitere Anwendung des <a href="sortieren_in_linearer_zeit.html#Bucket-Prinzip" title="Sortieren in linearer Zeit">Bucket-Prinzips</a>, das wir im Zusammenhang mit dem Sortieren in linearer Zeit eingeführt haben. man bildet die Schlüssel wiederum auf Bucket-Indizes ab, um die Suche zu beschleunigen (von O(log N) nach O(1)). Im Unterschied zum Sortieren verzichtet man hier allerdings darauf, dass die Abbildung auf Bucket-Indizes die Ordnung der Schlüssel erhalten muss (es muss nicht einmal eine Ordnung definiert sein), weil diese Forderung es erschwert, die Schlüssel gleichmäßig auf die Buckets zu verteilen. Letzteres ist aber bei Hashtabellen extrem wichtig.
+</p><p>Gegeben sei ein Universum U, dass die Menge aller legalen Schlüssel darstellt. Die Mächtigkeit |U| der Menge U ist im allgemeinen sehr groß. Beispielsweise kann man mit Strings der Länge 9 bis zu 27<sup>9</sup>&#8776;10<sup>13</sup>&#8776;2<sup>43</sup> verschiedene Schlüssel generieren, wenn 27 Zeichen erlaubt sind (Kleinbuchstaben und Leerzeichen). Die Grundannahme von Hashing ist jetzt, dass in jeder gegebenen Anwendung nur ein (kleiner) Teil der erlaubten Schlüssel tatsächlich verwendet wird. Man definiert eine Hashfunktion, die jeden Schlüssel auf eine natürliche Zahl im Bereich 0...(M-1) abbildet, wobei M viel kleiner als |U| ist. 
+</p>
+<dl><dt>Definition einer Hashfunktion</dt>
+<dd> 
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt=" f: U  \rightarrow [0, 1, \ldots, M-1] \subset \mathbb{N} " src="../images/5c95092853a6a1224fa14133565433c5.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" f(u \in U) = h \in [0, 1, \ldots, M-1]" src="../images/d1dc92257c1907a56aeb294cd08137e2.png" /></dd></dl></dd></dl></dd></dl>
+<p>h wird als <i>Hashwert</i> von u bezeichnet. Da M &lt; |U|, werden notwendigerweise einige Schlüssel auf dieselbe Zahl abgebildet. Man bezeichnet den Fall <img class="mwe-math-fallback-image-inline tex" alt=" f(u_1 \in U) = f(u_2 \in U) " src="../images/ff387fc5e862bb3559078a226e579042.png" /> als <i>Kollision</i> zwischen den Schlüsseln u<sub>1</sub> und u<sub>2</sub>.
+</p><p>Die <b>Aufgabe</b> besteht jetzt darin, ein Hash-Funktion zu entwerfen, die möglichst wenige Kollisionen hat. Hashfunktionen ähneln damit einem Zufallszahlengenerator, weil jede Zahl <img class="mwe-math-fallback-image-inline tex" alt=" h \in 0 \ldots (M-1) " src="../images/6e600c1e90b1c2beb41a0c4bed2ad7a7.png" /> nach Möglichkeit mit gleicher Wahrscheinlichkeit herauskommen soll. Wird dieses Ziel erreicht, spricht man vom <i>uniformen Hashing</i>.
+</p><p>In der Regel ist aber nicht vorher bekannt, welche Schlüssel in einer Anwendung verwendet werden. Es kann deshalb immer vorkommen, dass die verwendete Schlüsselmenge sehr viele Kollisionen verursacht. Man sieht in der Tat leicht ein, dass für jede gegebene Hashfunktion ungünstige Schlüsselmengen <img class="mwe-math-fallback-image-inline tex" alt=" U_f \subset U" src="../images/cddad27543d3d524981075c3ebb3bfcc.png" /> existieren, bei denen es sehr viele Kollisionen gibt. Im ungünstigsten Fall könnte U<sub>f</sub> so gewählt sein, dass f(U<sub>f</sub>) = k = const. gilt. Ein Hacker, der die verwendete Hashfunktion kennt, kann z.B. U<sub>f</sub> absichtlich so wählen, um eine denial-of-service-Attacke gegen einen hash-basierten Webservice zu starten. Ein anderes anschauliches Beispiel wäre eine Party, zu der nur Leute eingeladen werden, die an einem 8ten im Monat Geburtstag haben. Auf dieser Party ist es viel wahrscheinlicher, Leute zu finden, die am selben (oder gleichen) Tag Geburtstag haben, als wenn man alle einlädt.
+</p><p>D.h. die Wahl einer guten Hashfunktion ist eine Kunst, und man muss (wenn möglich) die Daten analysieren um ein gutes f zu finden.
+</p>
+<h4><span class="mw-headline" id="Perfektes_Hashing">Perfektes Hashing</span></h4>
+<p>Kennt man die Untermenge der tatsächlich vorkommenden Schlüssel <img class="mwe-math-fallback-image-inline tex" alt="U_f \subset U" src="../images/cddad27543d3d524981075c3ebb3bfcc.png" /> schon im voraus, hat man die Möglichkeit, eine <i>perfekte Hashfunktion</i> ohne Kollisionen zu entwerfen.
+</p>
+<dl><dt>Beispiel anhand der Monatsnamen </dt></dl>
+<p>U ist in diesem Fall eine Menge von Strings der Länge 9 (weil der September als längster Monatsname 9 Zeichen hat). Es ergeben sich also <img class="mwe-math-fallback-image-inline tex" alt="60^{9}" src="../images/15a13b5cebc95c0edfedbdcb4eb61e91.png" />&gt;&#8776;10<sup>16</sup>&#8776;2<sup>54</sup> mögliche Strings, da mit Groß- und Kleinbuchstaben, Umlauten, ß und Leerzeichen 60 Zeichen im deutschen Alphabet vorhanden sind. Von all diesen Möglichkeiten werden genau 12 benutzt:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="U_f" src="../images/04787a4ab091bcc0c9995df28791c0d7.png" /> = {"Januar"; "Februar"; ...&#160;; "Dezember"}</dd></dl></dd></dl></dd></dl>
+<ul><li> Benutzt man nun als Hashfunktion die Anfangsbuchstaben der Monatsnamen, benötigt man dafür 6 bit. M ist somit 64. </li></ul>
+<dl><dd><dl><dd><dl><dd>{"Januar"; "Februar"; ...&#160;; "Dezember"} &#8594; {"J"; "F"; "M"; "A"; "M"; "J"; "J"; "A"; "S"; "O"; "N"; "D"}</dd></dl></dd></dl></dd>
+<dd>Dabei enstehen viele Kollisionen (J wird 3x verwendet, M 2x, A 2x), die gewählte ist also keine gute Hashfunktion</dd></dl>
+<ul><li> Benutzt man als Hashfunktion die ersten 3 Buchstaben benötigt man 18 bit, M = <img class="mwe-math-fallback-image-inline tex" alt="2^{18}" src="../images/6f1a139fee7425c5773423930023be15.png" /> </li></ul>
+<dl><dd><dl><dd><dl><dd>{"Januar"; "Februar"; ...&#160;; "Dezember"} &#8594; {"Jan", "Feb", "März", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"}</dd></dl></dd></dl></dd>
+<dd>Nun entstehen keine Kollision mehr. Diese Hashfunktion ist deshalb beim Ausfüllen von Formularen und dergleichen sehr beliebt. Dafür ist M aber recht groß.</dd></dl>
+<p>Die Aufgabe wird also präzisiert: man sucht für <img class="mwe-math-fallback-image-inline tex" alt="U_f" src="../images/04787a4ab091bcc0c9995df28791c0d7.png" /> eine <b>minimale, perfekte Hashfunktion</b>, für die <img class="mwe-math-fallback-image-inline tex" alt="|U_f| = M" src="../images/f3cb3771f3df7b09ba5c091b50eec26d.png" /> gilt. Ein Verfahren hierfür ist Gegenstand von Übungsblatt 9.
+</p>
+<h4><span class="mw-headline" id="Universelles_Hashing">Universelles Hashing</span></h4>
+<p>Hier wählt man für eine gegebene Hashtabelle die Hashfunktion per Zufallszahl aus einer (großen) Menge erlaubter Hashfunktion &#8594; Die Wahrscheinlichkeit, dass die Hashfunktion für die Schlüssel ungünstig ist, wird dadruch minimiert. Die oben erwähnte denial-of-service-Attacke ist jetzt nicht mehr möglich, weil kein Hacker die Hashfunktion im voraus kennen kann. Näheres zum universellen Hashing finden Sie in der <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Universal_hashing">Wikpedia</a>.
+</p>
+<h4><span class="mw-headline" id="Kryptographische_Hashfunktionen">Kryptographische Hashfunktionen</span></h4>
+<p>In kryptographischen Anwendungen treten neben dem Hauptziel, die Größe des Universums auf eine überschaubare Zahl von Integer-Werten zu reduzieren, zwei weitere Anforderungen, die für Verschlüsselung bzw. verschlüsselte Kommunikation wichtig sind: erstens will man Kollisionen unbedingt vermeiden (damit zwei verschiedene Dokumente oder Passwörter nicht auf den gleichen Hashwert abgebildet werden), und zweitens darf es nicht möglich sein, aus dem Hashwert die urpsrüngliche Nachricht (also das Dokument oder Passwort) zu rekonstruieren. Man wählt deshalb relative große M (128 bit und mehr) sowie spezielle, für diesen Zweck optimierte Hashfunktionen, wie z.B. <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Message-Digest_Algorithm_5">md5</a> und <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/SHA1">sha1</a>. Weitere Einzelheiten finden Sie in der <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Cryptographic_hash_function">Wikipedia</a>.
+</p>
+<h4><span class="mw-headline" id="Beliebte_Standard-Hashfunktionen">Beliebte Standard-Hashfunktionen</span></h4>
+<p>In der Praxis definiert man Hashfunktionen gewöhnlich zweistufig: Zunächst bildet man den Schlüssel auf einen 32 bit Integerwert ab, M' ist damit 2<sup>32</sup>. Dieser "rohe" Hashwert wird dann mittels der Modulo-Operation auf die eigentliche Größe M des assoziativen Arrays abgebildet:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt=" f(u \in U) = f&#39;(u \in U)\,\%\,M\,=\,h \in [0, 1, \ldots, M-1] " src="../images/90dace532beaee63d2a5df6834b3105b.png" /></dd></dl></dd></dl></dd></dl>
+<p>mit
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt=" f&#39;(u \in U) = h&#39; \in [0, 1, \ldots, 2^{32}-1] " src="../images/608418c0880b2a6e46da5bdb3add11c7.png" /></dd></dl></dd></dl></dd></dl>
+<p>Der große Wert von M' sichert, dass man bei der Wahl von M großen Spielraum hat, so dass die Größe des assoziativen Arrays sehr gut an die Menge der zu speichernden Daten angepaßt werden kann. Die Funktion f'(u) definiert man wie folgt:
+</p>
+<ul><li> Falls U = <tt>unsigned int</tt> (32bit int Datentyp) &#8658; f'(u) = u</li>
+<li> Falls U = <tt>signed int</tt> &#8658; Typkonvertierung nach <tt>unsigned int</tt> &#8658; f'(u) = (unsigned int)u</li>
+<li> Andere Schlüsseltypen (also insbesondere Strings) interpretiert man als Array of byte &#8658; f'(u) konvertiert Array of Byte nach <tt>unsigned int</tt>. Beispiele für solche Funktionen:</li></ul>
+<dl><dd><dl><dd> <b>Bernsteinfunktion:</b></dd></dl></dd></dl>
+<pre>    def bHash(u):     # u: Array of Byte
+        h=0
+        for k in u:
+            h = 33 * h + k 
+        return h
+</pre>
+<dl><dd><dl><dd> <b>modifizierte Bernsteinfunktion:</b></dd></dl></dd></dl>
+<pre>    def mbHash(u):    # u: Array of Byte
+        h=0
+        for k in u:
+            h = (33 * h) ^ k  # ^ ist bitweises Xor
+        return h
+</pre>
+<dl><dd><dl><dd> <b>Shift-Add-Xor-Funktion:</b></dd></dl></dd></dl>
+<pre>    def saxhash(u):   # u: Array of Byte
+        h=0
+        for k in u:
+            h ^= (h &lt;&lt; 5) + (h &gt;&gt; 2) + k  # &lt;&lt; und &gt;&gt; sind Links- bzw. Rechtsshift der Bits, ^= ist bitweise Xor-Zuweisung
+        return h
+</pre>
+<dl><dd><dl><dd> <b>Fowler/Noll/Vo-Funktion:</b></dd></dl></dd></dl>
+<pre>    def FNVhash(u):   # u: Array of Byte
+        h = 2166136261
+        for k in u:
+            h = (16777619 * h) ^ k   # ähnlich der modifizierten Bernsteinfunktion, aber mit anderen Konstanten
+        return h
+</pre>
+<dl><dd><dl><dd> Die verwendeten Konstanten sind experimentell so gewählt worden, dass die Hashfunktionen in typischen Praxisanwendungen relativ wenige Kollisionen verursachen. Der tiefere Grund, warum z.B. 33 in der Bernsteinfunktion eine gute Wahl darstellt, ist unbekannt. Es empfielt sich, in einer gegebenen Anwendung mit mehreren Hashfunktionen zu experimentieren. Weitere solche Funktionen und andere nützliche Informationen findet man auf der Seite <a rel="nofollow" class="external text" href="http://www.eternallyconfuzzled.com/tuts/algorithms/jsw_tut_hashing.aspx">eternallyconfuzzled.com</a>.</dd></dl></dd></dl>
+<h2><span class="mw-headline" id="Hashtabellen">Hashtabellen</span></h2>
+<p>Eine Hashtabelle ist eine Datenstruktur, die die Funktionalität des assoziativen Arrays mit Hilfe von Hashing realisiert. Das Grundprinzip besteht darin, dass die Hashtabelle intern ein (dynamisches) Array der Größe <tt>capacity</tt> verwaltet, so dass die Hashwerte als Indizes in diesem Array verwendet werden können (<tt>capacity</tt> entspricht der Zahl M aus der mathematischen Definition oben). Eine naive Implementation der Einfügeoperation sieht also so aus 
+</p>
+<pre>    def __setitem__(self, key, value):    # naive Implementation, funktioniert so nicht
+        index = self.hash(key)&#160;% self.capacity
+        self.array[index] = value
+</pre>
+<p>Diese Implementation ist allerdings zu einfach. Wenn nämlich die Schlüssel aus dem Universum U beliebig gewählt werden dürfen, sind Kollisionen unvermeidlich. Tritt aber eine Kollision auf, werden die Daten eines Schlüssels mit den Daten eines anderen Schlüssels überschrieben. Um Kollisionen geschickt zu behandeln gibt es zwei Ansätze:
+</p>
+<ul><li> lineare Verkettung</li>
+<li> offene Adressierung</li></ul>
+<h3><span class="mw-headline" id="Hashtabelle_mit_linearer_Verkettung_.28offenes_Hashing.2Fgeschlossene_Adressierung.29">Hashtabelle mit linearer Verkettung (offenes Hashing/geschlossene Adressierung)</span></h3>
+<p>Man kann dies als die pessimistische Lösung bezeichnen: Man nimmt an, dass Kollisionen häufig auftreten. Deshalb wird unter jedem
+Hashindex gleich eine Liste angelegt, in der Einträge mit gleichem Hashindex aufgenommen werden können. Die Hashtabelle verwaltet ein Array von Listen, und jedes Arrayfeld kann beliebig viele Elemente speichern: Wird ein Element auf den Index <tt>i</tt> abgebildet, werden die Daten einfach an die betreffende Liste angehängt. Bei Zugriff auf ein Element wird zunächst die passende Liste gesucht (mit Hilfe des Hashwerts), danach erfolgt in dieser Liste eine sequentielle Suche nach dem richtigen Schlüssel.
+</p><p>Um diese Idee implementieren zu können, benötigen wir zunächst eine Hilfsklasse <tt>HashNode</tt>, die (Schlüssel, Wert)-Paare speichert und mit Hilfe von <tt>next</tt> eine verkettete Liste realisiert:
+</p>
+<pre> class HashNode:
+     def __init__(self,key,data,next):
+         self.key = key
+         self.data = data
+         self.next = next    # Verkettung!
+</pre>
+<p>Die eigentliche Hashtabelle wird in der Klasse <i>HashTable</i> implementiert:
+</p>
+<pre> class HashTable:
+     def __init__(self):
+        self.capacity = ... # Geeignete Werte siehe unten
+        self.size = 0       # Anzahl der Werte, die zur Zeit tatsächlich gespeichert sind
+        self.array = [None]*self.capacity
+</pre>
+<p>Wie oben bereits erwähnt, werden die Zugriffsoperatoren <i>[ ]</i> für eine Datenstruktur in Python durch die Funktionen <tt>__setitem__</tt> bzw. <tt>__getitem__</tt> implementiert. 
+Die <tt>__setitem__</tt>-Funktion speichert die gegebenen Daten unter dem Schlüssel <tt>key</tt> in der <tt>HashTable</tt>-Klasse:
+</p>
+<pre>    def __setitem__(self, key, value):
+        index = hash(key)&#160;% self.capacity  # hash(...) ist in Python eine vordefinierte Funktion
+        node  = self.array[index]          # finde die zu 'key' gehörende Liste
+        while node is not None:            # sequentielle Suche nach 'key' in dieser Liste
+            if node.key == key:
+                # Element 'key' ist schon in der Tabelle
+                # =&gt; überschreibe die Daten mit dem neuen Wert
+                node.data = value
+                return
+            # andernfalls: Kollision des Hashwerts, probiere nächsten 'key' aus
+            node = node.next
+        # kein Element hatte den richtigen Schlüssel.
+        # =&gt; es gibt diesen Schlüssel noch nicht
+        #    füge also ein neues Element in die Hashtabelle ein
+        self.array[index] = HashNode(key, value, self.array[index]) # der alte Anfang der Liste wird zum
+                                                                    # Nachfolger des neu eingefügten ersten Elements
+        self.size += 1
+        ... # eventuell muss jetzt noch die Kapazität optimiert werden
+</pre>
+<p>Die Funktion <tt>__getitem__</tt> gibt die unter dem Schlüssel <tt>key</tt> abgelegten Daten zurück, oder eine Fehlermeldung, falls dieser Schlüssel nicht existiert:
+</p>
+<pre>    def __getitem__(self, key):
+        index = hash(key)&#160;% self.capacity
+        node = self.array[index]     # finde die zu 'key' gehörende Liste
+        while node is not None:      # sequentielle Suche nach 'key' in dieser Liste
+             if node.key == key:     # gefunden!
+                 return node.data    # =&gt; Daten zurückgeben
+             node = node.next        # nächsten Schlüssel probieren
+        raise KeyError(key)          # Schlüssel nicht gefunden =&gt; Fehler
+</pre>
+<h4><span class="mw-headline" id="Komplexit.C3.A4t_der_linearen_Verkettung_und_Wahl_der_Kapazit.C3.A4t">Komplexität der linearen Verkettung und Wahl der Kapazität</span></h4>
+<p>Die Komplexität wird durch zwei Operationen bestimmt: erstens das Auffinden der zu einem Schlüssel gehörenden Liste (die in O(1) erfolgt), zweitens das sequentielle Durchsuchen der Liste, die Zeit in O(L) erfordert, wobei L die mittlere Länge der Listen ist. Die Hashtabelle ist also nur schnell, wenn die Länge der Listen möglichst klein ist. Unter der Annahme des <i>uniformen Hashings</i>, wenn also alle Indizes gleich häufig verwendet werden, ist L gleich dem <b>Füllstand</b> der Hashtabelle:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\alpha = \frac{N}{M} = \frac{\text{size}}{\text{capacity}}" src="../images/3c4f52aafcb8acbf123ab7ef7f2b3ac8.png" /> wobei N die Größe <tt>size</tt> der Hashtabelle und M die Größe <tt>capacity</tt> des Arrays ist.</dd></dl></dd></dl></dd></dl>
+<p>Wenn die Hashwerte uniform sind, entfallen auf jede Liste im Mittel N/M Einträge (N Einträge, verteilt auf M Listen). Die Gesamtkomplexität berechnet sich nach der Sequenzregel zu
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="O(1+\alpha)" src="../images/8b00acc45bdca9a6be55c57131b07511.png" /></dd></dl></dd></dl></dd></dl>
+<p>Für eine effiziente Suche muss demnach <img class="mwe-math-fallback-image-inline tex" alt="\alpha \in O(1)" src="../images/197e768d3f92b4ee41a344ac0491a2bf.png" /> gewählt werden. Dies erreicht man, indem man, wie beim dynamischen Array, <tt>capacity</tt> immer wieder anpasst, falls <tt>size</tt> zu groß wird. Üblicherweise verdoppelt man <tt>capacity</tt>, sobald <tt>size == capacity</tt> erreicht wird. Analog zum dynamischen Array werden die Daten dann aus dem alten Array (<tt>self.array</tt>) in ein entsprechend vergrößertes neues Array kopiert.
+</p><p>In der C++ Standardbibliothek (Klasse <tt> <a rel="nofollow" class="external text" href="http://www.cplusplus.com/reference/stl/unordered_map/">std::unordered_map</a></tt>, siehe auch <a rel="nofollow" class="external text" href="hashtable-aux25c7.html">GCC hashtable_aux.cc (Primzahlen)</a> und <a rel="nofollow" class="external text" href="hashtable_policy25c7.html">GCC Hash Implementation</a>) wird die Hashtabelle häufig so
+implementiert. Dabei wird <tt>capacity</tt> immer als <i>Primzahl</i> gewählt, wobei sich aufeinanderfolgende Kapazitäten immer ungefähr verdoppeln. Dazu wählt man aus einer vorberechneten Liste von Primzahlen die kleinste Zahl, so dass <tt>new_capacity &gt;= 2*capacity</tt> gilt, und beginnt z.B. mit einer Default-Kapazität von 11:
+</p>
+<pre> 11, 23, 47, 97, 199, 409, 823, ...
+</pre>
+<p>Die Wahl von Primzahlen hat zur Folge, dass <tt>hash(key)&#160;% self.capacity</tt> <i>alle</i> Bits von h benutzt (Eigenschaft aus der Zahlentheorie). Die Kapazität wird vergrößert, wenn <tt>size == capacity</tt> erreicht wird, und die ungefähre Verdoppelung sichert, dass die amortisierte Komplexität der Einfügeoperation in O(1) ist (wie beim dynamischen Array).
+</p>
+<h3><span class="mw-headline" id="Hashtabelle_mit_offener_Adressierung_.28geschlossenes_Hashing.29">Hashtabelle mit offener Adressierung (geschlossenes Hashing)</span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:364px;"><a href="file_hashtb12.svg.html" class="image"><img alt="" src="../images/hashtb12.svg.png" width="362" height="226" class="thumbimage" /></a>  <div class="thumbcaption">Prinzip (<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Hash_table">Quelle</a>)</div></div></div>
+<p>Dies kann als die optimistische Variante betrachtet werden: man nimmt an, dass Kollisionen nicht so häufig auftreten, um eine komplexe Datenstruktur wie das "Array von Listen" zu rechtfertigen. Stattdessen behandelt man Kollisionen mit einer einfachen <b>Idee</b>: Wenn <tt>array[index]</tt> durch Kollision bereits vergeben ist, probiere einen
+anderen Index aus (siehe auch <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Hashtabelle#Hashing_mit_offener_Adressierung">Wikipedia (de)</a> und
+<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Open_addressing">Wikipedia (en)</a>). Dabei muss man folgendes beachten:
+</p>
+<ul><li> Das Array enthält pro Element höchstens ein (key,value)-Paar</li>
+<li> Das Array muss stets mindestens <i>einen</i> freien Platz haben (sonst gäbe es beim Ausprobieren anderer Indizes eine Endlosschleife). Es gilt immer <tt>self.size &lt; self.capacity</tt>. Dies war bei der vorigen Hash-Implementation mit linearer Verkettung nicht notwendig (aber im Sinne schneller Zugriffszeiten trotzdem wünschenswert).</li></ul>
+<h4><span class="mw-headline" id="Vorgehen_bei_Kollisionen">Vorgehen bei Kollisionen</span></h4>
+<h5><span class="mw-headline" id="Sequentielles_Sondieren">Sequentielles Sondieren</span></h5>
+<p>Probiere den nächsten Index: <tt>index = (index+1)&#160;% capacity</tt>
+</p>
+<ul><li> Vorteil: einfach</li>
+<li> Nachteil: Clusterbildung</li></ul>
+<p>Clusterbildung heißt, dass sich größere zusammenhängende Bereiche bilden die belegt sind, unterbrochen von Bereichen die komplett frei sind. Beim Versuch des Einfügens eines Elements an einen Platz, der schon belegt ist, muss jetzt das ganze Cluster sequentiell durchlaufen werden, bis ein freier Platz gefunden wird. Damit entspricht die Komplexität der Suche der mittleren Länge der belegten Bereiche, was sich entsprechend in einer langsamen Suche widerspiegelt.
+</p>
+<h5><span class="mw-headline" id="Doppeltes_Hashing">Doppeltes Hashing</span></h5>
+<p><a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Doppel-Hashing">Wikipedia (de)</a> <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Double_hashing">Wikipedia (en)</a>
+</p><p>Bestimme einen neuen Index (bei Kollisionen) durch eine <i>2. Hashfunktion</i>.
+</p><p>Das doppelte Hashing wird typischerweise in der Praxis angewendet und liegt auch der Python Implementierung des Datentyps <a rel="nofollow" class="external text" href="http://docs.python.org/tut/node7.html#SECTION007500000000000000000">Dictionary</a> (Syntax <tt>{'a':1, 'b':2, 'c':3}</tt> zugrunde.
+</p><p>Eine effiziente Implementierung dieses Datentyps ist für die Performance der Skriptsprache Python extrem wichtig, da z.B. beim Aufruf einer Funktion der auszuführunde Code in einem Dictionary unter dem Schlüssel <i>Funktionsname</i> nachgeschlagen wird oder die Werte lokaler Variablen innerhalb einer Funktion ebenfalls in einem Dictionary zu finden sind.
+</p><p>Für die Implementierung in Python werden wieder die obigen Klassen <tt>HashNode</tt> (das Attribut <tt>next</tt> kann allerdings jetzt entfernt werden) und <tt>HashTable</tt> benötigt, es folgen die angepassten Implementationen von <tt>__setitem__</tt> und <tt>__getitem__</tt>:
+</p>
+<pre> def __setitem__(self, key, value):
+     h = hash(key)
+     index = h&#160;% self.capacity
+     # erste Schleife: teste, ob key schon vorhanden ist
+     while True:
+         if self.array[index] is None:     # freies Feld gefunden =&gt; key nicht vorhanden
+              break
+         if self.array[index].key == key:  # key gefunden =&gt; Daten aktualisieren
+              self.array[index].data = value
+              return
+         # self.array[index].key ist anderer Schlüssel oder als gelöscht markiert
+         # =&gt; neuen Index durch 2. Hashfunktion berechnen
+         index = (5*index+1+h)&#160;% self.capacity
+         h = h // 32
+     # wenn wir hier landen, wurde key nicht gefunden
+     h = hash(key)
+     index = h&#160;% self.capacity
+     # zweite Schleife: neues Element einfügen
+     while True:
+         if self.array[index] is None or self.array[index].key is None:
+              # index ist frei (1. Bedingung) oder als gelöscht markiert (2. Bedingung)
+              # =&gt; hier gehört key hin
+              self.array[index] = HashNode(key, value)
+              self.size +=1
+              ... # eventuell muss hier die Kapazität optimiert werden
+              return
+         # index ist schon belegt =&gt; neuen Index durch 2. Hashfunktion berechnen
+         index = (5*index+1+h)&#160;% self.capacity
+         h = h // 32
+</pre>
+<p>Wir nehmen bei dieser Implementation an, dass gelöschte Elemente dadurch markiert werden, dass <tt>self.array[index].key</tt> auf einen Schlüssel gesetzt wird, der sonst nicht vorkommen kann (z.B. <tt>None</tt>). Dann wird die if-Abfrage <tt>self.array[index].key == key</tt> niemals wahr, und es wird weitergesucht. Würde man hingegen das Element vollständig löschen, könnte die Bedingung <tt>self.array[index] is None</tt> zu früh wahr werden, so dass die Schleife vorzeitig abgebrochen und das vorhandene Element für <tt>key</tt> nicht erreicht würde.
+</p>
+<pre>def __getitem__(self, key):
+    h = hash(key)
+    index = h&#160;% self.capacity
+    while True:
+        if self.array[index] is None:    # die Suchkette bricht ab =&gt; key existiert nicht
+            raise KeyError(key)
+        if self.array[index].key == key: # key gefunden =&gt; zugehörige Daten zurückgeben
+            return self.array[index].data
+        # index enthält nicht den passenden kay =&gt; neuen Index durch 2. Hashfunktion berechnen
+        index = (5*index+1+h)&#160;% self.capacity
+        h = h // 32
+</pre>
+<p>Die vorgestellte Implementierung orientiert sich an Pythons interner Dictionary Implementierung, der zugehörige Quellcode (mit ausführlichem Kommentar) findet sich im File <a rel="nofollow" class="external text" href="dictobject.html">dictobject.c</a> der Python Implementation.
+</p>
+<h5><span class="mw-headline" id="Beispiel_f.C3.BCr_doppeltes_Hashing">Beispiel für doppeltes Hashing</span></h5>
+<p>Der Übersichtlichkeit wegen wählen wir M'=2<sup>5</sup> (statt 2<sup>32</sup>) und eine Kapazität von M=8.
+</p><p>Roher Hashwert (für das Beispiel willkürlich gewählt):
+</p>
+<pre> h=25
+</pre>
+<p>Erster Index:
+</p>
+<pre> i0 = h&#160;% capacity = 25&#160;% 8 = 1
+</pre>
+<p>Es finde eine Kollision statt. Es wird ein zweiter Index berechnet:
+</p>
+<pre> i1 = (5*i0 + 1 + h)&#160;% 8 = (5*1 + 1 + 25)&#160;% 8 = 31&#160;% 8 = 7
+</pre>
+<p>Der Hashwert wird aktualisiert um die höherwertigen Bits von <tt>h</tt> ins Spiel zu bringen (hier durch <tt>h &gt;&gt; 2</tt> anstelle von <tt>h &gt;&gt; 5</tt> im originalen Pythoncode). Wir stellen <tt>h</tt> als Binärzahl dar, damit der Rechtsshift besser sichtbar wird:
+</p>
+<pre> h = h &gt;&gt; 2 
+ ==&gt; h = (11001 &gt;&gt; 2) = 00110 = 6
+</pre>
+<p>Es finde wieder eine Kollision statt, so dass ein dritter Index berechnet werden muss.
+</p>
+<pre> i2 = (5*i1 + 1 + h)&#160;% 8 = (5*7 + 1 + 6)&#160;% 8 = 42&#160;% 8 = 2
+</pre>
+<p>Der Hashwert wird wiederum aktualisiert:
+</p>
+<pre> h = h &gt;&gt; 2
+ ==&gt; h = (00110 &gt;&gt; 2) = 00001 = 1
+</pre>
+<p>Es finde eine Kollision statt, und wir berechnen den vierten Index:
+</p>
+<pre> i3 = (5*i2 + 1 + h)&#160;% 8 = (5*2 + 1 + 1)&#160;% 8 = 12&#160;% 8 = 4
+</pre>
+<p>Der Hashwert wird nochmals aktualisiert und erreicht jetzt den Wert 0 (der sich dann nicht mehr ändert):
+</p>
+<pre> h = h &gt;&gt; 2 
+ ==&gt; h = (00110 &gt;&gt; 2) = 0
+</pre>
+<p>Es finde eine Kollision statt. Da jetzt <tt>h = 0</tt> gilt, und die Zahlen 5 (Multiplikator) und 8 (capacity) teilerfremd sind, werden ab jetzt systematisch alle Indizes von 0 bis 7 durchprobiert (in der durch die Modulo-Operation bestimmten Reihenfolge):
+</p>
+<pre> i4  = (5*i3  + 1 + h)&#160;% 8 = (5*4 + 1 + 0)&#160;% 8 = 21&#160;% 8 = 5
+ i5  = (5*i4  + 1 + h)&#160;% 8 = (5*5 + 1 + 0)&#160;% 8 = 26&#160;% 8 = 2
+ i6  = (5*i5  + 1 + h)&#160;% 8 = (5*2 + 1 + 0)&#160;% 8 = 11 &amp; 8 = 3
+ i7  = (5*i6  + 1 + h)&#160;% 8 = (5*3 + 1 + 0)&#160;% 8 = 16 &amp; 8 = 0
+ i8  = (5*i7  + 1 + h)&#160;% 8 = (5*0 + 1 + 0)&#160;% 8 =  1 &amp; 8 = 1
+ i9  = (5*i8  + 1 + h)&#160;% 8 = (5*1 + 1 + 0)&#160;% 8 =  6 &amp; 8 = 6
+ i10 = (5*i9  + 1 + h)&#160;% 8 = (5*6 + 1 + 0)&#160;% 8 = 31 &amp; 8 = 7
+ i11 = (5*i10 + 1 + h)&#160;% 8 = (5*7 + 1 + 0)&#160;% 8 = 36 &amp; 8 = 4
+</pre>
+<p>Allen Indizes werden also erreicht, bevor sich die Folge wiederholt. Da man <tt>capacity</tt> immer so wählt, dass mindestens ein Arrayfeld noch frei ist, wird dadurch immer ein geeigneter Platz für das einzufügende Element gefunden.
+</p>
+<h4><span class="mw-headline" id="Komplexit.C3.A4t_der_offenen_Adressierung">Komplexität der offenen Adressierung</span></h4>
+<ul><li> Annahme: uniformes Hashing, das heißt alle Indizes haben gleiche Wahrscheinlichkeit</li>
+<li> Füllstand <img class="mwe-math-fallback-image-inline tex" alt="\alpha =\frac{N}{M} = \frac{\text{size}}{\text{capacity}}" src="../images/3c4f52aafcb8acbf123ab7ef7f2b3ac8.png" /></li></ul>
+<ul><li> <b>Erfolglose Suche</b> (d.h. es wird entweder ein neues Element eingefügt oder ein <tt>KeyError</tt> geworfen): Untere Schranke für die Komplexität ist <img class="mwe-math-fallback-image-inline tex" alt="\Omega\left(\frac{1}{1-\alpha}\right)" src="../images/c22652bdb7dab1d07dceecc6fbad7ccf.png" /> Schritte (= Anzahl der notwendigen index-Berechnungen).</li>
+<li> <b>Erfolgreiche Suche</b> <img class="mwe-math-fallback-image-inline tex" alt="\Omega\left(\frac{1}{\alpha}\ln\left(\frac{1} {1-\alpha}\right)\right)" src="../images/ead78257df54421d428a3b447a1a7f6f.png" /> Schritte.</li></ul>
+<table border="1" cellspacing="0" cellpadding="5" align="center">
+<tr>
+<th> <img class="mwe-math-fallback-image-inline tex" alt="\alpha" src="../images/bccfc7022dfb945174d9bcebad2297bb.png" />
+</th>
+<th> 0.5
+</th>
+<th> 0.9
+</th></tr>
+<tr>
+<td> erfolglos
+</td>
+<td> 2.0
+</td>
+<td> 10
+</td></tr>
+<tr>
+<td> erfolgreich
+</td>
+<td> 1.4
+</td>
+<td> 2.6
+</td></tr></table>
+<h4><span class="mw-headline" id="Wahl_der_Kapazit.C3.A4t">Wahl der Kapazität</span></h4>
+<p>Man sieht an der obigen Tabelle, dass die erfolglose Suche (und damit das Einfügen) sehr langsam wird, wenn der Füllstand hoch ist. In Python wird <tt>capacity</tt> deshalb so gewählt, dass <img class="mwe-math-fallback-image-inline tex" alt="\alpha \leq 2/3" src="../images/5982f3c268a3ca5c6a9a92f926a00db8.png" />. Falls <img class="mwe-math-fallback-image-inline tex" alt="\alpha" src="../images/bccfc7022dfb945174d9bcebad2297bb.png" /> größer werden sollte, verdopple die Kapazität und kopiere das alte array in das neue Array (analog zum dynamischen Array)
+</p><p>In Python werden die Kapazitätsgrößen als Zweierpotenzen gewählt, also 4,8,16,32,...,
+so dass <tt>h&#160;% self.capacity</tt> nur die unteren Bits von <tt>h</tt> benutzt. Die oberen Bits von <tt>h</tt> kommen erst ins Spiel, wenn bei der Berechnung der 2. Hashfunktion die Aktualisierung <tt>h = h &gt;&gt; 5</tt> erfolgt. Dies hat sich bei umfangreichen Experimenten als sehr gute Lösung erwiesen.
+</p>
+<h2><span class="mw-headline" id="Anwendungen_von_Hashing">Anwendungen von Hashing</span></h2>
+<ul><li> Hashtabelle, assoziatives Aray</li>
+<li> Sortieren in linearer Zeit (Übungsaufgabe 6.2)</li>
+<li> Suchen von Strings in Texten: Rabin-Karp-Algorithmus</li>
+<li> ...</li></ul>
+<h3><span class="mw-headline" id="Rabin_Karp_Algorithmus">Rabin Karp Algorithmus</span></h3>
+<p><a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Rabin-Karp-Algorithmus">Wikipedia (de)</a> <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Rabin-Karp_string_search_algorithm">Wikipedia (en)</a>
+</p><p>In Textverarbeitungsanwendungen ist eine häufig benutzte Funktion die <i>Search &amp; Replace</i> Funktionalität. Die Suche sollte in O(len(text)) möglich sein, aber ein naiver Algorithmus braucht O(len(text)*len(searchstring))
+</p>
+<h4><span class="mw-headline" id="Naive_Implementierung_der_Textsuche">Naive Implementierung der Textsuche</span></h4>
+<pre> def search(text, s):
+     M, N = len(text), len(s)
+     for k in range(M-N):
+         if s==text[k:k+N]:   # O(N), da N Zeichen verglichen werden müssen
+             return k
+     return -1 #nicht gefunden
+</pre>
+<h4><span class="mw-headline" id="Idee_des_Rabin_Karp_Algorithmus">Idee des Rabin Karp Algorithmus</span></h4>
+<p>Statt Vergleichen <tt>s==text[k:k+N]</tt>, die O(N) benötigen, weil N Vergleiche der Buchstaben durchgeführt werden müssen, vergleichen wir die Hashs von Suchstring und dem zu untersuchenden Textabschnitt: <tt>hash(s) == hash(text[k:k+N])</tt>. Dabei muss natürlich <tt>hash(s)</tt> nur einmal berechnet werden, wohingegen <tt>hash(text[k:k+N])</tt> immer wieder neu berechnet werden muss. Damit der Vergleich O(1) sein kann, ist es deswegen erforderlich, eine solche Hashfunktion zu haben, die nicht alle Zeichen (das wäre O(N) ) einlesen muss, sondern die den vorhergehenden Hashwert mit einbezieht.
+</p><p>Eine solche Hashfunktion heißt <i>Running Hash</i> und funktioniert analog zum <i>Sliding Mean</i>.
+</p><p>Die Running Hash Funktion berechnet in O(1) den hash von <tt>text[k+1:k+1+N]</tt> ausgehend vom hash für <tt>text[k:k+N]</tt>.
+</p><p>Idee: Interpretiere den Text als Ziffern in einer base d Darstellung:
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="h_k = \text{text}[k]\cdot d^{N-1} + \text{text}[k+1]\cdot d^{N-2} + \cdots + \text{text}[k+N-1]" src="../images/820e9dc1c181a5d5643203ecf0a038ca.png" />
+</p><p>Für die Basis 10 (Dezimalsystem) ergibt sich also
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="h_k = \text{text}[k]\cdot {10}^{N-1} + \text{text}[k+1]\cdot {10}^{N-2} + \cdots + \text{text}[k+N-1]" src="../images/0797891e6bbb68bce2f67c9e832a3a3f.png" />
+</p><p>Daraus folgt
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="h_{k+1} = 10 \cdot h_k - \text {text}[k]\cdot {10}^{N} + \text {text}[k+N]" src="../images/93efdfb4e97b915bc5a664cce912c027.png" />
+</p><p>Die Komplexität dieses Updates ist O(1), falls man <img class="mwe-math-fallback-image-inline tex" alt="{10}^{N}" src="../images/feb66177f862bc9a12cad2fce77d0e3c.png" /> vorberechnet hat.
+</p><p>In der Realität wählt man dann d=32 und benutzt noch an einigen Stellen modulo Operationen, um die Zahlen nicht zu groß werden zu lassen (siehe die Zahl <tt>q</tt> in der folgenden Implementation).
+</p>
+<h4><span class="mw-headline" id="Implementation">Implementation</span></h4>
+<pre> def searchRabinKarp(text, s):
+     M, N = len(text), len(s)
+     d = 32
+     q = 33554393  # q ist eine große Primzahl, aber so,
+                   # dass d*q &lt; 2**32 (um Überlauf bei 32-bit Integerarithmetik zu vermeiden)
+     dN = d**N&#160;% q # Vorberechnung des Vorfaktors für das Entfernen aus dem Hash
+     
+     # Initialisierung      
+     hs, ht = 0, 0
+     for k in range(N):
+         # ord() gibt die Zeichen-Nummer (z.B. ASCII- oder UTF-8-Code) des 
+         # übergebenen Zeichens zurück
+         hs = (hs*d + ord( s[k] ))&#160;% q
+         ht = (ht*d + ord(text[k]))&#160;% q
+     # Die Variablen sind jetzt wie folgt initialisiert:
+     # hs = hash(s)
+     # ht = hash(text[0:N])
+     
+     # Hauptschleife
+     k = 0 
+     while k &lt; M-N:
+         if hs == ht:  # übereinstimmende Hashs =&gt; prüfe, dass es nicht nur
+                       # eine Kollision ist
+             if s == text[k:k+N]:  # O(N)-Vergleich nur nötig, wenn Hashs übereinstimmen
+                  return k         # search string an Position k gefunden
+         # nicht gefunden =&gt; aktualisiere Hash für den nächsten Teilabschnitt von text:
+         ht = (d*ht + ord(text[k+N]))&#160;% q # neues Zeichen text[k+N] in Hash einfügen
+         ht = (ht - dN*ord(text[k]))&#160;% q  # Zeichen text[k] aus Hash entfernen.
+         k +=1
+     return -1  # search string nicht gefunden
+</pre>
+<p><a href="iteration_versus_rekursion.html" title="Iteration versus Rekursion">Nächstes Thema</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825110958
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.029 seconds
+Real time usage: 0.086 seconds
+Preprocessor visited node count: 317/1000000
+Preprocessor generated node count: 608/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:195-0!canonical!math=0 and timestamp 20260825110958 and revision id 5703
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index5321.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Hashing_und_Hashtabellen&amp;oldid=5703</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="hashing_und_hashtabellen.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="talk_hashing_und_hashtabellen.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index01c5.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="index840a.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="indexef24.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="hashing_und_hashtabellen-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="hashing_und_hashtabellen-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="index1db1.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="index5321.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index57b8.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 23 June 2020, at 16:11.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.029","walltime":"0.086","ppvisitednodes":{"value":317,"limit":1000000},"ppgeneratednodes":{"value":608,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825110958","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":202});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Hashing_und_Hashtabellen by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:45:49 GMT -->
+</html>

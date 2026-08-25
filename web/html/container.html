@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Container by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:38:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Container - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Container","wgTitle":"Container","wgCurRevisionId":5699,"wgRevisionId":5699,"wgArticleId":12,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Container","wgRelevantArticleId":12,"wgRequestId":"6034c4f2ef7b29f5cb56abaf","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Container rootpage-Container skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Container</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Abstrakte_Datentypen"><span class="tocnumber">1</span> <span class="toctext">Abstrakte Datentypen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Array"><span class="tocnumber">2</span> <span class="toctext">Array</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Operationen:"><span class="tocnumber">2.1</span> <span class="toctext">Operationen:</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Axiome:"><span class="tocnumber">2.2</span> <span class="toctext">Axiome:</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#in_Python:"><span class="tocnumber">2.3</span> <span class="toctext">in Python:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Stack"><span class="tocnumber">3</span> <span class="toctext">Stack</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Operationen:_2"><span class="tocnumber">3.1</span> <span class="toctext">Operationen:</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Axiome:_2"><span class="tocnumber">3.2</span> <span class="toctext">Axiome:</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#in_Python:_2"><span class="tocnumber">3.3</span> <span class="toctext">in Python:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Queue"><span class="tocnumber">4</span> <span class="toctext">Queue</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Operationen:_3"><span class="tocnumber">4.1</span> <span class="toctext">Operationen:</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Axiome:_3"><span class="tocnumber">4.2</span> <span class="toctext">Axiome:</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#in_Python:_3"><span class="tocnumber">4.3</span> <span class="toctext">in Python:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Assoziatives_Array"><span class="tocnumber">5</span> <span class="toctext">Assoziatives Array</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Operationen:_4"><span class="tocnumber">5.1</span> <span class="toctext">Operationen:</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Axiome:_4"><span class="tocnumber">5.2</span> <span class="toctext">Axiome:</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#in_Python:_4"><span class="tocnumber">5.3</span> <span class="toctext">in Python:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#Required_Interfaces"><span class="tocnumber">6</span> <span class="toctext">Required Interfaces</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="#Lesender_Zugriff"><span class="tocnumber">6.1</span> <span class="toctext">Lesender Zugriff</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Schreibender_Zugriff"><span class="tocnumber">6.2</span> <span class="toctext">Schreibender Zugriff</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Facts"><span class="tocnumber">7</span> <span class="toctext">Facts</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Beispiele"><span class="tocnumber">8</span> <span class="toctext">Beispiele</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="#Arrays"><span class="tocnumber">8.1</span> <span class="toctext">Arrays</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#verkettete_Listen"><span class="tocnumber">8.2</span> <span class="toctext">verkettete Listen</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Queues"><span class="tocnumber">8.3</span> <span class="toctext">Queues</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Priorit.C3.A4tswarteschlangen"><span class="tocnumber">8.4</span> <span class="toctext">Prioritätswarteschlangen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#Container_in_Python"><span class="tocnumber">9</span> <span class="toctext">Container in Python</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Abstrakte_Datentypen">Abstrakte Datentypen</span></h2>
+<p>Bei einem abstrakten Datentyp wird die Datenstruktur definiert, indem man die Menge der erlaubten Operationen und deren Bedeutung in abstrakter Form (d.h. unabhängig von einer bestimmten Implementation) angibt. Dazu verwendet man im allgemeinen die <i>algebraische Spezifikation</i>, die zunächst die Operationen auflistet und danach deren Eigenschaften in Form von <i>Axiomen</i> beschreibt, die nach der Ausführung einer Operation jeweils gelten müssen.
+</p><p>Wir unterscheiden folgende Arten von Operationen:
+</p>
+<ol><li> Observer: geben Informationen über den Zustand eines Objekts</li>
+<li> Modifier:<br />beim funktionalen Programmierstil: erzeugen ein neues, verändertes Objekt<br />beim prozeduralen und objekt-orientierten Programmierstil: verändern ein vorhandenes Objekt</li>
+<li> Konstruktoren: erzeugen ein neues Objekt (bei funktionaler Programmierung sind Konstruktoren nur ein Spezialfall der Modifier).</li></ol>
+<p>Wird ein Objekt <b>a</b> modifiziert, ist sein alter Wert in der Spezifikation unter dem formalen Namen <b>a<sub>old</sub></b> zugreifbar. Dies ermöglicht es, in den Axiomen den alten mit dem neuen Zustand zu vergleichen.
+</p><p>Im folgenden beschreiben wir die algebraische Spezifikation am Beispiel der <i>Container-Datenstrukturen</i>. Container dienen, wie in der Schifffahrt, zum Aufbewahren anderer Datenobjekte und sind damit grundlegend für die Programmierung, siehe auch <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Datenstruktur">Datenstrukturen</a> in der Wikipedia.
+</p>
+<h2><span class="mw-headline" id="Array">Array</span></h2>
+<p>In einem Array erhalten alle Elemente einen <i>Index</i>, d.h. eine nicht-negative laufende Nummer, die bei Null ("zero-based indexing", z.B. C++, Python) oder bei Eins ("one-based indexing", z.B. Fortran, Matlab) startet. Auf die Elemente des Arrays wird zugegriffen, indem man den jeweiligen Index angibt. Wir definieren das Array hier mit zero-based indexing.
+</p><p>Seien a ∈ Array, i ∈ <img class="mwe-math-fallback-image-inline tex" alt="\mathbb{N}_0" src="d6c03aecfa6920886b35463f1e75b9d3.html" /> (ein nicht-negativer Index) und v ∈ Object (ein beliebiges Objekt).
+</p>
+<h4><span class="mw-headline" id="Operationen:">Operationen:</span></h4>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr valign="top">
+<td> erzeuge ein neues Array:
+</td>
+<td> <tt>new_array(size ∈ <img class="mwe-math-fallback-image-inline tex" alt="\mathbb{N}_0" src="d6c03aecfa6920886b35463f1e75b9d3.html" />, initial ∈ Object) → Array</tt>
+</td></tr>
+<tr>
+<td>erfrage die Anzahl der Arrayelemente:
+</td>
+<td><tt>len(a) → <img class="mwe-math-fallback-image-inline tex" alt="\mathbb{N}_0" src="d6c03aecfa6920886b35463f1e75b9d3.html" /></tt>
+</td></tr>
+<tr>
+<td>erfrage das Element beim Index i:
+</td>
+<td><tt>get(a, i) → Object</tt>
+</td></tr>
+<tr>
+<td>setze das Objekt beim Index i:
+</td>
+<td><tt>set(a, i, v) → Array</tt>
+</td></tr></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Axiome:">Axiome:</span></h4>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr valign="top">
+<td> Ein neues Array enthält so viele Elemente, wie in <tt>size</tt> angegeben waren.<br />Alle Elemente haben den gegebenen Initialwert <tt>initial</tt>.
+</td>
+<td> <tt>a = new_array(size, initial)<br />assert(len(a) == size)</tt><br />für alle <tt>i ∈ 0, ..., size-1</tt> gilt:<br /> &#160;&#160;&#160;<tt>assert(get(a, i) == initial)</tt>
+</td></tr>
+<tr valign="top">
+<td>Nach der Zuweisung von v beim Index i gilt:<br />(i) die Größe bleibt unverändert,<br />(ii) Index i enthält das Element v,<br />(iii) die übrigen Elemente haben sich nicht verändert.
+</td>
+<td><tt>a = set(a, i, v)<br />assert(len(a) == len(a<sub>old</sub>))<br />assert(get(a, i) == v)</tt><br />für alle <tt>k ≠ i</tt> gilt:<br />&#160;&#160;&#160;<tt>assert(get(a, k) == get(a<sub>old</sub>, k))</tt>
+</td></tr></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="in_Python:">in Python:</span></h4>
+<p>Der Array-Typ heißt <tt>list</tt> (aus historischen Gründen, das hat nichts mit verketteten Listen zu tun):
+</p>
+<ul><li> <tt>get</tt> und <tt>set</tt> heißen <tt>__getitem__</tt> bzw. <tt>__setitem__</tt></li>
+<li> rufe Funktionen mit Punktsyntax auf:<br />statt <tt>get(a, i)</tt> schreibe <tt>a.__getitem__(i)</tt></li>
+<li> Indexschreibweise:<br /><tt>v = a[i]</tt> ist äquivalent zu <tt>v = a.__getitem__(i)</tt><br /><tt>a[i] = v</tt> ist äquivalent zu <tt>a.__setitem__(i, v)</tt></li>
+<li> Konstruktoren:<br /><tt>a = list()</tt> ist äquivalent zu <tt>a = []</tt> und entspricht <tt>a = new_array(0, 0)</tt> (erzeugt ein leeres Array)<br /><tt>a = [initial]*size</tt> entspricht <tt>a = new_array(size, initial)</tt> (erzeugt ein Array der gewünschten Größe mit Initialwert)<br /></li></ul>
+<p><tt>a = [1, 3, 2, 0, 5]</tt> initialisiert ein Array mit den gegebenen Elementen.
+<br />
+</p>
+<h2><span class="mw-headline" id="Stack">Stack</span></h2>
+<p>Ein Stack verhält sich wie ein Stapel (z.B. von Büchern oder Bierkästen) in der realen Welt: nur das jeweils oberste Element ist einfach zugänglich (Funktion <tt>top</tt>), die darunterliegenden sind blockiert. Ein neues Element wird immer oben auf den Stapel gelegt (Funktion <tt>push</tt>), und das <i>zuletzt</i> eingefügte Element wird als <i>erstes</i> wieder entfernt (Funktion <tt>pop</tt>). Dies bezeichnet man als "last in - first out"-Verhalten (LIFO).
+</p><p>Seien s ∈ Stack und v ∈ Object (ein beliebiges Objekt).
+</p>
+<h4><span class="mw-headline" id="Operationen:_2">Operationen:</span></h4>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr valign="top">
+<td> erzeuge einen leeren Stack:
+</td>
+<td> <tt>new_stack() → Stack</tt>
+</td></tr>
+<tr>
+<td>erfrage die Anzahl der Stackelemente:
+</td>
+<td><tt>len(s) → <img class="mwe-math-fallback-image-inline tex" alt="\mathbb{N}_0" src="d6c03aecfa6920886b35463f1e75b9d3.html" /></tt>
+</td></tr>
+<tr>
+<td>hänge ein neues Element am Ende an:
+</td>
+<td><tt>push(s, v) → Stack</tt>
+</td></tr>
+<tr>
+<td>erfrage das letzte Element:
+</td>
+<td><tt>top(s) → Object</tt>
+</td></tr>
+<tr>
+<td>entferne das letzte Element:
+</td>
+<td><tt>pop(s) → Stack</tt>
+</td></tr></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Axiome:_2">Axiome:</span></h4>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr valign="top">
+<td> Ein neuer Stack ist leer.
+</td>
+<td> <tt>s = new_stack()<br />assert(len(s) == 0)</tt>
+</td></tr>
+<tr valign="top">
+<td> Nach einem <tt>push</tt> gilt:<br />(i) die Größe hat sich um eins erhöht,<br />(ii) das gerade eingefügte Element ist jetzt das letzte.
+</td>
+<td><tt>s = push(s, v)<br />assert(len(s) == len(s<sub>old</sub>)+1)<br />assert(top(s) == v)</tt>
+</td></tr>
+<tr valign="top">
+<td> <tt>push</tt> gefolgt von <tt>pop</tt> reproduziert den Stack vor dem <tt>push</tt>.
+</td>
+<td><tt>s = pop(push(s, v))<br />assert(s == s<sub>old</sub>)</tt>
+</td></tr></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="in_Python:_2">in Python:</span></h4>
+<p>Der Typ <tt>list</tt> ist gleichzeitig ein Stack:
+</p>
+<ul><li> <tt>push(s, v)</tt> heißt <tt>s.append(v)</tt></li>
+<li> <tt>pop(s)</tt> heißt <tt>s.pop()</tt></li>
+<li> <tt>top(s)</tt> heißt <tt>s[-1]</tt> (Python unterstützt negative Indizes <tt>i</tt> und interpretiert sie als <tt>s[len(s)-abs(i)]</tt>, hier also <tt>s[len(s)-1]</tt>)</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Queue">Queue</span></h2>
+<p>Ein Queue realisiert das Verhalten einer Warteschlange (wie z.B. im Supermarkt): das aktuell vorderste Element ist einfach zugänglich (Funktion <tt>first</tt>), die dahinterliegenden sind blockiert. Ein neues Element wird immer am Ende der Queue angefügt (Funktion <tt>push</tt>), und das <i>zuerst</i> eingefügte Element wird als <i>erstes</i> wieder entfernt (Funktion <tt>popFirst</tt>). Dies bezeichnet man als "first in - first out"-Verhalten (FIFO).
+</p><p>Seien q ∈ Queue und v ∈ Object (ein beliebiges Objekt).
+</p>
+<h4><span class="mw-headline" id="Operationen:_3">Operationen:</span></h4>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr valign="top">
+<td> erzeuge eine leere Queue:
+</td>
+<td> <tt>new_queue() → Queue</tt>
+</td></tr>
+<tr>
+<td>erfrage die Anzahl der Queueelemente:
+</td>
+<td><tt>len(q) → <img class="mwe-math-fallback-image-inline tex" alt="\mathbb{N}_0" src="d6c03aecfa6920886b35463f1e75b9d3.html" /></tt>
+</td></tr>
+<tr>
+<td>hänge ein neues Element am Ende an:
+</td>
+<td><tt>push(q, v) → Queue</tt>
+</td></tr>
+<tr>
+<td>erfrage das erste Element:
+</td>
+<td><tt>first(q) → Object</tt>
+</td></tr>
+<tr>
+<td>entferne das erste Element:
+</td>
+<td><tt>pop(q) → Queue</tt>
+</td></tr></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Axiome:_3">Axiome:</span></h4>
+<p>Um die Axiome der Queue zu formulieren, brauchen wir zusätzlich die Zugriffsfunktion <tt>get</tt> des Arrays. Die Queue muss diese Funktion aber nur zum Testen und Debuggen unterstützen, beim Normalbetrieb ist sie nicht notwendig.
+</p>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr valign="top">
+<td> Eine neue Queue ist leer.
+</td>
+<td> <tt>q = new_queue()<br />assert(len(q) == 0)</tt>
+</td></tr>
+<tr valign="top">
+<td> Nach einem <tt>push</tt> gilt:<br />(i) die Größe hat sich um eins erhöht,<br />(ii) das gerade eingefügte Element ist jetzt das letzte,<br />(iii) die übrigen Elemente haben sich nicht verändert.
+</td>
+<td><tt>q = push(q, v)<br />assert(len(q) == len(q<sub>old</sub>)+1)<br />assert(get(q, len(q)-1) == v)</tt><br />für alle <tt>k ∈ 0, ..., len(q)-2</tt> gilt:<br />&#160;&#160;&#160;<tt>assert(get(q, k) == get(q<sub>old</sub>, k))</tt>
+</td></tr>
+<tr valign="top">
+<td> Wenn die Queue nicht leer ist, hat das erste Element den Index 0.
+</td>
+<td> <tt>assert(len(q) &gt; 0)<br />assert(first(q) == get(q, 0))</tt>
+</td></tr>
+<tr valign="top">
+<td> Nach einem <tt>popFirst</tt> gilt:<br />(i) die Größe hat sich um eins verringert,<br />(ii) alle Elemente ab dem zweiten rücken einen Index nach vorn.
+</td>
+<td><tt>q = popFirst(q)<br />assert(len(q) == len(q<sub>old</sub>)-1)</tt><br />für alle <tt>k ∈ 0, ..., len(q)-1</tt> gilt:<br />&#160;&#160;&#160;<tt>assert(get(q, k) == get(q<sub>old</sub>, k+1))</tt>
+</td></tr></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="in_Python:_3">in Python:</span></h4>
+<p>Der Typ <tt>list</tt> ist gleichzeitig eine Queue:
+</p>
+<ul><li> <tt>push(q, v)</tt> heißt <tt>q.append(v)</tt></li>
+<li> <tt>popFirst(q)</tt> heißt <tt>q.pop(0)</tt> oder <tt>del q[0]</tt> (Mit beiden Funktionen kann man allgemein das Element bei einem beliebigen Index entfernen.)</li>
+<li> <tt>first(q)</tt> heißt <tt>q[0]</tt></li></ul>
+<p>Allerdings ist es nicht sehr effizient, das erste Element aus einem <tt>list</tt>-Objekt zu entfernen. Eine effizientere Implementation der Queue-Funktionalität bietet der Type <tt>deque</tt> aus dem Modul <tt>collections</tt>, der sowohl für das Queue-Verhalten (FIFO) als auch das Stack-Verhalten (LIFO) effizient ist (deque ist die Abkürzung für "double-ended queue").
+<br />
+</p>
+<h2><span class="mw-headline" id="Assoziatives_Array">Assoziatives Array</span></h2>
+<p>Ein assoziatives Array erweitert die Array-Funktionalität, indem es statt der Indizes beliebige Schlüssel unterstützt, unter denen die Elemente abgerufen werden. Typische Schlüssel sind z.B. Zahlen, die keine laufende Nummer bilden (z.B. Matrikelnummern), Strings (z.B. Namen). Auf die Elemente des assoziativen Arrays wird zugegriffen, indem man den jeweiligen Schlüsselwert angibt. Assoziative Array werden häufig auch als <i>dictionaries</i> bezeichnet.
+</p><p>Seien d ∈ Dictionary, i ∈ Object (ein Schlüsselobjekt), v ∈ Object (ein beliebiges Objekt) und error ∈ Error (ein Objekt, das einen Fehler signalisiert).
+</p>
+<h4><span class="mw-headline" id="Operationen:_4">Operationen:</span></h4>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr valign="top">
+<td> erzeuge ein neues Dictionary:
+</td>
+<td> <tt>new_dictionary() → Dictionary</tt>
+</td></tr>
+<tr>
+<td>erfrage die Anzahl der Elemente:
+</td>
+<td><tt>len(d) → <img class="mwe-math-fallback-image-inline tex" alt="\mathbb{N}_0" src="d6c03aecfa6920886b35463f1e75b9d3.html" /></tt>
+</td></tr>
+<tr>
+<td>erfrage die zur Zeit gültigen Schlüssel:
+</td>
+<td><tt>keys(d) → Array</tt>
+</td></tr>
+<tr>
+<td>teste, ob der angegebene Schlüssel gültig ist:
+</td>
+<td><tt>has_key(d, i) → Boolean</tt>
+</td></tr>
+<tr>
+<td>erfrage das Element zum Schlüssel i:
+</td>
+<td><tt>get(d, i) → Object</tt>
+</td></tr>
+<tr>
+<td>setze das Objekt zum Schlüssel i:
+</td>
+<td><tt>set(d, i, v) → Dictionary</tt>
+</td></tr>
+<tr>
+<td>lösche den Schlüssel i und das zugehörige Objekt:
+</td>
+<td><tt>del_key(d, i) → Dictionary</tt>
+</td></tr></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Axiome:_4">Axiome:</span></h4>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr valign="top">
+<td> Ein neues Dictionary ist leer, ebenso die Liste seiner Schlüssel.
+</td>
+<td> <tt>d = new_dictionary()<br />assert(len(d) == 0)<br />assert(len(keys(d)) == 0)</tt>
+</td></tr>
+<tr valign="top">
+<td> Es gilt stets: alle Elemente im Array <tt>keys</tt> sind tatsächlich Schlüssel.
+</td>
+<td> <tt>k = keys(d)</tt><br />für alle <tt>j ∈ k</tt> gilt:<br />&#160;&#160;&#160;<tt>assert(has_key(d, j))</tt>
+</td></tr>
+<tr valign="top">
+<td>Wenn i kein Schlüssel ist, gilt:<br />(i) <tt>has_key</tt> liefert <tt>false</tt>,<br />(ii) Zugriffe mit <tt>get</tt> und <tt>del_key</tt> signalisieren einen Fehler.
+</td>
+<td><tt>assert(not has_key(d, i))<br />assert(get(d, i) == error)<br />assert(del_key(d, i) == error)</tt>
+</td></tr>
+<tr valign="top">
+<td>Wenn i kein Schlüssel ist, gilt nach der Zuweisung von v an den Schlüssel i:<br />(i) die Größe erhöht sich um eins,<br />(ii) i ist jetzt Schlüssel und enthält das Element v,<br />(iii) die übrigen Schlüssel und Elemente haben sich nicht verändert.
+</td>
+<td><tt>assert(not has_key(d, i))<br />d = set(d, i, v)<br />assert(len(d) == len(d<sub>old</sub>)+1)<br />assert(has_key(d, i))<br />assert(get(d, i) == v)</tt><br />für alle <tt>j ∈ keys(d<sub>old</sub>)</tt> gilt:<br />&#160;&#160;&#160;<tt>assert(get(d, j) == get(d<sub>old</sub>, j))</tt>
+</td></tr>
+<tr valign="top">
+<td>Wenn i bereits Schlüssel ist, gilt nach der Zuweisung von v an den Schlüssel i:<br />(i) die Größe bleibt unverändert,<br />(ii) Schlüssel i enthält das Element v,<br />(iii) die übrigen Schlüssel und Elemente haben sich nicht verändert.
+</td>
+<td><tt>assert(has_key(d, i))<br />d = set(d, i, v)<br />assert(len(d) == len(d<sub>old</sub>))<br />assert(get(d, i) == v)<br />assert(keys(d) == keys(d<sub>old</sub>))</tt><br />für alle <tt>j ∈ keys(d), j ≠ i</tt> gilt:<br />&#160;&#160;&#160;<tt>assert(get(d, j) == get(d<sub>old</sub>, j))</tt>
+</td></tr>
+<tr valign="top">
+<td>Wenn i ein Schlüssel ist, gilt nach dem Löschen von i:<br />(i) die Größe verringert sich um eins,<br />(ii) der Schlüssel ist nicht mehr vorhanden,<br />(iii) die übrigen Schlüssel und Elemente bleiben unverändert.
+</td>
+<td><tt>assert(has_key(d, i)<br />d = del_key(d, i)<br />assert(len(d) == len(d<sub>old</sub>)-1)<br />assert(not has_key(d, i))</tt><br />für alle <tt>j ∈ keys(d)</tt> gilt:<br />&#160;&#160;&#160;<tt>assert(get(d, j) == get(d<sub>old</sub>, j))</tt>
+</td></tr></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="in_Python:_4">in Python:</span></h4>
+<p>Der Dictionary-Typ heißt <tt>dict</tt>:
+</p>
+<ul><li> rufe Funktionen mit Punktsyntax auf:<br />statt <tt>has_key(d, i)</tt> schreibe <tt>d.has_key(i)</tt> etc.</li>
+<li> <tt>get</tt> und <tt>set</tt> heißen <tt>__getitem__</tt> bzw. <tt>__setitem__</tt></li>
+<li> <tt>get</tt> ist ebenfalls implementiert, aber es signalisiert keinen Fehler, wenn der Schlüssel unbekannt ist, sondern gibt ein Defaultobjekt zurück (siehe Dokumentation für Einzelheiten)</li>
+<li> <tt>del_key(d, i)</tt> heißt <tt>d.pop(i)</tt> oder <tt>del d[i]</tt></li>
+<li> <tt>d.keys()</tt> liefert ab Python 3 kein Array, sondern ein <i>iterable</i>, siehe Dokumentation</li>
+<li> Indexschreibweise:<br /><tt>v = d[i]</tt> ist äquivalent zu <tt>v = d.__getitem__(i)</tt><br /><tt>d[i] = v</tt> ist äquivalent zu <tt>d.__setitem__(i, v)</tt></li>
+<li> Konstruktoren:<br /><tt>d = dict()</tt> ist äquivalent zu <tt>d = {}</tt> und entspricht <tt>d = new_dictionary()</tt>: erzeugt ein leeres Dictionary<br /><tt>d = {'eins': 1, 'zwei': 2, 'drei': 3}</tt> initialisiert ein Dictionary mit den angegebenen Schlüssel/Wert-Paaren (die Schlüssel sind hier Strings, die Werte Zahlen).</li></ul>
+<p><br />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Required_Interfaces">Required Interfaces</span></h2>
+<p>Eine andere Möglichkeit, die Anforderungen an Container-Datenstrukturen zu definieren, ist das <i>required interface</i>. Dabei nimmt man den Standpunkt eines Algorithmus ein, der diese Datenstrukturen benutzen will, und fragt: Welche Operationen hätte man denn gerne bei einem Container? Wie sollten die Daten organisiert sein, damit der Algorithmus effizient damit arbeiten können? 
+</p><p>Eine solche Anforderungsanalyse ist sehr aufwändig und kann sich über Jahre erstrecken, weil Erfahrungen gesammelt werden müssen, welche Anforderungen in vielen Algorithmen immer wieder auftreten. Wir listen im folgenden nur das Resultat, also die wichtigsten Operationen von Container-Datenstrukturen auf. Wenig überraschend kommen am Ende gerade die Datenstrukturen heraus, die wir oben bereits behandelt haben.
+</p><p>Sei <tt>c</tt> eine Container-Datenstruktur und <tt>v</tt> ein darin gespeicherter Wert:
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Lesender_Zugriff">Lesender Zugriff</span></h3>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr valign="top">
+<td><b>0.</b>
+</td>
+<td> <tt>c.size()</tt>
+</td>
+<td>gibt die Anzahl der Elemente im Container an
+</td></tr>
+<tr>
+<td><b>1a.</b>
+</td>
+<td><tt>v = c.get(i)</tt>
+</td>
+<td>das i-te Element im Container lesen
+</td></tr>
+<tr>
+<td><b>1b.</b>
+</td>
+<td><tt>v = c.get(pos)</tt>
+</td>
+<td>das Element an Position <tt>pos</tt> lesen (<tt>pos</tt> ist ein geeignetes Hilfsobjekt, das in Abhängigkeit von der Art der Datenstruktur eine Position im Container referenziert. Im Falle 1a. <tt>v = c.get(i)</tt> ist <tt>pos</tt> eine natürliche Zahl, aber es gibt auch andere Möglichkeiten, die Position zu kodieren.)
+</td></tr>
+<tr>
+<td><b>1c.</b>
+</td>
+<td><tt>v = c.get(key)</tt>
+</td>
+<td>das Element mit dem Schlüssel <tt>key</tt> lesen (Beachte den Unterschied zu 1b: In 1b markiert <tt>pos</tt> eine Position im Container, hier in 1c bezieht sich <tt>key</tt> auf eine Eigenschaft der Datenelemente, die von der Position im Container unabhängig ist.)
+</td></tr>
+<tr>
+<td><b>2a.</b>
+</td>
+<td><tt>v = c.first()</tt>
+</td>
+<td>erstes Element lesen (äquivalent zu <tt>v = c.get(0)</tt>)
+</td></tr>
+<tr>
+<td><b>2b.</b>
+</td>
+<td><tt>v = c.last()</tt>
+</td>
+<td>letztes Element lesen (äquivalent zu <tt>v = c.get(c.size()-1)</tt>)
+</td></tr>
+<tr>
+<td><b>3a.</b>
+</td>
+<td><tt>v = c.smallest()</tt>
+</td>
+<td>das kleinste Element lesen (dies bezieht sich auf eine Eigenschaft der Datenelemente bzw. Schlüssel, im Unterschied zu 2a, wo es um die Position im Container geht.)
+</td></tr>
+<tr>
+<td><b>3b.</b>
+</td>
+<td><tt>v = c.largest()</tt>
+</td>
+<td>das größte Element lesen (dies bezieht sich auf eine Eigenschaft der Datenelemente bzw. Schlüssel, im Unterschied zu 2b, wo es um die Position im Container geht.)
+</td></tr></table>
+<p><br /><br />
+</p>
+<h3><span class="mw-headline" id="Schreibender_Zugriff">Schreibender Zugriff</span></h3>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr valign="top">
+<td><b>4a.</b>
+</td>
+<td><tt>v.set(i, v)</tt>
+</td>
+<td>i-tes Element überschreiben (<tt>c.size()</tt> bleibt unverändert)
+</td></tr>
+<tr>
+<td><b>4b.</b>
+</td>
+<td><tt>v.set(pos, v)</tt>
+</td>
+<td>Element an der Stelle <tt>pos</tt> überschreiben (<tt>c.size()</tt> bleibt unverändert. Zur Bedeutung von <tt>pos</tt> siehe 1b.)
+</td></tr>
+<tr>
+<td><b>4c.</b>
+</td>
+<td><tt>v.set(key, v)</tt>
+</td>
+<td>Element mit dem Schlüssel <tt>key</tt> überschreiben (<tt>c.size()</tt> bleibt unverändert)
+</td></tr>
+<tr>
+<td><b>5a.</b>
+</td>
+<td><tt>c.insert(i, v)</tt>
+</td>
+<td>Objekt als i-tes in den Container einfügen (Werte ab <tt>i</tt> werden eine Position nach hinten verschoben, <tt>c.size()</tt> erhöht sich um 1)
+</td></tr>
+<tr>
+<td><b>5b.</b>
+</td>
+<td><tt>c.insert(pos, v)</tt>
+</td>
+<td>Objekt an Position <tt>pos</tt> in den Container einfügen (Werte ab <tt>pos</tt> werden eine Position nach hinten verschoben, <tt>c.size()</tt> erhöht sich um 1)
+</td></tr>
+<tr>
+<td><b>5c.</b>
+</td>
+<td><tt>c.insert(key, v)</tt>
+</td>
+<td>Objekt unter dem Schlüssel <tt>key</tt> in den Container einfügen (Wenn der Schlüssel schon vergeben war, wird ein Fehler signalisiert. <tt>c.size()</tt> erhöht sich um 1).
+</td></tr>
+<tr>
+<td><b>5d.</b>
+</td>
+<td><tt>c.insert(v)</tt>
+</td>
+<td>Objekt an beliebiger Stelle in den Container einfügen (Der Container bestimmt die optimale Position selbst. <tt>c.size()</tt> erhöht sich um 1).
+</td></tr>
+<tr>
+<td><b>6a.</b>
+</td>
+<td><tt>c.prepend(v)</tt>
+</td>
+<td>Objekt am Anfang einfügen (äquivalent zu <tt>c.insert(0, v)</tt>, <tt>c.size()</tt> erhöht sich um 1)
+</td></tr>
+<tr>
+<td><b>6b.</b>
+</td>
+<td><tt>c.append(v)</tt>
+</td>
+<td>Objekt am Ende anhängen (äquivalent zu <tt>c.insert(c.size(), v)</tt>, <tt>c.size()</tt> erhöht sich um 1)
+</td></tr>
+<tr>
+<td><b>7a.</b>
+</td>
+<td><tt>c.remove(i)</tt>
+</td>
+<td>i-tes Element aus dem Container löschen (Werte ab <tt>i</tt> werden eine Position nach vorn verschoben, <tt>c.size()</tt> verringert sich um 1)
+</td></tr>
+<tr>
+<td><b>7b.</b>
+</td>
+<td><tt>c.remove(pos)</tt>
+</td>
+<td>Objekt an Position <tt>pos</tt> aus dem Container löschen  (Werte ab <tt>pos</tt> werden eine Position nach vorn verschoben, <tt>c.size()</tt> verringert sich um 1)
+</td></tr>
+<tr>
+<td><b>7c.</b>
+</td>
+<td><tt>c.remove(key)</tt>
+</td>
+<td>Objekt unter dem Schlüssel <tt>key</tt> aus dem Container löschen  (Wenn der Schlüssel nicht vergeben war, wird ein Fehler signalisiert. <tt>c.size()</tt> verringert sich um 1, wenn es kein Fehler signalisiert hat.)
+</td></tr>
+<tr>
+<td><b>8a.</b>
+</td>
+<td><tt>c.removeFirst()</tt>
+</td>
+<td>das erste Element aus dem Container entfernen (äquivalent zu <tt>c.remove(0)</tt>, <tt>c.size()</tt> verringert sich um 1)
+</td></tr>
+<tr>
+<td><b>8b.</b>
+</td>
+<td><tt>c.removeLast()</tt>
+</td>
+<td>das letzte Element aus dem Container entfernen (äquivalent zu <tt>c.remove(c.size()-1)</tt>, <tt>c.size()</tt> verringert sich um 1)
+</td></tr>
+<tr>
+<td><b>9a.</b>
+</td>
+<td><tt>c.removeSmallest()</tt>
+</td>
+<td>das kleinste Element aus dem Container entfernen (dies bezieht sich auf eine Eigenschaft der Datenelemente bzw. Schlüssel, im Unterschied zu 8a, wo es um die Position im Container geht. <tt>c.size()</tt> verringert sich um 1)
+</td></tr>
+<tr>
+<td><b>9b.</b>
+</td>
+<td><tt>c.removeLargest()</tt>
+</td>
+<td>das größte Element aus dem Container entfernen (dies bezieht sich auf eine Eigenschaft der Datenelemente bzw. Schlüssel, im Unterschied zu 8b, wo es um die Position im Container geht. <tt>c.size()</tt> verringert sich um 1)
+</td></tr></table>
+<p><br /><br />
+</p>
+<h2><span class="mw-headline" id="Facts">Facts</span></h2>
+<ul><li>Jede dieser Operationen kann sehr effizient implementiert werden.</li>
+<li>Keine Datenstruktur ist bekannt, die <b>alle</b> diese Operationen effizient implementiert.</li></ul>
+<h2><span class="mw-headline" id="Beispiele">Beispiele</span></h2>
+<p>Je nachdem welche Operation effizient sein soll, wird eine andere Container Datenstruktur ausgewählt. Die Operation <tt>c.size()</tt> wird von allen Containern effizient unterstützt.
+</p>
+<h3><span class="mw-headline" id="Arrays">Arrays</span></h3>
+<dl><dt><b>(statisches) Array</b> <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Array">[1]</a></dt>
+<dd> Das Array ist die einfachste Datenstruktur, es kann einfach als aufeinanderfolgender Bereich von Speicherzellen implementiert werden. Jede dieser Speicherzellen nimmt ein Objekt als Datenelement auf. Die Größe ist nicht veränderbar (daher der Name <i>statisch</i>). <br /> Das statische Array unterstützt die Operationen</dd></dl>
+<pre>   1a.    c.get(i)
+   4a.    c.set(i, value)
+</pre>
+<dl><dt><b>Dynamisches Array</b> <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Dynamic_array">[2]</a></dt>
+<dd> Die Größe ist veränderbar, aber nur durch Anfügen oder Entfernen eines Elements am <i>Ende</i> des Arrays. Die unterstützen Operationen sind dieselben wie die des statischen Arrays, zusätzlich unterstützt das dynamische Array die Operationen</dd></dl>
+<pre>   6b.    c.append(v)
+   8b.    c.removeLast()
+</pre>
+<p>Wir beschreiben im Abschnitt <a href="effizienz.html#dynamisches_Array" title="Effizienz">Amortisierte Komplexität</a>, wie man dies effizient implementieren kann. Das Anfügen neuer Elemente am Ende ist eine sehr häufige Operation, so dass das dynamische Array eine der beliebtesten Datenstrukturen ist. In Python hat das dynamische Array den Typ <tt>list</tt>, was in diesem Fall nichts mit verketten Listen zu tun hat, sondern eher auf Listen im Sinne von Tabellen hinweist (die Namenswahl ist dennoch etwas unglücklich und kann zu Verwechslungen führen).
+</p>
+<dl><dt><b>assoziatives Array (Dictionary)</b> <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Associative_array">[3]</a></dt>
+<dd> Ein Dictionary verallgemeinert das dynamische Array: Während Arrays auf ihre Elemente über Indizes (= natürliche Zahlen) zugreifen, können die Schlüssel (Keys) bei einem Dictionary einen beliebigen Typ haben. Jedes Element des Dictionary besteht aus einem Schlüssel-Wert-Paar, jeder Schlüssel bekommt somit einen Wert zugewiesen. <br />Das Dictionary unterstützt die Operationen</dd></dl>
+<pre>   1c.    c.get(key)
+   4c.    c.set(key, value)
+   5c.    c.insert(key, value)
+   7c.    c.remove(key)
+</pre>
+<p>Wenn als Schlüssel natürliche Zahlen 0, 1, ..., N gewählt werden, sind dies im wesentlichen dieselben Operationen wie beim Array. Man wird das Dictionary also vor allem dann einsetzen, wenn die Schlüssel einen anderen Typ haben, oder wenn die Zahlen nicht aus dem zusammenhängenden Intervall 0, ..., N kommen. Das Python-Dictionary hat den Typ <tt>dict</tt>. Wir behandeln diese Datenstruktur in den Kapiteln <a href="assoziative_arrays.html" title="Assoziative Arrays">Assoziative Arrays</a> und <a href="hashing_und_hashtabellen.html" title="Hashing und Hashtabellen">Hashing und Hashtabellen</a>.
+</p>
+<h3><span class="mw-headline" id="verkettete_Listen">verkettete Listen</span></h3>
+<dl><dt><b>(einfach) verkettete Liste</b> <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Linked_list#Singly-linked_list">[4]</a></dt>
+<dd> Im Gegensatz zum Array müssen die Speicherzellen nicht nacheinenander im Speicher abgelegt sein. Statt dessen enthält jedes Element der Liste ein Feld <tt>next</tt>, das auf das nächste Element der Liste verweist. Um das i-te Element zu finden, muss man die Liste von vorn nach hinten durchlaufen. Deshalb ist die Operation <tt>c.get(i)</tt> für verkettete Listen nicht effizient. Wenn man allerdings auf ein Element zugegriffen hat, kann man ein <tt>pos</tt>-Objekt (in diesem Fall eine Referenz auf das Element) speichern, so dass ein erneuter Zugriff auf das selbe Element schnell geht. Das gleiche gilt für das folgende Element, weil man nur einmal <tt>pos = pos.next</tt> aufrufen muss. Nur wenig komplizierter (und dadurch ebenfalls effizient) ist das Einfügen eines neuen Elements an der Position <tt>pos</tt>. <br />Die verkette Liste unterstützt somit die Operationen:</dd></dl>
+<pre>   1b.    c.get(pos)
+   2a.    c.first()
+   4b.    c.set(pos, value)
+   5b.    c.insert(pos, value)
+   6a.    c.prepend(value)
+   7b.    c.remove(pos)
+   8a.    c.removeFirst(pos)
+</pre>
+<p>Es scheint, dass die Liste eine sehr flexible Datenstruktur ist. Allerdings ist es ein gravierender Nachteil, dass <tt>pos</tt> nur auf das jeweils nächste Element weitergesetzt werden kann. Im Gegensatz dazu können Indizes in einem Array effizient auf beliebige Positionen gesetzt werden. Man bevorzugt deshalb heute dynamische Arrays.
+</p>
+<dl><dt><b>Doppelt verkettete Liste</b> <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Linked_list#Doubly-linked_list">[5]</a></dt>
+<dd> Im Gegensatz zur einfach verketteten Liste enthält jedes Element nicht nur einen Zeiger auf das darauffolgende, sondern auch auf das vorherige Element in der Liste. Dadurch kann ein <tt>pos</tt>-Objekt auch effizient um ein Element zurückgesetzt werden: <tt>pos = pos.previous</tt>.<br /> Die doppelt verkette Liste unterstützt deshalb die selben Operationen wie die einfach verkettete, und zusätzlich</dd></dl>
+<pre>   2b.    c.last()
+   6b.    c.append(value)
+   8b.    c.removeLast()
+</pre>
+<h3><span class="mw-headline" id="Queues">Queues</span></h3>
+<dl><dt><b>Stack (Stapelspeicher)</b> <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Stack_(data_structure)">[6]</a></dt>
+<dd> Speichert/Stapelt die Objekte mit push in einen Speicher. Wiederrum mit pop kann das oberste (=zuletzt eingefügte) Element herausgeholt werden: LIFO (Last In First Out) <br />Die Python-Datenstruktur <tt>List</tt> eignet sich beispielsweise als Stack.<br />Operationen:</dd></dl>
+<pre>   2b.    c.last()         # auf das oberste Element zugreifen, ohne es zu entfernen
+   6b.    c.append(value)  # Element auf den Stapel legen (beim Stack meist c.push(value) genannt)
+   8b.    c.removeLast()   # oberstes Element entfernen (beim Stack meist c.pop() genannt)
+</pre>
+<dl><dt><b>Queue (Schlange)</b> <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Queue_(data_structure)">[7]</a></dt>
+<dd> Eine Queue ist wie eine Warteschlange an der Kasse im Supermarkt, bedient wird derjenige der als erster an die Kasse kommt: FIFO (First In First Out)<br />Operationen:</dd></dl>
+<pre>   2a.    c.first()
+   6b.    c.append(value)
+   8a.    c.removeFirst()
+</pre>
+<dl><dt><b>Deque (Double Ended Queue)</b> <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Deque">[8]</a></dt>
+<dd>  wie Stack + Queue, d.h. Objekte können am Ende eingefügt, aber sowohl vorn als auch hinten gelesen und entfernt werden.<br />Operationen</dd></dl>
+<pre>   2a.    c.first()
+   2b.    c.last()
+   6b.    c.append(value)
+   8a.    c.removeFirst()
+   8b.    c.removeLast()
+</pre>
+<p>Die Deque ist Thema in <a href="%c3%9cbung-3.html" class="internal" title="Übung-3.pdf">Übungsblatt 3</a>.
+</p>
+<h3><span class="mw-headline" id="Priorit.C3.A4tswarteschlangen">Prioritätswarteschlangen</span></h3>
+<dl><dt><b>MinPriorityQueue</b> <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Priority_queue">[9]</a></dt>
+<dd> Warteschlange, die das Element mit der kleinsten Priorität zuerst zurückgibt (z.B. an der Kasse im Supermarkt diejenige/derjenige, die/der die wenigsten Produkte kaufen möchte) <br /> Mögliche Operationen:</dd></dl>
+<pre>   3a.    c.smallest()
+   5d.    c.insert(value)
+   9a.    c.removeSmallest()
+</pre>
+<dl><dt><b>MaxPriorityQueue</b> <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Priority_queue">[10]</a></dt>
+<dd> Warteschlange, die das Element mit der größten Priorität zuerst zurückgibt <br /> Unterstützte Operationen sind:</dd></dl>
+<pre>   3b.    c.largest()
+   5d.    c.insert(value)
+   9b.    c.removeLargest()
+</pre>
+<dl><dt><b>MinMaxPriorityQueue</b> <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Priority_queue">[11]</a></dt>
+<dd> kombiniert MinPriorityQueue + MaxPriorityQueue</dd></dl>
+<p>Die drei letzten Datenstrukturen behandeln wir im Kapitel <a href="priorit%c3%a4tswarteschlangen.html" title="Prioritätswarteschlangen">Prioritätswarteschlangen</a>.
+</p>
+<h2><span class="mw-headline" id="Container_in_Python">Container in Python</span></h2>
+<p>Wir hatten die Python-Datenstrukturen <tt>list</tt>, <tt>dict</tt> und <tt>collections.deque</tt> bereits weiter oben diskutiert. Es fehlen noch die Prioritätswarteschlangen, für die Python das Modul <tt>heapq</tt> anbietet. Es implementiert allerdings keine eigene Datenstruktur, sondern stellt Funktionen zur Verfügung, die die notwendigen Operationen auf der Basis eines normalen Arrays von Typ <tt>list</tt> realisieren, siehe Dokumentation für Einzelheiten.
+</p><p><a href="sortieren.html" title="Sortieren">Nächstes Thema</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825110952
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.016 seconds
+Real time usage: 0.049 seconds
+Preprocessor visited node count: 161/1000000
+Preprocessor generated node count: 234/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:12-0!canonical!math=0 and timestamp 20260825110952 and revision id 5699
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index59e4.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Container&amp;oldid=5699</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="container.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk"><a href="talk_container.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index6fea.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="indexb87a.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="indexcf5f.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="container-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="container-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="index4a47.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="index59e4.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index640f.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 28 April 2020, at 12:56.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.016","walltime":"0.049","ppvisitednodes":{"value":161,"limit":1000000},"ppgeneratednodes":{"value":234,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825110952","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":166});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Container by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:38:12 GMT -->
+</html>

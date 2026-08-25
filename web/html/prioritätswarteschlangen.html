@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Prioritätswarteschlangen by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:44:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Prioritätswarteschlangen - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Prioritätswarteschlangen","wgTitle":"Prioritätswarteschlangen","wgCurRevisionId":5645,"wgRevisionId":5645,"wgArticleId":38,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Prioritätswarteschlangen","wgRelevantArticleId":38,"wgRequestId":"69eaa5fe5be23f1c5b8a8621","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Prioritätswarteschlangen rootpage-Prioritätswarteschlangen skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Prioritätswarteschlangen</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Definitionen"><span class="tocnumber">1</span> <span class="toctext">Definitionen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Priorit.C3.A4tswarteschlange_als_sequentielles_Suchproblem"><span class="tocnumber">2</span> <span class="toctext">Prioritätswarteschlange als sequentielles Suchproblem</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Priorit.C3.A4tssuche_mit_einem_balancierten_Suchbaum"><span class="tocnumber">3</span> <span class="toctext">Prioritätssuche mit einem balancierten Suchbaum</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Die_Heap-Datenstruktur"><span class="tocnumber">4</span> <span class="toctext">Die Heap-Datenstruktur</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Linkslastiger_perfekt-balancierter_Bin.C3.A4rbaum"><span class="tocnumber">4.1</span> <span class="toctext">Linkslastiger perfekt-balancierter Binärbaum</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Heap-Bedingung"><span class="tocnumber">4.2</span> <span class="toctext">Heap-Bedingung</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Einf.C3.BCgen_und_L.C3.B6schen_bei_einem_Heap"><span class="tocnumber">4.3</span> <span class="toctext">Einfügen und Löschen bei einem Heap</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Beispiel_am_Wort_.22SORTING.22"><span class="tocnumber">4.4</span> <span class="toctext">Beispiel am Wort "SORTING"</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Weitere_Heapvarianten"><span class="tocnumber">4.5</span> <span class="toctext">Weitere Heapvarianten</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Heap-Sort"><span class="tocnumber">4.6</span> <span class="toctext">Heap-Sort</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Priorit.C3.A4tssuche_mit_dem_Bucket-Prinzip"><span class="tocnumber">5</span> <span class="toctext">Prioritätssuche mit dem Bucket-Prinzip</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Definitionen">Definitionen</span></h2>
+<p>Prioritätswarteschlangen verwendet man, wenn man in einem Container wiederholt das jeweils kleinste (Min Priority Queue) oder größte (Max Priority Queue) Element finden und gewöhnlich auch aus dem Container entfernen muss. Die typische Schnittstelle einer Prioritätswarteschlange <tt>pq</tt> enthält also typischerweise folgende effizient implementierte Operationen:
+</p>
+<dl><dt>Max Priority Queue</dt>
+<dd> </dd></dl>
+<pre>   pq.insert(x)          # Element x einfügen
+   x = pq.largest()      # das aktuell größte Element zurückgeben (aber es bleibt in der Queue)
+   pq.removeLargest()    # das aktuell größte Element entfernen
+</pre>
+<dl><dt>Min Priority Queue</dt>
+<dd> </dd></dl>
+<pre>   pq.insert(x)          # Element x einfügen
+   x = pq.smallest()     # das aktuell kleinste Element zurückgeben (aber es bleibt in der Queue)
+   pq.removeSmallest()   # das aktuell kleinste Element entfernen
+</pre>
+<p>Die Funktionen <tt>insert</tt> und <tt>remove</tt> werden auch oft mit <tt>push</tt> bzw. <tt>pop</tt> bezeichnet (wie beim Stack). In vielen Implementationen gibt <tt>remove</tt> außerdem das aktuelle größte bzw. kleinste Element zurück. Neben Min und Max Queue gibt es auch die <b>Min-Max Priority Queue</b> (bidirektionale Prioritätswarteschlange), die das kleinste <i>und</i> das größte Element effizient finden und entfernen kann.
+</p>
+<h2><span class="mw-headline" id="Priorit.C3.A4tswarteschlange_als_sequentielles_Suchproblem">Prioritätswarteschlange als sequentielles Suchproblem</span></h2>
+<p>Am einfachsten kann eine Prioritätswarteschlange durch sequentielle Suche realisiert werden. In diesem Fall ist einfach ein (unsortiertes) dynamisches Array <tt>a</tt> gegeben, dessen Elemente mit Prioritäten ausgestattet sind. Dann gilt
+</p>
+<pre>    pq.insert(x)&lt;=&gt; a.append(x)   (amortisierte Komplexität  <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(1)" src="../images/e32428924d34e88d8a50e9f1805128d2.png" />)
+</pre>
+<p>Die Suche (in diesem Fall nach dem Element mit <i>maximaler</i> Priorität) wird durch sequenzielles Durchlaufen des Arrays realisiert
+</p>
+<pre>def largest(a):
+   N = len(a)
+   if N == 0:  
+       raise RuntimeError("Access to empty priority queue.")
+   max = a[0]
+   k = 0
+   for n in range(1, N):       # Dieser Code entspricht der inneren Schleife von Selection Sort
+       if a[n] &gt; max:          # Die Suche hat also die Komplexität O(N).
+           max = a[n]
+           k = n
+   return k                    # Den Index des kleinsten Elements zurückgeben
+</pre>
+<p>Ähnlich implementiert man das Entfernen des größten Elements: Man sucht zunächst dessen Index, schiebt dann alle nachfolgenden Elemente um einen Index nach vorn, und verkürzt schließlich das dynamische Array um ein Element. 
+</p><p>Alternativ kann man auch die Komplexität von <tt>insert</tt> und <tt>largest</tt> vertauschen: <tt>insert</tt> kann die Queue sortiert aufbauen (indem jedes neue Element an seinem richtigen Platz eingefügt wird, was einen Aufwand von O(N) verursacht, da man im Mittel N/2 Elemente einen Platz nach hinten verschieben muss), so dass bei <tt>largest</tt> einfach in O(1) auf das letzte Element des Array zugegriffen wird. Auch das Entfernen des größten, also letzten Elements hat jetzt die amortisierte Komplexität O(1). 
+</p><p>Bei kleinen Arrays ist die sequentielle Suche die schnellste Methode. Bei großen Arrays hingegen ist die Suche mit O(N) nicht effizient.
+</p>
+<h2><span class="mw-headline" id="Priorit.C3.A4tssuche_mit_einem_balancierten_Suchbaum">Prioritätssuche mit einem balancierten Suchbaum</span></h2>
+<p>Ein binärer Suchbaum eignet sich offensichtlich für die Prioritätssuche, weil das Einfügen und Entfernen eines Elements sowie die Suche nach dem kleinsten oder größten Element jeweils in <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(\log N)" src="../images/1a6aaf3aa48f657da554d3063c176e7c.png" /> realisiert werden kann, falls der Baum balanciert ist. Man implementiert also <tt>insert</tt> z.B. wie beim <a href="suchen.html#Andersson-B.C3.A4ume" title="Suchen">Andersson-Baum</a>. Die Suche nach dem größten Element wird durch eine einfache rekursive Funktion realisiert:
+</p>
+<pre>def largest(node):                     # node ist die Wurzel des zu durchsuchenden Teilbaums
+     if node.right is not None:        # rechts stehen immer die großen Elemente
+         return largest(node.right)    # =&gt; Rekursion in den rechten Teilbaum
+     return node                       # wenn es nicht mehr nach rechts geht, dann haben wir den größten Knoten gefunden
+</pre>
+<p>Diese Funktion hat, wie auch <tt>insert</tt> und <tt>remove</tt>, die Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(\log N)" src="../images/1a6aaf3aa48f657da554d3063c176e7c.png" />. Alle Funktionen sind somit für große Datenstrukturen effizient. Allerdings stellt sich heraus, dass die Datenstruktur eines balancierten Suchbaums viel komplizierter ist, als für die Prioritätssuche notwendig wäre.
+</p>
+<h2><span class="mw-headline" id="Die_Heap-Datenstruktur">Die Heap-Datenstruktur</span></h2>
+<p>Die Datenstruktur des <i>Heap</i> ist speziell für die Prioritätssuche optimiert. Im Unterschied zum Suchbaum sucht man ja nicht nach einem beliebigen Element, sondern stets nach dem größten oder kleinsten. Dadurch kann die Datenstruktur signifikant vereinfacht werden. 
+</p>
+<h3><span class="mw-headline" id="Linkslastiger_perfekt-balancierter_Bin.C3.A4rbaum">Linkslastiger perfekt-balancierter Binärbaum</span></h3>
+<p>Ein <i>linkslastiger Binärbaum</i> ist ein Binärbaum, bei dem für jeden Knoten gilt, dass die Tiefe des linken Unterbaumes größer oder gleich der Tiefe des rechten Unterbaumes ist. Ein leerer Unterbaum hat dabei die Tiefe Null.
+</p>
+<dl><dd><dl><dd><dl><dd>d(node.left) &#8805; d(node.right)</dd></dl></dd></dl></dd></dl>
+<p>Wenn ein linkslastiger Binärbaum außerdem <i>perfekt balanciert</i> ist, gilt für alle Knoten sogar
+</p>
+<dl><dd><dl><dd><dl><dd>1 &#8805; d(node.left) - d(node.right) &#8805; 0</dd></dl></dd></dl></dd></dl>
+<p>d.h., die Höhe des linken Teilbaums kann maximal um Eins größer sein als die des rechten. 
+Die folgende Graphik zeigt, dass man einen linkslastigen, perfekt balancierten Binärbaum effizient als Array implementieren kann, indem man die Knoten von oben nach unten und von rechts nach links durchnummeriert, und diese Nummern als Array-Indizes verwendet:
+</p><p><a href="file_heaparray.html" class="image"><img alt="HeapArray.png" src="../images/thumb5866.png" width="400" height="250" srcset="/thumb.php?f=HeapArray.png&amp;width=600 1.5x, /thumb.php?f=HeapArray.png&amp;width=800 2x" /></a>
+</p><p>Dieser Baum entspricht dem Array 
+</p>
+<pre>  0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+</pre>
+<p>In der Array-Repräsentation kann man den Vater und die Kinder eines gegebenen Knotens <tt>index</tt> durch einfache Umrechnung der Arrayindizes bestimmen:
+</p>
+<pre>   parentIndex     = &#8970;(index - 1)/2&#8971;   # &#8970;.&#8971; heißt abrunden
+
+   leftChildIndex  = 2*index + 1
+   rightChildIndex = 2*index + 2
+</pre>
+<p>Diese Formeln gelten unter der Voraussetzung, dass die Indexzählung bei Null beginnt. Die Wurzel des Baumes hat also den Index 0. Ein neuer Knoten wird einfach am Ende des Arrays angehängt, und er ist ein linkes Kind, falls sein Index ungerade ist, andernfalls ein rechtes Kind. Offensichtlich bleiben  die Eigenschaften der Linkslastigkeit und der perfekten Balance durch diese Einfügestrategie erhalten.
+</p>
+<h3><span class="mw-headline" id="Heap-Bedingung">Heap-Bedingung</span></h3>
+<p>Ein Heap ist ein linkslastiger perfekt-balancierter Binärbaum, für den zusätzlich eine Heap-Bedingung gilt. Ein Baum erfüllt die <i>Max-Heap-Bedingung</i>, wenn für jedem Teilbaum gilt, dass die Wurzel eine <i>höhere</i> Prioriät hat als die Kinder. Entsprechend erfüllt der Baum die <i>Min-Heap-Bedingung</i>, wenn die Wurzel kleinere Priorität hat als die Kinder.
+</p><p>Im Kontext der array-basierten Repräsentation bedeutet dies, dass die Wurzel, also das Element <tt>heap[0]</tt> die größte (bzw. kleinste) Priorität hat. Die Funktion <tt>largest</tt> kann somit trivial implementiert werden:
+</p>
+<pre>def largest(heap):
+    return heap[0]    # Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(1)" src="../images/e32428924d34e88d8a50e9f1805128d2.png" />
+</pre>
+<h3><span class="mw-headline" id="Einf.C3.BCgen_und_L.C3.B6schen_bei_einem_Heap">Einfügen und Löschen bei einem Heap</span></h3>
+<p>Beim Einfügen in einem Heap müssen wir sicherstellen, dass einerseits die Heap-Bedingung erfüllt wird, und andererseits der Baum linkslastig und perfekt balanciert bleibt. Wir hatten bereits gesehen, dass letzteres immer gilt, wenn wir das neue Element einfach am Ende des Arrays anhängen. Danach rufen wir eine Hilfsfunktion <tt>upheap</tt> auf, die die Heap-Bedingung wieder herstellt, falls sie durch das neu eingefügte Element verletzt wird:
+</p>
+<pre> def insert(heap, x):
+     heap.append(x)             # Speichern des neuen Elements am Ende (in <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(1)" src="../images/e32428924d34e88d8a50e9f1805128d2.png" /> amortisiert) =&gt; Heap bleibt linkslastiger, perfekt balancierter Baum
+     upheap(heap, len(heap)-1)  # repariere die Heap-Bedingung für Element len(heap)-1 (also das gerade eingefügte Element)
+</pre>
+<p>Die Funktion <tt>upheap</tt> prüft, dass der Vaterknoten höhere (Max-Heap) bzw. niedrigere (Min-Heap) Priorität hat als der neue Knoten. Ist dies nicht der Fall, werden die beiden Knoten getauscht, und die Überprüfung wird rekursiv auf den Vaterknoten angewendet. Während der Reparaturen wandert man also im Baum aufwärts Richtung Wurzel, daher der Name der Funktion:
+</p>
+<pre>def upheap(heap, k):
+    """das k-te Element ist evtl. im Heap zu tief einsortiert und erfüllt die Heap-Bedingung nicht"""
+    v = heap[k]     # k-tes Element zwischenspeichern
+    while True:     # Endlosschleife wird unten durch break verlassen
+        if k == 0:  # wir sind an der Wurzel
+            break   #  =&gt; Heap-Bedingung ist auf jeden Fall erfüllt
+        parent = (k - 1)//2    # Berechnung der Vaterindex (Abrunden wegen Floor-Division)
+        if heap[parent] &gt; v:   # wenn die Max-Heap-Bedingung erfüllt ist
+            break              # =&gt; Abbruch der Rekursion
+        heap[k] = heap[parent] # sonst: parent-Element muss eine Ebene nach unten verschoben werden
+        k = parent             # und parent wird der neue Index k
+    heap[k] = v                # heap[k] ist jetzt die richtige Stelle für das neue Element
+</pre>
+<p>Die Anzahl der Schleifendurchläufe entspricht maximal der Tiefe des Baumes. Die Komplexität von <tt>insert</tt> ist somit <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(\log N)" src="../images/1a6aaf3aa48f657da554d3063c176e7c.png" />, weil der Baum balanciert ist.
+</p><p>Bei <tt>removeLargest</tt> müssen wir entsprechend das erste Element <tt>heap[0]</tt> aus dem Array entfernen. Allerdings kann aus einem dynamischen Array nur das <i>letzte</i> Element effizient (in amortisiert O(1)) entfernt werden. Wir verwenden deshalb einen Trick: Wir überschreiben das Element <tt>heap[0]</tt> mit dem letzten Element <tt>heap[-1]</tt>, und löschen dann das letzte Element (das ja jetzt zweimal im Heap ist). Da das letzte Element normalerweise nicht das Element mit der größten Priorität sein wird, muss mit der Hilfsfunktion <tt>downheap</tt> noch die Heap-Bedingung repariert werden. 
+</p>
+<pre>def removeLargest(heap):
+    heap[0] = heap[-1]   # das letzte Element auf die erste Stelle bringen (das bisherige erste Element ist damit gelöscht)
+    del heap[-1]         # das letzte Element löschen  <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(1)" src="../images/e32428924d34e88d8a50e9f1805128d2.png" /><br />
+    downheap(heap)       # repariere die Heap-Bedingung für Element 0
+</pre>
+<p>Die Funktion <tt>downheap</tt> geht jetzt im Baum abwärts in Richtung der Blätter und stellt sicher, dass die Kinder jedes Knotens kleinere Prioritäten haben als der Knoten selbst:
+</p>
+<pre>def downheap(heap, last = None):
+    """Das 0-te Element ist evtl. im Heap zu hoch einsortiert und erfüllt die Heap-Bedingung nicht.
+       Die Variable last gibt den Index des letzten gültigen Elements an (wird unten für Heapsort benötigt)."""
+
+    if last is None: last = len(heap) - 1
+    k = 0
+    v = heap[k]          # 0-tes Element zwischenspeichern
+    while True:          # Endlosschleife wird unten durch break verlassen
+        child = 2*k + 1  # linkes Kind
+        if child &gt; last:        # linkes Kind existiert nicht (k ist Blattknoten)
+              break             # =&gt; Rekursion abbrechen
+        if child + 1 &lt;= last and heap[child] &lt; heap[child + 1]   # rechtes Kind existiert und ist größer
+              child = child + 1                                  # =&gt; vergleiche mit rechtem Kind (sonst mit linkem)
+        if v &gt;= heap[child]:    # wenn die Max-Heap-Bedingung erfüllt ist
+              break             # =&gt; Abbruch der Rekursion
+        heap[k] = heap[child]   # sonst: child-Element muss eine Ebene nach oben verschoben werden
+        k = child               # und child wird der neue Index k
+    heap[k] = v                 # heap[k] ist jetzt die richtige Stelle für das Element v
+</pre>
+<p>Auch in dieser Funktion erreicht die Anzahl der Schleifendurchläufe maximal die Tiefe des Baumes. <tt>removeLargest</tt> hat somit eine Komplexität von <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(\log N)" src="../images/1a6aaf3aa48f657da554d3063c176e7c.png" />.
+</p>
+<h3><span class="mw-headline" id="Beispiel_am_Wort_.22SORTING.22">Beispiel am Wort "SORTING"</span></h3>
+<p>Wir fügen die Buchstaben <tt>[S, O, R, T, I, N, G]</tt> in dieser Reihenfolge in eine Max Priority Queue ein. Bei den ersten drei Buchstaben passiert nichts interessantes, da S der größte von ihnen ist und somit die Heap-Bedingung nicht verletzt wird. Wir bekommen also den Heap:
+</p>
+<pre>   S
+   | \
+   |  \
+   O   R
+</pre>
+<p>(um das Ganze anschaulicher zu machen, verwenden wir die Baumdarstellung des Heap anstelle der Array-Darstellung). Fügt man jetzt T am Ende des Heap ein, wird es zum linken Kind von O, und die Heap-Bedingung ist verletzt. Wir benötigen zwei Iterationen von <tt>upheap</tt>, um die Heap-Bedingung wieder herzustellen:
+</p>
+<pre>   S            S            <font color="red">T</font>
+   | \          | \          | \
+   |  \         |  \         |  \
+   O   R   =&gt;   <font color="red">T</font>   R   =&gt;   S   R
+   |            |            |
+   <font color="red">T</font>            O            O
+</pre>
+<p>Beim Einfügen von I, N und G am Ende des Heaps wird die Heap-Bedingung nicht verletzt:
+</p>
+<pre>   T    
+   | \  
+   |  \ 
+   S   R
+   |\  |\  
+   O I N G 
+</pre>
+<p>Entfernen wir jetzt das größte Element T, wird zuerst das letzte Element (also G) an die Position 0 gebracht. Die Heap-Bedingung muss jetzt durch zwei Iterationen von <tt>downHeap</tt> repariert werden:
+</p>
+<pre>   <font color="red">G</font>            S            S    
+   | \          | \          | \  
+   |  \         |  \         |  \ 
+   S   R   =&gt;   <font color="red">G</font>   R   =&gt;   O   R
+   |\  |        |\  |        |\  |
+   O I N        O I N        <font color="red">G</font> I N
+</pre>
+<p>Beim Entfernen von S kommt N an die Position 0. Hier genügt eine Iteration, um die Heap-Bedingung wieder herzustellen:
+</p>
+<pre>   <font color="red">N</font>            R    
+   | \          | \  
+   |  \         |  \ 
+   O   R   =&gt;   O   <font color="red">N</font>
+   |\           |\   
+   G I          G I
+</pre>
+<p>Der nächste Aufruf von <tt>removeLargest</tt> bringt das I an Position 0, und es wird ein Schritt zur Reparatur benötigt:
+</p>
+<pre>   <font color="red">I</font>            O    
+   | \          | \  
+   |  \         |  \ 
+   O   N   =&gt;   <font color="red">I</font>   N
+   |            |    
+   G            G
+</pre>
+<h3><span class="mw-headline" id="Weitere_Heapvarianten">Weitere Heapvarianten</span></h3>
+<ul><li>Min-Max-Priority Queue ("Deap", Double Ended Heap): Implementiert <tt>largest</tt>, <tt>smallest</tt>,  <tt>reamoveLargest</tt>, <tt>removeSmallest</tt> jeweils in <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(\log N)" src="../images/1a6aaf3aa48f657da554d3063c176e7c.png" />.</li>
+<li><a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Binomial-Heap">Binomialer Heap</a>: Erlaubt das effiziente Zusammenführen zweier Prioritätslisten. Fügt eine effiziente Operation "mergeHeaps" hinzu, die aus zwei gegebenen Heaps mit N<sub>1</sub> bzw. N<sub>2</sub>  Elementen in <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(\log N)" src="../images/1a6aaf3aa48f657da554d3063c176e7c.png" /> einen neuen Heap mit N=N<sub>1</sub>+N<sub>2</sub> Elementen erzeugt. Der Name der Datenstruktur leitet sich von den Binomialkoeffizienten her, die in den Beweisen der Eigenschaften benutzt werden.</li>
+<li><a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Fibonacci-Heap">Fibonacci-Heap</a>: Einfügen und Merge erfolgen in konstanter Zeit <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(1)" src="../images/e32428924d34e88d8a50e9f1805128d2.png" />, das Entfernen in amortisiert logarithmischer Zeit <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(\log N)" src="../images/1a6aaf3aa48f657da554d3063c176e7c.png" />. Allerdings ist die Datenstruktur sehr kompliziert, und die in der O-Notation verborgenen Konstanten sind wesentlich größer als bei einem normalen Heap, so dass kein tatsächlicher Geschwindigkeitsgewinn beobachtet wird. Deshalb werden Fibonacci-Heaps in der Praxis kaum verwendet. Der Name kommt von den Fibonacci-Zahlen, die in den Beweisen benutzt werden.</li></ul>
+<h3><span class="mw-headline" id="Heap-Sort">Heap-Sort</span></h3>
+<p>Da ein Heap als Array repräsentiert ist, kann man die Heap-Funktionen benutzen, um einen effizienten Sortieralgorithmus zu definieren. Die Idee des Algorithmus ist, erst alle Elemente des unsortierten Arrays in den Heap einzufügen, und danach die Elemente in sortierter Reihenfolge wieder zu entfernen. Der Hauptunterschied zum normalen Heap besteht dabei darin, dass wir das Array nicht nach jedem  Einfügen und Entfernen um ein Element verlängern bzw. kürzen: Stattdessen markieren wir nur, welcher Teil des Arrays zur Zeit der gültige Heap ist, und benutzen den Rest des Arrays, um die übrigen Arrayelemente (die zur Zeit nicht im Heap sind) aufzubewahren. 
+</p>
+<pre>def heapSort(array):
+    N = len(array)
+    for k in range(1, N):        # Einfügephase: alle Element in den Heap einsortieren
+        upheap(array, k)         #  d.h. Heap-Bedingung für Array bis Element k erfüllen
+    for k in range(N-1, 0, -1):                  # Entfernenphase: alle Elements sortiert wieder aus dem Heap entnehmen:
+        array[0], array[k] = array[k], array[0]  #  d.h. aktuell größtes Element mit Ende des Heaps vertauschen
+        downheap(array, k-1)                     #  und Heap-Bedingung für den Rest des Heaps reparieren
+</pre>
+<p>Sowohl die Einfüge- wie auch die Entfernenphase -- und damit die gesamte Funktion <tt>heapSort</tt> -- haben die Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N \log N)" src="../images/99ebda7faaba019b65ac2c39a6b81628.png" />, weil jeweils N Operationen auf einem Heap der mittleren Größe N/2 ausgeführt werden. Es gibt sogar eine noch etwas effizientere Variante von Heap-Sort, die das Einfügen in linearer Zeit bewältigt. Dies ändert aber nichts an der Gesamtkomplexität, da die Komplexität des Entfernens gleich bleibt. 
+</p><p>Der große Vorteil von Heap-Sort gegenüber Merge Sort besteht darin, dass alle Operationen <i>in place</i>, also ohne Verwendung zusätzlichen Speichers ausgeführt werden (genau genommen muss man dazu allerdings die Funktion <tt>xrange</tt> statt <tt>range</tt> beutzen, siehe <a rel="nofollow" class="external text" href="http://docs.python.org/lib/built-in-funcs.html#l2h-80">Kapitel 2.1</a> der Python Dokumentation). Heap Sort gleicht damit Quick Sort, hat aber gegenüber diesem den Vorteil, dass die Komplexität im schlechtesten Fall immer noch <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N \log N)" src="../images/99ebda7faaba019b65ac2c39a6b81628.png" /> bleibt (bei Quick Sort: <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N^2)" src="../images/5a042d1f9927b25772c570cfbb47e811.png" />). Allerdings zeigt sich, dass Quick Sort im typischen Fall etwa doppelt so schnell ist wie Heap Sort, und dass der ungünstige Fall von Quick Sort in der Praxis nicht vorkommt (falls man die Pivot-Elemente nicht zu naiv wählt). Daher wird Heap Sort in der Praxis selten verwendet.
+</p><p>Am Beispiel des Arrays <tt>[S, O, R, T, I, N, G]</tt> können wir die Reihenfolge der Operationen gut verdeutlichen. Im Unterschied zu oben verwenden wir jetzt die Array-Repräsentation:
+</p>
+<pre>   SORTING      # Anfangszustand
+</pre>
+<p>Einfügephase:
+</p>
+<pre>   SORTING      # upheap(array, 1) und upheap(array, 2) ändern nichts
+   TSROING      # upheap(array, 3)
+   TSROING      # upheap(array, 4) bis upheap(array, 6) ändern ebenfalls nichts
+</pre>
+<p>Entfernenphase:
+</p>
+<pre>   GSROINT      # vertauschen von array[0] und array[6]
+   SORGINT      # downheap(array, 5)
+   NORGIST      # vertauschen von array[0] und array[5]
+   RONGIST      # downheap(array, 4)
+   IONGRST      # vertauschen von array[0] und array[4]
+   OINGRST      # downheap(array, 3)
+   GINORST      # vertauschen von array[0] und array[3]
+   NIGORST      # downheap(array, 2)
+   GINORST      # vertauschen von array[0] und array[2]
+   IGNORST      # downheap(array, 1)
+   GINORST      # vertauschen von array[0] und array[1]
+   GINORST      # downheap(array, 0) ändert nichts mehr
+</pre>
+<h2><span class="mw-headline" id="Priorit.C3.A4tssuche_mit_dem_Bucket-Prinzip">Prioritätssuche mit dem Bucket-Prinzip</span></h2>
+<p>Das <a href="sortieren_in_linearer_zeit.html#Bucket_Prinzip" title="Sortieren in linearer Zeit">Bucket-Prinzip</a>, das wir beim Sortieren in Linearzeit kennen gelernt haben, leistet auch gute Dienste, um die Suche in Prioritätswarteschlangen zu beschleunigen. Um es anzuwenden, benötigen wir wieder eine Funktion <tt>bucketMap</tt>, die die Prioritäten auf ganze Zahlen im Bereich <tt>0...(m-1)</tt> abbildet, wenn wir <tt>m</tt> Buckets verwenden wollen. Die Reduktion auf <tt>m</tt> verschiedene Prioritäten ist in der Praxis häufig möglich: In vielen Situationen gibt es gar kein sinnvolles Kriterium, um Prioritäten sehr fein aufzuschlüsseln. Denken Sie z.B. an Prüfungsnoten, die nur in Schritten von 1/3 Noten angegeben werden. Eine feinere Aufteilung würde zu ziemlich willkürlichen Ergebnissen in den Nachkommastellen führen, und potentielle Arbeitgeber könnten daraus kaum nützliche Hinweise für die Eignung eines Kandidaten entnehmen. Ähnlich liegt der Fall, wenn die Prioritäten aus Messwerten berechnet werden, die eine (in der Praxis nicht untypische) Messgenauigkeit von 1% haben. Dann reicht eine Quantisierung auf 256 Stufen vollkommen aus, denn die Nachkommastellen würden ohnehin nur noch Rauschen enthalten (256 Stufen sind relativ beliebt, weil man damit gerade die Möglichkeiten eines Bytes ausschöpft).
+</p><p>Sind die Prioritäten auf <tt>m</tt> Stellen quantisiert, aber es gibt <tt>n &gt; m</tt> verschiedene Objekte, müssen einige Objekte zwangsläufig gleiche Priorität haben. In diesem Fall werden die Objekte nach dem First in-First out-Prinzip priorisiert. Die Datenstruktur <tt>BucketPriorityQueue</tt> verwendet deshalb intern ein Array von Queues. Eine geeignete Queue-Datenstruktur findet sich im Python-Modul <tt><a rel="nofollow" class="external text" href="http://docs.python.org/library/collections.html">collections</a></tt>: Die Klasse <tt><a rel="nofollow" class="external text" href="http://docs.python.org/library/collections.html#collections.deque">collections.deque</a></tt> unterstützt sowohl die Funktionalität einer Queue (first in-first out: <tt>append</tt> und <tt>popleft</tt>) als auch die eines Stacks (last in-first out: <tt>append</tt> und <tt>pop</tt>). Der folgende Code realisiert eine MinPriorityQueue, wobei wir zur Vereinfachung annehmen, dass die Priotitäten direkt als Bucket-Indizes verwendet werden können:
+</p>
+<pre>import collections
+
+class BucketPriorityQueue:
+    def __init__(self, m):
+        self.data = [collections.deque() for k in xrange(m)]   # Array mit m leeren Queues
+        self.size = 0                                          # noch keine Daten vorhanden
+        self.minBucket = m                                     # den niedrigsten zur Zeit vorhandenen Bucket-Index merken
+    
+    def __len__(self):
+        return self.size                                       # Python-Standardfunktion für die Anzahl der Elemente
+        
+    def push(self, priority, value):                           # neues Element einfügen
+        if priority &lt; 0 or priority &gt;= len(self.data):         # Vorbedingung prüfen
+            raise ValueError('BucketPriorityQueue.push(): Priority is out of range.')
+        self.data[priority].append(value)                      # Element an die passende Queue anhängen
+        self.size += 1                                         # Anzahl aktualisieren
+        if priority &lt; self.minBucket:
+            self.minBucket = priority                          # niedrigsten zur Zeit vorhandenen Bucket-Index aktualisieren
+    
+    def top(self):                                             # Element mit höchster Priorität abfragen
+        if self.size == 0:                                     # Vorbedingung prüfen
+            raise IndexError('BucketPriorityQueue.top(): Queue is empty.')
+        return self.minBucket, self.data[self.minBucket][0]    # Priorität und zugehörigen Wert zurückgeben
+    
+    def pop(self):
+        if self.size == 0:                                     # Vorbedingung prüfen
+            raise IndexError('BucketPriorityQueue.top(): Queue is empty.')
+        priority = self.minBucket                              # Priorität und
+        value = self.data[priority].popleft()                  # ... Wert des Top-Elements speichern
+        self.size -= 1                                         # Anzahl aktualisieren
+        if self.size == 0:                                     # den niedrigsten zur Zeit vorhandenen Bucket-Index aktualisieren
+            self.minBucket = m
+        else:
+            while len(self.data[self.minBucket]) == 0:
+                self.minBucket += 1
+        return priority, data                                  # Priorität und zugehörigen Wert zurückgeben
+</pre>
+<p>Alle Befehle in <tt>push</tt>, <tt>top</tt> und <tt>pop</tt> haben konstante Komplexität, bis auf das Aktualisieren des niedrigsten Bucket-Index in <tt>pop</tt>, das im ungünstigen Fall die Komplexität O(m) haben kann, z.B. wenn immer abwechselnd Objekte mit der Priorität 0 und der Priorität (m-1) eingefügt werden. Dieser hypothetische Fall kommt aber in der Praxis kaum vor. Er ist auch ausgeschlossen, wenn man zuerst sämtliche Elemente in die Queue einfügt, und danach in sortierter Reihenfolge wieder entnimmt (denn dann muss <tt>minBucket</tt> nur einmal hochgezählt werden). In praktischen Anwendungen führt die Verwendung der <tt>BucketPriorityQueue</tt> häufig zu deutlichen Verbesserungen gegenüber einem Heap.
+</p><p><a href="assoziative_arrays.html" title="Assoziative Arrays">Nächstes Thema</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825110957
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.017 seconds
+Real time usage: 0.037 seconds
+Preprocessor visited node count: 187/1000000
+Preprocessor generated node count: 368/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:38-0!canonical!math=0 and timestamp 20260825110957 and revision id 5645
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="indexfffb.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Prioritätswarteschlangen&amp;oldid=5645</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="priorit%c3%a4tswarteschlangen.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="talk_priorit%c3%a4tswarteschlangen.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index4121.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="index44d2.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="index8323.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="priorit%c3%a4tswarteschlangen-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="priorit%c3%a4tswarteschlangen-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="index3b85.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="index4af7.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index85ce.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 1 June 2017, at 17:56.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.017","walltime":"0.037","ppvisitednodes":{"value":187,"limit":1000000},"ppgeneratednodes":{"value":368,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825110957","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":148});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Prioritätswarteschlangen by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:44:49 GMT -->
+</html>

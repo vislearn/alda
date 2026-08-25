@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Iteration_versus_Rekursion by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:45:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Iteration versus Rekursion - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Iteration_versus_Rekursion","wgTitle":"Iteration versus Rekursion","wgCurRevisionId":5098,"wgRevisionId":5098,"wgArticleId":69,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Iteration_versus_Rekursion","wgRelevantArticleId":69,"wgRequestId":"daceb889b52b343c6a0ee3c9","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Iteration_versus_Rekursion rootpage-Iteration_versus_Rekursion skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Iteration versus Rekursion</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Rekursion_in_der_Informatik:"><span class="tocnumber">1</span> <span class="toctext">Rekursion in der Informatik:</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Entscheidende_Eigenschaften_der_Rekursion"><span class="tocnumber">1.1</span> <span class="toctext">Entscheidende Eigenschaften der Rekursion</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Arten_der_Rekursion"><span class="tocnumber">1.2</span> <span class="toctext">Arten der Rekursion</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Lineare_Rekursion"><span class="tocnumber">1.2.1</span> <span class="toctext">Lineare Rekursion</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Baumrekursion"><span class="tocnumber">1.2.2</span> <span class="toctext">Baumrekursion</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Course-of-values_recursion"><span class="tocnumber">1.2.3</span> <span class="toctext">Course-of-values recursion</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Primitive_Rekursion"><span class="tocnumber">1.2.4</span> <span class="toctext">Primitive Rekursion</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Endrekursion"><span class="tocnumber">1.2.5</span> <span class="toctext">Endrekursion</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Beispiele_und_Umwandlung_in_Iteration"><span class="tocnumber">2</span> <span class="toctext">Beispiele und Umwandlung in Iteration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Beispiel_f.C3.BCr_alle_Rekursionsarten:_Fibonacci-Zahlen"><span class="tocnumber">2.1</span> <span class="toctext">Beispiel für alle Rekursionsarten: Fibonacci-Zahlen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Version_1:_Naive_rekursive_Implementation"><span class="tocnumber">2.1.1</span> <span class="toctext">Version 1: Naive rekursive Implementation</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Version_2:_Umwandlung_in_einen_iterativen_Algorithmus_mit_Stack"><span class="tocnumber">2.1.2</span> <span class="toctext">Version 2: Umwandlung in einen iterativen Algorithmus mit Stack</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Version_3:_Course-of-values_recursion"><span class="tocnumber">2.1.3</span> <span class="toctext">Version 3: Course-of-values recursion</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Version_4:_Endrekursiv"><span class="tocnumber">2.1.4</span> <span class="toctext">Version 4: Endrekursiv</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Version_5:_Umwandlung_in_einen_iterativen_Algorithmus_ohne_Stack"><span class="tocnumber">2.1.5</span> <span class="toctext">Version 5: Umwandlung in einen iterativen Algorithmus ohne Stack</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#Beispiel_f.C3.BCr_die_Umwandlung_von_Rekursion_in_Iteration:_treeSort"><span class="tocnumber">2.2</span> <span class="toctext">Beispiel für die Umwandlung von Rekursion in Iteration: treeSort</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Aufl.C3.B6sung_rekursiver_Gleichungen"><span class="tocnumber">3</span> <span class="toctext">Auflösung rekursiver Gleichungen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Master-Theorem"><span class="tocnumber">3.1</span> <span class="toctext">Master-Theorem</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#Fall_1:"><span class="tocnumber">3.1.1</span> <span class="toctext">Fall 1:</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Fall_2:"><span class="tocnumber">3.1.2</span> <span class="toctext">Fall 2:</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Fall_3:"><span class="tocnumber">3.1.3</span> <span class="toctext">Fall 3:</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Beispiel:_Merge_Sort"><span class="tocnumber">3.1.4</span> <span class="toctext">Beispiel: Merge Sort</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#F.C3.A4lle_die_nicht_durch_das_Master-Theorem_abgedeckt_sind:"><span class="tocnumber">3.1.5</span> <span class="toctext">Fälle die nicht durch das Master-Theorem abgedeckt sind:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="#Rekursionsb.C3.A4ume_und_Substitutionsmethode"><span class="tocnumber">3.2</span> <span class="toctext">Rekursionsbäume und Substitutionsmethode</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Rekursion_in_der_Informatik:">Rekursion in der Informatik:</span></h2>
+<p>Einen Funktion f ist <b>rekursiv</b> wenn sie sich selbst aufruft.
+Die Funktion heißt <i>indirekt-rekursiv</i> wenn sie sich selbst aufruft über den Umweg einer anderen Funktion (oder mehrerer anderer Funktionen).
+</p><p>Beispiel einer indirekten Rekursion:
+</p>
+<pre>   <b>foo</b>  ---&gt;  <b>bar</b>  ---&gt;  <b>foo</b>
+      ruft auf    ruft auf
+</pre>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Entscheidende_Eigenschaften_der_Rekursion">Entscheidende Eigenschaften der Rekursion</span></h3>
+<ul><li> Jeder Aufruf einer rekursiven Funktion f hat sein <u>eigenes</u> Set von lokalen Variablen, d.h. der rekursive Aufruf hat die gleichen Anweisungen auszuführen, aber er hat seine eigenen Daten. Betrachten wir z.B. die rekursive Funktion</li></ul>
+<pre>     def f(n):
+         r = f(n-1)
+         ... # weiterer Code
+         return r
+</pre>
+<dl><dd>Für ein gegebenes n erhalten wir die Aufrufkette:</dd></dl>
+<pre>     f(n)             1.Ebene
+        f(n-1)        2.Ebene
+             f(n-2)   3.Ebene
+                      ...
+</pre>
+<dl><dd>Die Funktionsaufrufe der verschiedenen Ebenen werden so ausgeführt, als ob wir für jede Ebene eine eigene Funktion f<sub>1</sub>(n<sub>1</sub>), f<sub>2</sub>(n<sub>2</sub>), f<sub>3</sub>(n<sub>3</sub>) usw. definiert hätten:</dd></dl>
+<pre>     f<sub>1</sub>(n<sub>1</sub>)            1.Ebene ---&gt; n<sub>1</sub> = n
+         f<sub>2</sub>(n<sub>2</sub>)        2.Ebene ---&gt; n<sub>2</sub> = n<sub>1</sub>-1
+             f<sub>3</sub>(n<sub>3</sub>)    3.Ebene ---&gt; n<sub>3</sub> = n<sub>2</sub>-1 = n<sub>1</sub>-2 = n-2
+                       ...
+</pre>
+<dl><dd>Die Funktionen f<sub>1</sub>(n<sub>1</sub>), f<sub>2</sub>(n<sub>2</sub>), f<sub>3</sub>(n<sub>3</sub>) enthalten alle den gleichen Code, aber mit unterschiedlich benannten Variablen n<sub>1</sub>, n<sub>2</sub>, n<sub>3</sub>. Durch diese Umbenennungen sollte die obige Aussage deutlich werden.</dd></dl>
+<ul><li> Jede rekursive Funktion muß <u>mindestens <b>einen</b> nicht-rekursiven</u> Zweig haben. Dieser Zweig wird als <b>Basisfall</b> oder <b>Rekursionsabschluss</b> bezeichnet.</li></ul>
+<ul><li> Jeder rekursive Aufruf muß über <u>endlich viele Stufen</u> auf einen Basisfall zurückgeführt werden, denn sonst erhält man eine Endlosrekursion (und das ist fast so übel wie eine Endlosschleife -- "fast" deshalb, weil die Endlosrekursion spätestens dann abbricht wenn der Speicher voll ist --&gt; siehe Übung 8 Aufgabe 2a).</li></ul>
+<ul><li> Die Anzahl der rekursiven Aufrufe bis zum Rekursionsabschluss bezeichnet man als <b>Rekursionstiefe d</b>.</li></ul>
+<ul><li> Jede rekursive Funktion kann in eine iterative Funktion umgewandelt werden, die statt rekursiver Aufrufe eine Schleife enthält. Wir beschreiben dies unten anhand von Beispielen.</li></ul>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Arten_der_Rekursion">Arten der Rekursion</span></h3>
+<p>Die Arten der Rekursion sind hier nicht vollständig angegeben, es gibt noch weitere. Aber die hier folgenden sind für die Programmierung am wichtigsten.
+</p>
+<h4><span class="mw-headline" id="Lineare_Rekursion">Lineare Rekursion</span></h4>
+<ul><li> Jeder Ausführungspfad durch die Funktion f enthält <u>höchstens einen</u> rekursiven Aufruf.</li>
+<li> Höchstens einen, weil mindestens ein Pfad existieren muss, der keinen rekursiven Aufruf enthält (der Basisfall).                                  </li></ul>
+<dl><dd>&#8658; Das Ergebnis der Aufrufe ist eine 1-dimensionale "Rekursionskette".</dd></dl>
+<h4><span class="mw-headline" id="Baumrekursion">Baumrekursion</span></h4>
+<p>(auch Kaskadenrekursion)<br />
+</p>
+<ul><li> Mindestens ein Ausführungspfad durch die Funktion enthält mindestens 2 rekursive Aufrufe.</li>
+<li> Baumrekursion ist damit das Gegenteil der linearen Rekursion.</li></ul>
+<dl><dd>&#8658; Das Ergebnis der Aufrufe ist ein verzweigter "Rekursionsbaum". Ein baum-rekursiver Algorithmus ist deshalb häufig ineffizient: Wird der Pfad mit mehreren rekursiven Aufrufen mindestens &#937;(d)-mal ausgeführt (wobei d die Rekursionstiefe) ist, entsteht ein Rekursionsbaum mit O(2<sup>d</sup>) Knoten, also ein Algorithmus mit exponentieller Komplexität.</dd></dl>
+<h4><span class="mw-headline" id="Course-of-values_recursion">Course-of-values recursion</span></h4>
+<ul><li> Das Ergebnis des rekursiven Aufrufes für Argument n hängt nur von den Ergebnissen der letzten p-Aufrufe, also für Argument n-1,n-2,...,n-p ab (wobei p eine Konstante ist).</li></ul>
+<h4><span class="mw-headline" id="Primitive_Rekursion">Primitive Rekursion</span></h4>
+<ul><li> Spezialfall der course-of-values recursion mit p=1.</li></ul>
+<dl><dd>&#8658;  Das ist auch ein Spezialfall der linearen Rekursion, denn wenn das Ergebnis nur von einem rekursiven Aufruf abhängt, kann kein Rekursionsbaum entstehen.</dd></dl>
+<h4><span class="mw-headline" id="Endrekursion">Endrekursion</span></h4>
+<ul><li> In jedem rekursiven Ausführungspfad ist der rekursive Aufruf der letzte Befehl vor dem return-Befehl.</li></ul>
+<dl><dd>&#8658;  Das ist ein Spezialfall der linearen Rekursion, denn es kann nur einen letzten Befehl vor jedem return geben, ein zweiter rekursiver Aufruf könnte allenfalls der vorletzte Befehl sein.</dd></dl>
+<h2><span class="mw-headline" id="Beispiele_und_Umwandlung_in_Iteration">Beispiele und Umwandlung in Iteration</span></h2>
+<h3><span class="mw-headline" id="Beispiel_f.C3.BCr_alle_Rekursionsarten:_Fibonacci-Zahlen">Beispiel für alle Rekursionsarten: Fibonacci-Zahlen</span></h3>
+<p>Wir verdeutlichen die verschiedenen Rekursionsarten und ihre Umwandlung in iterative Algorithmen am Beispiel der Fibonacci-Zahlen.
+</p>
+<dl><dt>Fibonacci-Zahlen</dt>
+<dd> Die n-te Fibonacci-Zahl ist gemäß der folgenden Rekursionsformel definiert. 
+<dl><dd><dl><dd>f<sub>0</sub>=0</dd>
+<dd>f<sub>1</sub>=1</dd>
+<dd>f<sub>n</sub>=f<sub>n-1</sub>+f<sub>n-2</sub></dd></dl></dd></dl></dd>
+<dd>Es ergibt sich die Folge: 
+<dl><dd><dl><dd>f<sub>k</sub>=0, 1, 1, 2, 3, 5, 8, 13,... (&#8658; Die Folge wächst exponentiell an.)</dd></dl></dd></dl></dd></dl>
+<p>Im folgenden zeigen wir 5 verschiedene Algorithmen zu Berechnung der n-ten Fibonacci-Zahl:
+</p>
+<h4><span class="mw-headline" id="Version_1:_Naive_rekursive_Implementation">Version 1: Naive rekursive Implementation</span></h4>
+<p>Implementiert man einfach die rekursive Formel der Definition, erhält man:
+</p>
+<pre>def fib1(n):                      # Funktion berechnet die n-te Fibonacci-Zahl
+    if n &lt;= 1: 
+         return n                 # Rekursionsabschluss
+    return fib1(n-1) + fib1(n-2)  # Baumrekursion
+</pre>
+<p>Die Funktion fib1(n) ist ein Beispiel für eine Baumrekursion mit exponentieller Komplexität.
+Der Aufrufbaum sieht dann wie folgt aus:
+<a href="file_fibrek.html" class="image"><img alt="Fibrek.png" src="../images/fibrek.png" width="1024" height="453" /></a>
+</p><p>Im Falle der Fibonacci-Zahlen ist dies ein ungünstiger Algorithmus, weil viele Teilergebnise wiederholt berechnet werden (z.B. f<sub>n-2</sub> und f<sub>n-3</sub>).
+Aber einige Probleme sind <u>echt</u> Baumrekursiv, z.B. das Ausrechnen der möglichen Züge beim Schachspiel.
+</p><p><br />
+</p>
+<dl><dt>Es gilt folgender grundlegender Satz</dt>
+<dd></dd></dl>
+<p>Jeder rekursiver Algorithmus kann mit Hilfe eines Stacks in einen iterativen Algorithmus umgewandelt werden (d.h. mit einer Schleife statt einer Rekursion). Das bedeutet, dass rekursive Programme gleichmächtig sind wie Programme mit Schleifen (z.B. WHILE-Programme, siehe <a href="einf%c3%bchrung.html#Zur_Frage_der_elementaren_Schritte" title="Einführung">erste Vorlesung</a>), d.h. gleichmächtig wie die Turing-Maschine. Die Komplexität des Algorithmus ändert sich durch die Umwandlung nicht.
+<br />
+</p>
+<h4><span class="mw-headline" id="Version_2:_Umwandlung_in_einen_iterativen_Algorithmus_mit_Stack">Version 2: Umwandlung in einen iterativen Algorithmus mit Stack</span></h4>
+<pre>def fib2(n):
+    stack = [n]   # der Stack enthält als erstes Teilproblem das ursprüngliche Problem "n-te Fibonacci-Zahl berechnen"
+    f = 0         # f wird später die Lösung enthalten
+    
+    while len(stack) &gt; 0:          # solange noch was auf dem Stack liegt, ist noch Arbeit zu tun
+          k = stack.pop()          # Teilproblem von Stack entnehmen und lösen
+          if k &lt;= 1:               
+               f += k              # entweder: Teilergebnis zur Lösung addieren (das war vorher der Rekursionsabschluss)
+          else:                    
+               stack.append(k-1)   # oder: zwei neue Teilprobleme auf dem Stack ablegen 
+               stack.append(k-2)   # (das waren vorher die rekursiven Aufrufe)
+    return f
+</pre>
+<h4><span class="mw-headline" id="Version_3:_Course-of-values_recursion">Version 3: Course-of-values recursion</span></h4>
+<p>Wie man unmittelbar aus der Definition erkennt, ist die Berechnung der Fibonacci-Zahlen Course-of-values rekursiv mit p=2. Eine entsprechende Implementation verwendet eine Hilfsunfktion, die immer die Ergebnisse der p letzten Aufrufe zurückgibt:
+</p>
+<pre>def fib3(n):
+    f1, f2 = fib3Impl(n)    # Hilfsfunktion, f1 ist die Fibonacci-Zahl von (n+1) und f2 ist die Fibonacci-Zahl von n
+    return f2
+
+</pre>
+<p>Die Hilfsfunktion enthält jetzt die eigentliche Rekursion. Sie berechnet die Fibonacci-Zahlen f<sub>k</sub> und f<sub>k-1</sub> aus den Zahlen f<sub>k-1</sub> und f<sub>k-2</sub>:
+</p>
+<pre>def fib3Impl(n):
+    if n == 0: 
+        return 1, 0         # gebe die Fibonacci-Zahl von 1 und die davor zurück
+    else:                          # rekursiver Aufruf
+       f1, f2 = fib3Impl(n-1)      # f1 ist Fibonacci-Zahl von n, f2 die von (n-1)
+       return f1 + f2, f1          # gebe neue Fibonacci-Zahl f<sub>n+1</sub> = f1+f2 und die vorherige (f<sub>n</sub> = f1) zurück.
+</pre>
+<p>&#8658; Diese Implementation ist jetzt linear-rekursiv (aber nicht endrekursiv). Sie hat damit lineare Komplexität und nicht exponentielle wie die beiden vorherigen Versionen.
+</p><p><br />
+</p>
+<dl><dt>Es gilt folgender Satz</dt>
+<dd></dd></dl>
+<p>Jede Course-of-values Rekursion kann in Endrekursion umgewandelt werden.
+<br />
+</p>
+<h4><span class="mw-headline" id="Version_4:_Endrekursiv">Version 4: Endrekursiv</span></h4>
+<p>Man gelangt von der Course-of-values Rekursion zur Endrekursion, indem man einfach die Berechnungsreihenfolge umkehrt: statt rückwärts von f<sub>n</sub> nach f<sub>0</sub> zu arbeiten, arbeitet man vorwärts von f<sub>0</sub> nach f<sub>n</sub>. Dazu muss der Hilfsfunktion eine Zählvariable übergeben werden, die angibt, wie viele Schritte noch bis zum Ziel f<sub>n</sub> verbleiben. Außerdem erhält die Hilfsfunktion die beiden vorherigen Fibonacci-Zahlen als Argument übergeben:
+</p>
+<pre>def fib4(n):
+    return fib4Impl(1, 0, n) 
+
+</pre>
+<p>Die Hilfsfunktion:
+</p>
+<pre>def fib4Impl(f1, f2, counter):
+    if counter == 0: 
+       return f2
+    else:
+       return fib4Impl(f1+f2, f1, counter-1)   # f1 ist die letzte Fibonacci-Zahl,
+                                               # f1+f2 wird die neue Fibonacci-Zahl und wir müssen counter um 1 herunterzählen
+                                               # Endrekursion: fib4Impl() ist der letzte Befehl vor dem return
+</pre>
+<p>Beispiel mit n=3:
+</p>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr align="center">
+<td>
+</td>
+<th> &#160;f<sub>1</sub>&#160;
+</th>
+<th> &#160;f<sub>2</sub>&#160;
+</th>
+<th> counter
+</th></tr>
+<tr>
+<td> fib4Impl 1.Aufruf
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 0
+</td>
+<td align="left"> 3
+</td></tr>
+<tr>
+<td> fib4Impl 2.Aufruf
+</td>
+<td align="center"> 1
+</td>
+<td align="center"> 1
+</td>
+<td align="left"> 2
+</td></tr>
+<tr>
+<td> fib4Impl 3.Aufruf
+</td>
+<td align="center"> 2
+</td>
+<td align="center"> 1
+</td>
+<td align="left"> 1
+</td></tr>
+<tr>
+<td> fib4Impl 4.Aufruf
+</td>
+<td align="center"> 3
+</td>
+<td align="center"> 2
+</td>
+<td> 0 &#8658; Rekursionsabschluss &#8658; return 2
+</td></tr></table>
+<p>&#8658; Ergebnis von fib4(3) (die 3. Fibonacci-Zahl) ist 2.
+</p><p><br />
+</p>
+<dl><dt>Es gilt folgender grundlegender Satz</dt>
+<dd></dd></dl>
+<p>Jede endrekursive Funktion kann <u>ohne</u> Stack in eine iterative Funktion umgewandelt werden. 
+<br />
+</p><p>Bei einigen Programmiersprachen (z.B. Lisp, Scheme) wird dies von Compiler sogar automatisch erledigt (als Programmoptimierung, weil Iteration im allgemeinen schneller ist als Rekursion).
+</p>
+<h4><span class="mw-headline" id="Version_5:_Umwandlung_in_einen_iterativen_Algorithmus_ohne_Stack">Version 5: Umwandlung in einen iterativen Algorithmus ohne Stack</span></h4>
+<pre>def fib5(n):
+    f1, f2 = 1, 0                # f1 ist die Fibonaccizahl für n=1, f2 die für n=0
+    while n &gt; 0:
+        f1, f2 = f1 + f2, f1     # berechne die nächste Fibonaccizahl in f1 und speichere die letzte in f2
+        n -= 1
+    return f2
+</pre>
+<p>Das ist genau das gleiche wie <tt>fib4Impl</tt>. Aber anstelle eines rekursiven Aufrufes werden einfach die Variablen f<sub>1</sub> und f<sub>2</sub> wiederverwendet (mit den neuen Werten überschrieben). Dies ist möglich, weil die originalen Werte nicht mehr benötigt werden, denn der rekursive Aufruf bei <tt>fib4Impl</tt> war der letzte Befehl vor dem return (Endrekursion!).
+</p>
+<h3><span class="mw-headline" id="Beispiel_f.C3.BCr_die_Umwandlung_von_Rekursion_in_Iteration:_treeSort">Beispiel für die Umwandlung von Rekursion in Iteration: treeSort</span></h3>
+<p>Input: 
+</p>
+<ul><li> ein balancierter Binärbaum, repräsentiert durch seinen Wurzelknoten <tt>root</tt></li>
+<li> ein leeres dynamisches Array a, das später die sortierten Elemente des Baums enthalten wird</li></ul>
+<p>Aufgerufen wird: 
+</p>
+<pre>    treeSort(root,a)  # kopiert Elemente des Baums sortiert in Array a
+</pre>
+<p>Wiederholung des rekursiven Algorithmus (vergleiche Abschnitt "<a href="suchen.html#Sortieren_mit_Hilfe_eines_selbst-balancierenden_Suchbaums" title="Suchen">Sortieren mit Hilfe eines selbst-balancierenden Suchbaums</a>"):
+</p>
+<pre>def treeSort(node,a):
+   if node is None: 
+       return
+   treeSort(node.left,a)
+   a.append(node.key)
+   treeSort(node.right,a)
+</pre>
+<p>Dieser Algorithmus ist baumrekursiv, was nicht weiter überrascht, denn die Rekursion dient ja zur Traversierung eines Baumes. In diesem Fall führt Baumrekursion nicht zu exponentieller Komplexität, weil die Tiefe des Baum nur O(log N) ist. Dadurch benötigt <tt>treeSort</tt> nur O(2<sup>log N</sup>) = O(N) Schritte zum Auslesen des Baumes (das Füllen das Baumes benötigt allerdings O(N log N) Schritte und dominiert den Algorithmus).
+</p><p>Die Implementation als iterative Funktion erfolgt mit Hilfe eines Stacks und einer Hilfsfunktion <tt>traverseLeft</tt>, die den Stack füllt:
+</p>
+<pre>def treeSortIterative(root, a):
+   stack = []
+   traverseLeft(root, stack)   # fülle Stack mit den Knoten des linken Teilbaums von root
+   while len(stack) &gt; 0:
+       node = stack.pop()
+       a.append(node.key)
+       traverseLeft(node.right, stack)  # fülle Stack mit den Knoten des linken Teilbaums von node.right
+</pre>
+<p>Hilfsfunktion:
+</p>
+<pre>def traverseLeft(node, stack):
+   while node is not None:
+       stack.append(node)
+       node = node.left
+</pre>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Aufl.C3.B6sung_rekursiver_Gleichungen">Auflösung rekursiver Gleichungen</span></h2>
+<p>Um die Komplexität eines rekursiven Algorithmus zu berechen, müssen wir die notwendige Schrittzahl für ein Problem der Größe N bestimmen. Die Schrittzahl einer rekursiven Funktion setzt sich zusammen aus den Schritten, die in der Funktion selbst ausgeführt werden, sowie denen, die die verschiednenen rekursiven Aufrufe beitragen. Um dies allgemein auszudrücken, nehmen wir an, dass jeder rekursive Aufruf sich auf ein Teilproblem des originalen Problems bezieht. Die Größe des i-ten Teilproblems sei n/b<sub>i</sub> (wenn wir also auf dem Originalproblem weiterarbeiten, gilt b<sub>i</sub>=1), und es soll a<sub>i</sub> Teilprobleme dieser Größe geben. Dann wird die gesuchte Schrittzahl durch folgende Formel ausgedrückt: 
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\underbrace{T(n)}_{\mbox{Schrittzahl}}  =  \underbrace{ a_1T\left(\frac{n}{b_1}\right)+a_2T\left(\frac{n}{b_2}\right)+\cdots+a_kT\left(\frac{n}{b_k}\right) }_{\mbox{rekursive Teilprobleme}}&#10;+\underbrace{f(n)}_{\mbox{nicht-rekursiver Teil}}" src="../images/ef95bc7bb37459cb499fc98340194258.png" /></dd></dl></dd></dl></dd></dl>
+<p><u>Bemerkung:</u>  Im allgemeinen arbeiten die rekursiven Aufrufe auf Teilproblemen ganzzahliger Größe. Daher muss man <img class="mwe-math-fallback-image-inline tex" alt="\frac{n}{b_i}" src="../images/aceef4378b900734cdcf028159ca948c.png" /> gegebenenfalls aufrunden <img class="mwe-math-fallback-image-inline tex" alt="\left\lceil\frac{n}{b_i}\right\rceil" src="../images/e9c02a55b7a50f2eb9cbe7e907561de4.png" /> oder abrunden <img class="mwe-math-fallback-image-inline tex" alt="\left\lfloor\frac{n}{b_i}\right\rfloor" src="../images/ab444da52d3e67a374db7c55fb5ffe4d.png" />. Diese Rundungen spielen für die Auflösung der Formeln meist keine Rolle, weil die Rundungsfehler für große n vernachlässigbar sind.
+</p><p>Rekursionsformeln dieses Typs haben wir z.B. im Kapitel <a href="sortieren.html" title="Sortieren">Sortieren</a> bereits behandelt. Hier wollen wir allgemeine Strategien angeben, wie man die rekursive Form dieser Formeln in eine explizite Form (die keine Ausdrücke der Art <img class="mwe-math-fallback-image-inline tex" alt="T\left(\frac{n}{b_i}\right)" src="../images/36315562c73b1e136a24e5571caf1c8f.png" /> mehr enthält) überführt .
+</p>
+<h3><span class="mw-headline" id="Master-Theorem">Master-Theorem</span></h3>
+<p>Im Speziallfall k=1 (d.h. alle Unterprobleme haben die gleiche Größe) vereinfacht sich obige Formel zu:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n) = a\,T\left(\frac{n}{b}\right)+f(n)" src="../images/383e14b305a6ded06a2de752f1d21b06.png" /></dd></dl></dd></dl></dd></dl>
+<p>Hier gibt es mit dem Master-Theorem eine sehr allgemeine Regel, wie man die Komplexität des rekursiven Algorithmus in expliziter Form (genauer: in &#920;-Notation) ausrechnen kann. Einen Beweis für das Master-Theorem findet man z.B. bei T. Cormen, C. Leiserson, R.Rivest: "Algorithmen - eine Einführung". 
+</p><p>Wir definieren zunächst den <b>Rekursionsexponenten</b>:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\rho=\log_b (a)" src="../images/e25e61d24b3f989050b067599247818d.png" /></dd></dl></dd></dl></dd></dl>
+<p>Ja nach dem Verhalten des nicht-rekursiven Anteils unterscheiden wir 3 Fälle
+</p>
+<h4><span class="mw-headline" id="Fall_1:">Fall 1:</span></h4>
+<p>Falls die Funktion f(n) sehr effizient ist, so dass für ihre Komplexität gilt
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(n) \in O(n^{\rho-\epsilon}) , \epsilon&gt;0" src="../images/aa48e3f0138e502b5671cbe3259857d2.png" /><br /></dd></dl></dd></dl></dd></dl>
+<p>In diesem Fall dominieren die Kosten der Rekursion, und die Komplexität der rekursiven Funktion ergibt sich aus dem Rekursionsexponenten
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n) \in \Theta(n^{\rho})" src="../images/36578182d45899ba82ae049977155e65.png" /></dd></dl></dd></dl></dd></dl>
+<h4><span class="mw-headline" id="Fall_2:">Fall 2:</span></h4>
+<p>Wenn die Funktion f(n) genauso effizient ist wie die Rekursion, wenn also gilt
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(n) \in \Theta(n^{\rho}) " src="../images/d1e8bc107d9eb34814b3839eebe4a69f.png" /><br /></dd></dl></dd></dl></dd></dl>
+<p>dann addieren sich die Kosten für f(n) und für die Rekursion, und wir erhalten:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n) \in \Theta(n^{\rho}\cdot\log n)" src="../images/9612f37b997bd6c973e82464f38c4bf9.png" /></dd></dl></dd></dl></dd></dl>
+<h4><span class="mw-headline" id="Fall_3:">Fall 3:</span></h4>
+<p>Wenn die Funktion f(n) nicht sehr effizient ist, so dass für ihre Komplexität gilt 
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(n) \in \Omega(n^{\rho+\epsilon})" src="../images/c3ad39778499bef8fa25432a76ad83e3.png" /></dd></dl></dd></dl></dd></dl>
+<p>kann das Master-Theorem nur dann eine Aussage machen, wenn außerdem gilt
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="a\,f\left(\frac{n}{b}\right)\le c\,f(n)\,\textrm{mit}\,c&lt;1" src="../images/c7f7f64bd7ef8d7d902acdfc022e9804.png" /></dd></dl></dd></dl></dd></dl>
+<p>Jetzt dominieren die Kosten von f(n), und die Komplexität wird 
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n) \in \Theta(f(n))" src="../images/dc81cd9d06992f5c6d100c89f56b74e7.png" /></dd></dl></dd></dl></dd></dl>
+<h4><span class="mw-headline" id="Beispiel:_Merge_Sort">Beispiel: Merge Sort</span></h4>
+<p>Im Falle von Merge Sort wird das Problem in zwei gleiche Teile zerlegt, die beide rekursiv sortiert werden (es gilt also a=2, b=2). Das Zusammenfügen der beiden Teile erfordert &#920;(n) Vergleiche. Wir erhalten also die Formel
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n)  =  \underbrace{ 2\,T\left(\frac{n}{2}\right)}_{\mbox{rekursive Aufrufe von MergeSort}}+\underbrace {\Theta(n)}_{\textrm{Merge}}" src="../images/ffaddc660293bc2724aa22448cdc57ef.png" /></dd></dl></dd></dl></dd></dl>
+<p>Für den Rekursionsexponenten erhalten wir
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\rho=log_2 2 = 1" src="../images/baedd79f8bb77b36bfabd77b1e11edcc.png" /></dd></dl></dd></dl></dd></dl>
+<p>Mit f(n) &#8712; &#920;(n) = &#920;(n<sup>&#961;</sup>) trifft Fall 2 zu, und wir erhalten für die Komplexität von MergeSort das bereits bekannte Ergebnis: 
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n) \in \Theta(n^ \rho \log n) = \Theta(n\,\log n)" src="../images/8acfba48ebbdd372355860ec9c0b82fe.png" /></dd></dl></dd></dl></dd></dl>
+<h4><span class="mw-headline" id="F.C3.A4lle_die_nicht_durch_das_Master-Theorem_abgedeckt_sind:">Fälle die nicht durch das Master-Theorem abgedeckt sind:</span></h4>
+<ul><li> wenn <img class="mwe-math-fallback-image-inline tex" alt="k \ &gt; 1" src="../images/7c9ea1d2e793a5723722cd773dc31fbc.png" />: rekursive Teilprobleme <u>verschiedener</u> Grösse</li>
+<li> wenn <img class="mwe-math-fallback-image-inline tex" alt="f(n) \in O\left(\frac{n^\rho}{\log n}\right)" src="../images/8db0d981caf61a743adb9e6b3479c405.png" />: Die Komplexität von f(n) liegt genau zwischen den Fällen 1 und 2.</li>
+<li> wenn <img class="mwe-math-fallback-image-inline tex" alt="f(n) \in \Omega\left(n^\rho \log n\right)" src="../images/8092d9205a0f59b44ad4ea28917b9df9.png" />: Die Komplexität von f(n) liegt genau zwischen den Fällen 2 und 3.</li>
+<li> wenn für alle c&lt;1 gilt <img class="mwe-math-fallback-image-inline tex" alt="a\,f\left(\frac{n}{b}\right)&gt; c\,f(n)" src="../images/e615e154cb9e512f1fee1ce60795414f.png" />: Die Komplexität der Funktion f(n) auf den reduzierten Problemen ist zu groß.</li></ul>
+<h3><span class="mw-headline" id="Rekursionsb.C3.A4ume_und_Substitutionsmethode">Rekursionsbäume und Substitutionsmethode</span></h3>
+<p>Wenn das Master-Theorem nicht anwendbar ist, muss man die Rekursionsformel selbst auflösen. Dies gilt zum Beispiel, wenn der Algorithmus das Problem in zwei ungleich große Teile zerlegt. Wir betrachten das folgende Beispiel, bei dem das Problem in Teile der Größe 1/3 und 2/3 zerlegt wird und das Zusammenfügen der Teile c*n Schritte erfordert:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n)  =  \underbrace{ T\left(\frac{n}{3}\right)}_{\frac{1}{3}\mbox{ der Daten}}+\underbrace {T\left(\frac{2n}{3}\right)}_{\frac{2}{3}\mbox{ der Daten}} +\underbrace {c\cdot n}_{\mbox{Zusammenfügen}}" src="../images/0966e9a42633506756539308b37a0cfc.png" /><br /></dd></dl></dd></dl></dd></dl>
+<p>Wir bilden zuerst den Rekursionsbaum dieses Problems, wobei für jeden Knoten die Größe des Teilproblems angegeben ist, das dieser Knoten lösen muss:
+</p>
+<pre>                                                n    
+                                              /    \
+                                             /      \
+                                            /        \
+                                           /          \
+                                          /            \
+                                      (n/3)            (2n/3)
+                                    /       \          /     \
+                                   /         \        /       \
+                                  /           \      /         \
+                               (n/9)       (2n/9)  (2n/9)      (4n/9)
+</pre>
+<p>Jeder Knoten ruft rekursiv seine Kindknoten auf und fügt dann deren Teilprobleme zusammen. Wir berechnen den Aufwand, den allein das Zusammenfügen auf jeder Ebene des Baumes verursacht. Auf der obersten Ebene (Ebene 1) gibt es nur ein Teilproblem, und der Aufwand ist c*n. Auf Ebene 2 haben wir zwei Teilprobleme mit Aufwand
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="c\,\frac{n}{3}" src="../images/e50bf003bcbe6edb89f778c56ff2eac5.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="c\,\frac{2\,n}{3}" src="../images/e03469d16414a4fe854f9ebcc038e4fc.png" /></dd></dl></dd></dl></dd></dl>
+<p>Der Gesamtaufwand für das Zusammenfügen auf Ebene 2 ist die Summe dieser Ausdrücke, wir erhalten also wieder c*n. Für Ebene 3 gilt wiederum
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="c\left(\frac{n}{9}+\frac{2\,n}{9}+\frac{2\,n}{9}+\frac{4\,n}{9}\right)=c\,n" src="../images/c5e769b4ad233b7daf3003c252ec32e3.png" /></dd></dl></dd></dl></dd></dl>
+<p>Offensichtlich gilt also für alle Ebenen, dass das Zusammenfügen der Teilprobleme insgesamt c*n Schritte erfordert. Zur Berechnung des Gesamtaufwands müssen wir nun noch die Anzahl der Ebenen, also die Tiefe d des Baumes, schätzen. Die Rekursion muss spätestens dann enden, wenn ein Teilproblem der Größe 1 erreicht wird, weil dies nicht weiter zerlegt werden kann. Die Rekursion endet also, wenn
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\left(\frac{2}{3}\right)^d n=1" src="../images/77ea6f9f3c6068fea860e1e72bece8ce.png" />.</dd></dl></dd></dl></dd></dl>
+<p>Auflösen dieser Formel nach d ergibt
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="d=\log_\frac{3}{2}(n)" src="../images/ceb5c35bfb3975d8c5507df14a09f0e4.png" /></dd></dl></dd></dl></dd></dl>
+<p>Wir leiten daraus die <b>Vermutung</b> ab, dass für die Komplexität unseres Algorithmus gilt
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n) \in O\left(\log_\frac{3}{2}(n)\cdot c\cdot n\right)" src="../images/a64df4181916bbc8d67d394c98544a13.png" /></dd></dl></dd></dl></dd></dl>
+<p>Nach den Regeln der O-Notation vereinfacht sich dies aber zu
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n) \in O\left(n\,\log n\right)" src="../images/0ff5b3c6ac46190773123af190e623ea.png" /></dd></dl></dd></dl></dd></dl>
+<p>Diese Vermutung muss aber noch formal bewiesen werden (der Rekursionsbaum reicht als Beweis nicht aus). Der Beweis erfolgt durch die <b>Substitutionsmethode</b>. Das bedeutet, dass wir unsere Vermutung auf der rechten Seite der Rekursionsformel einsetzen und beweisen, dass eine wahre Aussage herauskommt. Für hinreichend große n und hinreichend großes d kann die Vermutung geschrieben werden als
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n) \le d\,n\,\mbox{ld}(n) " src="df30b8a5b4a71d5a08c80a5fa6b1aae0.html" /></dd></dl></dd></dl></dd></dl>
+<p>(wir haben hier willkürlich Logarithmen zu Basis 2 eingesetzt -- die Basis in der O-Notation ist bekanntlich beliebig). Einsetzen in die Rekursionsformel liefert
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n) \le T\left(\frac{n}{3}\right)+ T\left(\frac{2n}{3}\right)+ c\,n \le d\,\frac{n}{3}\,\mbox{ld}\left(\frac{n}{3}\right)+ d\,\frac{2n}{3}\,\mbox{ld}\left(\frac{2n}{3}\right)+ c\,n" src="4b50b3ac4cbb3661d54b2e73619746f2.html" /></dd></dl></dd></dl></dd></dl>
+<p>Durch Ausmultiplizieren der Klammern und Trennen der Logarithmen von Quotionten erhalten wir
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt=" T(n) \le d\frac{1}{3}\,n\,\mbox{ld}(n)-d\,\frac{1}{3}\,n\,\mbox{ld}(3)+d\,\frac{2}{3}\,n\,\mbox{ld}(n)+d\,\frac{2}{3}\,n\,\mbox{ld}(2)-d\,\frac{2}{3}\,n\,\mbox{ld}(3)+c\,n" src="../images/4f15f97610eabb7c5e9d2c7715b16d2d.png" /></dd></dl></dd></dl></dd></dl>
+<p>Unter Beachtung von ld(2)=1 können wir die Terme wie folgt zusammenfassen
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt=" T(n) \le d\,n\,\mbox{ld}(n)-d\,n\left(\mbox{ld}(3)-\frac{2}{3}\right)+c\,n" src="../images/f79c616e23da25d1b2adff32a5188d1a.png" /></dd></dl></dd></dl></dd></dl>
+<p>Falls unsere Vermutung richtig ist, muss die rechte Seite kleiner oder gleich <img class="mwe-math-fallback-image-inline tex" alt="d\,n\,\mbox{ld}(n) " src="c7cd1ff7d0d097a691c35dfe851ccf4d.html" /> sein. Um dies zeigen zu können, setzen wir
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt=" d \ge \frac{c}{\mbox{ld}(3)-\frac{2}{3}}\, \Leftrightarrow\, d\left(\mbox{ld}(3)-\frac{2}{3}\right) \ge c" src="../images/8a3ac5fe98a9cc3ec0210473daf7749a.png" /></dd></dl></dd></dl></dd></dl>
+<p>(nach den Regeln der O-Notation kann d beliebig gewählt werden, solange es hinreichend groß ist).
+Wenn wir die Konstante c mit Hilfe dieses Ausdrucks ersetzen, erhalten wir
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt=" T(n) \le d\,n\,\mbox{ld}(n)-d\,n\left(\mbox{ld}(3)-\frac{2}{3}\right)+c\,n \le &#10;d\,n\,\mbox{ld}(n)-d\,n\left(\mbox{ld}(3)-\frac{2}{3}\right)+d\left(\mbox{ld}(3)-\frac{2}{3}\right)n" src="../images/a168e6aa171eb90f2da83f7ff8614c20.png" /></dd></dl></dd></dl></dd></dl>
+<p>Die beiden letzten Terme heben sich aber gerade weg, und es bleibt übrig:
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt=" T(n) \le d\,n\,\mbox{ld}(n)" src="df30b8a5b4a71d5a08c80a5fa6b1aae0.html" /></dd></dl></dd></dl></dd></dl>
+<p>und somit
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n) \in O\left(n\,\log n\right)" src="../images/0ff5b3c6ac46190773123af190e623ea.png" /></dd></dl></dd></dl></dd></dl>
+<p>w.z.b.w.
+</p><p>Allgemein gilt, dass eine <u>ungleiche Aufteilung in Teilprobleme die Komplexität eines rekursiven Algorithmus nicht verschlechtert, falls das Teilungsverhältnis konstant bleibt</u> und außerdem der nichtrekursive Aufwand f(n) auf jeder Ebene in O(n) ist. Das trifft aber nicht zu, wenn das Problem immer in ein Teilproblem <em>konstanter</em> Größe und den Rest geteilt wird. Dann gilt mit einer Konstanten p
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="T(n) = T(p) + T(n-p) + c\cdot n" src="../images/79ee20d82c619d9e9f5e47c7f3d959ab.png" /></dd></dl></dd></dl></dd></dl>
+<p>und das Teilungsverhältnis wird umso schlechter, je größer n wird. Dies ist gerade der ungünstige Fall bei Quicksort, und wir haben gesehen, dass sich die Komplexität hier auf O(n<sup>2</sup>) verschlechtert.
+</p><p><a href="generizit%c3%a4t.html" title="Generizität">Nächstes Thema</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825110958
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.036 seconds
+Real time usage: 0.195 seconds
+Preprocessor visited node count: 339/1000000
+Preprocessor generated node count: 884/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:69-0!canonical!math=0 and timestamp 20260825110958 and revision id 5098
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index7f0e.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Iteration_versus_Rekursion&amp;oldid=5098</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="iteration_versus_rekursion.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="talk_iteration_versus_rekursion.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index5dec.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="indexdf31.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="indexfd7d.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="iteration_versus_rekursion-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="iteration_versus_rekursion-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="index4339.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="index7f0e.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index3802.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 13 June 2012, at 16:49.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.036","walltime":"0.195","ppvisitednodes":{"value":339,"limit":1000000},"ppgeneratednodes":{"value":884,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825110958","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":450});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Iteration_versus_Rekursion by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:46:41 GMT -->
+</html>

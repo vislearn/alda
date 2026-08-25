@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Assoziative_Arrays by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:44:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Assoziative Arrays - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Assoziative_Arrays","wgTitle":"Assoziative Arrays","wgCurRevisionId":5714,"wgRevisionId":5714,"wgArticleId":194,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Assoziative_Arrays","wgRelevantArticleId":194,"wgRequestId":"488d6b5ff7b88677c07a8614","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Assoziative_Arrays rootpage-Assoziative_Arrays skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Assoziative Arrays</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Datenstruktur-Dreieck_f.C3.BCr_assoziative_Arrays"><span class="tocnumber">1</span> <span class="toctext">Datenstruktur-Dreieck für assoziative Arrays</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Definition_des_abstrakten_Datentyps"><span class="tocnumber">2</span> <span class="toctext">Definition des abstrakten Datentyps</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Das_JSON-Datenformat"><span class="tocnumber">3</span> <span class="toctext">Das JSON-Datenformat</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Implementation_von_assoziativen_Array-Klassen"><span class="tocnumber">4</span> <span class="toctext">Implementation von assoziativen Array-Klassen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Realisierung_durch_sequentielle_Suche"><span class="tocnumber">4.1</span> <span class="toctext">Realisierung durch sequentielle Suche</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Realisierung_als_Suchbaum"><span class="tocnumber">4.2</span> <span class="toctext">Realisierung als Suchbaum</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Datenstruktur-Dreieck_f.C3.BCr_assoziative_Arrays">Datenstruktur-Dreieck für assoziative Arrays</span></h2>
+<p>Assoziative Arrays sind eine der wichtigsten Anwendungen für Suchalgorithmen und Suchbäume. Bevor wir dies im Detail erklären, wollen wir jedoch noch einmal einen Blick auf das Datenstruktur-Dreieck aus der ersten Vorlesung werfen, das am Beispiel der assoziativen Arrays sehr schön illustriert werden kann. Wir zeigen es hier noch einmal:
+</p><p><a href="file_dt_dreieck.html" class="image"><img alt="Dt dreieck.png" src="../images/thumb7f52.png" width="300" height="259" srcset="/thumb.php?f=Dt_dreieck.png&amp;width=450 1.5x, /thumb.php?f=Dt_dreieck.png&amp;width=600 2x" /></a>
+</p><p>Wir erinnern daran, dass man zwei Ecken des Dreicks wählen muss, um eine Datenstruktur zu definieren. Wir werden im Folgenden zeigen, wie Python durch Festlegen der erlaubten Operationen und deren Bedeutung den abstrakten Datentyp "Assoziatives Array" definiert, wie durch Festlegen eines Speicherlayouts und der Bedeutung der gespeicherten Entitäten das Standard-Datenformat "JSON" definiert ist, und wie durch effiziente Implementation der festgelegten Operationen mit jeweils passendem Speicherlayout die Datenstruktur auf unterschiedliche Arten realisiert werden kann.
+</p>
+<h2><span class="mw-headline" id="Definition_des_abstrakten_Datentyps">Definition des abstrakten Datentyps</span></h2>
+<p>Assoziative Arrays können genau wie gewöhnliche Arrays benutzt werden, sie unterstützen also den lesenden und schreibenden Zugriff über den Indexoperator <tt>a[...]</tt>. Im Unterschied zum gewöhnlichen Array, wo die Indizes ganze Zahlen im Bereich <img class="mwe-math-fallback-image-inline tex" alt=" i \in 0 \ldots N-1" src="../images/c834c78fc36f10fa6c719f2559509dd0.png" /> sein muss, kann der Typ der Indizes jetzt <i>beliebig</i> sein. Wir verwenden dafür den Begriff "Schlüssel" (engl.: key):
+</p>
+<pre>   a[key] = value   # Speichern des Wertes 'value' unter dem Schlüssel 'key'
+   value  = a[key]  # Auslesen des unter dem Schlüssel 'key' gespeicherten Wertes
+</pre>
+<p>Eine typische Anwendung ist ein Wörterbuch
+</p>
+<pre>   x = toEnglish['Baum']   # ergibt 'tree'
+</pre>
+<p>In diesem Fall ist der Typ des Schlüssels <tt>string</tt>. Dies ist in der Praxis der häufigste Fall, weshalb assoziative Arrays oft als <i>Dictionary</i> bezeichnet werden (so auch in Python, hier heißt der Typ <tt>dict</tt>). Im allgemeinen kann aber jeder Typ als Schlüssel benutzt werden, der eine der folgenden Anforderungen erfüllt:
+</p>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr align="center">
+<th> unterstützte Vergleichsoperationen für Schlüssel
+</th>
+<th> mögliche Implementation des assoziativen Arrays
+</th></tr>
+<tr>
+<td> Identitätstest: <br /><tt>key1 == key2</tt>
+</td>
+<td> sequentielle Suche
+</td></tr>
+<tr>
+<td> Ordnungsrelation: <br /><tt>key1 &lt; key2</tt> oder<br /><tt>cmp(key1, key2)</tt>
+</td>
+<td> Suchbaum (auch binäre Suche, falls keine neuen Schlüssel eingefügt und keine gelöscht werden)
+</td></tr>
+<tr>
+<td> Identitätstest und Hashfunktion:<br /><tt>key1 == key2</tt> und <br /><tt>hash(key1) == hash(key2)</tt>
+</td>
+<td> Hashtabelle
+</td></tr></table>
+<p>Wenn über die Schlüssel mehr bekannt ist (eine Ordnungsrelation oder eine Hashfunktion statt einer bloßen Indentitätsprüfung), kann man entsprechend bessere Datenstrukturen (Suchbäume oder Hashtabellen statt sequentieller Suche) verwenden, deren Zugriffsfunktionen wesentlich effizienter sind (sequentielle Suche ist ja nur in O(N)). 
+</p><p>Zu den beiden obigen Zugriffsfunktionen treten in Python noch drei weitere Funktionen hinzu: eine um zu testen, ob ein Schlüssel vorhanden ist, eine um einen Schlüssel und die darunter gespeicherten Daten zu löschen, sowie eine, die die Größe des Arrays (Anzahl der gespeicherten Schlüssel/Wert-Paare) zurückgibt:
+</p>
+<pre>   if a.has_key(key): # Testen, ob Schlüssel 'key' existiert
+       del a[key]     # Schlüssel 'key' und zugehörige Daten aus dem Array entfernen
+   print len(a)       # Größe des Arrays ausgeben
+</pre>
+<p>Die Syntax der aufgeführten Funktionen gilt für die <i>Benutzung</i> eines assoziativen Arrays. Will man einen solchen Datentyp implementieren, muss man die entsprechende Funktionalität als Methoden der jeweiligen Klasse zur Verfügung stellen. Der Python-Interpreter transformiert den Index-/Schlüsselzugriff <tt>a[key]</tt> sowie die <tt>len</tt>- und <tt>del</tt>-Operatoren automatisch in Aufrufe der jeweiligen Methode, wie die folgende Tabelle verdeutlicht. Zur vollständigen Definition der Bedeutung der einzelnen Operationen (wie vom Datenstruktur-Dreieck gefordert) gehört außerdem die Spezifikation des Verhaltens im Fehlerfall (wenn z.B. ein angeforderter Schlüssel nicht existiert).
+</p>
+<table border="1" cellspacing="0" cellpadding="7">
+
+<tr align="center">
+<th> Operation
+</th>
+<th> von Python intern generierter Methodenaufruf
+</th>
+<th> zu implementierende Methodensignatur
+</th>
+<th> Bedeutung
+</th></tr>
+<tr>
+<td> <tt>a[key] = value</tt>
+</td>
+<td> <tt>a.__setitem__(key, value)</tt>
+</td>
+<td> <tt>def __setitem__(self, key, value):</tt>
+</td>
+<td> * wenn <tt>key</tt> bereits existiert: ersetze die zugehörigen Daten durch <tt>value</tt><br />* wenn <tt>key</tt> noch nicht existiert: lege einen neuen Schlüssel an und speichere <tt>value</tt> als zugehörigeaten
+</td></tr>
+<tr>
+<td> <tt>value = a[key]</tt>
+</td>
+<td> <tt>a.__getitem__(key)</tt>
+</td>
+<td> <tt>def __getitem__(self, key):</tt>
+</td>
+<td> * wenn <tt>key</tt> existiert: gebe die zugehörigen Daten zurück<br />* wenn <tt>key</tt> nicht existiert: löse <tt>KeyError</tt>-Exception aus
+</td></tr>
+<tr>
+<td> <tt>a.has_key(key)</tt>
+</td>
+<td> <tt>a.has_key(key)</tt>
+</td>
+<td> <tt>def has_key(self, key):</tt>
+</td>
+<td> gibt <tt>True</tt> zurück wenn <tt>key</tt> existiert, sonst <tt>False</tt>
+</td></tr>
+<tr>
+<td> <tt>del a[key]</tt>
+</td>
+<td> <tt>a.__delitem__(key)</tt>
+</td>
+<td> <tt>def __delitem__(self, key):</tt>
+</td>
+<td> * wenn <tt>key</tt> existiert: entferne diesen Schlüssel und die zugehörigen Daten<br />* wenn <tt>key</tt> nicht existiert: löse <tt>KeyError</tt>-Exception aus
+</td></tr>
+<tr>
+<td> <tt>len(a)</tt>
+</td>
+<td> <tt>a.__len__()</tt>
+</td>
+<td> <tt>def __len__(self):</tt>
+</td>
+<td> gibt die Größe des Arrays zurück
+</td></tr></table>
+<p>Aufgrund der Definition ist klar, das jeder Schlüssel nur einmal im Array vorkommen kann. Die Definition des Abstrakten Datentyps "assoziatives Array" erlaubt es uns, derartige Arrays auf verschiedenste Art zu implementieren, ohne dass sich an der Benutzung (also daran, wie man die Arrayfunktionalität später aufruft) irgend etwas ändert.
+</p>
+<h2><span class="mw-headline" id="Das_JSON-Datenformat">Das JSON-Datenformat</span></h2>
+<p>Die zweite Kante des Datenstruktur-Dreiecks ist das "Datenformat". Hier legt man Speicherlayout und Bedeutung fest. Ein Datenformat dient vor allem zum Speichern von Daten auf Festplatte und zum Austausch von Daten zwischen verschiedenen Programmen bzw. Internetseiten. Im Fall von assoziativen Arrays setzt sich dafür das <a rel="nofollow" class="external text" href="http://www.json.org/">JSON-Format</a> immer mehr durch, weil es einfach und trotzdem mächtig ist. Es eignet sich sehr gut zum Speichern von assoziativen Arrays (also von Schlüssel/Wert Paaren) und unterstützt außerdem gewöhnliche Arrays und hierarchische Strukturen, weil die Werte wiederum (gewöhnliche oder assoziative) Arrays sein dürfen.
+</p><p>Das Speicherlayout einer JSON-Dateien ist definiert als eine Bytefolge, die als Zeichenfolge gemäß <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/UTF-8">UTF-8-Standard</a> interpretiert wird. Dies hat zwei Vorteile: einerseits ist das Format dadurch mit allen gängigen Systemen kompatibel und überall gleich, andererseits kann jedes JSON-File einfach in einem Texteditor geöffnet und editiert werden und ist für Menschen und Maschinen gleichermaßen leicht lesbar.
+</p><p>Die Zuordung einer Bedeutung zu einem gegebenen Speicherinhalt erfolgt in JSON mit Hilfe einer Grammatik. Ein JSON-File enthält entweder ein gewöhnliches Array oder ein assoziatives Array (Dictionary):
+</p>
+<pre> JSON_file&#160;:= array
+            | dictionary
+</pre>
+<p>Ein gewöhnliches Array wird als Folge von einem oder mehreren Elementen geschrieben, die durch Komma getrennt und in eckigen Klammern eingeschlossen sind (Zeichen, die in der Grammatik in einfache Anführungszeichen eingeschlossen sind, müssen explizit im JSON-File stehen). Leere Arrays sind ebenfalls erlaubt:
+</p>
+<pre> array   &#160;:= '[' elements ']'
+           | '[' ']'
+ elements&#160;:= value
+           | value ',' elements
+</pre>
+<p>Ein Dictionary wird in ähnlicher Weise als Folge von Schlüssel/Wert-Paaren geschrieben, die durch Komma getrennt und in geschweiften Klammern eingeschlossen sind. Leere Dictionaries sind erlaubt. Die Schlüssel müssen immer Strings sein, gefolgt von einem Doppelpunkt:
+</p>
+<pre> dictionary&#160;:= '{' pairs '}'
+             | '{' '}'
+ pairs     &#160;:= string ':' value
+             | string ':' value ',' pairs
+</pre>
+<p>Strings sind Zeichenfolgen (inklusive einiger Sonderzeichen wie "\n" für einen Zeilenumbruch), die in doppelte Anführungszeichen eingeschlossen sind, oder der Leerstring:
+</p>
+<pre> string&#160;:= '"' '"'  
+         | '"'characters'"'
+</pre>
+<p>Werte können Zahlen (ganze oder reelle Zahlen, definiert wie in Python), Boolesche Werte ('true' oder 'false'), Strings oder 'null' sein. Außerdem können Arrays und Dictionaries wiederum als Werte verwendet werden, wodurch sich beliebig tief geschachtelte, hierarchische Datenstrukturen ergeben:
+</p>
+<pre> value&#160;:= number | string | boolean | null | array | dictionary
+</pre>
+<p>Hier ist ein einfaches Beispiel für ein JSON-File, das Ausschnitte aus einer Studenten-Datenbank enthält:
+</p>
+<pre>  {
+      "Müller, Friedrich"&#160;: {
+           "Mathematik"&#160;: 2.0,
+           "ALDA"&#160;: 1.3
+      },
+      "Weise, Anna"&#160;: {
+           "Mathematik"&#160;: 1.0,
+           "Philosophie": 1.3
+      }
+  }
+</pre>
+<p>Das JSON-Format ist syntaktisch der Sprache Python sehr nahe, und kann mit einigen verherigen Definitionen direkt durch die <tt>eval()</tt>-Funktion in ein Python-Dictionary oder -Array umgewandelt werden.
+</p>
+<pre>  # don't do this - it is highly <b>unsafe</b> and dangerous
+  true, false, null = True, False, None                  # fehlende Konstanten defininieren
+  res = eval(file("test.json").read().decode("utf_8"))   # File einlesen und als Python-Code ausführen
+</pre>
+<p>Dies sollte man jedoch <b>auf keinen Fall</b> tun, weil ein Hacker dadurch beliebigen Code ausführen könnte, den er vorher in das File 'test.json' eingeschmuggelt hat. Da die Funktion <tt>eval()</tt> nur prüft, ob der Ausdruck gültiges Python ist, aber nicht, ob das File gültiges JSON (also nur Daten, aber keinen ausführbaren Code) enthält, kann man dies nicht erkennen oder verhindern. Deshalb sollte man zum Einlesen von JSON stets das Python-Modul <a rel="nofollow" class="external text" href="http://docs.python.org/library/json.html">json</a> verwenden, das ein manipuliertes File einfach zurückweisen würde:
+</p>
+<pre>  # sicheres Einlesen und Konvertieren
+  import json
+  
+  with open('test.json', encoding='utf-8') as f:    # File im UTF-8 Format öffnen 
+      res = json.load(f)                            # und als json einlesen
+</pre>
+<h2><span class="mw-headline" id="Implementation_von_assoziativen_Array-Klassen">Implementation von assoziativen Array-Klassen</span></h2>
+<p>Die dritte Kante des Datenstruktur-Dreiecks bezieht sich schließlich auf die Realisierung der Datenstruktur als Klasse, indem man auf geeignet organisiertem Speicher die geforderten Operationen implementiert. In Python ist mit der Klasse <tt>dict</tt> eine sehr leistungsfähige Implementation eines assoziativen Arrays integraler Bestandteil der Sprache. Diese Implementation beruht auf dem Konzept der Hashtabellen, das wir in der Vorlesung <a href="hashing_und_hashtabellen.html" title="Hashing und Hashtabellen">später behandeln</a>. Man benötigt dafür eine Funktion <tt>hash(key)</tt>, die in Python für alle Standarddatentypen bereits implementiert ist. In diesem Abschnitt wollen wir zwei alternative Implementationen auf der Basis von sequentieller Suche und auf der Basis von Suchbäumen betrachten.
+</p>
+<h3><span class="mw-headline" id="Realisierung_durch_sequentielle_Suche">Realisierung durch sequentielle Suche</span></h3>
+<p>Wenn für die Schlüssel nur ein Identitätsvergleich 
+</p>
+<pre>  key1 == key2
+</pre>
+<p>definiert ist, hat man keine Möglichkeit, die Schlüsselsuche durch eine spezielle Datenstruktur zu beschleunigen. Man speichert die Schlüssel/Wert-Paare dann einfach in einem gewöhnlichen Array, das man sequentiell durchsucht. Dazu implementieren wir zunächst eine Hilfsklasse, die Schlüssel/Wert-Paare aufnimmt:
+</p>
+<pre>  class KeyValuePair:
+      def __init__(self, key, value):
+          self.key = key
+          self.value = value
+</pre>
+<p>Die Arrayklasse speichert die Paare in einem Array <tt>self.data</tt>, dessen aktuelle Länge der Größe des assoziativen Arrays entspricht. Damit ist das Speicherlayout der Klasse festgelegt:
+</p>
+<pre>  class SequentialSearchArray:
+      def __init__(self):
+          self.data = []
+      def __len__(self):
+          return len(self.data)
+</pre>
+<p>Um auf die Daten zugreifen zu können, müssen wir nach dem richtigen Schlüssel suchen. Dazu implementieren wir die Hilfsfunktion <tt>findKey</tt>, die den Index des Schlüssels zurückgibt, oder <tt>None</tt>, wenn der Schlüssel nicht existiert:
+</p>
+<pre>      def findKey(self, key):
+          for k in xrange(len(self.data)):
+              if key == self.data[k].key:
+                  return k
+          return None
+</pre>
+<p>Beim Einfügen eines Elements müssen wir zuerst prüfen, ob es den Schlüssel schon gibt, und dann entweder die daten überschreiben oder ein neues Element anfügen:
+</p>
+<pre>      def __setitem__(self, key, value):
+          k = self.findKey(key)
+          if k is None:
+              self.data.append(KeyValuePair(key, value))  # neues Paar einfügen
+          else:
+              self.data[k].value = value                  # Daten ersetzen
+</pre>
+<p>Die Suche hingegen löst eine Exception aus, wenn der Schlüssel nicht gefunden wurde:
+</p>
+<pre>      def __getitem__(self, key):
+          k = self.findKey(key)
+          if k is None:
+              raise KeyError(key)        # Schlüssel nicht gefunden =&gt; Fehler
+          else:
+              return self.data[k].value  # Schlüssel gefunden =&gt; Daten zurückgeben
+</pre>
+<p>Die übrigen geforderten Funktionen sind ebenso einfach zu implementieren:
+</p>
+<pre>      def has_key(self, key):
+          return (self.findKey(key) is not None)
+      
+      def __delitem__(self, key):
+          k = self.findKey(key)
+          if k is None:
+              raise KeyError(key)     # Schlüssel nicht gefunden =&gt; Fehler
+          else:
+              del self.data[k]        # Schlüssel gefunden =&gt; löschen
+</pre>
+<p>Wegen der sequentiellen Suche hat der Zugriff auf ein Element in dieser Datenstruktur die Komplexität O(len(a)).
+</p>
+<h3><span class="mw-headline" id="Realisierung_als_Suchbaum">Realisierung als Suchbaum</span></h3>
+<p>Wenn für den Schlüsseltyp des assoziativen Arrays eine Ordnung definiert ist (wenn also <tt>key1 &lt; key2</tt> oder <tt>cmp(key1, key2)</tt> unterstützt werden), kann man das Indexierungsproblem auf das Suchproblem zurückführen. Dann kann das assoziative Array effizient als selbst-balancierender Suchbaum imlementiert werden, so dass die Zugriffsfunktionen nur noch eine Komplexität in O(log(len(a))) haben. Die Datenstruktur des Suchbaums muss dafür so erweitert werden, dass zu jedem Schlüssel auch die zugehörigen Daten gespeichert werden. Man erweitert die Node-Klasse deshalb um ein Feld "value":
+</p>
+<pre>   class Node:
+       def __init__(self, key, value):
+           self.key = key
+           self.data = value
+           self.left = self.right = None
+</pre>
+<p>Dann kann man eine Klasse <tt>TreeSearchArray</tt> realisieren, deren Konstruktor einen leeren Suchbaum initialisiert:
+</p>
+<pre>   class TreeSearchArray:
+       def __init__(self):
+           self.root = None
+           self.size = 0
+       def __len__(self):
+           return self.size
+</pre>
+<p>Die Funktion <tt>__setitem__</tt> schaut nach, ob ein Eintrag mit dem betreffenden Schlüssel bereits existiert. Wenn ja, werden seine Daten mit den neuen Daten überschrieben, andernfalls wird ein neuer Eintrag angelegt. Intern werden dazu die bereits bekannten Funktionen <tt>treeSearch</tt> und <tt>treeInsert</tt> verwendet (siehe Abschnitt <a href="suchen.html#Suchb.C3.A4ume" title="Suchen">Suchbäume</a>):
+</p>
+<pre>       def __setitem__(self, key, value):
+            node = treeSearch(self.root, key)
+            if node is None:
+                self.root = treeInsert(self.root, key)
+                self.size += 1
+                node = treeSearch(self.root, key) 
+            node.value = value
+</pre>
+<p>(Eine geschicktere Implementation würde natürlich den zweiten Aufruf von <tt>treeSearch</tt> eliminieren und das Setzen der Daten gleich in <tt>treeInsert</tt> erledigen. Dies ändert aber nichts an der Komplexität der Funktion.) Die Funktion <tt>__getitem__</tt> sucht ebenfalls einen Eintrag mit dem gegebenen Schlüssel. Wenn er gefunden wird, gibt sie die zugehörigen Daten zurück, andernfalls eine Fehlermeldung:
+</p>
+<pre>       def __getitem__(self, key):
+           node = treeSearch(self.root, key)
+           if node is None:
+               raise KeyError(key)
+           else:
+               return node.value
+</pre>
+<p>Die Indexoperationen haben bei der Realisierung mit Baumsuche eine Komplexität in O(log n).
+</p><p>Ein wichtiges Beispiel für ein assoziatives Array, das auf diese Weise realisiert wurde, ist die C++ Standardklasse <tt><a rel="nofollow" class="external text" href="http://www.sgi.com/tech/stl/Map.html">std::map</a></tt>.
+</p><p><a href="hashing_und_hashtabellen.html" title="Hashing und Hashtabellen">Nächstes Thema</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825110957
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.009 seconds
+Real time usage: 0.022 seconds
+Preprocessor visited node count: 32/1000000
+Preprocessor generated node count: 48/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:194-0!canonical!math=0 and timestamp 20260825110957 and revision id 5714
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="indexc45f.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Assoziative_Arrays&amp;oldid=5714</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="assoziative_arrays.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="talk_assoziative_arrays.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index3c0a.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="index2b53.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="indexadd5.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="assoziative_arrays-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="assoziative_arrays-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="index1cb4.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="indexc45f.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index5178.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 9 July 2020, at 21:09.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.009","walltime":"0.022","ppvisitednodes":{"value":32,"limit":1000000},"ppgeneratednodes":{"value":48,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825110958","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":158});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Assoziative_Arrays by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:45:03 GMT -->
+</html>

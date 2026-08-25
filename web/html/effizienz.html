@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Effizienz by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:40:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Effizienz - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Effizienz","wgTitle":"Effizienz","wgCurRevisionId":5700,"wgRevisionId":5700,"wgArticleId":29,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Effizienz","wgRelevantArticleId":29,"wgRequestId":"4a12b15a7649ff16da68b833","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Effizienz rootpage-Effizienz skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Effizienz</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Bei der Diskussion von Effizienz müssen wir zwischen der Laufzeit eines Algorithmus auf einem bestimmten System und seiner prinzipiellen Leistungsfähigkeit (Algorithmenkomplexität) unterscheiden. Der Benutzer ist natürlich vor allem an der Laufzeit interessiert, denn diese bestimmt letztendlich seine Arbeitsproduktivität. Ein Softwaredesigner hingegen muss eine Implementation wählen, die auf verschiedenen Systemen und in verschiedenen Anwendungen schnell ist. Für ihn sind daher auch Aussagen zur Algorithmenkomplexität sehr wichtig, um den am besten geeigneten Algorithmus auszuwählen.
+</p>
+<div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Laufzeit"><span class="tocnumber">1</span> <span class="toctext">Laufzeit</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Laufzeitvergleich"><span class="tocnumber">1.1</span> <span class="toctext">Laufzeitvergleich</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Optimierung_der_Laufzeit"><span class="tocnumber">1.2</span> <span class="toctext">Optimierung der Laufzeit</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Algorithmen-Komplexit.C3.A4t"><span class="tocnumber">2</span> <span class="toctext">Algorithmen-Komplexität</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Beispiel:_Selection_Sort"><span class="tocnumber">2.1</span> <span class="toctext">Beispiel: Selection Sort</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Fallunterscheidung:_Worst_und_Average_Case"><span class="tocnumber">2.2</span> <span class="toctext">Fallunterscheidung: Worst und Average Case</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Beispiele_aus_den_.C3.9Cbungen_.28Gemessene_Laufzeiten_f.C3.BCr_Mergesort.2FSelectionsort.29"><span class="tocnumber">2.3</span> <span class="toctext">Beispiele aus den Übungen (Gemessene Laufzeiten für Mergesort/Selectionsort)</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Asymptotische_Komplexit.C3.A4t_am_Beispiel_Polynom"><span class="tocnumber">2.4</span> <span class="toctext">Asymptotische Komplexität am Beispiel Polynom</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Landau-Symbole"><span class="tocnumber">3</span> <span class="toctext">Landau-Symbole</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#O-Notation"><span class="tocnumber">3.1</span> <span class="toctext">O-Notation</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Ein_einfaches_Beispiel"><span class="tocnumber">3.1.1</span> <span class="toctext">Ein einfaches Beispiel</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Komplexit.C3.A4t_bei_kleinen_Eingaben"><span class="tocnumber">3.1.2</span> <span class="toctext">Komplexität bei kleinen Eingaben</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Eigenschaften_der_O-Notation_.28Rechenregeln.29"><span class="tocnumber">3.1.3</span> <span class="toctext">Eigenschaften der O-Notation (Rechenregeln)</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#O-Kalk.C3.BCl"><span class="tocnumber">3.1.4</span> <span class="toctext">O-Kalkül</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#O-Kalk.C3.BCl_auf_das_Beispiel_des_Selectionsort_angewandt"><span class="tocnumber">3.1.5</span> <span class="toctext">O-Kalkül auf das Beispiel des Selectionsort angewandt</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Zusammenhang_zwischen_Komplexit.C3.A4t_und_Laufzeit"><span class="tocnumber">3.1.6</span> <span class="toctext">Zusammenhang zwischen Komplexität und Laufzeit</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Exponentielle_Komplexit.C3.A4t"><span class="tocnumber">3.1.7</span> <span class="toctext">Exponentielle Komplexität</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#-_Notation"><span class="tocnumber">3.2</span> <span class="toctext">- Notation</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#-_Notation_2"><span class="tocnumber">3.3</span> <span class="toctext">- Notation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Komplexit.C3.A4tsvergleich_zweier_Algorithmen"><span class="tocnumber">4</span> <span class="toctext">Komplexitätsvergleich zweier Algorithmen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#Beweis_.C3.BCber_die_Definition_der_asymptotischen_Komplexit.C3.A4t"><span class="tocnumber">4.1</span> <span class="toctext">Beweis über die Definition der asymptotischen Komplexität</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Beweis_durch_Dividieren"><span class="tocnumber">4.2</span> <span class="toctext">Beweis durch Dividieren</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Beispiel_f.C3.BCr_den_Komplexit.C3.A4tsvergleich:_Gleitender_Mittelwert_.28Running_Average.29"><span class="tocnumber">4.3</span> <span class="toctext">Beispiel für den Komplexitätsvergleich: Gleitender Mittelwert (Running Average)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-24"><a href="#Berechnung_der_Komplexit.C3.A4t_von_Version_1"><span class="tocnumber">4.3.1</span> <span class="toctext">Berechnung der Komplexität von Version 1</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#Berechnung_der_Komplexit.C3.A4t_von_Version_2"><span class="tocnumber">4.3.2</span> <span class="toctext">Berechnung der Komplexität von Version 2</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#Fazit"><span class="tocnumber">4.3.3</span> <span class="toctext">Fazit</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#Beispiel_f.C3.BCr_eine_Verschlechterung_der_Komplexit.C3.A4t_durch_Verwendung_einer_nicht_optimalen_Datenstruktur"><span class="tocnumber">4.3.4</span> <span class="toctext">Beispiel für eine Verschlechterung der Komplexität durch Verwendung einer nicht optimalen Datenstruktur</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#Fazit:"><span class="tocnumber">4.3.5</span> <span class="toctext">Fazit:</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#Amortisierte_Komplexit.C3.A4t"><span class="tocnumber">5</span> <span class="toctext">Amortisierte Komplexität</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="#Beispiel:_Inkrementieren_von_Bin.C3.A4rzahlen"><span class="tocnumber">5.1</span> <span class="toctext">Beispiel: Inkrementieren von Binärzahlen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-31"><a href="#Fazit_2"><span class="tocnumber">5.1.1</span> <span class="toctext">Fazit</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-32"><a href="#Anwendung:_Dynamisches_Array"><span class="tocnumber">5.2</span> <span class="toctext">Anwendung: Dynamisches Array</span></a>
+<ul>
+<li class="toclevel-3 tocsection-33"><a href="#Ineffiziente_naive_L.C3.B6sung"><span class="tocnumber">5.2.1</span> <span class="toctext">Ineffiziente naive Lösung</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="#Effiziente_L.C3.B6sung_durch_Verdoppeln_der_Kapazit.C3.A4t"><span class="tocnumber">5.2.2</span> <span class="toctext">Effiziente Lösung durch Verdoppeln der Kapazität</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#Komplexit.C3.A4tsanalyse_des_dynamischen_Arrays_mit_der_Accounting_Methode"><span class="tocnumber">5.2.3</span> <span class="toctext">Komplexitätsanalyse des dynamischen Arrays mit der Accounting Methode</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#Beispiel_f.C3.BCr_9_Einf.C3.BCgeoperationen"><span class="tocnumber">5.2.4</span> <span class="toctext">Beispiel für 9 Einfügeoperationen</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Laufzeit">Laufzeit</span></h2>
+<p>Aus Anwendersicht ist ein Algorithmus effizient, wenn er die in der Spezifikation verlangten Laufzeitgrenzen einhält. Ein Algorithmus muss also nicht immer so schnell wie möglich sein, sondern so schnell wie nötig. Dies führt in verschiedenen Anwendungen zu ganz unterschiedliche Laufzeitanforderungen:
+</p>
+<ul><li> Berechnen des nächsten Steuerkommandos für eine Maschine: ca. 1/1000s</li>
+<li> Berechnen des nächsten Bildes für eine Videopräsentation (z.B. Dekompression von MPEG-kodierten Bildern): ca. 1/25s</li></ul>
+<dl><dd> Geringere Bildraten führen zu ruckeligen Filmen.</dd></dl>
+<ul><li> Sichtbare Antwort auf ein interaktives Kommando (z.B. Mausklick): ca. 1/2s</li></ul>
+<dl><dd> Wird diese Antwortzeit überschritten, vermuten viele Benutzer, dass der Mausklick nicht funktioniert hat, und klicken nochmals, mit eventuell fatalen Folgen. Wenn ein Algorithmus notwendigerweise länger dauert als 1/2s, sollte ein Fortschrittsbalken angezeigt werden.</dd></dl>
+<ul><li> Wettervorhersage: muss spätestens am Vorabend des vorhergesagten Tages beendet sein</li></ul>
+<h3><span class="mw-headline" id="Laufzeitvergleich">Laufzeitvergleich</span></h3>
+<p>Da die Laufzeit für den Benutzer ein so wichtiges Kriterium ist, werden häufig Laufzeitvergleiche durchgeführt. Deren Ergebnisse hängen allerdings von vielen Faktoren ab, die möglicherweise nicht kontrollierbar sind:
+</p>
+<ul><li> Geschwindigkeit und Anzahl der Prozessoren</li>
+<li> Auslastung des Systems</li>
+<li> Größe des Hauptspeichers  und Cache, Geschwindigkeit des  Datenbus</li>
+<li> Qualität des Compilers/Optimierers (ist der Compiler für die spezielle Prozessor-Architektur optimiert?)</li>
+<li> Geschick des Programmierers</li>
+<li> Daten (Beispiel Quicksort: Best case und worst case [vorsortierter Input] stark unterschiedlich)</li></ul>
+<p>All diese Faktoren sind untereinander abhängig. Laufzeitvergleiche sind daher mit Vorsicht zu interpretieren.
+Generell sollten bei Vergleichen möglichst wenige Parameter verändert werden, z.B.
+</p>
+<ul><li> gleiches Programm (gleiche Kompilierung), gleiche Daten, andere Prozessoren</li></ul>
+<p>oder
+</p>
+<ul><li> gleiche CPU, Daten, andere Programme (Vergleich von Algorithmen)</li></ul>
+<p>Zur Verbesserung der Vergleichbarkeit gibt es standardisierte <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Benchmark_(computing)">Benchmarks</a>, die bestimmte Aspekte eines Systems unter möglichst realitätsnahen Bedingungen testen. Generell gilt aber: Durch Laufzeitmessung ist schwer festzustellen, ob ein Algorithmus <i>prinzipiell</i> besser ist als ein anderer. Dafür ist die Analyse der <a href="effizienz.html#Algorithmen-Komplexit.C3.A4t" title="Effizienz">Algorithmenkomplexität</a> notwendig.
+</p>
+<h3><span class="mw-headline" id="Optimierung_der_Laufzeit">Optimierung der Laufzeit</span></h3>
+<p>Wenn sich herausstellt, dass ein bereits implementierter Algorithmus zu langsam läuft, geht man wie folgt vor:
+</p>
+<ol><li> Man verwendet einen <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Profiling_(computer_programming)">Profiler</a>, um zunächst den Flaschenhals zu bestimmen. Ein Profiler ist ein Hilfsprogramm, das während der Ausführung eines Programms misst, wieviel Zeit in jeder Funktion und Unterfunktion verbraucht wird. Dadurch kann man herausfinden, welcher Teil des Algorithmus überhaupt Probleme bereitet. Donald Knuth gibt z.B. als Erfahrungswert an, dass Programme während des größten Teils ihrer Laufzeit nur 3% des Quellcodes (natürlich mehrmals wiederholt) ausführen <a rel="nofollow" class="external autonumber" href="knuthstructuredprogramminggoto.html">[1]</a>. Es ist sehr wichtig, diese 3% experimentell zu bestimmen, weil die Erfahrung zeigt, dass man beim Erraten der kritischen Programmteile oft falsch liegt. Man spricht dann von "<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Optimization_(computer_science)#When_to_optimize">premature optimization</a>", also von voreiliger Optimierung ohne experimentelle Untersuchung der wirklichen Laufzeiten, was laut Knuth "the root of all evil" ist. Der Python-Profiler wird in <a rel="nofollow" class="external text" href="https://docs.python.org/3/library/profile.html">Kapitel 25</a> der Python-Dokumentation beschrieben.</li>
+<li> Man kann dann versuchen, die kritischen Programmteile zu optimieren.</li>
+<li> Falls der Laufzeitgewinn durch Optimierung zu gering ist, muss man einen prinzipiell schnelleren Algorithmus verwenden, falls es einen gibt.</li></ol>
+<p>Einige wichtige Techniken der Programmoptimierung sollen hier erwähnt werden. Wenn man einen optimierenden Compiler verwendet, werden einige Optimierungen automatisch ausgeführt <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Compiler_optimization">[2]</a>. In Python trifft dies jedoch nicht zu. Um den Sinn einiger Optimierungen zu verstehen, benötigt man Grundkenntnisse der Computerarchitektur.
+</p>
+<dl><dt>Elimination von redundantem Code</dt>
+<dd> Es ist offensichtlich überflüssig, dasselbe Ergebnis mehrmals zu berechnen, wenn es auch zwischengespeichert werden könnte. Diese Optimierung wird von vielen automatischen Optimierern unterstützt und kommt im wesentlichen in zwei Ausprägungen vor:
+<dl><dt> common subexpression elimination</dt>
+<dd> In mathematischen Ausdrücken wird ein Teilergebnis häufig mehrmals benötigt. Man betrachte z.B. die Lösung der quadratischen Gleichung <img class="mwe-math-fallback-image-inline tex" alt="x^2+p\,x+q = 0" src="../images/2475ae095fc51aa662f0bfa91e74f9d8.png" />:</dd></dl></dd></dl>
+<pre>       x1 = - p / 2.0 + sqrt(p*p/4.0 - q)
+       x2 = - p / 2.0 - sqrt(p*p/4.0 - q)
+</pre>
+<dl><dd><dl><dd>Die mehrmalige Berechnung von Teilausdrücken wird vermieden, wenn man stattdessen schreibt:</dd></dl></dd></dl>
+<pre>       p2 = - p / 2.0
+       r  = sqrt(p2*p2 - q)
+       x1 = p2 + r
+       x2 = p2 - r
+</pre>
+<dl><dd><dl><dt> loop invariant elimination</dt>
+<dd> Wenn ein Teilausdruck sich in einer Schleife nicht ändert, muss man ihn nicht bei jedem Schleifendurchlauf neu berechnen, sondern kann dies einmal vor Beginn der Schleife tun. Ein typisches Beispiel hierfür ist die Adressierung von Matrizen, die als 1-dimensionales Array gespeichert sind. Angenommen, wir speichern eine NxN Matrix <tt>m</tt> in einem Array <tt>a</tt> der Größe N<sup>2</sup>, so dass das Matrixelement <tt>m<sub>ij</sub></tt> durch <tt>a[i + j*N]</tt> indexiert wird. Wir betrachten die Aufgabe, eine Einheitsmatrix zu initialisieren. Ein nicht optimierter Algorithmus dafür lautet:</dd></dl></dd></dl>
+<pre>      for j in range(N):
+          for i in range(N):
+              if i == j:
+                   a[i + j*N] = 1.0
+              else:
+                   a[i + j*N] = 0.0
+</pre>
+<dl><dd><dl><dd>Der Ausdruck <tt>j*N</tt> wird hier in jedem Schleifendurchlauf erneut berechnet, obwohl sich <tt>j</tt> in der inneren Schleife gar nicht verändert. Man kann deshalb optimieren zu:</dd></dl></dd></dl>
+<pre>      for j in range(N):
+          jN = j*N
+          for i in range(N):
+              if i == j:
+                   a[i + jN] = 1.0
+              else:
+                   a[i + jN] = 0.0
+</pre>
+<dl><dt>Vereinfachung der inneren Schleife</dt>
+<dd> Generell sollte man sich bei der Optimierung auf die innere Schleife eines Algorithmus konzentrieren, weil dieser Code am häufigsten ausgeführt wird. Insbesondere sollte man die Anzahl der Befehle in der inneren Schleife so gering wie möglich halten und teure Befehle vermeiden. Früher waren vor allem Floating-Point Befehle teuer, die man oft durch die schnellere Integer-Arithmetik ersetzt hat, falls dies algorithmisch möglich war (diesen Rat findet man noch oft in der Literatur). Heute hat sich die Hardware so verbessert, dass im Allgemeinen nur noch die Floating-Point Division deutlich langsamer ist als die anderen Operatoren. Im obigen Beispiel der quadratischen Gleichung ist es daher sinnvoll, den Ausdruck </dd></dl>
+<pre>       p2 = -p / 2.0
+</pre>
+<dl><dd>durch</dd></dl>
+<pre>       p2 = -0.5 * p
+</pre>
+<dl><dd>zu ersetzen. Dadurch ersetzt man eine Division durch eine Multiplikation und spart außerdem das Negieren von <tt>p</tt>, da der Compiler direkt mit <tt>-0.5</tt> multipliziert.</dd>
+<dt>Ausnutzung der Prozessor-Pipeline</dt>
+<dd> Moderne Prozessoren führen mehrere Befehle parallel aus. Dies ist möglich, weil jeder Befehl in mehrere Teilschritte zerlegt werden kann. Eine generische Unterteilung in vier Teilschritte ist z.B.:
+<ol><li> Dekodieren des nächsten Befehls</li>
+<li> Beschaffen der Daten, die der Befehl verwendet (aus Prozessorregistern, dem Cache, oder dem Hauptspeicher)</li>
+<li> Ausführen des Befehls</li>
+<li> Schreiben der Ergebnisse</li></ol></dd>
+<dd>Man bezeichnet dies als die "<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Instruction_pipeline">instruction pipeline</a>" des Prozessors (heutige Prozessoren verwenden wesentlich feinere Unterteilungen). Prozessoren werden nun so gebaut, dass mehrere Befehle parallel, auf verschiedenen Ausführungsstufen ausgeführt werden. Wenn Befehl 1 also beim Schreiben der Ergebnisse angelangt ist, kann Befehl 2 die Hardware zum Ausführen des Befehls benutzen, während Befehl 3 seine Daten holt, und Befehl 4 soeben dekodiert wird. Unter bestimmten Bedingungen funktioniert diese Parallelverarbeitung jedoch nicht. Dies gibt Anlass zu Optimierungen:
+<dl><dt>Vermeiden unnötiger Typkonvertierungen</dt>
+<dd> Der Prozessor verarbeitet Integer- und Floating-Point-Befehle in verschiedenen Pipelines, weil die Hardwareanforderungen sehr verschieden sind. Wird jetzt ein Ergebnis von Integer nach Floating-Point umgewandelt oder umgekehrt, muss die jeweils andere Pipeline warten, bis die erste Pipeline ihre Berechnung beendet. Es kann dann besser sein, Berechnungen in Floating-Point zu Ende zu führen, auch wenn sie semantisch eigentlich Integer-Berechnungen sind.</dd>
+<dt>Reduzierung der Anzahl von Verzweigungen</dt>
+<dd> Wenn der Code verzweigt (z.B. durch eine <tt>if</tt>- oder  <tt>while</tt>-Anweisung), ist nicht klar, welcher Befehl nach der Verzweigung ausgeführt werden soll, bevor Stufe 3 der Pipeline die Verzweigungsbedingung ausgewertet hat. Bis dahin wären die ersten beiden Stufen der Pipeline unbenutzt. Moderne Prozessoren benutzen zwar ausgefeilte Heuristiken, um das Ergebnis der Bedingung vorherzusagen, und führen den hoffentlich richtigen Zweig des Codes spekulativ aus, aber dies funktioniert nicht immer. Man sollte deshalb generell die Anzahl der Verzweigungen minimieren. Als Nebeneffekt führt dies meist auch zu besser lesbarem, verständlicherem Code. Im Matrixbeispiel kann man</dd></dl></dd></dl>
+<pre>      for j in range(N):
+          jN = j*N
+          for i in range(N):
+              if i == j:
+                   a[i + jN] = 1.0
+              else:
+                   a[i + jN] = 0.0
+</pre>
+<dl><dd><dl><dd>durch</dd></dl></dd></dl>
+<pre>      for j in range(N):
+          jN = j*N
+          for i in range(N):
+              a[i + jN] = 0.0
+          a[j + jN] = 1.0
+</pre>
+<p>ersetzen. Die Diagonalelemente <tt>a[j + jN]</tt> werden jetzt zwar zweimal initialisiert (in der Schleife auf Null, dann auf Eins), aber durch Elimination der <tt>if</tt>-Abfrage wird dies wahrscheinlich mehr als ausgeglichen, zumal dadurch die innere Schleife wesentlich vereinfacht wurde.
+</p>
+<dl><dt>Ausnutzen des Prozessor-Cache</dt>
+<dd> Zugriffe auf den Hauptspeicher sind sehr langsam. Deshalb werden stets ganze Speicherseiten auf einmal in den <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Cache_(computing)">Cache</a> des Prozessors geladen. Wenn unmittelbar nacheinander benutzte Daten auch im Speicher nahe beieinander liegen (sogenannte "<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Locality_of_reference">locality of reference</a>"), ist die Wahrscheinlichkeit groß, dass die als nächstes benötigten Daten bereits im Cache sind und damit schnell gelesen werden können. Bei vielen Algorithmen kann man die Implementation so umordnen, dass die locality of reference verbessert wird, was zu einer drastischen Beschleunigung führt. Im Matrix-Beispiel ist z.B. die Reihenfolge der Schleifen wichtig. Für konstanten Index <tt>j</tt> liegen die Indizes <tt>i</tt> im Speicher hintereinander. Deshalb ist es günstig, in der inneren Schleife über <tt>i</tt> zu iterieren:</dd></dl>
+<pre>      for j in range(N):
+          jN = j*N
+          for i in range(N):
+              a[i + jN] = 0.0
+          a[j + jN] = 1.0
+</pre>
+<dl><dd>Die umgekehrte Reihenfolge der Schleifen ist hingegen ungünstig</dd></dl>
+<pre>      for i in range(N):
+          for j in range(N):
+              a[i + j*N] = 0.0
+          a[i + i*N] = 1.0
+</pre>
+<dl><dd>Jetzt werden in der inneren Schleife stets N Datenelemente übersprungen. Besonders bei großem N muss man daher häufig den Cache neu füllen, was bei der ersten Implementation nicht notwendig war.  (Außerdem verliert man hier die Optimierung <tt>jN = j*N</tt>, die jetzt nicht mehr möglich ist.)</dd></dl>
+<p>Code aus kompilierten Sprachen wie C/C++ Als Faustregel kann man durch Optimierung eine Verdoppelung der Geschwindigkeit erreichen (in Ausnahmefällen auch mehr). Benötigt man stärkere Verbesserungen, muss man wohl oder übel einen besseren Algorithmus oder einen schnelleren Computer verwenden.
+</p>
+<h2><span class="mw-headline" id="Algorithmen-Komplexit.C3.A4t">Algorithmen-Komplexität</span></h2>
+<p>Komplexitätsbetrachtungen ermöglichen den Vergleich der prinzipiellen Eigenschaften von Algorithmen unabhängig von einer Implementation, Umgebung etc.
+</p><p>Eine einfache Möglichkeit ist das Zählen der Aufrufe einer Schlüsseloperation. Beispiel Sortieren:
+</p>
+<ul><li> Anzahl der Vergleiche</li>
+<li> Anzahl der Vertauschungen</li></ul>
+<h3><span class="mw-headline" id="Beispiel:_Selection_Sort">Beispiel: Selection Sort</span></h3>
+<pre> for i in range(len(a)-1):
+   min = i
+   for j in range(i+1, len(a)):
+     if a[j] &lt; a[min]:
+       min = j
+   a[min], a[i] = a[i], a[min]      # swap
+</pre>
+<ul><li>Anzahl der Vergleiche: Ein Vergleich in jedem Durchlauf der inneren Schleife. Es ergibt sich folgende Komplexität:
+<dl><dd>Ingesamt <img class="mwe-math-fallback-image-inline tex" alt="\sum_{i=0}^{N-2} \sum_{j=i+1}^{N-1}1 = \frac{N}{2} (N-1) \!" src="../images/931ef059de829250232a1c45c3e98c1a.png" /> Vergleiche.</dd></dl></li></ul>
+<ul><li>Anzahl der Vertauschungen (swaps): Eine Vertauschung pro Durchlauf der äußeren Schleife:
+<dl><dd>Insgesamt <img class="mwe-math-fallback-image-inline tex" alt="N-1 \!" src="../images/dd733568e47faa0e14f56b92b6a96d0f.png" /> Vertauschungen</dd></dl></li></ul>
+<p>Die Komplexität wird durch die Operationen bestimmt, die am häufigsten ausgeführt werden, hier also die Anzahl der Vergleiche. Die Anzahl der Vertauschungen ist hingegen kein geeignetes Kriterium für die Komplexität von selection sort, weil der Aufwand in der inneren Schleife ignoriert würde.
+</p>
+<h3><span class="mw-headline" id="Fallunterscheidung:_Worst_und_Average_Case">Fallunterscheidung: Worst und Average Case</span></h3>
+<p>Die Komplexität ist in der Regel eine Funktion der Eingabegröße (Anzahl der Eingabebits, Anzahl der Eingabeelemente). Sie kann aber auch von der Art der Daten abhängen, nicht nur von der Menge, z.B. vorsortierte Daten bei Quicksort. Um von der Art der Daten unabhängig zu werden, kann man zwei Fälle der Komplexität unterscheiden:
+</p>
+<ul><li> Komplexität im ungünstigsten Fall 
+<dl><dd> Der ungünstigste Fall ist die Eingabe gegebener Länge, für die der Algorithmus am langsamsten ist. Der Nachteil dieser Methode besteht darin, dass dieser ungünstige Fall in der Praxis vielleicht gar nicht oder nur selten vorkommt, so dass sich der Algorithmus in Wirklichkeit besser verhält als man nach dieser Analyse erwarten würde. Beim Quicksort-Algorithmus mit zufälliger Wahl des Pivot-Elements müsste z.B. stets das kleinste oder größte Element des aktuellen Intervalls als Pivot-Element gewählt werden, was äußerst unwahrscheinlich ist.</dd></dl></li>
+<li> Komplexität im durchschnittlichen/typischen Fall
+<dl><dd> Der typische Fall ist die mittlere Komplexität des Algorithmus über alle möglichen Eingaben. Dazu muss man die Wahrscheinlichkeit jeder möglichen Eingabe kennen, und berechnet dann die mittlere Laufzeit über dieser Wahrscheinlichkeitsverteilung. Leider ist die Wahrscheinlichkeit der Eingaben oft nicht bekannt, so dass man geeignete Annahmen treffen muss. Bei Sortieralgorithmen können z.B. alle möglichen Permutationen des Eingabearrays als gleich wahrscheinlich angenommen werden, und der typische Fall ist dann die mittlere Komplexität über alle diese Eingaben. Oft hat man jedoch in der Praxis andere Wahrscheinlichkeitsverteilungen, z.B. sind die Daten oft "fast sortiert" (nur wenige Elemente sind an der falschen Stelle). Dann verhält sich der Algorithmus ebenfalls anders als vorhergesagt.</dd></dl></li></ul>
+<p>Wir beschränken uns in dieser Vorlesung auf die Komplexität im ungünstigseten Fall. <b>Exakte</b> Formeln für Komplexität sind aber auch dann schwer zu gewinnen, wie das folgende Beispiel zeigt:
+</p>
+<h3><span class="mw-headline" id="Beispiele_aus_den_.C3.9Cbungen_.28Gemessene_Laufzeiten_f.C3.BCr_Mergesort.2FSelectionsort.29">Beispiele aus den Übungen (Gemessene Laufzeiten für Mergesort/Selectionsort)</span></h3>
+<ul><li> Mergesort: <img class="mwe-math-fallback-image-inline tex" alt="\frac{0,977N\log N}{\log 2} + 0,267N-4.39 \!" src="../images/1e819ae31422750d5e5cd32104fec9d7.png" />
+<dl><dd> andere Lösung: <img class="mwe-math-fallback-image-inline tex" alt="1140 N\log(N) - 1819N + 6413 \!" src="../images/7dfefbe78e8ec18fc24c6f303cd65723.png" /></dd></dl></li>
+<li> Selectionsort: <img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{2}N^2 - \frac{1}{2N} - 10^{-12} \!" src="../images/074b68a95401e1574b2b485de646d1d1.png" />
+<dl><dd> andere Lösung: <img class="mwe-math-fallback-image-inline tex" alt="1275N^2 - 116003^N + 11111144 \!" src="../images/24c330078aa82d1f8efdb37e13ec998f.png" /></dd></dl></li></ul>
+<p>Aus diesen Formeln wird nicht offensichtlich, welcher Algorithmus besser ist.
+Näherung: Betrachte nur <b>sehr große Eingaben</b> (meist sind alle Algorithmen schnell genug für kleine Eingaben). Dieses Vorgehen wird als <b>Asymptotische Komplexität</b> bezeichnet (N gegen unendlich).
+</p>
+<h3><span class="mw-headline" id="Asymptotische_Komplexit.C3.A4t_am_Beispiel_Polynom">Asymptotische Komplexität am Beispiel Polynom</span></h3>
+<p>Polynom: <img class="mwe-math-fallback-image-inline tex" alt="a\,x^2+b\,x+c=p\!" src="../images/a12a8ecbb700d9d9b39ccee3619a9bb8.png" />
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="x \!" src="../images/3a427d888687d9dfe0f72040d9fa53a4.png" /> sei die Eingabegröße, und wir betrachten die Entwicklung von <img class="mwe-math-fallback-image-inline tex" alt="p \!" src="../images/2225a33c170f19586f1ee1de06e36962.png" /> in Abhängigkeit von <img class="mwe-math-fallback-image-inline tex" alt="x \!" src="../images/3a427d888687d9dfe0f72040d9fa53a4.png" />.
+</p>
+<ul><li> <img class="mwe-math-fallback-image-inline tex" alt="x=0 \!" src="../images/7f3fb20c863ec4416fd30eccddfc89f3.png" />
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="p=c \!" src="../images/fb37a88abd062d9a38641c9b6f2f158a.png" /></dd></dl></li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="x=1 \!" src="../images/6fa2b8290935563dd2a356f25c63bc3c.png" />
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="p=a+b+c \!" src="../images/7a1e9e0c889180d4beb2b917df1f3449.png" /></dd></dl></li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="x=1000 \!" src="../images/31c7d97852d1e6ef7672e2ceb0765c95.png" />
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="p=1000000a+1000b+c \approx 1000000a\!" src="../images/9f718f10f88b86732e59e136412c64e5.png" /></dd></dl></li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="x \to \infty \!" src="../images/283df40a21196eedf62fd866cb126b9c.png" />
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="p \approx x^2a\!" src="../images/25da732fc2dc248e559ff24beaa84cf5.png" /></dd></dl></li></ul>
+<p>Für sehr große Eingaben verlieren also <i>b</i> und <i>c</i> immer mehr an Bedeutung, so dass am Ende nur noch <i>a</i> für die Komplexitätsbetrachtung wichtig ist.
+</p>
+<h2><span class="mw-headline" id="Landau-Symbole">Landau-Symbole</span></h2>
+<p>Um die asymptotische Komplexität verschiedener Algorithmen miteinander vergleichen zu können, verwendet man die sogenannten <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Landau-Symbole">Landau-Symbole</a>. Das wichtigste Landau-Symbol ist <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}" src="../images/aeb29ed2e1ec2353da1748944aef3c2f.png" />, mit dem man eine <i>obere Schranke</i> <img class="mwe-math-fallback-image-inline tex" alt="f \in \mathcal{O}(g)" src="../images/3a2ea26ba8e2fefe1d5037f68350c78d.png" /> für die Komplexität angeben kann. 
+</p><p>Schreibt man <img class="mwe-math-fallback-image-inline tex" alt="f \in \Omega(g)" src="../images/94453f15f98575f5ce5197bb02d5a6c3.png" />, so stellt dies eine asymptotische <i>untere Schranke</i> für die Funktion f dar.
+</p><p>Schließlich bedeutet <img class="mwe-math-fallback-image-inline tex" alt="f \in \Theta(g)" src="../images/56d489ca87e5c7a3f1b487b0426efcc3.png" />, dass die Funktion f genauso schnell wie die Funktion g wächst, das heißt man hat eine asymptotisch <i>scharfe Schranke</i> für f. Hierzu muss sowohl <img class="mwe-math-fallback-image-inline tex" alt="f\in\mathcal{O}(g)" src="../images/3a2ea26ba8e2fefe1d5037f68350c78d.png" /> als auch <img class="mwe-math-fallback-image-inline tex" alt="f \in \Omega(g)" src="../images/94453f15f98575f5ce5197bb02d5a6c3.png" /> erfüllt sein. 
+</p><p>Im nun folgenden soll auf die verschiedenen Landau-Symbole noch näher eingegeangen werden.
+</p>
+<h3><span class="mw-headline" id="O-Notation">O-Notation</span></h3>
+<p>Intuitiv gilt: Für große N dominieren die am schnellsten wachsenden Terme einer Funktion. Die Notation <img class="mwe-math-fallback-image-inline tex" alt="f \in \mathcal{O}(g)" src="../images/3a2ea26ba8e2fefe1d5037f68350c78d.png" /> (sprich "f ist in O von g" oder "f ist von derselben Größenordnung wie g") formalisiert eine solche Abschätzung der asymptotischen Komplexität der Funktion f von oben. 
+</p>
+<dl><dt> Asymptotische Komplexität</dt>
+<dd> Für zwei Funktionen f(x) und g(x) gilt
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(x) \in \mathcal{O}(g(x))" src="../images/7ad3b375d6a64a8dc8517a4f4d8b0bcf.png" /></dd></dl></dd>
+<dd> genau dann wenn es eine Konstante <img class="mwe-math-fallback-image-inline tex" alt="c&gt;0" src="../images/96df96dd95bbf61a8224853c7a06c48c.png" /> und ein Argument <img class="mwe-math-fallback-image-inline tex" alt="x_0" src="../images/0b21a666a81629962ade8afd967826ed.png" /> gibt, so dass 
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\forall x \ge x_0:\quad f(x) \le c\,g(x)" src="../images/bdbfb0b30f0aeb250e375e76ce21b30e.png" />.</dd></dl></dd>
+<dd>Die Menge <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(g(x))" src="../images/a5ddaf22914bc52cba6e80db94a081b2.png" /> aller durch g(x) abschätzbaren Funktionen ist also formal definiert durch
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(g(x)) = \{ f(x)\ |\ \exists c&gt;0: \forall x \ge x_0: 0 \le f(x) \le c\,g(x)\}" src="../images/87508457de1671db15c8fb9fdc19e0da.png" /></dd></dl></dd></dl>
+<p>Die Idee hinter dieser Definition ist, dass g(x) eine wesentlich einfachere Funktion ist als f(x), die sich aber nach geeigneter Skalierung (Multiplikation mit c) und für große Argumente x im wesentlichen genauso wie f(x) verhält. Man kann deshalb in der Algorithmenanalyse f(x) durch g(x) ersetzen. <img class="mwe-math-fallback-image-inline tex" alt="f(x) \in \mathcal{O}(g(x))" src="../images/7ad3b375d6a64a8dc8517a4f4d8b0bcf.png" /> spielt für Funktionen eine ähnliche Rolle wie der Operator &#8804; für Zahlen: Falls a &#8804; b gilt, kann bei einer Abschätzung von oben ebenfalls a durch b ersetzt werden.
+</p>
+<h4><span class="mw-headline" id="Ein_einfaches_Beispiel">Ein einfaches Beispiel</span></h4>
+<p><a href="file_sqsqrt.html" class="image"><img alt="Sqsqrt.png" src="../images/sqsqrt.png" width="502" height="472" /></a>
+</p><p>Rot = <img class="mwe-math-fallback-image-inline tex" alt="x^2 \!" src="../images/9c5805a5b53f327df325d2c0ee24d192.png" />
+Blau = <img class="mwe-math-fallback-image-inline tex" alt="\sqrt{x} \!" src="../images/24c14e18eb820d36a6d305df659841ad.png" />
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="\sqrt{x} \in \mathcal{O}(x^2)\!" src="../images/c9d073fbabaa3579e23bf75bab8283f2.png" /> weil <img class="mwe-math-fallback-image-inline tex" alt="\sqrt{x} \le c\,x^2\!" src="../images/ad67dfbce53973b8db5d9261886178a9.png" /> für alle <img class="mwe-math-fallback-image-inline tex" alt="x \ge x_0 = 1 \!" src="../images/0301c6cc5b707e9e0442f714753b02d6.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="c = 1\!" src="../images/7ffe31acdf1df4faa9237df89aee548e.png" />, oder auch für <img class="mwe-math-fallback-image-inline tex" alt="x \ge x_0 = 4 \!" src="../images/bd56df321582966ff0103a944ded839c.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="c = 1/16" src="../images/d50c068c12ea8eb5e9b4f8370605dccc.png" /> (die Wahl von c und x<sub>0</sub> in der Definition von O(.) ist beliebig, solange die Bedingungen erfüllt sind).
+</p>
+<h4><span class="mw-headline" id="Komplexit.C3.A4t_bei_kleinen_Eingaben">Komplexität bei kleinen Eingaben</span></h4>
+<p>Algorithmus 1: <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N^2) \!" src="../images/4fc5094216cb8f1a4a06b1f76aefb2fa.png" /><br />
+Algorithmus 2: <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N\log{N}) \!" src="../images/c75599d5906078fc2ce56f2d49b0853e.png" />
+</p><p>Algorithmus 2 ist schneller (von geringerer Komplexität) für große Eingaben, aber bei kleinen Eingaben (insbesondere, wenn der Algorithmus in einer Schleife immer wieder mit kleinen Eingaben aufgerufen wird) könnte Algorithmus 1 schneller sein, falls der in der <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}" src="../images/aeb29ed2e1ec2353da1748944aef3c2f.png" />-Notation verborgene konstante Faktor <i>c</i> bei Algorithmus 2 einen wesentlich größeren Wert hat als bei Algorithmus 1.
+</p>
+<h4><span class="mw-headline" id="Eigenschaften_der_O-Notation_.28Rechenregeln.29">Eigenschaften der O-Notation (Rechenregeln)</span></h4>
+<ol><li> Transitiv:
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="f(x) \in \mathcal{O}(g(x)) \land g(x) \in \mathcal{O}(h(x)) \to f(x) \in \mathcal{O}(h(x)) \!" src="772f941454957d46281e530c7e18057e.html" />           </dd></dl></li>
+<li> Additiv:
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="f(x) \in \mathcal{O}(h(x)) \land g(x) \in \mathcal{O}(h(x)) \to f(x) + g(x) \in \mathcal{O}(h(x)) \!" src="../images/739e46d300d8dc177fd217e59ca2b342.png" />           </dd></dl></li>
+<li> Für Monome gilt:
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="x^k \in \mathcal{O}(x^k)" src="../images/05d9f0905d107729ff21369822c3f093.png" /> und</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="x^k \in \mathcal{O}(x^{k+j}), \forall j \ge 0 \!" src="../images/c143887c1ba8c6b737bd7b5b7a330a9d.png" /></dd></dl></li>
+<li> Multiplikation mit einer Konstanten:
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="f(x) \in \mathcal{O}(g(x)) \to c\,f(x) \in \mathcal{O}(g(x))\!" src="../images/ac2540615752921f878e4bf8c3f853c3.png" /></dd>
+<dd> andere Schreibweise:</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="f(x) = c\,g(x) \to f(x) \in \mathcal{O}(g(x))\!" src="../images/05c1f1a73ad6cecda6904235bdc13e83.png" /></dd></dl></li>
+<li> Folgerung aus 3. und 4. für Polynome: 
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="a_0+a_1\,x + ... + a_n\,x^n \in \mathcal{O}(x^n)\!" src="../images/ca02ce140bd7b88ecace0493f8da26b2.png" /></dd>
+<dd> Beispiel: <img class="mwe-math-fallback-image-inline tex" alt="a\,x^2+b\,x+c \in \mathcal{O}(x^2)\!" src="ed88ae438be17e0dd7802fd3c3276599.html" /></dd></dl></li>
+<li> Logarithmus:
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="a, b &gt; 1\!" src="426dc877166fe6f3df4d6ea83474dc66.html" /></dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="\log_{a}{x} \in \mathcal{O}(\log_{b}{x})\!" src="d154cb93278eeffbf7b429bdce342b63.html" /></dd>
+<dd> Die Basis des Logarithmus spielt also keine Rolle.</dd>
+<dd> Beweis hierfür:
+<dl><dd> <img class="mwe-math-fallback-image-inline tex" alt="\log_{a}{x} = \frac{\log_{b}{x}}{\log_{b}{a}}\!" src="3330eb3269fc0958cf7bde65c730fc6c.html" /></dd>
+<dd> Mit <img class="mwe-math-fallback-image-inline tex" alt="c = 1 / \log_{b}{a}\," src="4b6b89dc5e740a71bd48618471e6ea6b.html" /> gilt: <img class="mwe-math-fallback-image-inline tex" alt="\log_{a}{x} = c\,\log_{b}{x}\!" src="070aec1b1c902c924fbd0e24621eb8c0.html" />.</dd>
+<dd> Wird hier die (zweite) Regel für Multiplikation mit einer Konstanten angewendet, fällt der konstante Faktor weg, also <img class="mwe-math-fallback-image-inline tex" alt="\log_{a}{x} \in \mathcal{O}(\log_{b}{x})\!" src="d154cb93278eeffbf7b429bdce342b63.html" />.</dd></dl></dd>
+<dd> Insbesondere gilt auch <img class="mwe-math-fallback-image-inline tex" alt="\log_{a}{x} \in \mathcal{O}(\log_{2}{x})\!" src="../images/403e74645b6ee823d8415b4ae8bd0c29.png" />, es kann also immer der 2er Logarithmus verwendet werden.</dd></dl></li></ol>
+<h4><span class="mw-headline" id="O-Kalk.C3.BCl">O-Kalkül</span></h4>
+<p>Das O-Kalkül definiert wichtige Vereinfachungsregeln for Ausdrücke in O-Notation (Beweise: siehe Übungsaufgabe):
+</p>
+<ol><li> <img class="mwe-math-fallback-image-inline tex" alt="f(x) \in \mathcal{O}(f(x))\!" src="../images/849eda7b88a4a43ea909b5476ad9275b.png" /></li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(\mathcal{O}(f(x))) \in \mathcal{O}(f(x))\!" src="../images/888963989301ffa85e3da39a7d9a3ef1.png" /></li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="c\,\mathcal{O}(f(x)) \in \mathcal{O}(f(x))\," src="../images/0e71ab248b7583c61e8167c9e1e72d76.png" /> für jede Konstante <i>c</i></li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(f(x))+c \in \mathcal{O}(f(x))\," src="../images/c31339331aa0a7232e67bc3989cd5aa7.png" /> für jede Konstante <i>c</i></li>
+<li> Sequenzregel:
+<dl><dd> Wenn zwei nacheinander ausgeführte Programmteile die Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(f(x))" src="../images/efd832b56c501ad246dac3a94f61b898.png" /> bzw. <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(g(x))" src="../images/a5ddaf22914bc52cba6e80db94a081b2.png" /> haben, gilt für beide gemeinsam:</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(f(x)) + \mathcal{O}(g(x)) \in \mathcal{O}(f(x))" src="../images/4511086950febecdeb83998351d954a8.png" /> falls <img class="mwe-math-fallback-image-inline tex" alt="g(x) \in \mathcal{O}(f(x))" src="../images/f5dc1b779b42f6857f997bec3b4fffc4.png" /> bzw.</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(f(x)) + \mathcal{O}(g(x)) \in \mathcal{O}(g(x))\!" src="../images/61f2d5d3581fcade582962445415e39d.png" /> falls <img class="mwe-math-fallback-image-inline tex" alt="f(x) \in \mathcal{O}(g(x))" src="../images/7ad3b375d6a64a8dc8517a4f4d8b0bcf.png" />.</dd>
+<dd> Informell schreibt man auch: <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(f(x)) + \mathcal{O}(g(x)) \in \mathcal{O}(max(f(x), g(x)))\!" src="../images/d6c9a6476053156f6f12adf020e13bc8.png" />.</dd></dl></li>
+<li> Schachtelungsregel bzw. Aufrufregel:
+<dl><dd> Wenn in einer geschachtelten Schleife die äußere Schleife die Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(f(x))" src="../images/efd832b56c501ad246dac3a94f61b898.png" /> hat, und die innere <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(g(x))" src="../images/a5ddaf22914bc52cba6e80db94a081b2.png" />, gilt für beide gemeinsam:</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(f(x)) * \mathcal{O}(g(x)) \in \mathcal{O}(f(x) * g(x))\!" src="../images/cf7f6d0735f07a45ea757610aec0b81f.png" />.</dd>
+<dd> Gleiches gilt wenn eine Funktion <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(f(x))" src="../images/efd832b56c501ad246dac3a94f61b898.png" />-mal aufgerufen wird, und die Komplexität der Funktion selbst <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(g(x))" src="../images/a5ddaf22914bc52cba6e80db94a081b2.png" /> ist.</dd></dl></li></ol>
+<dl><dt>Beispiel für 5.</dt>
+<dd> Beide Schleifen haben die Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)" src="../images/e3e85a10a3e7c2636dc7784f9f02f287.png" />. Dies gilt auch für ihre Hintereinanderausführung:</dd></dl>
+<pre>     for i in range(N):
+         a[i] = i
+     for i in range(N):
+         print a[i]
+</pre>
+<dl><dt>Beispiele für 6.</dt>
+<dd> Beide Schleifen haben die Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)" src="../images/e3e85a10a3e7c2636dc7784f9f02f287.png" />. Ihre Verschachtelung hat daher die Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N^2)" src="../images/5a042d1f9927b25772c570cfbb47e811.png" />. </dd></dl>
+<pre>     for i in range(N):
+         for j in range(N):
+             a[i*N + j] = i+j
+</pre>
+<dl><dd> Dies gilt ebenso, wenn statt der inneren Schleife eine Funktion mit Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)" src="../images/e3e85a10a3e7c2636dc7784f9f02f287.png" /> ausgeführt wird:</dd></dl>
+<pre>     for i in range(N):
+         a[i] = foo(i, N)  # <img class="mwe-math-fallback-image-inline tex" alt="\mathrm{foo}(i, N) \in \mathcal{O}(N)" src="../images/eb9d0ebfaf0f5b9fda35169ea118f2f5.png" />
+</pre>
+<h4><span class="mw-headline" id="O-Kalk.C3.BCl_auf_das_Beispiel_des_Selectionsort_angewandt">O-Kalkül auf das Beispiel des Selectionsort angewandt</span></h4>
+<p>Selectionsort: Wir hatten gezeigt dass <img class="mwe-math-fallback-image-inline tex" alt="f(N) = \frac{N^2}{2} - \frac{N}{2}" src="../images/aaa285c72a2bfe66ed7ab4c011891dbf.png" />. Nach der Regel für Polynome vereinfacht sich dies zu <img class="mwe-math-fallback-image-inline tex" alt="f(N) \in \mathcal{O}\left(\frac{N^2}{2}\right) = \mathcal{O}(N^2)\!" src="../images/87837601af46932423901af4f93f3938.png" />.
+</p><p>Alternativ via Schachtelungsregel:
+</p>
+<dl><dd> Die äußere Schleife wird (<i>N</i>-1)-mal durchlaufen: <img class="mwe-math-fallback-image-inline tex" alt="N-1 \in \mathcal{O}(N)" src="../images/e72766b77763e3ab80605dfec5f7370c.png" /></dd>
+<dd> Die innere Schleife wird (<i>N-i</i>-1)-mal durchlaufen. Das sind im Mittel <i>N</i>/2 Durchläufe: <img class="mwe-math-fallback-image-inline tex" alt="N/2 \in \mathcal{O}(N)" src="../images/72f66829604e3bfa6bce0eb158f3a2c5.png" /></dd>
+<dd> Zusammen: <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)*\mathcal{O}(N) \in \mathcal{O}(N^2)" src="../images/4f8aab9d3dd2731db45f4f91682fd2e0.png" /></dd></dl>
+<p>Nach beiden Vorgehensweisen kommen wir zur Schlussfolgerung, dass der Selectionsort die asymptotische Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N^2)\!" src="../images/4fc5094216cb8f1a4a06b1f76aefb2fa.png" /> besitzt.
+</p>
+<h4><span class="mw-headline" id="Zusammenhang_zwischen_Komplexit.C3.A4t_und_Laufzeit">Zusammenhang zwischen Komplexität und Laufzeit</span></h4>
+<p>Wenn eine Operation 1ms dauert, erreichen Algorithmen verschiedener Komplexität folgende Leistungen (wobei angenommen wird, dass der in der <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}" src="../images/aeb29ed2e1ec2353da1748944aef3c2f.png" />-Notation verborgene konstante Faktor immer etwa gleich 1 ist):
+</p>
+<table class="wikitable" style="text-align:left" cellpadding="7">
+<caption>
+</caption>
+<tr>
+<th> Komplexität </th>
+<th> Operationen in 1s </th>
+<th> Operationen in 1min </th>
+<th> Operationen in 1h
+</th></tr>
+<tr>
+<th> <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)" src="../images/e3e85a10a3e7c2636dc7784f9f02f287.png" />
+</th>
+<td> 1000 </td>
+<td> 60.000 </td>
+<td> 3.600.000
+</td></tr>
+<tr>
+<th> <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N\log_2{N})" src="../images/55143ebd006aac6338cd6a93ae997573.png" />
+</th>
+<td> 140 </td>
+<td> 4895 </td>
+<td> 204094
+</td></tr>
+<tr>
+<th> <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N^2)" src="../images/5a042d1f9927b25772c570cfbb47e811.png" />
+</th>
+<td> 32 </td>
+<td> 245 </td>
+<td> 1898
+</td></tr>
+<tr>
+<th> <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N^3)" src="../images/362d8734e031e530eda5855ac09c0639.png" />
+</th>
+<td> 10 </td>
+<td> 39 </td>
+<td> 153
+</td></tr>
+<tr>
+<th> <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(2^N)" src="../images/3aa11945e944fc54f13d5fa014a60083.png" />
+</th>
+<td> 10 </td>
+<td> 16 </td>
+<td> 21
+</td></tr></table>
+<h4><span class="mw-headline" id="Exponentielle_Komplexit.C3.A4t">Exponentielle Komplexität</span></h4>
+<p>Der letzte Fall <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(2^N)" src="../images/3aa11945e944fc54f13d5fa014a60083.png" /> ist von exponentieller Komplexität. Das bedeutet, dass eine Verdopplung des Aufwands nur bewirkt, dass die maximale Problemgröße um eine Konstante wächst. Algorithmen mit exponentieller (oder noch höherer) Komplexität werden deshalb als <b>ineffizient</b> bezeichnet. Algorithmen mit höchstens polynomieller Komplexität gelten hingegen als effizient.
+</p><p>In der Praxis sind allerdings auch polynomielle Algorithmen mit hohem Exponenten meist zu langsam. Als Faustregel kann man eine praktische Grenze von <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N^3)" src="../images/362d8734e031e530eda5855ac09c0639.png" /> ansehen. Bei einer Komplexität von <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N^3)" src="../images/362d8734e031e530eda5855ac09c0639.png" /> bewirkt ein verdoppelter Aufwand immer noch eine Steigerung der maximalen Problemgröße um den Faktor <img class="mwe-math-fallback-image-inline tex" alt="\sqrt[3]{2}" src="../images/62f6a0ce6cf44d89c6f3b211c98c43bd.png" /> (also eine <i>multiplikative</i> Vergrößerung um ca. 25%, statt nur einer additiven Vergrößerung wie bei exponentieller Komplexität).
+</p>
+<h3><span class="mw-headline" id="-_Notation"><img class="mwe-math-fallback-image-inline tex" alt="\Omega" src="../images/b9d99db8626de63193c7fe96273a6cae.png" />- Notation</span></h3>
+<p>Genauso wie <img class="mwe-math-fallback-image-inline tex" alt="f \in \mathcal{O}(g)" src="../images/3a2ea26ba8e2fefe1d5037f68350c78d.png" /> eine Art <img class="mwe-math-fallback-image-inline tex" alt="\le" src="49dc1443f33cf63082d6e193dd2af78f.html" />-Operator für Funktionen ist, definiert <img class="mwe-math-fallback-image-inline tex" alt="f \in \Omega(g) " src="../images/94453f15f98575f5ce5197bb02d5a6c3.png" /> eine Abschätzung von unten, analog zum <img class="mwe-math-fallback-image-inline tex" alt="\ge" src="../images/8fbe2a506fe3db0835548e1b648ec977.png" />-Operator für Zahlen. Formal kann man <img class="mwe-math-fallback-image-inline tex" alt="f(N) \in \Omega(g(N)) " src="../images/d655bda41a41135257a9e0d5ae799619.png" /> genau dann schreiben, falls es eine Konstante <img class="mwe-math-fallback-image-inline tex" alt=" c &gt; 0 " src="../images/96df96dd95bbf61a8224853c7a06c48c.png" /> gibt, so dass 
+</p><p><img class="mwe-math-fallback-image-inline tex" alt=" f(N) \ge c \cdot g(N) " src="../images/4d8603fdf4ba7817e5f9d961338aa614.png" /> für <img class="mwe-math-fallback-image-inline tex" alt=" N  \ge N_0 " src="../images/f49a78bb1d56cc15429416a89550a2d4.png" /> 
+</p><p>gilt.
+Man verwendet diese Notation also um abzuschätzen, wie groß der Aufwand (die Komplexität) für einen bestimmten Algorithmus <i>mindestens</i> ist und nicht <i>höchstens</i>, was man mit der <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}" src="../images/aeb29ed2e1ec2353da1748944aef3c2f.png" /> - Notation ausdrücken würde.
+</p><p>Ein praktisches Beispiel für eine Anwendung der <img class="mwe-math-fallback-image-inline tex" alt="\Omega" src="../images/b9d99db8626de63193c7fe96273a6cae.png" />- Notation wäre die Fragestellung, ob es <i>prinzipiell</i> einen besseren Algorithmus für ein bestimmtes Problem gibt. Wie später im Abschnitt <a href="suchen.html#Sortieren_als_Suchproblem" title="Suchen">Sortieren als Suchproblem</a> gezeigt wird, ist das Sortieren eines Arrays durch paarweise Vergleiche von Elementen immer mindestens von der Komplexität <img class="mwe-math-fallback-image-inline tex" alt=" \Omega(N\cdot \ln N) " src="../images/b5d77820c9a32c3411c7550737907bb0.png" />, was konkret bedeutet, dass kein Sortieralgorithmus, der nach diesem Prinzip arbeitet, jemals eine geringere Komplexität als beispielsweise Merge-Sort haben wird. Natürlich kann man den entsprechenden Sortieralgorithmus, also Merge-Sort zum Beispiel, unter Umständen noch optimieren, aber die Komplexität wird erhalten bleiben. Mit diesem Wissen kann man sich viel (vergebliche) Arbeit sparen.
+</p>
+<h3><span class="mw-headline" id="-_Notation_2"><img class="mwe-math-fallback-image-inline tex" alt="\Theta" src="../images/78fb652a2e06bbad99d4b54531029c40.png" />- Notation</span></h3>
+<p><img class="mwe-math-fallback-image-inline tex" alt="f(N) \in \Theta(g(N))" src="../images/118a64fcbcfc2ad4ca2ac96c282251c1.png" /> ist eine scharfe Abschätzung der asymptotischen Komplexität einer Funktion f. 
+</p><p>Damit dies gilt, muss <img class="mwe-math-fallback-image-inline tex" alt="f(N) \in \mathcal{O}(g(N))" src="../images/e7f537769070e221e1160b1140b18733.png" /> und <i>gleichzeitig</i> <img class="mwe-math-fallback-image-inline tex" alt="f(N) \in \Omega(g(N))" src="../images/d655bda41a41135257a9e0d5ae799619.png" /> erfüllt sein.
+</p><p>Dies ist natürlich auch die beste Abschätzung der asymptotischen Komplexität einer Funktion f. Formal bedeutet <img class="mwe-math-fallback-image-inline tex" alt="f(N) \in \Theta(g(N))" src="../images/118a64fcbcfc2ad4ca2ac96c282251c1.png" /> dass es zwei Konstanten <img class="mwe-math-fallback-image-inline tex" alt=" c_1 " src="../images/0bd1ecc6359ce275e3a626020b904c8c.png" /> und <img class="mwe-math-fallback-image-inline tex" alt=" c_2 " src="../images/ec6afd67ef6d50afbb01857b9eee7d59.png" />, beide größer als Null, gibt, so dass für alle <img class="mwe-math-fallback-image-inline tex" alt=" N \geq N_0 " src="../images/f49a78bb1d56cc15429416a89550a2d4.png" /> gilt: 
+</p><p><img class="mwe-math-fallback-image-inline tex" alt=" c_1 \cdot g(N) \leq f(N) \leq c_2 \cdot g(N) " src="../images/c1c9063719cd16d67901ebb97e7bbb34.png" />.
+</p><p>In der Praxis wird manchmal statt der <img class="mwe-math-fallback-image-inline tex" alt="\Theta" src="../images/78fb652a2e06bbad99d4b54531029c40.png" />-Notation auch dann die <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}" src="../images/aeb29ed2e1ec2353da1748944aef3c2f.png" />-Notation benutzt, wenn eine scharfe Schranke ausgedrückt werden soll. Dies ist zwar formal nicht korrekt, aber man kann die intendierte Bedeutung meist aus dem Kontext erschließen.
+</p>
+<h2><span class="mw-headline" id="Komplexit.C3.A4tsvergleich_zweier_Algorithmen">Komplexitätsvergleich zweier Algorithmen</span></h2>
+<p>In diesem Abschnitt wollen wir der Frage nachgehen, wie ein formaler Beweis für die Behauptung <img class="mwe-math-fallback-image-inline tex" alt=" f(N) \in \mathcal{O}(g(N))" src="../images/e7f537769070e221e1160b1140b18733.png" /> geschehen kann. Hierbei werden zwei Beweismethoden vorgestellt werden, und zwar der <b>Beweis über die Definition der Komplexität</b> sowie der <b>Beweis durch Dividieren</b>.
+</p>
+<h3><span class="mw-headline" id="Beweis_.C3.BCber_die_Definition_der_asymptotischen_Komplexit.C3.A4t">Beweis über die Definition der asymptotischen Komplexität</span></h3>
+<p>Die Definition der asymptotischen Komplexität <img class="mwe-math-fallback-image-inline tex" alt="f(N) \in \mathcal{O}(g(N))" src="../images/e7f537769070e221e1160b1140b18733.png" /> war: 
+</p><p>Es gibt eine Konstante <img class="mwe-math-fallback-image-inline tex" alt=" c &gt; 0 " src="../images/96df96dd95bbf61a8224853c7a06c48c.png" />, so dass <img class="mwe-math-fallback-image-inline tex" alt=" f(N) \le c \cdot g(N) " src="../images/636c5ba8ae9cbc48ade75f764220195d.png" /> für <img class="mwe-math-fallback-image-inline tex" alt=" N  \ge N_0 " src="../images/f49a78bb1d56cc15429416a89550a2d4.png" /> erfüllt ist. 
+</p><p>Um also die die asymptotische Komplexität <img class="mwe-math-fallback-image-inline tex" alt="f(N) \in \mathcal{O}(g(N))" src="../images/e7f537769070e221e1160b1140b18733.png" /> zu beweisen, muss man die oben erwähnten Konstanten c und <img class="mwe-math-fallback-image-inline tex" alt=" N_0 " src="../images/8357f2d642ae4e6902976c9f7c45b171.png" /> finden, so dass 
+</p><p><img class="mwe-math-fallback-image-inline tex" alt=" f(N) \leq c \cdot g(N) " src="../images/636c5ba8ae9cbc48ade75f764220195d.png" /> für alle <img class="mwe-math-fallback-image-inline tex" alt=" N \ge N_0 " src="../images/f49a78bb1d56cc15429416a89550a2d4.png" /> erfüllt ist. 
+</p><p>Dies geschieht zweckmäßigerweise mit dem Beweisprinzip der <i>vollständigen Induktion</i>. Hierbei ist zu zeigen, dass
+</p>
+<ol><li> <img class="mwe-math-fallback-image-inline tex" alt=" f(N_0) \leq g(N_0) " src="../images/2d78907228a2ac0fbcc082a768f01dda.png" /> für die eine zu bestimmende Konstante <img class="mwe-math-fallback-image-inline tex" alt=" N_0 " src="../images/8357f2d642ae4e6902976c9f7c45b171.png" /> gilt (<i>Induktionsanfang</i>) und </li>
+<li> falls <img class="mwe-math-fallback-image-inline tex" alt=" f(N) \leq g(N) " src="../images/30b5adf3bef9990472ec9e51f24b1813.png" />, dann auch <img class="mwe-math-fallback-image-inline tex" alt=" f(N+1) \leq g(N+1) " src="../images/f67c73040b7fb4283adbc3953700712f.png" /> (<i>Induktionsschritt</i>) gilt.</li></ol>
+<h3><span class="mw-headline" id="Beweis_durch_Dividieren">Beweis durch Dividieren</span></h3>
+<p>Hierbei wählt man eine Konstante c und zeigt, dass <img class="mwe-math-fallback-image-inline tex" alt=" \lim_{N \rightarrow \infty} \frac{f(N)}{c \cdot g(N)} \leq 1 " src="../images/b2ef9bbf7254eb5bec1b79ce6df6ec26.png" /> gilt (für die O-Notation, bei &#937;-Notation gilt entsprechend <img class="mwe-math-fallback-image-inline tex" alt="\geq 1 " src="../images/190e98cf0a6ba7a8b6ed2eafbfb4e8ea.png" />). Man kann dies auch als alternative Definition der Komplexität verwenden.
+</p><p>Als Beispiel betrachten wir die beiden Funktionen <img class="mwe-math-fallback-image-inline tex" alt=" f(N) = N \,\lg N " src="../images/0fc67392b72f96c95ba0fe7a6ee7f016.png" /> und <img class="mwe-math-fallback-image-inline tex" alt=" g(N) = N^2 " src="../images/88c4580038459a327e96231cab677d79.png" /> und wollen zeigen, dass <img class="mwe-math-fallback-image-inline tex" alt="f(N) \in \mathcal{O}(g(N))" src="../images/e7f537769070e221e1160b1140b18733.png" /> gilt. 
+</p><p>Als Konstante c wählen wir <img class="mwe-math-fallback-image-inline tex" alt=" c = 1 " src="../images/27071423b9a403c9ffa1895ef3fefb6e.png" />
+</p><p><img class="mwe-math-fallback-image-inline tex" alt=" \lim_{N \rightarrow \infty} \frac{f(N)}{g(N)} = \lim_{N \rightarrow \infty} \frac{\lg N}{N} = \frac{\infty}{\infty} " src="../images/1f6b310bc1f27eefec3075d4b42e8f76.png" />
+</p><p>Unbestimmte Ausdrücke der Form 
+<img class="mwe-math-fallback-image-inline tex" alt=" \lim_{x \rightarrow x_0} \frac{f(x)}{g(x)} " src="../images/e87b00a88f65bd3712581ed230a72b76.png" />,
+in denen sowohl <img class="mwe-math-fallback-image-inline tex" alt=" f(x) " src="../images/50bbd36e1fd2333108437a2ca378be62.png" /> als auch <img class="mwe-math-fallback-image-inline tex" alt=" g(x) " src="../images/e84fec1e074026d6fa8e3155482c35c3.png" /> mit <img class="mwe-math-fallback-image-inline tex" alt=" x \rightarrow x_0 " src="../images/225d59c85c6fe9b02f24666185dbb496.png" /> gegen Null oder gegen Unendlich streben, kann man manchmal mit den Regeln von <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/L%27Hospital%27sche_Regel"><i>l'Hospital</i></a> berechnen. Danach darf man die Funktionen f und g zur Berechnung des unbestimmten Ausdrucks durch ihre k-ten Ableitungen ersetzen:
+</p><p><img class="mwe-math-fallback-image-inline tex" alt=" \lim_{x \rightarrow x_0} \frac{f(x)}{g(x)} = \lim_{x \rightarrow x_0} \frac{f^{(k)}(x)}{g^{(k)}(x)} " src="../images/142f7e48ae2da1965d0934b96e642444.png" />
+</p><p>In unserem Fall verwenden wir die erste Ableitung und erhalten:
+<img class="mwe-math-fallback-image-inline tex" alt=" \lim_{N \rightarrow \infty} \frac{f&#39;(x)}{g&#39;(x)} = \lim_{N \rightarrow \infty} \frac{1/N}{1} \rightarrow 0 " src="../images/30ef48b7dcdcddeb51044093ae9df6fb.png" />
+</p><p>Damit wurde <img class="mwe-math-fallback-image-inline tex" alt="f(N) \in \mathcal{O}(g(N))" src="../images/e7f537769070e221e1160b1140b18733.png" />, also <img class="mwe-math-fallback-image-inline tex" alt="N \lg N \in \mathcal{O}(N^2)" src="810baf909b9ef7d4f3dddbe32774ecc0.html" /> gezeigt.
+</p><p>Man beachte hierbei, dass <img class="mwe-math-fallback-image-inline tex" alt="N \lg N \in \mathcal{O}(N^2)" src="810baf909b9ef7d4f3dddbe32774ecc0.html" /> keine enge Grenze für die Komplexität von <img class="mwe-math-fallback-image-inline tex" alt="N \,\lg N" src="9702eb4bfcc1f68b47b583ac74f83870.html" /> darstellt, da der Grenzwert <img class="mwe-math-fallback-image-inline tex" alt=" \lim_{N \rightarrow \infty} \frac{f&#39;(x)}{g&#39;(x)}\, " src="20808f783545c3c22b50fc908342daad.html" /> gegen 0 und nicht gegen eine von Null verschiedene Konstante strebt. In diesem Fall haben wir die Komplexität von <img class="mwe-math-fallback-image-inline tex" alt="N \cdot \lg N " src="8a30fe9d6d630529872c0e33a270ad1b.html" /> also nur nach oben abschätzen können.
+</p>
+<h3><span class="mw-headline" id="Beispiel_f.C3.BCr_den_Komplexit.C3.A4tsvergleich:_Gleitender_Mittelwert_.28Running_Average.29">Beispiel für den Komplexitätsvergleich: Gleitender Mittelwert (Running Average)</span></h3>
+<p>Wir berechnen für ein gegebenes Array <tt>a</tt> einen gleitenden Mittelwert über <tt>k</tt> Elemente:<br />
+</p>
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="r_i = \frac{1}{k} \sum_{j=i-k+1}^i a_j" src="../images/f05741b16849c89fe47b4e3ab50948ba.png" /> <br /></dd></dl></dd></dl>
+<p>Das heisst, für jedes <tt>i</tt> mitteln wir die letzten <tt>k</tt> Elemente von <tt>a</tt> und schreiben das Ergebnis in <tt>r[i]</tt>. Diese Operation ist z.B. bei Börsenkursen wichtig: Neben dem aktuellen Kurs für jeden Tag wird dort meist auch der gleitende Mittelwert der letzten 30 Tage sowie der letzten 200 Tage angegeben. In diesen Mittelwerten erkennt man besser die langfristige Tendenz, weil die täglichen Schwankungen herausgemittelt werden. Wir nehmen außerdem an, dass
+</p>
+<ul><li> Array-Zugriff hat eine Komplexit&#228;t von O(1)</li>
+<li> <img class="mwe-math-fallback-image-inline tex" alt="k \ll N" src="../images/0667b53361e319564208b9b8b54a5d5b.png" />, d.h. <img class="mwe-math-fallback-image-inline tex" alt="N-k\approx N" src="../images/bb7d405d261652e07fa9181055638b69.png" />.</li></ul>
+<p>Die beiden folgenden Algorithmen berechnen die Mittelwerte auf unterschiedliche Art. Der linke folgt der obigen Definition durch eine Summe, während der rechte inkrementell arbeitet: Man kann den Bereich der <tt>k</tt> letzten Werte als Fenster betrachten, das über das Array <tt>a</tt> geschoben wird. Schiebt man das Fenster ein Element weiter, fällt links ein Element heraus, und rechts kommt eins hinzu. Man muss also nicht jedes Mal die Summe neu berechnen, sondern kann den vorigen Wert aktualisieren. Wir werden sehen, dass dies Folgen für die Komplexität des Algorithmus hat.
+</p>
+<table border="1" cellspacing="0" cellpadding="2">
+
+<tr>
+<th> Programmzeile
+</th>
+<th> Version 1: O(N * k)
+</th>
+<th> Komplexit&#228;t
+</th>
+<th> Version 2: O(N)
+</th>
+<th> Komplexit&#228;t
+</th></tr>
+<tr>
+<td>
+<p>1.
+</p>
+</td>
+<td>
+<p><tt>r = [0] * len(a)</tt>
+</p>
+</td>
+<td>
+<b><center>O(N)</center></b>
+</td>
+<td>
+<p><tt>r = [0] * len(a)</tt>
+</p>
+</td>
+<td>
+<b><center>O(N)</center></b>
+</td></tr>
+<tr>
+<td>
+<p>2.
+</p>
+</td>
+<td>
+<p><tt>if k &gt; len(a):</tt>
+</p>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td>
+<td>
+<p><tt>if k &gt; len(a):</tt>
+</p>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td></tr>
+<tr>
+<td>
+<p>3.
+</p>
+</td>
+<td>
+<dl><dd><dl><dd> <tt>raise RuntimeError ("k zu gro&#223;")</tt></dd></dl></dd></dl>
+</td>
+<td>
+</td>
+<td>
+<dl><dd><dl><dd> <tt>raise RuntimeError ("k zu gro&#223;")</tt></dd></dl></dd></dl>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+<p>4.
+</p>
+</td>
+<td>
+<p><tt>for j in range(k-1, len(a)):</tt>
+</p>
+</td>
+<td>
+<center>O(N-k+1) = <b>O(N)</b></center>
+</td>
+<td>
+<p><tt>for i in range(k):</tt>
+</p>
+</td>
+<td>
+<b><center>O(k)</center></b>
+</td></tr>
+<tr>
+<td>
+<p>5.
+</p>
+</td>
+<td>
+<dl><dd><dl><dd> <tt>for i in range(j-k+1, j+1):</tt></dd></dl></dd></dl>
+</td>
+<td>
+<b><center>O(k)</center></b>
+</td>
+<td>
+<dl><dd><dl><dd> <tt>r[k-1] += a[i]</tt></dd></dl></dd></dl>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td></tr>
+<tr>
+<td>
+<p>6.
+</p>
+</td>
+<td>
+<dl><dd><dl><dd><dl><dd><dl><dd> <tt>r[j] += a[i]</tt></dd></dl></dd></dl></dd></dl></dd></dl>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td>
+<td>
+<p><tt>for j in range(k, len(a)):</tt>
+</p>
+</td>
+<td>
+<center>O(N-k+1) = <b>O(N)</b></center>
+</td></tr>
+<tr>
+<td>
+<p>7.
+</p>
+</td>
+<td>
+<dl><dd><dl><dd> <tt>r[j] /= float(k)</tt></dd></dl></dd></dl>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td>
+<td>
+<dl><dd><dl><dd> <tt>r[j] = (a[j] - a[j-k] + r[j-1])</tt></dd></dl></dd></dl>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td></tr>
+<tr>
+<td>
+<p>8.
+</p>
+</td>
+<td>
+<p><tt>return r</tt>
+</p>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td>
+<td>
+<p><tt>for j in range(len(a)):</tt>
+</p>
+</td>
+<td>
+<b><center>O(N)</center></b>
+</td></tr>
+<tr>
+<td>
+<p>9.
+</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+<dl><dd><dl><dd> <tt>r[j] /= float(k)</tt></dd></dl></dd></dl>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td></tr>
+<tr>
+<td>
+<p>10.
+</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+<p><tt>return r</tt>
+</p>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td></tr></table>
+<p>Wir zeigen unten dass Version 2 eine geringere Komplexit&#228;t besitzt, obwohl sie mehr Zeilen ben&#246;tigt.
+</p><p><br />
+Wir haben in der Tabelle die Komplexität jeder Zeile für sich angegeben. Einfache Anweisungen (Berechnungen, Lese- und Schreibzugriffe auf das Array, Zuweiseungen) haben konstante Komplexität, die Komplexität des Schleifenkopfes allein (also der <tt>for</tt>-Anweisung ohne den eingerückten Schleifenkörper) entspricht der Anzahl der Durchläufe. Wir müssen jetzt noch die Verschachtelung der Schleifen und die Nacheinanderausführung von Anweisungen berücksichtigen. 
+</p>
+<h4><span class="mw-headline" id="Berechnung_der_Komplexit.C3.A4t_von_Version_1">Berechnung der Komplexität von Version 1</span></h4>
+<p><small>(Wiederholung der Rechenregeln: siehe Abschnitt <a href="effizienz.html#O-Notation" title="Effizienz">O-Notation</a>)</small>
+</p><p>Wir betrachten zunächst die innere Schleife (Zeilen 5 und 6 von Version 1):
+</p><p>Der Schleifenkopf (Zeile 5) hat die Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(k)" src="../images/e79ea04722f88bc7f42ae16f249d6fe4.png" />, weil die Schleife k-mal durchlaufen wird. Der Schleifenkörper (Zeile 6) hat die Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(1)" src="../images/e32428924d34e88d8a50e9f1805128d2.png" />. Nach der Verschachtelungsregel müssen wir die beiden Komplexitäten multiplizieren, und es ergibt sich:
+</p>
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(k)\cdot\mathcal{O}(1) = \mathcal{O}(k\cdot 1)=\mathcal{O}(k)" src="../images/ba8470149eb38cf7e9ddb6e8d8bd0d51.png" /></dd></dl></dd></dl>
+<p>Wir betrachten nun die äußere Schleife. Der Schleifenkopf (Zeile 4) wird (N-k)-mal durchlaufen und hat somit eine Komplexität von <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)" src="../images/e3e85a10a3e7c2636dc7784f9f02f287.png" />. Der Schleifenkörper (Zeilen 5 bis 7) besteht aus der inneren Schleife (Zeilen 5 und 6) mit der gerade berechneten Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(k)" src="../images/e79ea04722f88bc7f42ae16f249d6fe4.png" /> sowie einer einfachen Anweisung (Zeile 7) mit Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(1)" src="../images/e32428924d34e88d8a50e9f1805128d2.png" />. Nach der Sequenzregel wird die Komplexität des Schleifenkörpers durch Addition berechnet:
+</p>
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(k)+\mathcal{O}(1) = \mathcal{O}(\max(k,1)) = \mathcal{O}(k)" src="../images/b6e17dc8e459da722997580b34d2634b.png" /></dd></dl></dd></dl>
+<p>Die Komplexität der gesamten äußeren Schleife erhalten wir nach der Verschachtelungsregel wieder durch multiplizieren:
+</p>
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)\cdot\mathcal{O}(k) = \mathcal{O}(N\cdot k)" src="../images/045cffbad897d8dcc9879cf877b49591.png" /></dd></dl></dd></dl>
+<p>Die übrigen Schritte des Algorithmus werden einfach nacheinander ausgeführt, so dass sie ebenfalls nach der Sequenzregel behandelt werden. Wir erhalten
+</p>
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)+\mathcal{O}(1)+\mathcal{O}(N\cdot k)+\mathcal{O}(1) = \mathcal{O}(\max(N,1,N\cdot k,1)) = \mathcal{O}(N\cdot k)" src="../images/a67e2c3dfd607ce691e5c174f1aaf6fe.png" /></dd></dl></dd></dl>
+<p>Der gesamte Algorithmus hat also die Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N\cdot k)" src="../images/cb076eee23b6966856a1748d6d94338f.png" />.
+</p>
+<h4><span class="mw-headline" id="Berechnung_der_Komplexit.C3.A4t_von_Version_2">Berechnung der Komplexität von Version 2</span></h4>
+<p>Hier gibt es nur einfache Schleifen ohne Verschachtelung. Da der Schleifenkörper jeder Schleife nur einfache Anweisungen der Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(1)" src="../images/e32428924d34e88d8a50e9f1805128d2.png" /> enthält, ergibt sich die Komplexität der Schleifen nach der Verschachtelungsregel als
+</p>
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(X)\cdot\mathcal{O}(1) = \mathcal{O}(X\cdot 1)=\mathcal{O}(X)" src="../images/e9f215fb1ffe1b7f7d9d303ca61cbc3a.png" /></dd></dl></dd></dl>
+<p>wobei <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(X)" src="../images/ef56eaa2ee72e519707f234eaa53f3bd.png" /> die Komplexität des jeweiligen Schleifenkopfes ist. Wir erhalten also für Zeilen 4 und 5: <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(k)" src="../images/e79ea04722f88bc7f42ae16f249d6fe4.png" />, Zeilen 6 und 7: <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)" src="../images/e3e85a10a3e7c2636dc7784f9f02f287.png" />, Zeilen 8 und 9: <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)" src="../images/e3e85a10a3e7c2636dc7784f9f02f287.png" />. Die Hintereinanderausführung wird nach der Sequenzregel behandelt:
+</p>
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)+\mathcal{O}(1)+\mathcal{O}(k)+\mathcal{O}(N)+\mathcal{O}(N)+\mathcal{O}(1) = \mathcal{O}(\max(N,1,k,N,N,1)) = \mathcal{O}(N)" src="../images/aadfa0e065b6901134eaa541bd4b04ec.png" /></dd></dl></dd></dl>
+<p>Dieser Algorithmus hat also nur die Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(N)" src="../images/e3e85a10a3e7c2636dc7784f9f02f287.png" />.
+</p>
+<h4><span class="mw-headline" id="Fazit">Fazit</span></h4>
+<p>Obwohl Version 2 mehr Schritte benötigt hat sie eine geringere Komplexität, da die for-Schleifen nicht wie bei Version 1 verschachtelt/untergeordnet sind. Bei verschachtelten for-Schleifen muss die Multiplikationsregel angewendet werden &#8594; höhere Komplexität.
+</p><p>Die gerade berechnete Komplexität gilt aber <u>nur</u> unter der Annahme, dass Array-Zugriffe konstante Komplexität <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(1)" src="../images/e32428924d34e88d8a50e9f1805128d2.png" /> besitzen. Wenn dies nicht der Fall ist, kann sich die Komplexität des Algorithmus drastisch verschlechtern.
+</p>
+<table border="1" cellspacing="0" cellpadding="5">
+<tr>
+<td>Allgemein gilt:<br />
+<p>Algorithmen-Analysen beruhen auf der Annahme, dass Zugriffe auf die Daten optimal schnell sind, dass heißt, dass die für den jeweiligen Algorithmus am besten geeignete Datenstruktur verwendetet wird.<br /> &#8594; Ansonsten: Komplexitätsverschlechterung!
+</p>
+</td></tr></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Beispiel_f.C3.BCr_eine_Verschlechterung_der_Komplexit.C3.A4t_durch_Verwendung_einer_nicht_optimalen_Datenstruktur">Beispiel für eine Verschlechterung der Komplexität durch Verwendung einer nicht optimalen Datenstruktur</span></h4>
+<p>Wir verwenden im Mittelwert-Algorithmus eine verkettete Liste anstelle des Eingabe-Arrays <tt>a</tt>. Wir benötigen dazu eine Funktion, die das j-te Element der Liste zurückgibt. Wie üblich ist die Liste mit Hilfe einer Knotenklasse implementiert:
+</p>
+<pre>     class Node:
+         def __init__(self, data):
+             self.data = data
+             self.next = None
+</pre>
+<p>Die Listenklasse selbst hat ein Feld <tt>head</tt>, das eine Referenz auf den ersten Knoten speichert, und jeder Knoten speichert im Feld <tt>next</tt> eine Referenz auf seinen Nachfolger. Um zum j-ten Element zu gelangen, muss man die Liste sequenziell durchlaufen
+</p>
+<pre>     def get_jth(list, j):
+          r = list.head
+          while j &gt; 0:
+              r = r.next
+              j -= 1
+          return r.data
+</pre>
+<p>Die Komplexität dieser Funktion ist offensichtlich <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(j)" src="../images/39bc18b65310dfbbcf687c0038568984.png" /> (Komplexitätsberechnung wie oben). Wir setzen jetzt bei Version 1 des Mittelwert-Algorithmus diese Funktion in Zeile 6 anstelle des Indexzugriffs <tt>a[i]</tt> ein (nur in dieser Zeile wird auf die Elemente des Arrays zugegriffen). Wir erhalten folgende Implementation (die Änderungen sind rot markiert):
+</p>
+<table border="1" cellspacing="0" cellpadding="2">
+
+<tr>
+<th> Programmzeile
+</th>
+<th> Version 1 mit Liste: O(N * k)
+</th>
+<th> Komplexit&#228;t
+</th></tr>
+<tr>
+<td>
+<p>1.
+</p>
+</td>
+<td>
+<p><tt>r = [0] * len(a)</tt>
+</p>
+</td>
+<td>
+<b><center>O(N)</center></b>
+</td></tr>
+<tr>
+<td>
+<p>2.
+</p>
+</td>
+<td>
+<p><tt>if k &gt; len(a):</tt>
+</p>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td></tr>
+<tr>
+<td>
+<p>3.
+</p>
+</td>
+<td>
+<dl><dd><dl><dd> <tt>raise RuntimeError ("k zu gro&#223;")</tt></dd></dl></dd></dl>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+<p>4.
+</p>
+</td>
+<td>
+<p><tt>for j in range(k-1, len(a)):</tt>
+</p>
+</td>
+<td>
+<center>O(N-k+1) = <b>O(N)</b></center>
+</td></tr>
+<tr>
+<td>
+<p>5.
+</p>
+</td>
+<td>
+<dl><dd><dl><dd> <tt>for i in range(j-k+1, j+1):</tt></dd></dl></dd></dl>
+</td>
+<td>
+<b><center>O(k)</center></b>
+</td></tr>
+<tr>
+<td>
+<p>6.
+</p>
+</td>
+<td>
+<dl><dd><dl><dd><dl><dd><dl><dd> <tt>r[j] += <font color="red">get_jth(a, i)</font></tt></dd></dl></dd></dl></dd></dl></dd></dl>
+</td>
+<td>
+<b><center><font color="red">O(i)</font></center></b>
+</td></tr>
+<tr>
+<td>
+<p>7.
+</p>
+</td>
+<td>
+<dl><dd><dl><dd> <tt>r[j] /= float(k)</tt></dd></dl></dd></dl>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td></tr>
+<tr>
+<td>
+<p>8.
+</p>
+</td>
+<td>
+<p><tt>return r</tt>
+</p>
+</td>
+<td>
+<b><center>O(1)</center></b>
+</td></tr></table>
+<p>Der Aufruf der Funktion <tt>get_jth</tt> ist jetzt gleichbedeutend mit einer dreifach verschachtelten Schleife (weil <tt>get_jth</tt> ja eine zusatzliche Schleife enthält). Die Anzahl der Operationen in Zeile 4 bis 6 ist jetzt
+</p>
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(N,k)=\sum_{j=k-1}^{N-1}\,\sum_{i=j-k+1}^j\,\mathcal{O}(i)" src="../images/075f15d486c493435a15ea4019ba35b6.png" /></dd></dl></dd></dl>
+<p>wobei das <img class="mwe-math-fallback-image-inline tex" alt="\mathcal{O}(i)" src="../images/212f456250686d6060148ac4101fb122.png" /> die neue Schleife durch Verwendung der Liste repräsentiert. Mit Mathematica-Hilfe <a rel="nofollow" class="external autonumber" href="http://www.wolfram.com/">[3]</a> lässt sich diese Summe exakt ausrechnen
+</p>
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="f(N,k)=\frac{1}{2}(k N^2-k^2 N+k^2-k)\in \mathcal{O}(k N^2)" src="../images/38825d6bb60947342b8c98d04303f0f3.png" /></dd></dl></dd></dl>
+<p>Die Komplexitätsberechnung erfolgte dabei nach der Regel für Polynome unter Beachtung von <img class="mwe-math-fallback-image-inline tex" alt="k \ll N" src="../images/0667b53361e319564208b9b8b54a5d5b.png" />.
+</p>
+<h4><span class="mw-headline" id="Fazit:">Fazit:</span></h4>
+<p>Die Komplexität von Version 1 mit einer verketteten Liste wäre O(N<sup>2</sup> * k)
+<b>&#8594; Die richtige Datenstruktur ist wichtig, da es sonst zu einer Komplexitätsverschlechterung kommen kann!</b>
+</p><p>Auf Version 2 unseres Running Average-Beispiels hätte eine verkettete Liste allerdings keine Auswirkungen, da die inkrementelle Berechnung der Summen in Zeile 7 weiterhin möglich ist (bei geschickter Implementation!) und somit Version 2 immer noch eine Komplexität von O(N) hätte.
+</p>
+<h2><span class="mw-headline" id="Amortisierte_Komplexit.C3.A4t">Amortisierte Komplexität</span></h2>
+<p>Bis jetzt wurde die Komplexität nur im schlechtesten Fall (Worst Case) betrachtet. Bei einigen Operationen schwankt die Komplexität jedoch sehr stark, wenn man sie mehrmals hintereinander ausführt, und der schlechteste Fall kommt nur selten vor. Dann ist es sinnvoll, die <i>amortisierte Komplexität</i> zu betrachten, die sich mit der <i>durchschnittlichen</i> Komplexität über viele Aufrufe der selben Operation beschäftigt.
+</p><p>Zum weiter Lesen: [<a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Amortisierte_Laufzeitanalyse">Wikipedia: Amortisierte Laufzeitanalyse</a>]
+</p>
+<h3><span class="mw-headline" id="Beispiel:_Inkrementieren_von_Bin.C3.A4rzahlen">Beispiel: Inkrementieren von Binärzahlen</span></h3>
+<p>Frage: Angenommen, das Umdrehen eines Bits einer Binärzahl verursacht Kosten von 1 Einheit. Wir erzeugen die Folge der natürlichen Zahlen in Binärdarstellung durch sukzessives Inkrementieren, von Null beginnend. Bei jeder Inkrementierung werden einige Bits verändert, aber diese Zahl (und damit die Kosten der Inkrementierungen) <i>schwanken</i> sehr stark. Wir fragen jetzt, was eine Inkrementierung im Durchschnitt kostet?
+</p><p>Um diese Durchschnittskosten zu berechnen, bezahlen wir bei jeder Inkrementierung 2 Einheiten. Wenn davon nach Abzug der Kosten der jeweiligen Operation noch etwas übrig bleibt, wird der Rest dem  Guthaben zugeschrieben. Umgekehrt wird ein eventueller Fehlbetrag (wenn eine Inkrementierung mehr als 2 Bits umdreht) aus dem Guthaben gedeckt. Dadurch werden die ansonsten großen Schwankungen der Kosten ausgeglichen:
+</p>
+<dl><dd><dl><dd> Kosten &lt; Einzahlung &#8594; es wird gespart</dd>
+<dd> Kosten = Einzahlung &#8594; Guthaben bleibt unverändert</dd>
+<dd> Kosten &gt; Einzahlung &#8594; Guthaben wird für die Kosten verbraucht</dd></dl></dd></dl>
+<p><br />
+</p>
+<table border="1" cellspacing="0" cellpadding="5">
+<tr>
+<th>Schritte
+</th>
+<th>Zahlen
+</th>
+<th>Kosten <br />
+<p>(Anzahl der geänderten Bits)
+</p>
+</th>
+<th> Einzahlung
+</th>
+<th>Guthaben =<br />
+<p>altes Guthaben + Einzahlung - Kosten
+</p>
+</th></tr>
+<tr>
+<td>1.
+</td>
+<td>0000<u><span style="color:#00BFFF;">1</span></u>
+</td>
+<td>1
+</td>
+<td><b>2</b>
+</td>
+<td><b>1</b>
+</td></tr>
+<tr>
+<td>2.
+</td>
+<td>000<u><span style="color:#00BFFF;">1</span></u><u><span style="color:#00BFFF;">0</span></u>
+</td>
+<td>2
+</td>
+<td><b>2</b>
+</td>
+<td><b>1</b>
+</td></tr>
+<tr>
+<td>3.
+</td>
+<td>0001<u><span style="color:#00BFFF;">1</span></u>
+</td>
+<td>1
+</td>
+<td><b>2</b>
+</td>
+<td><b>2</b>
+</td></tr>
+<tr>
+<td>4.
+</td>
+<td>00<u><span style="color:#00BFFF;">1</span></u><u><span style="color:#00BFFF;">0</span></u><u><span style="color:#00BFFF;">0</span></u>
+</td>
+<td>3
+</td>
+<td><b>2</b>
+</td>
+<td><b>1</b>
+</td></tr>
+<tr>
+<td>5.
+</td>
+<td>0010<u><span style="color:#00BFFF;">1</span></u>
+</td>
+<td>1
+</td>
+<td><b>2</b>
+</td>
+<td><b>2</b>
+</td></tr>
+<tr>
+<td>6.
+</td>
+<td>001<u><span style="color:#00BFFF;">10</span></u>
+</td>
+<td>2
+</td>
+<td><b>2</b>
+</td>
+<td><b>2</b>
+</td></tr>
+<tr>
+<td>7.
+</td>
+<td>0011<u><span style="color:#00BFFF;">1</span></u>
+</td>
+<td>1
+</td>
+<td><b>2</b>
+</td>
+<td><b>3</b>
+</td></tr>
+<tr>
+<td>8.
+</td>
+<td>0<u><span style="color:#00BFFF;">1000</span></u>
+</td>
+<td>4
+</td>
+<td><b>2</b>
+</td>
+<td><b>1</b>
+</td></tr>
+</table>
+<p><br />
+Die Kosten ergeben sich aus der Anzahl der Ziffern die von 1 nach 0, bzw. von 0 nach 1 verändert werden
+</p><p><u>Rechnung:</u>
+</p><p>1. Schritt: Kosten: 1 &lt; Einzahlung: 2<br />
+</p>
+<dl><dd><dl><dd> &#8594; es wird gespart<br /></dd></dl></dd></dl>
+<p>2. Schritt: Kosten: 2 = Einzahlung: 2<br />
+</p>
+<dl><dd><dl><dd> &#8594; es wird nicht gespart<br /></dd>
+<dd> &#8594; Guthaben bleibt so wie es ist <br /></dd></dl></dd></dl>
+<p>3. Schritt: Kosten: 1 &lt; Einzahlung: 2<br />
+</p>
+<dl><dd><dl><dd> &#8594; es wird gespart<br /></dd></dl></dd></dl>
+<p>4. Schritt: Kosten: 3 &gt; Einzahlung: 2<br />
+</p>
+<dl><dd><dl><dd> &#8594; es wird eine 1 vom Guthaben genommen um die Kosten zu zahlen<br /></dd></dl></dd></dl>
+<p>usw.
+</p><p>Man erkennt, dass vor teuren Operation (Wechsel von 3 auf 4 bzw. von 7 auf 8) genügend Guthaben angespart wurde, um die Kosten zu decken. Das Guthaben geht bei diesen Operationen immer wieder auf 1 zurück, aber es wird nie vollständig verbraucht. 
+</p><p>Dies kann man sehr einfach exakt beweisen: Betrachtet man jede Stelle der Binärzahlen einzeln, erkennt man, dass sich die letzte Stelle (2<sup>0</sup>) in jedem Schritt ändert und man jedesmal eine Einheit dafür bezahlen muss. Die vorletzte Stelle (2<sup>1</sup>) ändert sich in jedem zweiten Schritt. Man zahlt also in jedem Schritt durchschnittlich nur 1/2 Einheit. Die drittletzte Stelle (2<sup>2</sup>) ändert sich in jedem vierten Schritt und verursacht somit durchschnittliche Kosten von 1/4 Einheit usw. Die durchschnittlichen Gesamtkosten pro Schritt kann man durch die unendliche Summe
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="c = 1  + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + ..." src="../images/591f1ca2b191a66b4edaf86d8fb7166d.png" />
+</p><p>berechnen. Dies ist die bekannte Summe der geometrischen Reihe mit <img class="mwe-math-fallback-image-inline tex" alt="q=\frac{1}{2}" src="../images/4e26c1d397578800102659b68c0427b5.png" />
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="c = \sum_{k=0}^{\infty} q^k = \frac{1}{1-q} = 2" src="../images/6f586e839f09d53e18b8d4e59bd95f9f.png" />
+</p><p>Wir schließen daraus, dass die durchschnittlichen oder <b>amortisierten Kosten</b> einer Inkrementierungsoperation gleich 2 sind.
+</p><p>Zum Weiterlesen: [<a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Account-Methode">Wikipedia Account-Methode</a>]
+</p>
+<h4><span class="mw-headline" id="Fazit_2">Fazit</span></h4>
+<p>Die amortisierte Komplexität beschäftigt sich mit dem Durchschnitt aller Operation im ungünstigsten Fall. Operationen mit hohen Kosten, die aber nur selten ausgeführt werden, fallen bei der amortisierten Komplexität nicht so ins Gewicht. Bei Algorithmen, die gelegentlich eine "teure" Operation benutzen, ansonsten jedoch "billige" Operationen aufrufen, kann die amortisierte Komplexität niedriger sein als die Komplexität im schlechtesten (Einzel-)Fall.
+</p><p>In unserem Beispiel fallen die teuren Einzelschritte (z.B. 4. und 8. Schritt) bei den amortisierten Kosten nicht so ins Gewicht, da wir die Kosten aus unserem Guthaben mitbezahlen können. Das Guthaben ist immer groß genug, weil jeder zweite Aufruf eine billige Operation ist, die nur ein Bit umdreht und somit das Ansparen ermöglicht. Diese Betrachtung zeigt, dass die amortisierte (d.h. durchschnittliche) Komplexität des Algoithmus niedriger (nämlich konstant) ist als die Komplexität im schlechtesten Fall.
+</p>
+<h3><span class="mw-headline" id="Anwendung:_Dynamisches_Array">Anwendung: Dynamisches Array</span></h3>
+<p>Ein dynamisches Array hat die Eigenschaft, dass man effizient am Ende des Arrays neue Elemente anfügen kann, indem man die Länge des Arrays entsprechend vergrößert (siehe Übung 1). Die Analyse der amortisierten Komplexität der Anfüge-Operation zeigt uns, wie man das Vergrößern des Arrays richtig implementiert, damit die Operation wirklich effizient abläuft.
+</p>
+<h4><span class="mw-headline" id="Ineffiziente_naive_L.C3.B6sung">Ineffiziente naive Lösung</span></h4>
+<p>Wenn wir an ein Array ein Element anhängen wollen, müssen wir neuen Speicher allokieren, der die gewünschte Länge hat. Die Werte aus dem alten Array müssen dann in den neuen Speicher umkopiert werden. Danach kann das neue Element hinten angefügt werden, weil wir im neuen Array bereits Speicher für dieses Element reserviert haben. Bei der naiven Implementation des dynamischen Arrays wiederholt man dies bei jeder Anfügeoperation. Für die Analyse nehmen wir an, dass das Kopieren eines Elements konstante Zeit O(1) erfordert, ebenso das Einfügen eines neuen Elements auf in eine noch unbenutzte Speicherposition.
+</p><p><u>Naives Anhängen eines weiteren Elements an ein Array:</u>
+</p>
+<table border="1" cellspacing="0" cellpadding="5" align="right">
+<tr>
+<th>Schritte
+</th>
+<td><b>Array</b>
+<p><small>(wie es nach jedem Schritt aussieht)</small>
+</p>
+</td>
+<th>Komplexität
+</th></tr>
+<tr>
+<td><center>altes Array (N=4)</center>
+</td>
+<td><center>[0,1,2,3]</center>
+</td>
+<td><center>-</center>
+</td></tr>
+<tr>
+<td>1. neuer Speicher für<br />&#160;&#160;&#160;(N+1) Elemente
+</td>
+<td><center>[None,None,None,None,None]</center>
+</td>
+<td><center>O(N+1) = <b>O(N)</b></center>(wenn der Speicher initialisiert wird<br />(hier auf <tt>None</tt>), sonst O(1))
+</td></tr>
+<tr>
+<td>2. Kopieren
+</td>
+<td><center>[0,1,2,3,None]</center>
+</td>
+<td><center><b>O(N)</b></center>
+</td></tr>
+<tr>
+<td>3. append von "x"
+</td>
+<td><center>[0,1,2,3,'x']</center>
+</td>
+<td><center><b>O(1)</b></center>
+</td></tr>
+</table>
+<p>altesArray = [0,1,2,3]<br />
+altesArray.append('x')
+</p><p>1. Es wird ein neues Array der Größe N+1 erzeugt<br />
+2. Die N Datenelemente aus dem alten Array werden in das neue Array kopiert<small><br />
+Das sind N Operationen der Komplexität O(1), also ein Gesamtaufwand von O(N).</small><br />
+3. 'x' wird mit Aufwand O(1) an die letzte Stelle des neuen Arrays geschrieben
+</p><p><br />
+<u>Additionsregel:</u><br />
+O(N) + O(1) &#8712; O(N)
+</p><p><b>Folgerung:</b> 
+</p><p>Bei der naiven Methode erfordert jede Anfügung einen Aufwand O(N) (wobei N die derzeitige Arraygröße ist). <b>Das ist nicht effizient.</b>
+</p>
+<h4><span class="mw-headline" id="Effiziente_L.C3.B6sung_durch_Verdoppeln_der_Kapazit.C3.A4t">Effiziente Lösung durch Verdoppeln der Kapazität</span></h4>
+<p>Offensichtlich kommt man nicht darum herum, den Inhalt des alten Arrays zu kopieren, wenn der allokierte Speicher voll ist. Der Trick für die effiziente Implementation der Anfügeoperation besteht darin, das Kopieren so selten wie möglich durchzuführen, also nicht wie in der naiven Lösung bei jeder Anfügeoperation. Hier kommt die amortisierte Komplexität ins Spiel: Ab und zu gibt es eine teure Anfügeoperation (wenn nämlich kopiert werden muss), aber wenn man den durchschnittlichen Aufwand über viele Anfügungen betrachtet, ist die Operation effizient. Der teure Fall wird sozusagen "herausgemittelt". 
+</p><p>Um nur selten kopieren zu müssen, werden beim dynamischen Array mehr Speicherelemente reserviert als zur Zeit benötigt werden (in der naiven Lösung wurde dagegen immer nur Speicher für ein einziges neues Element reserviert). Wir unterscheiden deshalb 
+</p>
+<dl><dd><tt>capacity</tt> = Anzahl der allokierten Speicherzellen, d.h. der möglichen Elemente, die in das Array passen<br /></dd>
+<dd><tt>size</tt> = Anzahl der Elemente, die im Array zur Zeit gespeichert sind<br /></dd></dl>
+<p>Die Daten selbst werden in einem statischen Array gespeichert:
+</p>
+<dl><dd><tt>data</tt> = statisches Array der Größe <tt>capacity</tt><br /></dd></dl>
+<p>Die folgende intuitive Abschätzung zeigt, dass es sinnvoll ist, die Größe des allokierten Speichers jeweils zu verdoppeln. Wir starten bei einem Array der Größe <tt>size = capacity</tt> = N. Da der verfügbare Speicher voll ist, müssen wir bei der nächsten Anfügung die N vorhandenen Elemente in ein neues Array der Länge <tt>new_capacity</tt> kopieren (Aufwand <img class="mwe-math-fallback-image-inline tex" alt="N\cdot O(1)" src="../images/f2faaef4b5826a367a52c040e8b417f2.png" />). Danach können wir K Elemente billig einfügen (Aufwand <img class="mwe-math-fallback-image-inline tex" alt="K\cdot O(1)" src="../images/63abb5e0e0f7648d5e73203548a8c3ff.png" />), wobei 
+</p>
+<dl><dd>K = <tt>new_capacity - capacity</tt> </dd></dl>
+<p>die Anzahl der nach dem Kopieren noch unbenutzen Speicherzellen ist. Der durchschnittliche Aufwand für diese K Einfügungen ist somit
+</p>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\bar T = \frac{N \cdot O(1) + K \cdot O(1)}{K}=\frac{N+K}{K}\cdot O(1)" src="../images/cde3e1c75832299982237df5d8de404d.png" /></dd></dl>
+<p>Damit die mittlere Zeit in O(1) sein kann, muss der Quotient <img class="mwe-math-fallback-image-inline tex" alt="(N+K)/K" src="../images/1f38020d39172e454dceff1ab027d5fa.png" /> eine Konstante sein. Wir setzen <img class="mwe-math-fallback-image-inline tex" alt="K = a N" src="../images/2d8fc50ec5ef395b43203d544f93b9e0.png" /> und erhalten:
+</p>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\bar T = \frac{(a+1)N}{a N}\cdot O(1)=\frac{a+1}{a}\cdot O(1)" src="../images/b885432d2f711a776abc9153175109b9.png" /></dd></dl>
+<p>Der amortisierte Aufwand über K Einfügungen ist also konstant, wenn <img class="mwe-math-fallback-image-inline tex" alt="a" src="../images/0cc175b9c0f1b6a831c399e269772661.png" /> eine (kleine) von N unabhängige Zahl ist. Typischerweise wählt man 
+</p>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="a = 1" src="../images/3872c9ae3f427af0be0ead09d07ae2cf.png" /></dd></dl>
+<p>und mit <img class="mwe-math-fallback-image-inline tex" alt="K = 1\cdot N" src="../images/8e570b24d8755a0ac3da49fd4bb4ceac.png" /> ergibt sich
+</p>
+<dl><dd><tt>new_capacity = capacity</tt> + N = <tt>2 * capacity</tt></dd></dl>
+<p>Die Vorgehensweise beim Zufügen eines neuen Elements im Fall <tt>size == capacity</tt> ist also
+</p>
+<ul><li> capacity wird verdoppelt<br /></li></ul>
+<dl><dd> <tt>neue capacity = 2 * alte capacity</tt></dd>
+<dd> (allgemein genügt es auch, wenn capacity um einen bestimmten Prozentsatz vergrößert wird, 
+<dl><dd> <tt>neue capacity = alte capacity * c</tt> </dd></dl></dd>
+<dd> mit c &gt; 1, z.B. c = 1.2, das entspricht oben der Wahl <img class="mwe-math-fallback-image-inline tex" alt="a = 0.2" src="../images/dba7975a04a8f361e58d174f01683b09.png" />)</dd></dl>
+<ul><li> ein neues statisches Array der Größe 'neue capacity' wird erzeugt</li>
+<li> das alte Array wird ins neue kopiert und danach freigegeben</li>
+<li> das anzufügende Element wird ins neue Array eingefügt</li></ul>
+<p>Umgekehrt geht man beim Entfernen des <i>letzten</i> Array-Elements vor. Normalerweise überschreibt man einfach das letzte Element mit <tt>None</tt> und dekrementiert <tt>size</tt>. Wird dadurch das Array zu klein (üblicherweise <tt>size &lt; capacity / 4</tt>), wird die Kapazität halbiert, genauer:
+</p>
+<ul><li> ein neues Array mit <br /></li></ul>
+<dl><dd> <tt>neue capacity = alte capacity / 2 </tt></dd>
+<dd> wird angelegt (bzw. mit
+<dl><dd> <tt>neue capacity = alte capacity / c </tt></dd></dl></dd>
+<dd> wenn ein anderer Vergrößerungsfaktor verwendet wird)</dd></dl>
+<ul><li> das alte Array wird ins neue kopiert und danach freigegeben</li></ul>
+<p><b>Folge:</b> Die Kosten für das Vergrößern/Verkleinern der Kapazität werden amortisiert über viele Einfügungen, die kein Vergrößern erfordern. Die Operation <tt>append</tt> besitzt amortisierte Komplexität O(1). Im folgenden Abschnitt zeigen wir dies mathematisch exakt mit der Potentialmethode.
+</p>
+<h4><span class="mw-headline" id="Komplexit.C3.A4tsanalyse_des_dynamischen_Arrays_mit_der_Accounting_Methode">Komplexitätsanalyse des dynamischen Arrays mit der Accounting Methode</span></h4>
+<p>Um den formalen Beweis zu führen, legen wir fast, dass <i>Kosten</i> mit positiven Zahlen ausgedrückt werden, während <i>Guthaben</i> als negative Werte geschrieben werden. Wir definieren also das Guthaben nach Schritt <i>i</i> als Differenz zwischen Größe und Kapazität des Arrays:
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="\Phi_i = \mathrm{size}_i - \mathrm{capacity}_i" src="../images/f02644c75429721a64f6cf36e0303509.png" />
+</p><p>Dies kann niemals positiv sein, weil die Anzahl der Elemente des Arrays niemals die Kapazität überschreitet, und entspricht der negierten Anzahl der freien Speicherzellen. Wir zahlen also Guthaben ein, wenn wir mehr Speicher allokieren als zur Zeit benötigt wird, und verbrauchen es, wenn wir neue Elemente in die freien Speicherzellen einfügen.
+</p><p>Bei jeder Einfügung erhöht sich die Arraygröße um ein Element:
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="\mathrm{size}_i = \mathrm{size}_{i-1}+1" src="../images/f10f921ab0463acc09490362a714da01.png" />
+</p><p>Die amortisierten Kosten der Einfügeoperation <img class="mwe-math-fallback-image-inline tex" alt="\hat c_i" src="../images/75989c43c6a5266260064fb79194e82c.png" /> setzen sich zusammen aus den tatsächlichen Kosten <img class="mwe-math-fallback-image-inline tex" alt="c_i" src="../images/d9899588b2b28a768a63ade0f3523596.png" />  der Operation (der Einfügung des neuen Elements und eventuell dem Umkopieren der vorhandenen Elemente) sowie der Änderung des Guthabens:
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="\hat c_i = c_i + \Phi_i - \Phi_{i-1}" src="../images/73c99af4cb03711863aae9ad2875d3da.png" />
+</p><p>Durch Änderung des Guthabens können die Kosten der Einfügeoperation kompensiert werden. Wir unterscheiden zwei Fälle:
+</p><p><u>Fall 1: Array ist nicht voll</u><br />
+Es ist kein Umkopieren nötig, da noch Kapazität frei ist. Daher gilt
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="\mathrm{capacity}_i = \mathrm{capacity}_{i-1}" src="../images/916e8db5131bcb308cc35c69aafdca13.png" />
+</p><p>Die Einfügung kostet nur eine Einheit für das Kopieren des neuen Elements
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="c_i=1" src="../images/d0955600d2fd35ee9eaa8e820ae0fbb2.png" />
+</p><p>Einsetzen in die Formel für die amortisierten Kosten liefert:
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="\hat c_i = 1 + (\mathrm{size}_{i-1} + 1 - \mathrm{capacity}_{i-1}) - (\mathrm{size}_{i-1} - \mathrm{capacity}_{i-1}) = 2" src="../images/3163a8907580e543fb3f5303dfb74b4c.png" />
+</p><p>Die amortisierten Kosten betragen somit zwei Einheiten.
+</p><p><u>Fall 2: Array ist voll</u><br />
+Das heißt, vor dem Einfügen gilt
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="\mathrm{size}_{i-1} = \mathrm{capacity}_{i-1}" src="../images/07d819e1112e97eaee5b8c2a823e2545.png" />
+</p><p>Jetzt muss der Speicher zunächst verdoppelt und die vorhandenen Elemente umkopiert werden. Die Kapazität ändert sich somit nach
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="\mathrm{capacity}_i = 2\cdot\mathrm{capacity}_{i-1}" src="../images/9e9230fa2a3b247d727405475d5dfe08.png" />
+</p><p>Zu den Kosten für das Kopieren des neuen Elements kommen jetzt die Kosten für das Umkopieren der vorhandenen Elemente (wir nehmen an, dass das Kopieren jedes einzelnen Elements stets eine Einheit kostet):
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="c_i=1 + \mathrm{size}_{i-1}" src="../images/176cdd0bf287ff2dcb19ee519d3d031e.png" />
+</p><p>Einsetzen in die Formel für die amortisierten Kosten liefert jetzt:
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="\hat c_i = (1 + \mathrm{size}_{i-1}) + (\mathrm{size}_{i-1} + 1 - 2\cdot\mathrm{capacity}_{i-1}) - (\mathrm{size}_{i-1} - \mathrm{capacity}_{i-1}) = 2 + \mathrm{size}_{i-1} - \mathrm{capacity}_{i-1}" src="../images/9235758ce011385067998c647e71c4f2.png" />
+</p><p>Wegen <img class="mwe-math-fallback-image-inline tex" alt="\mathrm{size}_{i-1} = \mathrm{capacity}_{i-1}" src="../images/07d819e1112e97eaee5b8c2a823e2545.png" /> (das Array war vor der Einfügung voll) vereinfacht sich dies aber zu
+</p><p><img class="mwe-math-fallback-image-inline tex" alt="\hat c_i = 2" src="../images/cf1d68c150670d612ba36a5e13e1e4a4.png" />
+</p><p>Auch in diesem Fall betragen die amortisierten Kosten zwei Einheiten. 
+</p><p><b>Damit wurde bewiesen, dass die Operation <tt>append</tt> beim dynamischen Array eine konstante amortisierte Komplexität hat, also <tt>append</tt> &#8712; O(1)</b>. Diese Operation kann deshalb gefahrlos in der inneren Schleife eines Algorithmus benutzt werden.
+</p>
+<h4><span class="mw-headline" id="Beispiel_f.C3.BCr_9_Einf.C3.BCgeoperationen">Beispiel für 9 Einfügeoperationen</span></h4>
+<table border="1" cellspacing="0" cellpadding="5">
+<tr>
+<th>Array<br />
+<p><small>(wie es aussehen könnte)</small>
+</p>
+</th>
+<th>size
+</th>
+<th>capacity
+</th>
+<th>Kosten für append<br />(einschließlich Umkopieren)
+</th>
+<th>Summe Kosten
+</th>
+<th>Durchschnittskosten
+</th>
+<th>&#934;<sub>i</sub> = size - capacity<br />
+<p><small>(i = size)</small>
+</p>
+</th>
+<th>Potenzialdifferenz<br />
+<p>&#916; &#934;<sub>i</sub> = &#934;<sub>i</sub> - &#934;<sub>i-1</sub>
+</p>
+</th>
+<th>amortisierte Kosten<sub>i</sub><br />
+<p>= Kosten<sub>i</sub> + &#916; &#934;<sub>i</sub>
+</p>
+</th></tr>
+<tr>
+<td> <center>[None]</center>
+</td>
+<td> <center>0</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>-</center>
+</td>
+<td> <center>-</center>
+</td>
+<td> <center>-</center>
+</td>
+<td> <center>-1</center>
+</td>
+<td> <center>-</center>
+</td>
+<td> <center>-</center>
+</td></tr>
+<tr>
+<td> <center>[a]</center><center><span style="color:#00BFFF;">Array ist voll!</span></center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>0</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>2</center>
+</td></tr>
+<tr>
+<td> <center>[a,b]</center><center><span style="color:#00BFFF;">Array ist voll!</span></center>
+</td>
+<td> <center>2</center>
+</td>
+<td> <center>2</center>
+</td>
+<td> <center>1 + 1</center>
+</td>
+<td> <center>3</center>
+</td>
+<td> <center>3/2</center>
+</td>
+<td> <center>0</center>
+</td>
+<td> <center>0</center>
+</td>
+<td> <center>2</center>
+</td></tr>
+<tr>
+<td> <center>[a,b,c,None]</center>
+</td>
+<td> <center>3</center>
+</td>
+<td> <center>4</center>
+</td>
+<td> <center>2 + 1</center>
+</td>
+<td> <center>6</center>
+</td>
+<td> <center>6/3</center>
+</td>
+<td> <center>-1</center>
+</td>
+<td> <center>-1</center>
+</td>
+<td> <center>2</center>
+</td></tr>
+<tr>
+<td> <center>[a,b,c,d]</center><center><span style="color:#00BFFF;">Array ist voll!</span></center>
+</td>
+<td> <center>4</center>
+</td>
+<td> <center>4</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>7</center>
+</td>
+<td> <center>7/4</center>
+</td>
+<td> <center>0</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>2</center>
+</td></tr>
+<tr>
+<td> <center>[a,b,c,d,e,None,None,None]</center>
+</td>
+<td> <center>5</center>
+</td>
+<td> <center>8</center>
+</td>
+<td> <center>4 + 1</center>
+</td>
+<td> <center>12</center>
+</td>
+<td> <center>12/5</center>
+</td>
+<td> <center>-3</center>
+</td>
+<td> <center>-3</center>
+</td>
+<td> <center>2</center>
+</td></tr>
+<tr>
+<td> <center>[a,b,c,d,e,f,None,None]</center>
+</td>
+<td> <center>6</center>
+</td>
+<td> <center>8</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>13</center>
+</td>
+<td> <center>13/6</center>
+</td>
+<td> <center>-2</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>2</center>
+</td></tr>
+<tr>
+<td> <center>[a,b,c,d,e,f,g,None]</center>
+</td>
+<td> <center>7</center>
+</td>
+<td> <center>8</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>14</center>
+</td>
+<td> <center>14/7</center>
+</td>
+<td> <center>-1</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>2</center>
+</td></tr>
+<tr>
+<td> <center>[a,b,c,d,e,f,g,h]</center><center><span style="color:#00BFFF;">Array ist voll!</span></center>
+</td>
+<td> <center>8</center>
+</td>
+<td> <center>8</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>15</center>
+</td>
+<td> <center>15/8</center>
+</td>
+<td> <center>0</center>
+</td>
+<td> <center>1</center>
+</td>
+<td> <center>2</center>
+</td></tr>
+<tr>
+<td> <center>[a,b,c,d,e,f,g,h,j,None,None,None,<br />
+None,None,None,None]</center>
+</td>
+<td> <center>9</center>
+</td>
+<td> <center>16</center>
+</td>
+<td> <center>8 + 1</center>
+</td>
+<td> <center>24</center>
+</td>
+<td> <center>24/9</center>
+</td>
+<td> <center>-7</center>
+</td>
+<td> <center>-7</center>
+</td>
+<td> <center>2</center>
+</td></tr>
+</table>
+<p>Die durchschnittlichen Kosten betragen stets etwa 2 Einheiten, schwanken allerdings so, dass nicht unmittelbar ersichtlich ist, ob dies für sämtliche Einfügeoperationen gilt. Die amortisierten Kosten, die mit Hilfe des Guthabens berechnet werden, sind hingegen konstant 2, wie auch im obigen Beweis für alle Einfügeoperationen allgemein gezeigt wurde.
+</p><p><a href="suchen.html" title="Suchen">Nächstes Thema</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825110955
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.147 seconds
+Real time usage: 0.856 seconds
+Preprocessor visited node count: 2028/1000000
+Preprocessor generated node count: 4336/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:29-0!canonical!math=0 and timestamp 20260825110954 and revision id 5700
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index3a18.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Effizienz&amp;oldid=5700</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="effizienz.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk"><a href="talk_effizienz.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index8798.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="indexc157.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="index9d2e.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="effizienz-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="effizienz-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="indexaab8.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="index3a18.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index4e9e.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 26 May 2020, at 13:14.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.147","walltime":"0.856","ppvisitednodes":{"value":2028,"limit":1000000},"ppgeneratednodes":{"value":4336,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825110955","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":988});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Effizienz by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:43:25 GMT -->
+</html>

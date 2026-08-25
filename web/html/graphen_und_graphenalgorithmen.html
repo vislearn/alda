@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Graphen_und_Graphenalgorithmen by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:46:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Graphen und Graphenalgorithmen - Alda</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Graphen_und_Graphenalgorithmen","wgTitle":"Graphen und Graphenalgorithmen","wgCurRevisionId":5712,"wgRevisionId":5712,"wgArticleId":76,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Graphen_und_Graphenalgorithmen","wgRelevantArticleId":76,"wgRequestId":"25fc2b2c64194a18dbb201f6","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1bp9du0",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../images/load0ce0.css"/>
+<script async="" src="../images/load3a95.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<link rel="shortcut icon" href="favicon.html"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../images/opensearch_desc.php" title="Alda (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../images/api-result251f.xml"/>
+<link rel="alternate" type="application/atom+xml" title="Alda Atom feed" href="../images/feeda295.xml"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js?40bd4"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Graphen_und_Graphenalgorithmen rootpage-Graphen_und_Graphenalgorithmen skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators mw-body-content">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">Graphen und Graphenalgorithmen</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">From Alda</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Einf.C3.BChrung_zu_Graphen"><span class="tocnumber">1</span> <span class="toctext">Einführung zu Graphen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Motivation_--_K.C3.B6nigsberger_Br.C3.BCckenproblem"><span class="tocnumber">1.1</span> <span class="toctext">Motivation -- Königsberger Brückenproblem</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Definitionen"><span class="tocnumber">1.2</span> <span class="toctext">Definitionen</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Repr.C3.A4sentation_von_Graphen"><span class="tocnumber">1.3</span> <span class="toctext">Repräsentation von Graphen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Durchlaufen_von_Graphen_.28Graph_Traversal.29"><span class="tocnumber">2</span> <span class="toctext">Durchlaufen von Graphen (Graph Traversal)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Tiefensuche_in_Graphen_.28Depth_First_Search.2C_DFS.29"><span class="tocnumber">2.1</span> <span class="toctext">Tiefensuche in Graphen (Depth First Search, DFS)</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Breitensuche_in_Graphen_.28Breadth_First_Search.2C_BFS.29"><span class="tocnumber">2.2</span> <span class="toctext">Breitensuche in Graphen (Breadth First Search, BFS)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Weitere_Anwendungen_der_Tiefensuche"><span class="tocnumber">3</span> <span class="toctext">Weitere Anwendungen der Tiefensuche</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Test.2C_ob_ein_ungerichteter_Graph_azyklisch_ist"><span class="tocnumber">3.1</span> <span class="toctext">Test, ob ein ungerichteter Graph azyklisch ist</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Damenproblem"><span class="tocnumber">3.2</span> <span class="toctext">Damenproblem</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Finden_von_Zusammenhangskomponenten"><span class="tocnumber">3.3</span> <span class="toctext">Finden von Zusammenhangskomponenten</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#L.C3.B6sung_mittels_Tiefensuche"><span class="tocnumber">3.3.1</span> <span class="toctext">Lösung mittels Tiefensuche</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#L.C3.B6sung_mittels_Union-Find-Algorithmus"><span class="tocnumber">3.3.2</span> <span class="toctext">Lösung mittels Union-Find-Algorithmus</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#K.C3.BCrzeste_Wege_.28Pfade.29"><span class="tocnumber">4</span> <span class="toctext">Kürzeste Wege (Pfade)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#K.C3.BCrzeste_Wege_in_ungewichteten_Graphen_mittels_Breitensuche"><span class="tocnumber">4.1</span> <span class="toctext">Kürzeste Wege in ungewichteten Graphen mittels Breitensuche</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Gewichtete_Graphen"><span class="tocnumber">4.2</span> <span class="toctext">Gewichtete Graphen</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Algorithmus_von_Dijkstra"><span class="tocnumber">4.3</span> <span class="toctext">Algorithmus von Dijkstra</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#Edsger_Wybe_Dijkstra"><span class="tocnumber">4.3.1</span> <span class="toctext">Edsger Wybe Dijkstra</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Algorithmus"><span class="tocnumber">4.3.2</span> <span class="toctext">Algorithmus</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Beispiel"><span class="tocnumber">4.3.3</span> <span class="toctext">Beispiel</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Komplexit.C3.A4t_von_Dijkstra"><span class="tocnumber">4.3.4</span> <span class="toctext">Komplexität von Dijkstra</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Vergleich_mit_Breitensuche_und_Tiefensuche"><span class="tocnumber">4.3.5</span> <span class="toctext">Vergleich mit Breitensuche und Tiefensuche</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Korrektheit_von_Dijkstra"><span class="tocnumber">4.3.6</span> <span class="toctext">Korrektheit von Dijkstra</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="#A.2A-Algorithmus_-_Wie_kann_man_Dijkstra_noch_verbessern.3F"><span class="tocnumber">4.4</span> <span class="toctext">A*-Algorithmus - Wie kann man Dijkstra noch verbessern?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Minimaler_Spannbaum"><span class="tocnumber">5</span> <span class="toctext"><b>Minimaler Spannbaum</b></span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#Anwendungen"><span class="tocnumber">5.1</span> <span class="toctext">Anwendungen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-27"><a href="#Wie_verbindet_man_n_gegebene_Punkte_mit_m.C3.B6glichst_kurzen_Stra.C3.9Fen_.28Eisenbahnen.2C_Dr.C3.A4hten_.5Bbei_Schaltungen.5D_usw..29.3F"><span class="tocnumber">5.1.1</span> <span class="toctext">Wie verbindet man n gegebene Punkte mit möglichst kurzen Straßen (Eisenbahnen, Drähten [bei Schaltungen] usw.)?</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#Bestimmung_von_Datenclustern"><span class="tocnumber">5.1.2</span> <span class="toctext">Bestimmung von Datenclustern</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-29"><a href="#Algorithmen"><span class="tocnumber">5.2</span> <span class="toctext">Algorithmen</span></a>
+<ul>
+<li class="toclevel-3 tocsection-30"><a href="#Algorithmus_von_Prim"><span class="tocnumber">5.2.1</span> <span class="toctext">Algorithmus von Prim</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#Algorithmus_von_Kruskal"><span class="tocnumber">5.2.2</span> <span class="toctext">Algorithmus von Kruskal</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#Verwendung_einer_BucketPriorityQueue"><span class="tocnumber">5.2.3</span> <span class="toctext">Verwendung einer BucketPriorityQueue</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-33"><a href="#Algorithmen_f.C3.BCr_gerichtete_Graphen"><span class="tocnumber">6</span> <span class="toctext">Algorithmen für gerichtete Graphen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-34"><a href="#Anwendung:_Sequence_Alignment_.2F_Edit_Distance"><span class="tocnumber">6.1</span> <span class="toctext">Anwendung: Sequence Alignment / Edit Distance</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#Anwendung:_Abh.C3.A4ngigkeitsgraph"><span class="tocnumber">6.2</span> <span class="toctext">Anwendung: Abhängigkeitsgraph</span></a>
+<ul>
+<li class="toclevel-3 tocsection-36"><a href="#Zwei_Algorithmen_zum_Finden_der_topologischen_Sortierung"><span class="tocnumber">6.2.1</span> <span class="toctext">Zwei Algorithmen zum Finden der topologischen Sortierung</span></a>
+<ul>
+<li class="toclevel-4 tocsection-37"><a href="#Algorithmus_1"><span class="tocnumber">6.2.1.1</span> <span class="toctext">Algorithmus 1</span></a></li>
+<li class="toclevel-4 tocsection-38"><a href="#Algorithmus_2"><span class="tocnumber">6.2.1.2</span> <span class="toctext">Algorithmus 2</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-39"><a href="#Transitive_H.C3.BClle_und_stark_zusammenh.C3.A4ngende_Komponenten"><span class="tocnumber">6.3</span> <span class="toctext">Transitive Hülle und stark zusammenhängende Komponenten</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-40"><a href="#Weitere_wichtige_Graphenalgorithmen"><span class="tocnumber">7</span> <span class="toctext">Weitere wichtige Graphenalgorithmen</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Einf.C3.BChrung_zu_Graphen">Einführung zu Graphen</span></h2>
+<h3><span class="mw-headline" id="Motivation_--_K.C3.B6nigsberger_Br.C3.BCckenproblem">Motivation -- Königsberger Brückenproblem</span></h3>
+<p>Leonhard Euler <a rel="nofollow" class="external autonumber" href="http://de.wikipedia.org/wiki/Leonhard_Euler">[1]</a> erfand den Graphen-Formalismus 1736, um eine scheinbar banale Frage zu beantworten: Ist es möglich, in Königsberg (siehe Stadtplan von 1809 und die schematische Darstellung) einen Spaziergang zu unternehmen, bei dem jede der 7 Brücken genau einmal überquert wird?
+</p><p><a href="file_koenigsberg1809.html" class="image"><img alt="Koenigsberg1809.png" src="../images/koenigsberg1809.png" width="1235" height="700" /></a><br />
+<a href="file_koenigsberg.html" class="image"><img alt="Koenigsberg.jpg" src="../images/koenigsberg.jpg" width="455" height="302" /></a>
+</p><p>Ein Graph abstrahiert von der Geometrie des Problems und repräsentiert nur die Topologie. Jeder Stadtteil von Königsberg ist ein Knoten des Graphen, jede Brücke eine Kante. Der zum Brückenproblem gehörende Graph sieht also so aus:
+</p>
+<pre>    O
+   /| \
+   \|  \
+    O---O
+   /|  /
+   \| /
+    O
+</pre>
+<p>Der gesuchte Spaziergang würde existieren, wenn es maximal 2 Knoten gäbe, an denen sich eine ungerade Zahl von Kanten trifft. Die Frage muss für Königsberg also verneint werden, denn hier gibt es vier solche Knoten. Ein leicht modifiziertes Problem ist allerdings lösbar: Im obigen Stadtplan erkennt man eine Fähre, die die Stadtteile Kneiphof und Altstadt verbindet. Bezieht man dieselbe in den Spaziergang ein, ergibt sich folgender Graph, bei dem nur noch zwei Knoten mit ungerader Kantenzahl existieren:
+</p>
+<pre>  --O
+ / /| \
+ \ \|  \
+  --O---O
+   /|  /
+   \| /
+    O
+</pre>
+<p>Inzwischen haben Graphen eine riesige Zahl weiterer Anwendungen gefunden. Einige Beispiele:
+</p>
+<ul><li> Landkarten:
+<ul><li> Knoten: Länder</li>
+<li> Kanten: gemeinsame Grenzen</li></ul></li></ul>
+<ul><li> Logische Schaltkreise:
+<ul><li> Knoten: Gatter</li>
+<li> Kanten: Verbindungen</li></ul></li></ul>
+<ul><li> Chemie (Summenformeln):
+<ul><li> Knoten: chemische Elemente</li>
+<li> Kanten: Bindungen </li></ul></li></ul>
+<ul><li> Soziologie (StudiVZ)
+<ul><li> Soziogramm
+<ul><li> Knoten: Personen</li>
+<li> Kanten: Freund von ...</li></ul></li></ul></li></ul>
+<h3><span class="mw-headline" id="Definitionen">Definitionen</span></h3>
+<dl><dt>Ungerichteter Graph</dt>
+<dd> Ein ungerichteter Graph G = ( V, E ) besteht aus
+<ul><li> einer endliche Menge V von Knoten (vertices)</li>
+<li> einer endlichen Menge <img class="mwe-math-fallback-image-inline tex" alt="E \subset V \times V" src="../images/68baf21617b1f489f8edbba06c10d391.png" /> von Kanten (edges)</li></ul></dd>
+<dd>Die Paare (u,v) und (v,u) gelten dabei als nur <i>eine</i> Kante (somit gilt die Symmetriebeziehung: (u,v) ∈ E =&gt; (v,u) ∈ E ). Die Anzahl der Kanten, die sich an einem Knoten treffen, wird als <i>Grad</i> (engl. <i>degree</i>) dieses Knotens bezeichnet:
+<dl><dd><dl><dd>degree(v) = |{v' ∈ V | (v,v') ∈ E}|</dd></dl></dd></dl></dd>
+<dd>(Die Syntax |{...}| bezeichnet dabei die Mächtigkeit der angegebenen Menge, also die Anzahl der Elemente in der Menge.)</dd></dl>
+<p>Der Graph des Königsberger Brückenproblems ist ungerichtet. Bezeichnet man die Knoten entsprechend des folgenden Bildes
+</p>
+<pre>   c
+  /| \
+  \|  \
+   b---d 
+  /|  /
+  \| /
+   a
+</pre>
+<p>gilt für die Knotengrade: <tt>degree(a) == degree(c) == degree(d) == 3</tt> und <tt>degree(b) == 5</tt>. Genauer muss man bei diesem Graphen von einem <i>Multigraphen</i> sprechen, weil es zwischen einigen Knotenpaaren (nämlich (a, b) sowie (b, c)) mehrere Kanten ("Mehrfachkanten") gibt. Wir werden in dieser Vorlesung nicht näher auf Multigraphen eingehen.
+</p>
+<dl><dt>Gerichteter Graph</dt>
+<dd> Ein Graph heißt <i>gerichtet</i>, wenn die Kanten (u,v) und (v,u) unterschieden werden. Die Kante (u,v) ∈ E wird nun als Kante von u nach v (aber nicht umgekehrt) interpretiert. Entsprechend unterscheidet man jetzt den <i>eingehenden</i> und den <i>ausgehenden Grad</i> jedes Knotens:
+<ul><li>out_degree(v) = |{v' ∈ V | (v,v') ∈ E}|<br /></li>
+<li>in_degree(v)  = |{v' ∈ V| (v',v) ∈ E}|</li></ul></dd></dl>
+<p>Das folgende Bild zeigt einen gerichteten Graphen. Hier gilt <tt>out_degree(1) == out_degree(3) == in_degree(2) == in_degree(4) == 2</tt> und 
+<tt>in_degree(1) == in_degree(3) == out_degree(2) == out_degree(4) == 0</tt>:
+</p><p><a href="file_digraph.html" class="image" title="gerichteter Graph"><img alt="gerichteter Graph" src="../images/digraph.png" width="299" height="275" /></a>
+</p><p><br />
+</p>
+<dl><dt>Vollständiger Graph</dt>
+<dd> Ein vollständiger Graph ist ein ungerichteter Graph, bei dem jeder Knoten mit allen anderen Knoten verbunden ist.
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="E = \{ (v,w) |  v \in V, w \in V, v \ne w \}" src="../images/deeeac6bbf559beeb412f47399bad1f0.png" /></dd></dl></dd></dl></dd>
+<dd>Ein vollständiger Graph mit |V| Knoten hat <img class="mwe-math-fallback-image-inline tex" alt="|E| = \frac{|V|(|V|-1)}{2}" src="../images/4d0264dc6b3d6dd54ac376d4f823b708.png" /> Kanten.</dd></dl>
+<p>Die folgenden Abbildungen zeigen die vollständigen Graphen mit einem bis fünf Knoten (auch als K<sub>1</sub> bis K<sub>5</sub> bezeichnet).
+</p>
+<table border="0" cellspacing="0" cellpadding="0" style="margin: 1em auto 1em auto">
+
+<tr>
+<td> <div class="thumb tright"><div class="thumbinner" style="width:87px;"><a href="file_k1.html" class="image"><img alt="" src="../images/k1.png" width="85" height="61" class="thumbimage" /></a>  <div class="thumbcaption">k1</div></div></div>
+</td>
+<td> <div class="thumb tright"><div class="thumbinner" style="width:167px;"><a href="file_k2.html" class="image"><img alt="" src="../images/k2.png" width="165" height="73" class="thumbimage" /></a>  <div class="thumbcaption">k2</div></div></div>
+</td>
+<td> <div class="thumb tright"><div class="thumbinner" style="width:167px;"><a href="file_k3.html" class="image"><img alt="" src="../images/k3.png" width="165" height="129" class="thumbimage" /></a>  <div class="thumbcaption">k3</div></div></div>
+</td></tr>
+<tr>
+<td> <div class="thumb tright"><div class="thumbinner" style="width:213px;"><a href="file_k4.html" class="image"><img alt="" src="../images/k4.png" width="211" height="185" class="thumbimage" /></a>  <div class="thumbcaption">k4</div></div></div>
+</td>
+<td> <div class="thumb tright"><div class="thumbinner" style="width:230px;"><a href="file_k5.html" class="image"><img alt="" src="../images/k5.png" width="228" height="188" class="thumbimage" /></a>  <div class="thumbcaption">k5</div></div></div>
+</td>
+<td>
+</td></tr></table>
+<p><br />
+<i>Rätsel</i><br />
+Auf einer Party sind Leute. Alle stoßen miteinander an. Es hat 78 mal "Pling" gemacht.
+Wieviele Leute waren da? Antwort: Jede Person ist ein Knoten des Graphen, jedes Antoßen eine Kante. 
+Da alle miteinander angestoßen haben, handelt es sich um einen vollständigen Graphen. Mit
+|V|(|V|-1)/2 = 78 folgt, dass es 13 Personen waren.
+</p><p><br />
+</p>
+<dl><dt>Gewichteter Graph</dt>
+<dd> Ein Graph heißt <i>gewichtet</i>, wenn jeder Kante eine reelle Zahl zugeordnet ist. Bei vielen Anwendungen beschränkt man sich auch auf nichtnegative reelle Gewichte. In einem gerichteten Graphen können die Gewichte der Kanten (u,v) und (v,u) unterschiedlich sein.</dd></dl>
+<p>Die Gewichte kodieren Eigenschaften der Kanten, die für die jeweilige Anwendung interessant sind. Bei der Berechnung des maximalen Flusses in einem Netzwerk sind die Gewichte z.B. die Durchflusskapazitäten jeder Kante, bei der Suche nach kürzesten Weges kodieren Sie den Abstand zwischen den Endknoten der Kante, bei Währungsnetzwerken (jeder Knoten ist eine Währung) geben sie die Wechselkurse an, usw..
+</p><p><br />
+</p>
+<dl><dt>Teilgraphen</dt>
+<dd> Ein Graph G' = (V',E') ist ein Teilgraph eines Graphen G, wenn gilt:
+<ul><li> V' &#8838; V </li>
+<li> E' &#8834; E </li></ul></dd>
+<dd>Er heißt <i>(auf)spannender Teilgraph</i>, wenn gilt:
+<ul><li> V' = V</li></ul></dd>
+<dd>Er heißt <i>induzierter Teilgraph</i>, wenn gilt:
+<ul><li> e = (u,v) ∈ E' &#8834; E &#8660; u ∈ V' und v ∈ V'</li></ul></dd>
+<dd>Den von V' induzierten Teilgraphen erhält man also, indem man aus G alle Knoten löscht, die nicht in V' sind, sowie alle Kanten (und nur diese Kanten), die einen der gelöschten Knoten als Endknoten haben.</dd></dl>
+<p><br />
+</p>
+<dl><dt>Wege, Pfade, Zyklen, Kreise, Erreichbarkeit</dt>
+<dd> Sei G = (V,E) ein Graph (ungerichtet oder gerichteter) Graph. Dann gilt folgende rekursive Definition:
+<ul><li> Für v ∈ V ist (v) ein Weg der Länge 0 in G</li>
+<li> Falls <img class="mwe-math-fallback-image-inline tex" alt="(v_0, v_1, ..., v_{n-1})" src="../images/32fd9a880706104a96ce4c2567401af0.png" /> ein Weg ist, und eine Kante <img class="mwe-math-fallback-image-inline tex" alt="(v_{n-1}, v_n)\in E" src="../images/e2dad33b4362880dbdd5b520460df80a.png" /> existiert, dann ist auch <img class="mwe-math-fallback-image-inline tex" alt="(v_0, v_1, ..., v_{n-1}, v_n)" src="../images/0c5a60dab6f5957b00a22e565f9450d9.png" /> ein Weg, und er hat die Länge n. </li></ul></dd>
+<dd> Ein Weg ist also eine nichtleere Folge von Knoten, so dass aufeinander folgende Knoten stets durch eine Kante verbunden sind. Die Länge des Weges entspricht der Anzahl der Kanten im Weg (= Anzahl der Knoten - 1).
+<ul><li> Ein <i>Pfad</i> <img class="mwe-math-fallback-image-inline tex" alt="(v_0, v_1, ..., v_{n-1}, v_n)" src="../images/0c5a60dab6f5957b00a22e565f9450d9.png" /> ist ein Weg, bei dem alle Knoten v<sub>i</sub> verschieden sind.</li>
+<li> <i>Ein Zyklus</i> <img class="mwe-math-fallback-image-inline tex" alt="(v_0, v_1, ..., v_{n-1}, v_n)" src="../images/0c5a60dab6f5957b00a22e565f9450d9.png" /> ist ein Weg, der zum Ausgangspunkt zurückkehrt, wenn also v<sub>0</sub> = v<sub>n</sub> gilt.</li>
+<li> Ein <i>Kreis</i> ist ein Zyklus ohne Überkreuzungen. Das heisst, es gilt v<sub>0</sub> = v<sub>n</sub> und <img class="mwe-math-fallback-image-inline tex" alt="(v_0, v_1, ..., v_{n-1})" src="../images/32fd9a880706104a96ce4c2567401af0.png" /> ist ein Pfad.</li>
+<li> Ein Knoten w ∈ V ist von einem anderen Knoten v ∈ V aus <i>erreichbar</i> genau dann, wenn ein Weg (v, ..., w) existiert. Wir schreiben dann <img class="mwe-math-fallback-image-inline tex" alt="v \rightsquigarrow w" src="../images/cef1275ede7409b3576d21947f38e889.png" />.</li></ul></dd></dl>
+<p>In einem ungerichteten Graph ist die Erreichbarkeits-Relation stets symmetrisch, das heisst aus <img class="mwe-math-fallback-image-inline tex" alt="v \rightsquigarrow w" src="../images/cef1275ede7409b3576d21947f38e889.png" /> folgt <img class="mwe-math-fallback-image-inline tex" alt="w \rightsquigarrow v" src="../images/aebee1256e7f18c634c67f89a9a24ddf.png" />. In einem gerichteten Graphen ist dies im allgemeinen nicht der Fall.
+</p><p>Bestimmte Wege haben spezielle Namen
+</p>
+<dl><dt>Eulerweg</dt>
+<dd> Ein Eulerweg ist ein Weg, der alle <b>Kanten</b> genau einmal enthält.</dd></dl>
+<p>Die eingangs erwähnte Frage des Königsberger Brückenproblems ist equivalent zu der Frage, ob der dazugehörige Graph einen Eulerweg besitzt (daher der Name). Ein anderes bekanntes Beispiel ist das "Haus vom Nikolaus": Wenn man diesen Graphen in üblicher Weise in einem Zug zeichnet, erhält man gerade den Eulerweg. 
+</p>
+<pre>   O
+  /  \
+ O----O
+ | \/ |
+ | /\ |   "Das Haus vom Nikolaus": Alle <i>Kanten</i> werden nur <i>einmal</i> passiert
+ O----O
+</pre>
+<p><br />
+</p>
+<dl><dt>Hamiltonweg</dt>
+<dd> Ein Hamiltonweg ist ein Weg, der alle <b>Knoten</b> genau einmal enthält. Das "Haus vom Nikolaus" besitzt auch einen Hamiltonweg:</dd></dl>
+<pre>   O
+  /   
+ O----O
+    /  
+   /      Alle <i>Knoten</i> werden nur <i>einmal</i> passiert
+ O----O
+</pre>
+<p><br />
+</p>
+<dl><dt>Hamiltonkreis</dt>
+<dd> Ein Hamiltonkreis ist ein Kreis, der alle <b>Knoten</b> genau einmal enthält. Auch ein solches Gebilde ist im Haus von Nilolaus enthalten:</dd></dl>
+<pre>   O
+  /  \
+ O    O
+ |    |   v0 = vn
+ |    |   vi&#160;!= vj   Für Alle i,j   i&#160;!=j; i,j &gt;0; i,j &lt; n
+ O----O     
+</pre>
+<p>Die folgende Skizze zeigt hingegen einen Zyklus: Der Knoten rechts unten sowie die untere Kante sind zweimal enthalten (die Kante einmal von links nach rechts und einmal von rechts nach links):
+</p>
+<pre>   O
+  /  \
+ O    O
+   \  |
+    \ |   Zyklus
+ O====O
+</pre>
+<p><br />
+</p>
+<dl><dt>Zusammenhang, Zusammenhangskomponenten</dt>
+<dd> Ein ungerichteter Graph G heißt <i>zusammenhängend</i>, wenn für alle v,w ∈ V gilt:
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="v \rightsquigarrow w" src="../images/cef1275ede7409b3576d21947f38e889.png" /></dd></dl></dd></dl></dd>
+<dd>Ein gerichteter Graph G ist zusammenhängend, wenn für alle v,w ∈ V gilt:
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="v \rightsquigarrow w" src="../images/cef1275ede7409b3576d21947f38e889.png" /> <b>oder</b> <img class="mwe-math-fallback-image-inline tex" alt="w \rightsquigarrow v" src="../images/aebee1256e7f18c634c67f89a9a24ddf.png" />. </dd></dl></dd></dl></dd>
+<dd>Er ist <i>stark zusammenhängend</i>, wenn für alle v,w ∈ V gilt:
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="v \rightsquigarrow w" src="../images/cef1275ede7409b3576d21947f38e889.png" /> <b>und</b> <img class="mwe-math-fallback-image-inline tex" alt="w \rightsquigarrow v" src="../images/aebee1256e7f18c634c67f89a9a24ddf.png" />. </dd></dl></dd></dl></dd>
+<dd>Entsprechende Definitionen gelten für Teilgraphen G'. Ein Teilgraph G' heisst <i>Zusammenhangskomponente</i> von G, wenn er ein <i>maximaler</i> zusammenhängender Teilgraph ist, d.h. wenn G' zusammenhängend ist, und man keine Knoten und Kanten aus G mehr zu G' hinzufügen kann, so dass G' immer noch zusammenhängend bleibt. Entsprechend definiert man <i>starke Zusammenhangskomponenten</i> in einem gerichteten Graphen.</dd></dl>
+<p><br />
+</p>
+<dl><dt>Planarer Graph, ebener Graph</dt>
+<dd> Ein Graph heißt <i>planar</i>, wenn er so in einer Ebene gezeichnet werden <i>kann</i>, dass sich die Kanten nicht schneiden (außer an den Knoten). Ein Graph heißt <i>eben</i>, wenn er tatsächlich so gezeichnet <i>ist</i>, dass sich die Kanten nicht schneiden. Die Einbettung in die Ebene ist im allgemeinen nicht eindeutig.</dd></dl>
+<p><b>Beispiele:</b>
+</p><p>Der folgende Graph ist planar und eben:
+</p>
+<pre>     O
+    /|\
+   / O \
+  / / \ \
+  O     O
+</pre>
+<p>Das "Haus vom Nikolaus" ist ebenfalls planar, wird aber üblicherweise nicht als ebener Graph gezeichnet, weil sich die Diagonalen auf der Wand überkreuzen:
+</p>
+<pre>   O
+  /  \
+ O----O
+ | \/ |
+ | /\ |   
+ O----O
+</pre>
+<p>Eine ebene Einbettung dieses Graphen wird erreicht, wenn man eine der Diagonalen ausserhalb des Hauses zeichnet. Der Graph (also die Menge der Knoten und Kanten) ändert sich dadurch nicht.
+</p>
+<pre>     O  
+    /  \
+ --O----O
+/  |  / |
+|  | /  |   
+|  O----O      Das "Haus vom Nikolaus" als ebener Graph gezeichnet.
+ \     /
+  -----
+</pre>
+<p>Eine alternative Einbettung erhalten wir, wenn wir die andere Diagonale außerhalb des Hauses zeichnen:
+</p>
+<pre>     O  
+    /  \
+   O----O--|
+   | \  |  |
+   |  \ |  | 
+   O----O  |     Alternative Einbettung des "Haus vom Nikolaus".
+   |       |
+   |-------|
+</pre>
+<p>Jede Einbettung eines planaren Graphen (also jeder ebene Graph) definiert eine eindeutige Menge von <i>Regionen</i>:
+</p>
+<pre>|----O   @
+|   /@ \
+|  O----O
+|  |@ / |
+|  | / @|   
+|  O----O        @ entspricht jeweils einer <i>Region</i>. Auch ausserhalb der Figur ist eine Region (die sogenannte <i>unendliche</i> Region).
+|@      |
+|-------|
+</pre>
+<p><br />
+Der vollständige Graph K5 ist kein planarer Graph, da sich zwangsweise Kanten schneiden, wenn man diesen Graphen in der Ebene zeichnet.
+</p><p><br />
+</p>
+<dl><dt>Dualer Graph</dt>
+<dd> Jeder ebene Graph G = (V, E) hat einen <i>dualen Graphen</i> D = (V<sub>D</sub>, E<sub>D</sub>), dessen Knoten und Kanten wie folgt definiert sind:
+<ul><li> V<sub>D</sub> enthält einen Knoten für jede Region des Graphen G</li>
+<li> Für jede Kante e ∈ E gibt es eine duale Kante e<sub>D</sub> ∈ E<sub>D</sub>, die die an e angrenzenden Regionen (genauer: die entsprechenden Knoten in D) verbindet.</li></ul></dd></dl>
+<p>Die folgende Abbildung zeigt einen Graphen (grau) und seinen dualen Graphen (schwarz). Die Knoten des dualen Graphen sind mit Zahlen gekennzeichnet und entsprechen den Regionen des Originalgraphen. Jeder (grauen) Kante des Originalgraphen entspricht eine (schwarze) Kante des dualen Graphen.
+</p><p><br /><br />
+<a href="file_dual-graphs.html" class="image"><img alt="Dual-graphs.png" src="../images/dual-graphs.png" width="385" height="415" /></a>
+<br /><br />
+</p><p>Für duale Graphen gilt: Wenn der Originalgraph zusammenhängend ist, enthält jede Region des dualen Graphen genau einen Knoten des Originalgraphen. Deshalb ist der duale Graph des dualen Graphen wieder der Originalgraph. Bei nicht-zusammenhängenden Graphen gilt dies nicht (vgl. das Fenster bei obigem Bild). In diesem Fall hat der duale Graph mehrere mögliche Einbettungen in die Ebene (man kann z.B. die rechte Kante zwischen Knoten 2 und 4 auch links vom Fenster einzeichnen), und man erhält nicht notwendigerweise den Originalgraphen, wenn man den dualen Graphen des dualen berechnet.
+</p><p><br />
+</p>
+<dl><dt>Baum</dt>
+<dd> Ein <i>Baum</i> ist ein zusammenhängender, kreisfreier Graph.</dd></dl>
+<p>Beispiel: Binärer Suchbaum
+</p>
+<dl><dt>Spannbaum</dt>
+<dd> Ein <i>Spannbaum</i> eines zusammenhängenden Graphen G ist ein zusammenhängender, kreisfreier Teilgraph von G, der alle Knoten von G enthält</dd></dl>
+<p>Beispiel: Spannbaum für das "Haus des Nikolaus" 
+</p><p><br />
+</p>
+<pre>   O   
+  /       
+ O    O
+ |  /  
+ | /   
+ O----O
+</pre>
+<p>Der Spannbaum eines Graphen mit |V| Knoten hat stets |V| - 1 Kanten.
+</p>
+<dl><dt>Wald</dt>
+<dd> Ein <i>Wald</i> ist ein unzusammenhängender, kreisfreier Graph.</dd>
+<dd> Jede Zusammenhangskomponente eines Waldes ist ein Baum.</dd></dl>
+<h3><span class="mw-headline" id="Repr.C3.A4sentation_von_Graphen">Repräsentation von Graphen</span></h3>
+<p>Sei G = ( V, E ) gegeben und liege V in einer linearen Sortierung vor.<br /> 
+</p>
+<dl><dd><dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="V = \{ v_1, ...., v_n \}" src="../images/667b6d489e6949d62e79a2ce27666fa8.png" /></dd></dl></dd></dl></dd></dl>
+<dl><dt>Adjazenzmatrix</dt>
+<dd> Ein Graph kann durch eine Adjazenzmatrix repräsentiert werden, die soviele Zeilen und Spalten enthält, wie der Graph Knoten hat. Die Elemente der Adjazenzmatrix sind "1", falls eine Kante zwischen den zugehörigen Knoten existiert:
+<dl><dd><dl><dd><img class="mwe-math-fallback-image-inline tex" alt="\mathrm{\bold A} = a_{ij} = &#10;\begin{cases}&#10;1 &amp; \mathrm{falls}\quad (v_i, v_j) \in E \\&#10;0 &amp; \mathrm{sonst}&#10;\end{cases} &#10;" src="../images/673d4e223727fc32c21ad5d6e4f0aa7d.png" /></dd></dl></dd></dl></dd>
+<dd>Die Indizes der Matrix entsprechen also den Indizes der Knoten gemäß der gegebenen Sortierung. Im Falle eines ungerichteten Graphen ist die Adjazenzmatrix stets symmetrisch (d.h. es gilt <img class="mwe-math-fallback-image-inline tex" alt="a_{ij}=a_{ji}" src="../images/deeefba70a3fa1055792dd6f8b523ec6.png" />), bei einem gerichteten Graphen ist sie im allgemeinen unsymmetrisch.</dd></dl>
+<p>Beispiel für einen ungerichteten Graphen:
+</p>
+<pre>v = { a,b,c,d }     b      d
+                    | \  / |
+                    |  \/  |
+                    |  /\  |
+                    | /  \ |
+                    a      c
+
+      a b c d
+     -----------
+     (0 1 0 1) |a 
+ A = (1 0 1 0) |b
+     (0 1 0 1) |c
+     (1 0 1 0) |d
+</pre>
+<p>Die Adjazenzmatrixdarstellung eignet sich besonders für dichte Graphen (d.h. wenn die Zahl der Kanten in O(|V|<sup>2</sup>) ist.
+</p>
+<dl><dt>Adjazenzlisten</dt>
+<dd> In der Adjazenzlistendarstellung wird der Graph als Liste von Knoten repräsentiert, die für jeden Knoten einen Eintrag enthält. Der Eintrag für jeden Knoten ist wiederum eine Liste, die die Nachbarknoten dieses Knotens enthält:
+<ul><li> graph = {adjazencyList(v) | v ∈ V}</li>
+<li> adjazencyList(v) = {v' ∈ V | (v, v') ∈ E}</li></ul></dd></dl>
+<p>In Python implementieren wir Adjazenzlisten zweckmäßig als Array von Arrays:
+</p>
+<pre>                  graph = [[...],[...],...,[...]]
+Adjazenzliste für Knoten =&gt;  0     1         n
+</pre>
+<p>Wenn wir bei dem Graphen oben die Knoten wie bei der Adjazenzmatrix indizieren (also <tt>a =&gt; 0</tt>, <tt>b =&gt; 1</tt>, <tt>c =&gt; 2</tt>, <tt>d =&gt; 3</tt>), erhalten wir die Adjazenzlistendarstellung:
+</p>
+<pre>graph = [[b, d], [a, c],[b, d], [a, c]]
+</pre>
+<p>Auf die Nachbarknoten eines durch seinen Index <tt>node</tt> gegebenen Knotens können wir also wie folgt zugreifen:
+</p>
+<pre>     for neighbors in graph[node]:
+         ... # do something with neighbor
+</pre>
+<p>Die Adjazenzlistendarstellung ist effizienter, wenn der Graph nicht dicht ist, so dass viele Einträge der Adjazenzmatrix Null wären. In der Vorlesung werden wir nur diese Darstellung verwenden.
+</p>
+<dl><dt><div id="transposed_graph">Transponierter Graph</div></dt>
+<dd> Den <i>transponierten Graphen</i> G<sup>T</sup> eines gerichteten Graphen G erhält man, wenn man alle Kantenrichtungen umkehrt.</dd></dl>
+<p>Bei ungerichteten Graphen hat die Transposition offensichtlich keinen Effekt, weil alle Kanten bereits in beiden Richtungen vorhanden sind, so dass G<sup>T</sup> = G gilt. Bei gerichteten Graphen ist die Transposition einfach, wenn der Graph als Adjazenzmatrix implementiert ist, weil man einfach die transponierte Adjazenzmatrix verwenden muss (beachte, dass sich die Reihenfolge der Indizes umkehrt):
+</p>
+<dl><dd><dl><dd><dl><dd>A<sup>T</sup> = a<sub>ji</sub></dd></dl></dd></dl></dd></dl>
+<p>Ist der Graph hingegen durch eine Adjazenzliste repräsentiert, muss etwas mehr Aufwand getrieben werden:
+</p>
+<pre>def transposeGraph(graph):
+     gt = [[] for k in graph]   # zunächst leere Adjazenzlisten von G<sup>T</sup>
+     for node in range(len(graph)):
+          for neighbor in graph[node]:
+              gt[neighbor].append(node)  # füge die umgekehrte Kante in G<sup>T</sup> ein
+     return gt
+</pre>
+<h2><span class="mw-headline" id="Durchlaufen_von_Graphen_.28Graph_Traversal.29">Durchlaufen von Graphen (Graph Traversal)</span></h2>
+<p>Wir betrachten zunächst ungerichtete Graphen mit V Knoten und E Kanten. Eine grundlegende Aufgabe in diesen Graphen besteht darin, alle Knoten in einer bestimmten Reihenfolge genau einmal zu besuchen. Hierbei darf man sich von einem gegebenen Startknoten aus nur entlang der Kanten des Graphen bewegen. Die beim Traversieren benutzen Kanten bilden einen Baum, dessen Wurzel der Startknoten ist und der den gesamten Graphen aufspannt, falls der Graph zusammenhängend ist. (Beweis: Da jeder Knoten nur einmal besucht wird, gibt es für jeden besuchten Knoten [mit Ausnahme des Startknotens] genau eine eingehende Kante. Ist der Graph zusammenhängend, wird jeder Knoten tatsächlich erreicht und es gibt genau (V-1) Kanten, exakt soviele wie für einen Baum mit V Knoten notwendig sind.) Ist der Graph nicht zusammenhängend, wird jeder zusammenhängende Teilgraph (jede <i>Zusammenhangskomponente</i>) getrennt traversiert, und man erhält einen sogenannten <i>Wald</i> mit einem Baum pro Zusammenhangskomponente. Die beiden grundlegenden Traversierungsmethoden <i>Tiefensuche</i> und <i>Breitensuche</i> werden im folgenden vorgestellt.
+</p>
+<h3><span class="mw-headline" id="Tiefensuche_in_Graphen_.28Depth_First_Search.2C_DFS.29">Tiefensuche in Graphen (Depth First Search, DFS)</span></h3>
+<p>Die Idee der Tiefensuche besteht darin, jeden besuchten Knoten sofort über die erste Kante wieder zu verlassen, die zu einem noch nicht besuchten Knoten führt. Man findet dadurch schnell einen möglichst langen Pfad durch den Graphen, und der Traversierungs-Baum wird zunächst in die Tiefe verfolgt, daher der Name des Verfahrens. Hat ein Knoten keine unbesuchten Nachbarknoten mehr, geht man im Baum auf demselben Weg zurück (sogenanntes <i>back tracking</i>), bis man einen Knoten findet, der noch einen unbesuchten Nachbarn besitzt, und traversiert diese nach dem gleichen Muster. Gibt es gar keine unbesuchten Knoten mehr, kehrt die Suche zum Startknoten zurück und endet dort.
+</p><p>Die folgende rekursive Implementation der Tiefensuche erwartet den Graphen in Adjazenzlistendarstellung und beginnt die Suche beim Knoten <tt>startnode</tt>. Die Information, ob ein Knoten bereits besucht wurde, wird im Array <tt>visited</tt> gespeichert. Ein solches Array, das zusätzliche Informationen über die Knoten des Graphen bereitstellt, wir <i>property map</i> genannt. (Die Verwendung von property maps hat sich gegenüber der alternativen Idee durchgesetzt, solche Eigenschaften in speziellen Knotenklassen zu speichern. Im letzteren Fall braucht man nämlich für jede Anwendung eine angepasste Knotenklasse mit den jeweils gewünschten Attributen und damit auch angepasste Implementationen der Graphenfunktionen, was sich als sehr aufwändig erwiesen hat.) 
+</p>
+<pre>def dfs(graph, startnode):
+    visited = [False]*len(graph)  # Flags, welche Knoten bereits besucht wurden
+    
+    def visit(node):              # rekursive Hilfsfunktion, die den gegebenen Knoten und dessen Nachbarn besucht
+        if not visited[node]:     # Besuche node, wenn er noch nicht besucht wurde
+            visited[node] = True  # Markiere node als besucht
+            print(node)           # Ausgabe der Knotennummer - pre-order
+            for neighbor in graph[node]:   # Besuche rekursiv die Nachbarn
+                visit(neighbor)
+    
+    visit(startnode)
+</pre>
+<p><a href="file_tiefens.html" class="image"><img alt="Tiefens.jpg" src="../images/tiefens.jpg" width="610" height="265" /></a>
+</p><p>Ausgabe für den Graphen in diesem Bild (es handelt sich um einen ungerichteten Graphen, die Pfeile symbolisieren nur die Suchrichtung beim Traversal):
+</p>
+<pre>&gt;&gt;&gt; dfs(graph, 1)
+1
+2
+4
+3
+6
+7
+5
+</pre>
+<div id="pre_and_post_order">In dieser Version des Algorithmus werden die Knotennummern ausgegeben, bevor die Nachbarknoten besucht werden. Man bezeichnet die resultierende Sortierung der Knoten als <b>pre-order</b> oder als <b>discovery order</b>. Alternativ kann man die Knotennummern erst ausgeben, nachdem alle Nachbarn besucht wurden, also auf dem Rückweg der Rekursion. In diesem Fall spricht man von <b>post-order</b> oder <b>finishing order</b>:</div>
+<pre>def dfs(graph, startnode):
+    visited = [False]*len(graph)  # Flags, welche Knoten bereits besucht wurden
+    
+    def visit(node):              # rekursive Hilfsfunktion, die den gegebenen Knoten und dessen Nachbarn besucht
+        if not visited[node]:     # Besuche node, wenn er noch nicht besucht wurde
+            visited[node] = True  # Markiere node als besucht
+            for neighbor in graph[node]:   # Besuche rekursiv die Nachbarn
+                visit(neighbor)
+            <font color="red">print(node)           # Ausgabe der Knotennummer - post-order</font>
+    
+    visit(startnode)
+</pre>
+<p>Es ergibt sich jetzt die Ausgabe:
+</p>
+<pre>&gt;&gt;&gt; dfs(graph, 1)<font color="red">
+6
+7
+3
+4
+5
+2
+1</font>
+</pre>
+<p>In realem Code ersetzt man die print-Ausgaben natürlich durch anwendungsspezifische Aktionen und Berechnungen. Einige Anwendungen sind uns im Kapitel <a href="suchen.html" title="Suchen">Suchen</a> bereits begegnet. 
+</p>
+<dl><dt> Anwendungen der Pre-Order Traversierung</dt></dl>
+<ul><li> Kopieren eines Graphen: kopiere zuerst den besuchten Knoten, dann seine Nachbarn und die dazugehörigen Kanten (sowie die Kanten zu bereits besuchten Knoten, die in der Grundversion der Tiefensuche ignoriert werden).</li>
+<li> Bestimmen der Zusammenhangskomponenten eines Graphen (siehe unten)</li>
+<li> In einem Zeichenprogramm: fülle eine Region mit einer Farbe ("flood fill"). Dabei ist jedes Pixel ein Knoten des Graphen und wird mit seinen 4 Nachbarpixeln verbunden. Die Tiefensuche startet bei der Mausposition und endet am Rand des betreffendcen Gebiets.</li>
+<li> Falls der Graph ein Baum ist: bestimme den Abstand jedes Knotens von der Wurzel</li>
+<li> Falls der Graph ein Parse-Baum ist, wobei innere Knoten Funktionsaufrufe, Kindknoten Funktionsargumente, und Blattknoten Werte repräsentieren: drucke den zugehörigen Ausdruck aus (also immer zuerst den Funktionsnamen, dann die Argumente, die wiederum geschachtelte Funktionsaufrufe sein können).</li></ul>
+<dl><dt> Anwendungen der Post-Order Traversierung</dt></dl>
+<ul><li> Löschen eines Graphen: lösche zuerst die Nachbarn, dann den Knoten selbst</li>
+<li> Bestimmen einer topologischen Sortierung eines azyklischen gerichteten Graphens (siehe unten)</li>
+<li> Falls der Graph ein Baum ist: bestimme den Abstand jedes Knotens von den Blättern (also die Tiefe des Baumes, siehe Übung 5)</li>
+<li> Falls der Graph ein Parse-Baum ist: führe die zugehörige Berechnung aus (d.h. berechne zuerst die geschachtelten inneren Funktionen, dann mit diesen Ergebnissen die nächst äußeren usw., siehe Übung 5).</li></ul>
+<dl><dt> Anwendungen, die Pre- und Post-Order benötigen</dt></dl>
+<ul><li> Weg aus einem Labyrinth: die Pre-Order dokumentiert die Suche nach dem Weg, die Post-Order zeigt den Rückweg aus Sackgassen (siehe Übung 9).</li></ul>
+<p>Im Spezialfall, wenn der Graph ein Binärbaum ist, unterscheidet man noch eine dritte Variante der Traversierung, nämlich die <i>in-order</i> Traversierung. In diesem Fall behandelt man den Vaterknoten nach den linken, aber vor den rechten Kindern. Diese Reihenfolge wird beim <a href="suchen.html#Beziehungen_zwischen_dem_Suchproblem_und_dem_Sortierproblem" title="Suchen">Tree Sort Algorithmus</a> verwendet. Diese Sortierung verwendet man auch, wenn man einen Parse-Baum mit binären Operatoren (statt Funktionsaufrufen) ausgeben will, siehe Übung 5.
+</p><p>Eine nützliche Erweiterung der Tiefensuche besteht darin, Informationen über den Verlauf der Suche zu sammeln und am Ende zurückzugeben, so dass andere Algorithmen diese Information nutzen können. Typische Beispiele dafür sind eine Reihenfolge der Knoten (in discovery oder finishing order) oder die Vorgänger jedes Knotens im Tiefensuchbaum (also  von welchem Knoten aus man den jeweiligen Knoten zuerst erreicht hat). Wir führen dafür drei neue Arrays ein. 
+</p>
+<pre>def dfs(graph, startnode):
+    visited = [False]*len(graph)    # wurde ein Knoten bereits besucht?
+    parents = [None]*len(graph)     # registriere für jeden Knoten den Vorgänger im Tiefensuchbaum
+    discovery_order = []            # enthält am Ende die pre-order Sortierung
+    finishing_order = []            # enthält am Ende die post-order Sortierung
+    
+    def visit(node, parent):        # rekursive Hilfsfunktion
+        if not visited[node]:       # besuche 'node', wenn noch nicht besucht wurde
+            visited[node] = True           # markiere 'node' als besucht
+            parents[node] = parent         # speichere den Vorgänger von 'node'
+            discovery_order.append(node)   # registriere, dass 'node' jetzt entdeckt wurde
+            for neighbor in graph[node]:   # besuche rekursiv die Nachbarn ...
+                visit(neighbor, node)      #  ... wobei 'node' zu deren Vorgänger wird
+            finishing_order.append(node)   # registriere, dass 'node' jetzt fertiggestellt wurde
+    
+    visit(startnode, None)          # beginne bei 'startnode', der keinen Vorgänger hat
+    
+    return parents, discovery_order, finishing_order # gib die zusätzliche Informationen zurück
+</pre>
+<p>Beginnt man die Suche bei Knoten 1, entsprechen die Inhalte der Arrays <tt>discovery_order</tt> und <tt>finishing_order</tt> für den obigen Beispielgraphen gerade den vorher angeführten <tt>print</tt>-Ausgaben. Die Vorgänger im Array <tt>parents</tt> lauten: 
+</p>
+<pre> Knotennummer  |  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7
+ --------------+-----+-----+-----+-----+-----+-----+-----+-----
+ Vorgänger     | None| None|  1  |  4  |  2  |  2  |  3  |  3
+</pre>
+<p>Die Knotennummern dienen hier als Array-Indizes, und die dazugehörigen Arrayeinträge verweisen auf die Vorgänger. Man kann mit diesen Informationen den Weg von jedem Knoten zur Wurzel zurückverfolgen und damit den Tiefensuchbaum von unten nach oben rekonstruieren. Man beachte, dass <tt>parents</tt> den Eintrag <tt>None</tt> für die Knoten 0 umd 1 enthält, weil Knoten 0 in diesem Graphen nicht existiert und Knoten 1 als Wurzel der Suche keinen Vorgänger hat.
+</p><p>Wird das Array <tt>parents</tt> verwendet, kann man den Code vereinfachen, indem man das Array <tt>visited</tt> einspart: Sobald ein Knoten erstmals besucht wurde, ist sein Vorgänger bekannt und damit ungleich <tt>None</tt>. Die Abfrage <tt>if parents[node] is None:</tt> liefert damit das gleiche Resultat wie die Abfrage <tt>if not visited[node]:</tt>. Einzige Ausnahme ist der Startknoten der Suche, dessen Vorgänger bisher <tt>None</tt> war. Dieses Problem löst man leicht mit der Konvention, dass man den Startknoten zu seinem eigenen Vorgänger erklärt. Man startet die Suche also mit <tt>visit(startnode, startnode)</tt> statt mit <tt>visit(startnode, None)</tt>.
+</p>
+<h3><span class="mw-headline" id="Breitensuche_in_Graphen_.28Breadth_First_Search.2C_BFS.29">Breitensuche in Graphen (Breadth First Search, BFS)</span></h3>
+<p>Im Gegensatz zur Tiefensuche werden bei der Breitensuche alle Nachbarknoten abgearbeitet, <i>bevor</i> man rekursiv deren Nachbarn besucht. Man betrachtet somit zuerst alle Knoten, die den Abstand 1 von Startknoten haben, dann diejenigen mit dem Abstand 2 usw. Diese Reihenfolge bezeichnet man als <i>level-order</i>. Wir sind ihr beispielsweise in Übung 6 begegnet, als die ersten 7 Ebenen eines Treap ausgegeben werden sollten. Man implementiert Breitensuche zweckmäßig mit Hilfe einer Queue, die die Knoten in First In - First Out - Reihenfolge bearbeitet. Eine geeignete Datenstruktur hierfür ist die Klasse <tt><a rel="nofollow" class="external text" href="http://docs.python.org/library/collections.html#collections.deque">deque</a></tt> aus dem Python-Modul <tt><a rel="nofollow" class="external text" href="http://docs.python.org/library/collections.html">collections</a></tt> (eine Deque implementiert sowohl die Funktionalität einer Queue wie auch die eines Stacks, siehe Übung 3):
+</p>
+<pre>from collections import deque
+
+def bfs(graph, startnode):
+    parents = [None]*len(graph)            # speichere für jeden Knoten den Vorgänger im Breitensuchbaum
+    parents[startnode] = startnode         # Konvention: der Startknoten hat sich selbst als Vorgänger 
+  
+    q = deque()                            # Queue für die zu besuchenden Knoten
+    q.append(startnode)                    # Startknoten in die Queue einfügen
+    
+    while len(q) &gt; 0:                      # solange noch Knoten zu bearbeiten sind
+        node = q.popleft()                 # Knoten aus der Queue nehmen (first in - first out)
+    <font color="red">                                       # Beachte: mit q.pop() bekommen wir DFS</font>
+        print(node)                        # den Knoten bearbeiten (hier: Knotennummer drucken)
+        for neighbor in graph[node]:       # die Nachbarn expandieren
+            if parents[neighbor] is None:  # Nachbar wurde noch nicht besucht
+                parents[neighbor] = node   # =&gt; Vorgänger merken, Knoten dadurch als "besucht" markieren
+                q.append(neighbor)         #    und in die Queue aufnehmen
+</pre>
+<p><a href="file_breitens.html" class="image"><img alt="Breitens.jpg" src="../images/breitens.jpg" width="610" height="265" /></a>
+</p><p>Der Aufruf dieser Funktion liefert die Knoten des obigen Graphens ebenenweise, also zufällig genau in der Reihenfolge der Knotennummern:
+</p>
+<pre>&gt;&gt;&gt; bfs(graph, 1)
+1
+2
+3
+4
+5
+6
+7
+</pre>
+<p>Neben der ebenenweisen Ausgabe hat die Breitensuche viele weitere wichtige Anwendungen, z.B. beim Testen, ob ein gegebener Graph bi-partit ist (siehe <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Breadth-first_search#Testing_bipartiteness">WikiPedia</a>), sowie bei der Suche nach kürzesten Wegen (siehe unten) und kürzesten Zyklen.
+</p>
+<h2><span class="mw-headline" id="Weitere_Anwendungen_der_Tiefensuche">Weitere Anwendungen der Tiefensuche</span></h2>
+<p>Die Tiefensuche hat zahlreiche Anwendungen, wobei der grundlegende Algorithmus immer wieder leicht modifiziert und an die jeweilige Aufgabe angepasst wird. Wir beschreiben im folgenden einige Beispiele.
+</p>
+<h3><span class="mw-headline" id="Test.2C_ob_ein_ungerichteter_Graph_azyklisch_ist">Test, ob ein ungerichteter Graph azyklisch ist</span></h3>
+<p>Ein zusammenhängender ungerichteter Graph ist azyklisch (also ein Baum) genau dann, wenn es nur einen möglichen Weg von jedem Knoten zu jedem anderen gibt. (Bei gerichteten Graphen sind die Verhältnisse komplizierter. Wir behandeln dies weiter unten.) Das kann man mittels Tiefensuche leicht feststellen: Die Kante, über die wir einen Knoten erstmals erreichen, ist eine <i>Baumkante</i> des Tiefensuchbaums. Erreichen wir einen bereits besuchten Knoten nochmals über eine andere Kante, haben wir einen Zyklus gefunden. Dabei müssen wir allerdings beachten, dass in einem ungerichteten Graphen jede Baumkante zweimal gefunden wird, einmal in Richtung vom Vater zum Kind und einmal in umgekehrter Richtung. Im zweiten Fall endet die Kante zwar in einem bereits besuchten Knoten (dem Vater), aber es entsteht dadurch kein Zyklus. Den Vaterknoten müssen wir deshalb überspringen, wenn wir über die Nachbarn iterieren:
+</p>
+<pre>def undirected_cycle_test(graph):         # Annahme: der Graph ist zusammenhängend
+                                          # (andernfalls führe den Algorithmus für jede Zusammenhangskomponente aus)
+    visited = [False]*len(graph)          # Flags für bereits besuchte Knoten
+    
+    def visit(node, from_node):           # rekursive Hilfsfunktion: gibt True zurück, wenn Zyklus gefunden wurde
+        if not visited[node]:             # wenn node noch nicht besucht wurde
+            visited[node] = True          # markiere node als besucht
+            for neighbor in graph[node]:  # besuche die Nachbarn ...
+                if neighbor == from_node: # ... aber überspringe den Vaterknoten
+                    continue
+                if visit(neighbor, node): # ... signalisiere, wenn rekursiv ein Zyklus gefunden wurde
+                    return True
+            return False                  # kein Zyklus gefunden
+        else:
+            return True                   # Knoten schon besucht =&gt; Zyklus
+    
+    startnode = 0                         # starte bei beliebigem Knoten (hier: Knoten 0)
+    return visit(startnode, startnode)    # gebe True zurück, wenn ein Zyklus gefunden wurde
+</pre>
+<p>Wenn wir einen Zyklus finden, wird das weitere Traversieren das Graphen abgebrochen, denn ein Graph, der einmal zyklisch war, kann später nicht wieder azyklisch werden. Die notwendige Modifikation für unzusammenhängende Graphen erfolgt analog zum Algorithmus für die Detektion von Zusammenhangskomponenten, der im nächsten Abschnitt beschrieben wird.
+</p>
+<h3><span class="mw-headline" id="Damenproblem">Damenproblem</span></h3>
+<p>Tiefensuche wird häufig verwendet, um systematisch nach der Lösung eines logischen Rätsels (oder allgemeiner nach der Lösung eines diskreten Optimierungsproblems) zu suchen. Besonders anschaulich hierfür ist das Damenproblem. Die Aufgabe besteht darin, <img class="mwe-math-fallback-image-inline tex" alt="k" src="../images/8ce4b16b22b58894aa86c421e8759df3.png" /> Damen auf einem Schachbrett der Größe <img class="mwe-math-fallback-image-inline tex" alt="k \times k" src="../images/5b5f0112171324a6f9fc5df06f6019dd.png" /> so zu platzieren, dass sie sich (nach den üblichen Schach-Regeln) nicht gegenseitig schlagen können. Das folgende Diagramm zeigt eine Lösung für den Fall <img class="mwe-math-fallback-image-inline tex" alt="k=4" src="../images/8fb17f33ecfea96d828bc790d6d40e0a.png" />. Die Positionen der Damen werden dabei wie üblich durch die Angabe der Spalte (Linie) mit Buchstaben und der Zeile (Reihe) mit Zahlen kodiert, hier also A2, B4, C1, D3:
+</p>
+<pre> ---------------
+|   | X |   |   | 4
+|---|---|---|---| 
+|   |   |   | X | 3
+|---|---|---|---|
+| X |   |   |   | 2
+|---|---|---|---|
+|   |   | X |   | 1
+ ---------------
+  A   B   C   D
+</pre>
+<p>Um das Problem systematisch zu lösen, konstruieren wir einen gerichteten Graphen, dessen Knoten die möglichen Positionen der Damen kodieren. Wir verbinden Knoten, die zu benachbarten Linien gehören, genau dann mit einer Kante, wenn die zugehörigen Positionen kompatibel sind, also wenn sich die dort positionierten Damen nicht schlagen können. Der resultierende Graph für <img class="mwe-math-fallback-image-inline tex" alt="k=4" src="../images/8fb17f33ecfea96d828bc790d6d40e0a.png" /> hat folgende Gestalt:
+</p>
+<div class="center"><div class="floatnone"><a href="file_damenproblem-graph.html" class="image"><img alt="Damenproblem-graph.png" src="../images/thumb6e2b.png" width="500" height="221" srcset="/thumb.php?f=Damenproblem-graph.png&amp;width=750 1.5x, /thumb.php?f=Damenproblem-graph.png&amp;width=1000 2x" /></a></div></div>
+<p>Knoten, die zur selben Reihe oder Linie gehören, sind beispielsweise nicht direkt verbunden, weil zwei Damen niemals in derselben Linie oder Reihe stehen dürfen. Um eine erlaubte Konfiguration zu finden, verwenden wir nun eine angepasste Version der Tiefensuche: Wir beginnen die Suche beim Knoten <tt>START</tt>. Sobald wir den Knoten <tt>STOP</tt> erreichen, beenden wir die Suche und lesen die Lösung am gerade gefundenen Weg von Start nach Stop ab. Zwei kleine Modifikationen des Grundalgorithmus stellen sicher, dass die Bedingungen der Aufgabe eingehalten werden: Wir dürfen bei der Tiefensuche nur dann zu einem Nachbarn weitergehen, wenn die betreffende Position mit allen im Pfad bereits gesetzten Positionen kompatibel ist, andernfalls ist diese Kante tabu. Landen wir aufgrund dieser Regel in einer Sackgasse (also in einem Knoten, wo keine der ausgehenden Kanten erlaubt ist), müssen wir zur nächsten erlaubten Abzweigung zurückgehen (Backtracking). Beim Zurückgehen müssen wir das <tt>parent</tt>-Flag wieder auf <tt>None</tt> zurücksetzen, weil der betreffende Knoten ja möglicherweise auf einem anderen erlaubten Weg erreichbar ist.
+</p><p>Der folgende Graph zeigt einen solchen Fall: Wir haben zwei Damen auf die Felder A1 und B3 positioniert (grüne Pfeile). Die einzig ausgehende Kante von B3 führt zum Knoten C1, welcher aber mit der Position A1 inkompatibel ist, so dass diese Kante nicht verwendet werden darf (roter Pfeil). Das Backtracking muss jetzt zu Knoten A1 zurückgehen (dabei wird das <tt>parent</tt>-Flag von B3 wieder auf <tt>None</tt> gesetzt), weil A1 mit der Kante nach B4 eine weitere Option hat, die geprüft werden muss (die allerdings hier auch nicht zum Ziel führt).
+</p>
+<div class="center"><div class="floatnone"><a href="file_damenproblem-graph-failure.html" class="image"><img alt="Damenproblem-graph-failure.png" src="../images/thumbbf0d.png" width="500" height="221" srcset="/thumb.php?f=Damenproblem-graph-failure.png&amp;width=750 1.5x, /thumb.php?f=Damenproblem-graph-failure.png&amp;width=1000 2x" /></a></div></div>
+<p>Nach einigen weiteren Sackgassen findet man schließlich den Pfad A2, B4, C1, D3, der im folgenden Graphen grün markiert ist und der obigen Lösung entspricht:
+</p>
+<div class="center"><div class="floatnone"><a href="file_damenproblem-graph-success.html" class="image"><img alt="Damenproblem-graph-success.png" src="../images/thumb5fad.png" width="500" height="221" srcset="/thumb.php?f=Damenproblem-graph-success.png&amp;width=750 1.5x, /thumb.php?f=Damenproblem-graph-success.png&amp;width=1000 2x" /></a></div></div>
+<h3><span class="mw-headline" id="Finden_von_Zusammenhangskomponenten">Finden von Zusammenhangskomponenten</span></h3>
+<p>Das Auffinden und Markieren von Zusammenhangskomponenten (also maximalen zusammenhängenden Teilgraphen) ist eine grundlegende Aufgabe in ungerichteten, unzusammenhängenden Graphen (bei gerichteten Graphen sind die Verhältnisse wiederum komplizierter, siehe unten). Zwei Knoten u und v gehören zur selben Zusammenhangskomponente genau dann, wenn es einen Pfad von u nach v gibt (da der Graph ungerichtet ist, gibt es dann auch einen Pfad von v nach u). Man sagt auch, dass "v von u aus erreichbar" ist. Unzusammenhängende Graphen entstehen in der Praxis häufig, wenn die Kanten gewisse Relationen zwischen den Knoten kodieren: 
+</p>
+<ul><li> Wenn die Knoten Städte sind und die Kanten Straßen, sind diejenigen Städte in einer Zusammenhangskomponente, die per Auto von einander erreichbar sind. Unzusammenhängende Graphen entstehen hier beispielsweise, wenn eine Insel nicht durch eine Brücke erschlossen ist, wenn Grenzen gesperrt sind oder wenn ein Gebirge zu unwegsam ist, um Straßen zu bauen.</li>
+<li> Wenn Knoten Personen sind, und Kanten die Eltern-Kind-Relation beschreiben, so umfasst jede Zusammenhangskomponenten die Verwandten (auch wenn sie nur über viele "Ecken" verwandt sind).</li>
+<li> In der Bildverarbeitung entsprechen Knoten den Pixeln, und dieselben werden durch eine Kante verbunden, wenn sie zum selben Objekt gehören. Die Zusammenhangskomponenten entsprechen somit den Objekten im Bild (siehe Übungsaufgabe).</li></ul>
+<p>Die Zusammenhangskomponenten bilden eine Äquivalenzrelation. Folglich kann für jede Komponente ein Reprässentant bestimmt werden, der sogenannte "Anker". Kennt jeder Knoten seinen Anker, ist das Problem der Zusammenhangskomponenten gelöst. 
+</p>
+<h4><span class="mw-headline" id="L.C3.B6sung_mittels_Tiefensuche">Lösung mittels Tiefensuche</span></h4>
+<p>Unser erster Ansatz ist, den Anker mit Hilfe der Tiefensuche zu finden. Anstelle der property map <tt>visited</tt> verwenden wir diesmal eine property map <tt>anchors</tt>, die für jeden Knoten die Knotennummer des zugehörigen Ankers angibt, oder <tt>None</tt>, wenn der Knoten noch nicht besucht wurde. Dabei verwenden wir wieder die Konvention, dass Anker auf sich selbst zeigen. Für viele Anwendungen ist es außerdem (oder stattdessen) zweckmäßig, die Zusammenhangskomponenten mit einer laufenden Nummer, einem sogenannten <i>Label</i>, durchzuzählen. Dann kann man zusätzliche Informationen zu jeder Komponente (beispielsweise deren Größe) einfach in einem Array speichern, das über die Labels indexiert wird. Die folgende Version der Tiefensuche bestimmt sowohl die Anker als auch die Labels für jeden Knoten:
+</p>
+<pre>def connectedComponents(graph):
+       anchors = [None] * len(graph)             # property map für Anker jedes Knotens
+       labels  = [None] * len(graph)             # property map für Label jedes Knotens
+       
+       def visit(node, anchor):
+               """anchor ist der Anker der aktuellen ZK"""
+               if anchors[node] is None:         # wenn node noch nicht besucht wurde:
+                   anchors[node] = anchor        # setze seinen Anker
+                   labels[node] = labels[anchor] # und sein Label
+                   for neighbor in graph[node]:  # und besuche die Nachbarn
+                       visit(neighbor, anchor)
+       
+       current_label = 0                         # Zählung der ZK beginnt bei 0
+       for node in range(len(graph)):
+           if anchors[node] is None:             # Anker noch nicht bekannt =&gt; neue ZK gefunden
+               labels[node] = current_label      # Label des Ankers setzen
+               visit(node, node)                 # Knoten der neuen ZK rekursiv suchen
+               current_label += 1                # Label für die nächste ZK hochzählen
+       return anchors, labels
+</pre>
+<p>Interessant ist hier die Schleife über alle Knoten des Graphen am Ende des Algorithmus, die bei den bisherigen Versionen der Tiefensuche nicht vorhanden war. Um ihre Funktionsweise zu verstehen, nehmen wir für den Moment an, dass der Graph zusammenhängend ist. Dann findet diese Schleife den ersten Knoten des Graphen und führt die Tiefensuche mit diesem Knoten als Startknoten aus. Sobald die Rekursion zurückkehrt, sind alle Knoten des Graphen besucht (weil der Graph ja zusammenhängend war), so dass die Schleife alle weiteren Knoten überspringt (die if-Anweisung liefert für keinen weiteren Knoten True). Bei unzusammenhängenden Graphen dagegen erreicht die Tiefensuche nur die Knoten derselben Komponente, die im weiteren Verlauf der Schleife übersprungen werden. Findet die if-Anweisung jetzt einen noch nicht besuchten Knoten, muss dieser folglich in einer neuen Komponente liegen. Wir verwenden diesen Knoten als Anker und bestimmen die übrigen Knoten dieser Komponente wiederum mit Tiefensuche.
+</p>
+<ul><li> Beispiel: ... <b> under construction </b></li></ul>
+<p>Man erkennt, dass die Tiefensuche nach dem <i>Anlagerungsprinzip</i> vorgeht: Beginnend vom einem Startknoten (dem Anker) werden die Knoten der aktuellen Komponente nach und nach an den Tiefensuchbaum angehangen. Erst, wenn nichts mehr angelagert werden kann, geht der Algorithmus zur nächsten Komponente über.
+</p>
+<h4><span class="mw-headline" id="L.C3.B6sung_mittels_Union-Find-Algorithmus">Lösung mittels Union-Find-Algorithmus</span></h4>
+<p>Im Gegensatz zum Anlagerungsprinzip sucht der Union-Find-Algorithmus die Zusammenhangskomponenten mit dem <i>Verschmelzungsprinzip</i>: Eingangs wird jeder Knoten als ein Teilgraph für sich betrachtet. Dann iteriert man über alle Kanten und verbindet deren Endknoten jeweils zu einem gemeinsamen Teilgraphen (falls die beiden Enden einer Kante bereits im selben Teilgraphen liegen, wird diese Kante ignoriert). Solange noch Kanten vorhanden sind, werden dadurch immer wieder Teilgraphen in größere Teilgraphen verschmolzen. Am Ende bleiben die maximalen zusammenhängenden Teilgraphen (also gerade die Zusammenhangskomponenten) übrig. Dieser Algorithmus kommt ohne Tiefensuche aus und ist daher in der Praxis oft schneller, allerdings auch etwas komplizierter zu implementieren.
+</p><p>Der Schlüssel des Algorithmus ist eine Funktion <tt>findAnchor()</tt>, die zu jedem Knoten den aktuellen Anker sucht. Der Anker existiert immer, da jeder Knoten von Anfang an zu einem Teilgraphen gehört (anfangs ist jeder Teilgraph trivial und besteht nur aus dem Knoten selbst). Die Verschmelzung wird realisiert, indem der Anker des einen Teilgraphen seine Rolle verliert und stattdessen der Anker des anderen Teilgraphen eingesetzt wird. 
+</p><p>Zur Verwaltung der Anker verwenden wir wieder eine property map <tt>anchors</tt> mit der Konvention, dass die Anker auf sich selbst verweisen. Es wäre jedoch zu teuer, wenn man bei jeder Verschmelzung alle Anker-Einträge der beteiligten Knoten aktualisieren müsste, da jeder Knoten im Laufe des Algorithmus mehrmals seinen Anker wechseln kann. Statt dessen definiert man Anker rekursiv: Verweist ein Knoten auf einen Anker, der mittlerweile diese Rolle verloren hat, folgt man dem Verweis von diesem Knoten (dem ehemaligen Anker) weiter, bis man einen tatsächlichen Anker gefunden hat - erkennbar daran, dass er auf sich selbst verweist. Diese Suchfunktion kann folgendermassen implementiert werden:
+</p>
+<pre> def findAnchor(anchors, node):
+     while node&#160;!= anchors[node]:   # wenn node kein Anker ist
+         node = anchors[node]       # ... verfolge die Ankerkette weiter
+     return node
+</pre>
+<p>Allerdings kann diese Kette im Laufe vieler Verschmelzungen sehr lang werden, so dass das Verfolgen der Kette teuer wird. Man vermeidet dies durch die sogenannte <i>Pfadkompression</i>: Immer, wenn man den Anker gefunden hat, aktualisiert man den Eintrag am Anfang der Kette. Die Funktion <tt>findAnchor()</tt> wird dadurch nur wenig komplizierter:
+</p>
+<pre> def findAnchor(anchors, node):
+     start = node                   # wir merken uns den Anfang der Kette
+     while node&#160;!= anchors[node]:   # wenn node kein Anker ist
+         node = anchors[node]       # ... verfolge die Ankerkette weiter
+     anchors[start] = node          # Pfadkompression: aktualisiere den Eintrag am Anfang der Kette
+     return node
+</pre>
+<p>Man kann zeigen, dass die Ankersuche mit Pfadkompression zu einer fast konstanten amortisierten Laufzeit pro Aufruf führt.
+</p><p>Um mit jeder Kante des (ungerichteten) Graphen nur maximal einmal eine Verschmelzung durchzuführen, betrachten wir jede Kante nur in der Richtung von der kleineren zur größeren Knotennummer, die umgekehrte Richtung wird ignoriert. Außerdem ist es zweckmäßig, bei jeder Verschmelzung denjenigen Anker mit der kleineren Knotennummer als neuen Anker zu übernehmen. Dann gilt für jede Zusammenhangskomponente, dass gerade der Knoten mit der kleinsten Knotennummer der Anker ist (genau wie bei der Lösung mittels Tiefensuche), was die weitere Analyse vereinfacht, z.B. die Zuordnung der Labels zu den Komponenten am Ende des Algorithmus. 
+</p>
+<pre>def unionFindConnectedComponents(graph):
+    anchors = list(range(len(graph)))  # Initialisierung der property map: jeder Knoten ist sein eigener Anker
+    
+    for node in range(len(graph)):     # iteriere über alle Knoten
+        for neighbor in graph[node]:   # ... und über deren ausgehende Kanten
+            if neighbor &lt; node:        # ignoriere Kanten, die in falscher Richtung verlaufen
+                continue
+            # hier landen wir für jede Kante des Graphen genau einmal
+            a1 = findAnchor(anchors, node)       # finde Anker ...
+            a2 = findAnchor(anchors, neighbor)   # ... der beiden Endknoten
+            if a1 &lt; a2:                          # Verschmelze die beiden Teilgraphen
+                anchors[a2] = a1                 # (verwende den kleineren der beiden Anker als Anker des
+            elif a2 &lt; a1:                        #  entstehenden Teilgraphen. Falls node und neighbor 
+                anchors[a1] = a2                 #  den gleichen Anker haben, waren sie bereits im gleichen
+                                                 #  Teilgraphen, und es passiert hier nichts.)
+    # Bestimme jetzt noch die Labels der Komponenten
+    labels = [None]*len(graph)         # Initialisierung der property map für Labels
+    current_label = 0                  # die Zählung beginnt bei 0
+    for node in range(len(graph)):
+        a = findAnchor(anchors, node)  # wegen der Pfadkompression zeigt jeder Knoten jetzt direkt auf seinen Anker
+        if a == node:                  # node ist ein Anker
+            labels[a] = current_label  # =&gt; beginne eine neue Komponente
+            current_label += 1         # und zähle Label für die nächste ZK hoch
+        else:
+            labels[node] = labels[a]   # node ist kein Anker =&gt; setzte das Label des Ankers
+                                       # (wir wissen, dass labels[a] bereits gesetzt ist, weil 
+                                       #  der Anker immer der Knoten mit der kleinsten Nummer ist)
+    return anchors, labels
+
+</pre>
+<ul><li> Beispiel: ... <b>under construction</b></li></ul>
+<h2><span class="mw-headline" id="K.C3.BCrzeste_Wege_.28Pfade.29">Kürzeste Wege (Pfade)</span></h2>
+<p>Eine weitere grundlegende Aufgabe in Graphen ist die Bestimmung eines kürzesten Weges zwischen zwei gegebenen Knoten. Dies hat offensichtliche Anwendungen bei Routenplanern und Navigationssystemen und ist darüber hinaus wichtiger Bestandteil anderer Algorithmen, z.B. bei der Berechnung eines maximalen Flusses mit der <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Edmonds–Karp_algorithm">Methode von Edmonds und Karp</a>.
+</p>
+<h3><span class="mw-headline" id="K.C3.BCrzeste_Wege_in_ungewichteten_Graphen_mittels_Breitensuche">Kürzeste Wege in ungewichteten Graphen mittels Breitensuche</span></h3>
+<p>Im Fall eines ungewichteten Graphen ist die Länge eines Weges einfach durch die Anzahl der durchlaufenen Kanten definiert. Daraus folgt, dass kürzeste Pfade mit einer leicht angepassten Version der Breitensuche gefunden werden können: Aufgrund des first in-first out-Verhaltens der Queue betrachtet die Breitensuche alle (erreichbaren) Knoten in der Reihenfolge ihres Abstandes vom Startknoten. Wenn wir den Zielknoten zum ersten Mal erreichen, und der gerade gefundene Weg vom Start zum Ziel hat die Länge L, muss dies der kürzeste Weg sein: Alle möglichen Wege der Länge L' &lt; L hat die Breitensuche ja bereits betrachtet, ohne dass dabei der Zielknoten erreicht wurde. Daraus folgt übrigens eine allgemeine Eigenschaft aller Algorithmen für kürzeste Wege: Wenn der kürzeste Weg vom Start zum Ziel die Länge L hat, finden diese Algorithmen als Nebenprodukt auch die kürzesten Wege zu allen Knoten, für die L' &lt; L gilt. 
+</p><p>Um den Algorithmus zu implementieren, passen wir die Breitensuche so an, dass anstelle der property map <tt>visited</tt> eine property map <tt>parents</tt> verwendet wird, die für jeden besuchten Knoten den Vaterknoten im Breitensuchbaum speichert. Durch Rückverfolgen der <tt>parent</tt>-Kette können wir den Pfad vom Ziel zum Start rekonstruieren, und durch Umdrehen der Reihenfolge erhalten wir den gesuchten Pfad vom Start zum Ziel. Sobald der Zielknoten erreicht wurde, können wir die Breitensuche abbrechen (<tt>break</tt>-Befehl in der ersten <tt>while</tt>-Schleife). Falls der gegebene Graph unzusammenhängend ist, kann es passieren, dass gar kein Weg gefunden wird, weil Start und Ziel in verschiedenen Zusammenhangskomponenten liegen. Dies erkennen wir daran, dass die Breitensuche beendet wurde, ohne den Zielknoten zu besuchen. Dann gibt die Funktion statt eines Pfades dern Wert <tt>None</tt> zurück:
+</p>
+<pre> from collections import deque
+ 
+ def shortestPath(graph, startnode, destination):
+     parents = [None]*len(graph)      # Registriere für jeden Knoten den Vaterknoten im Breitensuchbaum
+     parents[startnode] = startnode   # startnode ist die Wurzel des Baums =&gt; verweist auf sich selbst
+     
+     q = deque()                      # Queue für die zu besuchenden Knoten
+     q.append(startnode)              # Startknoten in die Queue einfügen
+     
+     while len(q) &gt; 0:                # Solange es noch unbesuchte Knoten gibt
+         node = q.popleft()           # Knoten aus der Queue nehmen (first in - first out)
+         if node == destination:      # Zielknoten erreicht
+             break                    #   =&gt; Suche beenden
+         for neighbor in graph[node]: # Besuche die Nachbarn von node
+             if parents[neighbor] is None:  # aber nur, wenn sie noch nicht besucht wurden
+                 parents[neighbor] = node   # setze node als Vaterknoten
+                 q.append(neighbor)         # und füge neighbor in die Queue ein
+     
+     if parents[destination] is None: # Breitensuche wurde beendet ohne den Zielknoten zu besuchen
+         return None                  # =&gt; kein Pfad gefunden (unzusammenhängender Graph)
+     
+     # Pfad durch die parents-Kette zurückverfolgen und speichern
+     path = [destination]
+     while path[-1]&#160;!= startnode:
+         path.append(parents[path[-1]])
+     path.reverse()     # Reihenfolge umdrehen (Ziel =&gt; Start wird zu Start =&gt; Ziel)
+     return path        # gefundenen Pfad zurückgeben
+</pre>
+<h3><span class="mw-headline" id="Gewichtete_Graphen">Gewichtete Graphen</span></h3>
+<p>Das Problem der Suche nach kürzesten Wegen wird wesentlich interessanter und realistischer, wenn wir zu gewichteten Graphen übergehen:
+</p>
+<dl><dt> Definition - kantengewichteter Graph</dt>
+<dd> Jeder Kante (s,t) des Graphen ist eine reelle oder natürliche Zahl w<sub>st</sub> zugeordnet, die üblicherweise als <i>Kantengewicht</i> bezeichnet wird.</dd></dl>
+<dl><dt> Definition - knotengewichteter Graph</dt>
+<dd> Jedem Knoten v des Graphen ist eine reelle oder natürliche Zahl w<sub>v</sub> zugeordnet, die üblicherweise als <i>Knotengewicht</i> bezeichnet wird.</dd></dl>
+<p>Je nach Anwendung benötigt man Knoten- oder Kantengewichte oder auch beides zugleich. Wir beschränken uns in der Vorlesung auf kantengewichtete Graphen. Beispiele für die Informationen, die man durch Kantengewichte ausdrücken kann, sind
+</p>
+<ul><li> wenn die Knoten Orte sind: Abstand von Anfangs- und Endknoten jeder Kante (z.B. Luftline oder Straßenentfernung), Fahrzeit zwischen den Orten</li>
+<li> wenn der Knoten ein Rohrnetzwerk beschreibt: Durchflusskapazität der einzelnen Rohre (für max-Flussprobleme), analog bei elektrischen Netzwerken: elektrischer Widerstand</li>
+<li> wenn die Knoten Währungen repräsentieren, können deren Wechselkurse durch Kantengewichte angegeben werden.</li></ul>
+<p>Bei einigen Beispielen ergeben sich unterschiedliche Kantengewichte, wenn eine Kante von s nach t anstatt von t nach s durchlaufen wird. Beispielsweise können sich die Fahrzeiten erheblich unterscheiden, wenn es in einer Richtung bergauf, in der anderen bergab geht, obwohl die Entfernung in beiden Fällen gleich ist. Hier ergibt sich natürlicherweise ein gerichteter Graph. In anderen Beispielen (z.B. bei Luftlinienentfernungen, in guter Näherung auch bei Straßenentfernungen) sind die Gewichte von der Richtung unabhängig, so dass wir ungerichtete Graphen verwenden können.
+</p><p>Die Repräsentation der Kantengewichte im Programm richtet sich nach der Repräsentation des Graphen selbst. Am einfachsten ist wiederum die Adjazenzmatrix, die aber nur für dichte Graphen (<img class="mwe-math-fallback-image-inline tex" alt="E = O(V^2)" src="../images/5dc4ce425fcbc2f52638be12adec8dd1.png" />, mit E als Anzahl der Kanten und V als Anzahl der Knoten) effizient ist. Bei gewichteten Graphen gibt das Matrixelement a<sub>ij</sub> das Gewicht der Kante i &#8658; j (wobei a<sub>ij</sub> = 0 gesetzt wird, wenn diese Kante nicht existiert). Wie zuvor gilt für ungerichtete Graphen a<sub>ij</sub> = a<sub>ji</sub> (symmetrische Matrix), während dies für gerichtete Graphen nicht gelten muss.
+</p><p>Bei Graphen in Adjazenzlistendarstellung hat es sich bewährt, die Gewichte in einer <i>property map</i> zu speichern. Weiter oben haben wir bereits property maps für Knoteneigenschaften (z.B. <tt>visited</tt> und <tt>anchors</tt>) gesehen. Property maps für Kanten funktionieren ganz analog, allerdings muss man jetzt Paare von Knoten (nämlich Anfangs- und Endknoten der Kante) als Schlüssel verwenden und die Daten entsprechend in einem assoziativen Array ablegen:
+</p>
+<pre> w = weights[(i,j)]   # Zugriff auf das Gewicht der Kante i &#8658; j
+</pre>
+<p>Alternativ könnte man auch die Graph-Datenstruktur selbst erweitern, aber dies ist weniger zu empfehlen, weil jeder Algorithmus andere Erwiterungen benötigt und damit die Datenstruktur sehr unübersichtlich würde.
+</p><p>Der kürzeste Weg ist nun definiert als der Weg, bei dem die Summe der Kantengewichte minimal ist:
+</p>
+<dl><dt>Definition - Problem des kürzesten Weges</dt>
+<dd> Sei P die Menge aller Wege von u nach v, und <img class="mwe-math-fallback-image-inline tex" alt="p \in P" src="../images/913555e444ef02353e16ac6d9fecb58d.png" /> einer dieser Wege. Wenn der Grpah einfach ist (es also keine Mehrfachkanten zwischen denselben Knoten und keine Schleifen gibt), ist der Weg p durch die Folge der besuchten Knoten eindeutig bestimmt:</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="p : \ \ u = x_0 \rightarrow x_1 \rightarrow x_2 \rightarrow ... \rightarrow v = x_{n_p}" src="../images/9a6cdf78270ee3c553e2900365b4e0bd.png" /></dd>
+<dd>wo <img class="mwe-math-fallback-image-inline tex" alt="n_p" src="../images/d241fb30a61c3708d7909db5442d08ed.png" /> die Anzahl der Kanten im Weg p ist. Seine Kosten W<sub>p</sub> ergeben sich als Summer der Gewichte der einzelnen Kanten</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="W_p = \sum_{k=1}^{n_p} w_{x_{k-1}x_k}" src="../images/890641532a4830a00bc06a460c30aa3b.png" /></dd>
+<dd> und ein kürzester Weg <img class="mwe-math-fallback-image-inline tex" alt="p^* \in P" src="../images/04a0c2979cfa8dad2fbbc064d4a28f7a.png" /> ist ein Weg mit minimalen Kosten</dd>
+<dd> <img class="mwe-math-fallback-image-inline tex" alt="p^* = \textrm{argmin}_{p\in P}\ \ W_p" src="../images/37946309a5010e94c3dd883cb67722ce.png" /></dd>
+<dd> Das Problem des kürzesten Weges besteht darin, einen optimalen Weg <i>p*</i> zwischen gegebenen Knoten u und v zu finden.</dd></dl>
+<p>Die Lösung dieses Problems hängt davon ab, ob alle Kantengewichte positiv sind, oder ob es auch negative Kantengewichte gibt. In letzeren Fall ist es möglich, durch eine Verlängerung des Weges die Kosten zu redizieren, während sich im ersteren Fall die Kosten immer erhöhen, wenn man den Weg verlängert. 
+</p><p>Negative Gewichte treten z.B. bei den Währungsgraphen auf. Auf den ersten Blick entsprechen diese Graphen nicht den Anforderungen an das Problem des kürzesten Weges, weil Wechselkurse miteinander (und mit Geldbeträgen) multipliziert anstatt addiert werden. Man beseitigt diese Schwierigkeit aber leicht, indem man die <i>Logarithmen</i> der Wechselkurse als Kantengewichte verwendet, wodurch sich die Multiplikation in eine Addition der Logarithmen verwandelt. Wechselkurse &lt; 1 führen nun zu negativen Gewichten. 
+</p><p>Interessant werden negative Gewichte vor allem in Graphen mit Zyklen. Dann kann es nämlich passieren, dass die Gesamtkosten eines Zyklus ebenfalls negativ sind. Jeder Weg, der den Zyklus enthält, hat dann Kosten von <img class="mwe-math-fallback-image-inline tex" alt="-\infty" src="../images/beab416080922c84a90ba092f7734fe5.png" />, weil man den Zyklus beliebig oft durchlaufen und dadurch die Gesamtkosten immer weiter verkleinern kann:
+</p>
+<pre>    /\		1. Durchlauf: Kosten -1
+ 1 /  \ -4	2. Durchlauf: Kosten -2
+  /____\	etc.
+     2
+</pre>
+<p>Um hier nicht in einer Endlosschleife zu landen, benötigt man spezielle Algorithmen, die mit dieser Situation umgehen können. Der <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Bellman-Ford-Algorithmus">Algorithmus von Bellmann und Ford</a> beispielsweise bricht die Suche nach dem kürzesten Weg ab, sobald er einen negativen Zyklus entdeckt, aber andernfalls kann er negative Gewichte problemlos verarbeiten. 
+</p><p>Die Detektion negativer Zyklen hat wiederum eine interessante Anwendung bei Währungsgraphen: Ein Zyklus bedeutet hier, dass man Geld über mehrere Stufen von einer Währung in die nächste und am Schluß wieder in die Originalwährung umtauscht, und ein negativer Zyklus führt dazu, dass man am Ende <i>mehr</i> Geld besitzt als am Anfang (damit negative Zyklen wirklich einen Gewinn bedeuten und keinen Verlust, müssen die Wechselkurse vor der Logarithmierung in <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Wechselkurs#Nominaler_Wechselkurs">Preisnotierung</a> angegeben sein). Bei Privatpersonen ist dies ausgeschlossen, weil die Umtauschgebühren den möglichen Gewinn mehr als aufzehren. Banken mit direktem weltweitem Börsenzugang hingegen unternehmen große Anstrengungen, um solche negativen Zyklen möglichst schnell (nämlich vor der Konkurrenz) zu entdecken und auszunutzen. Diese Geschäftsmethode bezeichnet man als <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Arbitrage">Arbitrage</a> und die Existenz eines negativen Zyklus als Arbitragegelegenheit. Durch die Kursschwankungen (und durch die ausgleichende Wirkung der Arbitragegeschäfte selbst) existieren die Arbitragegelegenheiten nur für kurze Zeit, und ihre Detektion erfordert leistungsfähige Echtzeitalgorithmen.
+</p><p>In dieser Vorlesung beschränken wir uns hingegen auf Graphen mit ausschließlich positiven Gewichten. In diesem Fall ist der Algorithmus von Dijkstra die Methode der Wahl, weil er wesentlich schneller arbeitet als der Bellmann-Ford-Algorithmus.
+</p>
+<h3><span class="mw-headline" id="Algorithmus_von_Dijkstra">Algorithmus von Dijkstra</span></h3>
+<h4><span class="mw-headline" id="Edsger_Wybe_Dijkstra">Edsger Wybe Dijkstra</span></h4>
+<p>geb. 11. Mai 1930 in Rotterdam
+</p><p>ges. 06. August 2002
+</p><p>Dijkstra war ein niederländischer Informatiker und Wegbereiter der strukturierten Programmierung. 1972 erhielt er für seine Leistung in der Technik und Kunst der Programmiersprachen den Turing Award, der jährlich von der Association for Computing Machinery (ACM) an Personen verliehen wird, die sich besonders um die Entwicklung der Informatik verdient gemacht haben. Zu seinen Beiträgen zur Informatik gehören unter anderem der Dijkstra-Algorithmus zur Berechnung des kürzesten Weges in einem Graphen sowie eine Abhandlung über den go-to-Befehl und warum er nicht benutzt werden sollte. Der go-to-Befehl war in den 60er und 70er Jahren weit verbreitet, führte aber zu Spaghetti-Code. In seinem berühmten Paper "A Case against the GO TO Statement"<a rel="nofollow" class="external autonumber" href="../images/ewd215.pdf">[2]</a>, das als Brief mit dem Titel "Go-to statement considered harmful" veröffentlicht wurde, argumentiert Dijkstra, dass es umso schwieriger ist, dem Quellcode eines Programmes zu folgen, je mehr go-to-Befehle darin enthalten sind und zeigt, dass man auch ohne diesen Befehl gute Programme schreiben kann.
+</p>
+<h4><span class="mw-headline" id="Algorithmus">Algorithmus</span></h4>
+<p>Der Dijkstra-Algorithmus für kürzeste Wege ist dem oben vorgestellten Algorithmus <tt>shortestPath()</tt> auf der Basis von Breitensuche sehr ähnlich. Insbesondere gilt auch hier, dass neben dem kürzesten Weg vom Start zum Ziel auch alle kürzesten Wege gefunden werden, deren Endknoten dem Start näher sind als der Zielknoten. Aufgrund der Kantengewichte gibt es aber einen wichtigen Unterschied: Der erste gefundene Weg zu einem Knoten ist nicht mehr notwendigerweise der kürzeste. Wir bestimmen deshalb für jeden Knoten mehrere Kandidatenwege und verwenden eine Prioritätswarteschlange (statt einer einfachen First in - First out - Queue), um diese Wege nach ihrer Länge zu sortieren. Die Kandidatenwege für einen gegebenen Knoten werden unterschieden, indem wir auch den Vorgängerknoten im jeweiligen Weg speichern. Wenn ein Knoten <i>erstmals</i> an die Spitze der Prioritätswarteschlange gelangt, haben wir den kürzesten Weg zu diesem Knoten gefunden (das wird weiter unten formal bewiesen), und der Vorgänger des Knotens in diesem Weg wird zu seinem Vaterknoten. Erscheint derselbe Knoten später nochmals an der Spitze der Prioritätswarteschlange, handelt es sich um einen Kandidatenweg, der sich nicht als kürzester erwiesen hat und deshalb ignoriert werden kann. Wir erkennen dies leicht daran, dass der Vaterknoten in der property map <tt>parents</tt> bereits gesetzt ist. 
+</p><p>Eine geeignete Datenstruktur für die Prioritätswarteschlange wird durch das Python-Modul <a rel="nofollow" class="external text" href="http://docs.python.org/library/heapq.html">heapq</a> realisiert. Es verwendet ein normales Pythonarray als unterliegende Repräsentation für einen Heap und stellt effiziente <tt>heappush</tt> und <tt>heappop</tt>-Funktionen zur Verfügung. Dies entspricht genau unserer Vorgehensweise im Kapitel <a href="priorit%c3%a4tswarteschlangen.html" title="Prioritätswarteschlangen">Prioritätswarteschlangen</a>. Als Datenelement erwartet die Funktion <tt>heappush</tt> ein Tupel, dessen erstes Element die Priorität sein muss. Die übrigen Elemente des Tupels (und damit auch deren Anzahl) können je nach Anwendung frei festgelegt werden. Wir legen fest, dass das zweite Element den Endknoten des betrachteten Weges und das dritte den Vorgängerknoten speichert. 
+</p><p>Die Kantengewichte werden dem Algorithmus in der property map <tt>weights</tt> übergeben:
+</p>
+<pre> <code>
+   import heapq	                  # heapq implementiert die Funktionen für Heaps
+   
+   def dijkstra(graph, weights, startnode, destination):
+       parents = [None]*len(graph)       # registriere für jeden Knoten den Vaterknoten im Pfadbaum
+     
+       q = []                            # Array q wird als Heap verwendet
+       <font color="red">heapq.heappush(q, (0.0, startnode, startnode))</font>  # Startknoten in Heap einfügen
+     
+       while len(q) &gt; 0:                 # solange es noch Knoten im Heap gibt:
+           <font color="red">length, node, predecessor = heapq.heappop(q)</font>   # Knoten aus dem Heap nehmen
+           <font color="red">if parents[node] is not None:</font> # parent ist schon gesetzt =&gt; es gab einen anderen, kürzeren Weg
+               <font color="red">continue</font>                  #   =&gt; wir können diesen Weg ignorieren
+           <font color="red">parents[node] = predecessor</font>   # parent setzen
+           if node == destination:       # Zielknoten erreicht
+               break                     #   =&gt; Suche beenden
+           for neighbor in graph[node]:  # die Nachbarn von node besuchen,
+               if parents[neighbor] is None:   # aber nur, wenn ihr kürzester Weg noch nicht bekannt ist
+                   <font color="red">newLength = length + weights[(node,neighbor)]</font>   # berechne Pfadlänge zu neighbor              
+                   <font color="red">heapq.heappush(q, (newLength, neighbor, node))</font>  # und füge neighbor in den Heap ein
+     
+       if parents[destination] is None:  # Suche wurde beendet ohne den Zielknoten zu besuchen
+           return None, None             # =&gt; kein Pfad gefunden (unzusammenhängender Graph)
+     
+       # Pfad durch die parents-Kette zurückverfolgen und speichern
+       path = [destination]
+       while path[-1]&#160;!= startnode:
+           path.append(parents[path[-1]])
+       path.reverse()                    # Reihenfolge umdrehen (Ziel =&gt; Start wird zu Start =&gt; Ziel)
+       return path, length               # gefundenen Pfad und dessen Länge zurückgeben
+ </code>
+</pre>
+<p>Die wesentlichen Unterschiede zur Breitensuche sind im Code rot markiert: Anstelle der Queue verwenden wir jetzt einen Heap, und der Startknoten wird mit Pfadlänge 0 als erstes eingefügt. In der Schleife <tt>while len(q) &gt; 0:</tt> wird jeweils der Knoten <tt>node</tt> mit der aktuell kürzesten Pfadlänge aus dem Heap entfernt. Die Pfadlänge vom Start zu diesem Knoten wird in der Variable <tt>length</tt> gespeichert, sein Vorgänger in der Variable <tt>predecessor</tt>. Wenn der aktuelle Weg nicht der kürzeste ist (<tt>parents[node]</tt> war bereits gesetzt), wird dieser Weg ignoriert. Andernfalls werden die property map <tt>parents</tt> aktualisiert und die Nachbarn von <tt>node</tt> besucht. Beim Scannen der Nachbarn berechnen wir zunächst die Länge <tt>newLength</tt> das Weges <tt>startnode =&gt; node =&gt; neighbor</tt> als Summe von <tt>length</tt> und dem Gewicht der Kante <tt>(node, neighbode)</tt>. Diese Länge wird beim Einfügen des Nachbarknotens in den Heap zur Priorität des aktuellen Weges.
+</p><p>Die wichtigsten Prinzipien des Dijkstra-Algorithmus noch einmal im Überblick:
+</p>
+<ul><li> Der Dijkstra-Algorithmus ist Breitensuche mit Prioritätswarteschlange (Heap) statt einer einfache Warteschlange (Queue).</li>
+<li> Die Prioritätswarteschlange speichert alle Wege, die bereits gefunden worden sind und ordnet sie aufsteigend nach ihrer Länge. </li>
+<li> Das Sortieren (und damit der ganze Algorithmus) funktioniert nur mit positiven Kantengewichten korrekt.</li>
+<li> Da ein Knoten auf mehreren Wegen erreichbar sein kann, kann er auch mehrmals im Heap sein. </li>
+<li> Wenn ein Knoten <i>erstmals</i> aus der Prioritätswarteschlange entnommen wird, ist der gefundene Weg der kürzeste zu diesem Knoten. Andernfalls wird der Weg ignoriert.</li>
+<li> Wenn der Knoten <tt>destination</tt> aus dem Heap entnommen wird, ist der kürzeste Weg von Start nach Ziel gefunden, und die Suche kann beendet werden.</li></ul>
+<p>In unserer Implementation können, wie gesagt, mehrere Wege zum selben Knoten gleichzeitig in der Prioritätswarteschlange sein. Im Prinzip wäre es auch möglich, immer nur den besten zur Zeit bekannten Weg zu jedem Enknoten in der Prioritätswarteschlange zu halten - sobald ein besserer Kandidat gefunden wird, ersetzt er den bisherigen Kandidaten, anstatt zusätzlich eingefügt zu werden. Dies erfordert aber eine wesentlich kompliziertere Prioritätswarteschlange, die eine effiziente <tt>updatePriority</tt>-Funktion anbietet, ohne dass dadurch eine signifikante Beschleunigung erreicht wird. Deshalb verfolgen wir diesen Ansatz nicht.
+</p>
+<h4><span class="mw-headline" id="Beispiel">Beispiel</span></h4>
+<p><b>under construction</b>
+</p><p><a href="file_bsp.html" class="image"><img alt="Bsp.jpg" src="../images/bsp.jpg" width="553" height="138" /></a>
+</p>
+<h4><span class="mw-headline" id="Komplexit.C3.A4t_von_Dijkstra">Komplexität von Dijkstra</span></h4>
+<p>Zur Analyse der Komplexität nehmen wir an, dass der Graph V Knoten und E Kanten hat. Die Initialisierung der property map <tt>parents</tt> am Anfang der Funktion hat offensichtlich Komplexität O(V), weil Speicher für V Knoten allokiert wird. Der Code am Ende der Funktion, der aus der property map <tt>parents</tt> den Pfad extrahiert, hat ebenfalls die Komplexität O(V), weil der Pfad im ungünstigen Fall sämtliche Knoten des Graphen umfasst. Beides wird durch die Komplexität der Hauptschleife dominiert, zu deren Analyse wir den folgenden Codeausschnitt genauer anschauen wollen:
+</p>
+<pre>     while len(q) &gt; 0:
+          ... # 1
+          if parents[node] is not None: 
+              continue                  
+          parents[node] = predecessor
+          ... # 2
+</pre>
+<p>Wir erkennen, dass der Codeabschnitt <tt># 2</tt> für jeden Knoten höchstens einmal erreicht werden kann: Da <tt>parents[node]</tt> beim ersten Durchlauf gesetzt wird, kann die <tt>if</tt>-Abfrage beim gleichen Knoten nie wieder <tt>False</tt> liefern, und das nachfolgende <tt>continue</tt> bewirkt, dass der Abschnitt <tt># 2</tt> dann übersprungen wird. Man sagt auch, dass jeder Knoten <i>höchstens einmal expandiert</i> wird, auch wenn er mehrmals im Heap war. 
+</p><p>Der Codeabschnitt <tt># 2</tt> selbst enthält eine Schleife über alle ausgehenden Kanten des Knotens <tt>node</tt>. Im ungünstigsten Fall iterieren wir bei <i>allen</i> Knoten über <i>alle</i> ausgehenden Kanten, aber das sind gerade alle Kanten des Graphen je einmal in den beiden möglichen Richtungen. Die Funktion <tt>heappush</tt> wird sogar höchstens E Mal aufgerufen, weil eine Kante nur in den Heap eingefügt wird, wenn der kürzeste Weg der jeweiligen Endknotens noch nicht bekannt ist (siehe die <tt>if</tt>-Abfrage in der <tt>for</tt>-Schleife), und das ist nur ein einer Richtung möglich. Dies hat zwei Konsequenzen:
+</p>
+<ul><li> Die Schleife <tt>while len(q) &gt; 0:</tt> wird nur so oft ausgeführt, wie Elemente im Heap sind, also höchstens E Mal. Das gleiche gilt für den Codeabschnitt <tt># 1</tt>, der das <tt>heappop</tt> enthält.</li>
+<li> Die Operationen <tt>heappush</tt> und <tt>heappop</tt> haben logarithmische Komplexität in der Größe des Heaps, sind also in <img class="mwe-math-fallback-image-inline tex" alt="O(\log\,E)" src="../images/ac472ba67d38005a2f59b3676fd9bcc9.png" />. In einfachen Graphen gilt aber <img class="mwe-math-fallback-image-inline tex" alt="E = O(V^2)" src="../images/5dc4ce425fcbc2f52638be12adec8dd1.png" />, so dass sich die Komplexität der Heapoperationen vereinfacht zu <img class="mwe-math-fallback-image-inline tex" alt="O(\log\,E)=O(\log\,V^2)=O(2\log\,V)=O(\log\,V)" src="../images/fdec2eae44047c4be6a47b5f11405fec.png" />.</li></ul>
+<p>Zusammenfassend gilt: <tt>heappush</tt> und <tt>heappop</tt> werden maximal E Mal aufgerufen und haben eine Komplexität in <img class="mwe-math-fallback-image-inline tex" alt="O(\log\,V)" src="../images/a1dee76ec44f19c0301dd9cde4cc6a55.png" />. Folglich hat der Algorithmus von Dijkstra die Komplexität:
+</p>
+<dl><dd><img class="mwe-math-fallback-image-inline tex" alt="O(E\,\log\,V)" src="../images/84d0a3f3c0792ade821431302631f8fd.png" /></dd></dl>
+<h4><span class="mw-headline" id="Vergleich_mit_Breitensuche_und_Tiefensuche">Vergleich mit Breitensuche und Tiefensuche</span></h4>
+<p>Der Dijkstra-Algorithmus ist eng mit der Breiten- und Tiefensuche verwandt - man kann diese Algorithmen aus dem Dijkstra-Algorithmus gewinnen, indem man einfach die Regel zur Festlegung der Prioritäten ändert. Anstelle der Länge des Pfades verwenden wir als Priorität den Wert eine Zählvariable <tt>count</tt>, die nach jeder Einfügung in den Heap (also nach jedem Aufruf von <tt>heappush</tt>) aktualisiert wird. Zählen wir die Variable hoch, haben die zuerst eingefügten Kanten die höchste Priorität, der Heap verhält sich also wie eine Queue (First in-First out), und wir erhalten eine Breitensuche. Zählen wir die Variable hingegen (von E beginnend) herunter, haben die zuletzt eingefügten Kanten höchste Priorität. Der Heap verhält sich dann wie ein Stack (Last in-First out), und wir bekommen Tiefensuche. Statt eines Heaps plus Zählvariable kann man jetzt natürlich direkt eine Queue bzw. einen Stack verwenden. Dadurch fällt der Aufwand <img class="mwe-math-fallback-image-inline tex" alt="O(\log\,V)" src="../images/a1dee76ec44f19c0301dd9cde4cc6a55.png" /> für die Heapoperationen weg und wird durch die effizienten O(1)-Operationen von Queue bzw. Stack ersetzt. Damit erhalten wir für Breiten- und Tiefensuche die schon bekannte Komplexität O(E).
+</p>
+<h4><span class="mw-headline" id="Korrektheit_von_Dijkstra">Korrektheit von Dijkstra</span></h4>
+<p>Wir beweisen zunächst eine wichtige Eigenschaft des Algorithmus: Die Priorität (=Pfadlänge) des Knotens an der Spitze des Heaps wächst im Laufe des Algorithmus monoton an (aber nicht notwendigerweise streng monoton). Mit anderen Worten: liefert <tt>heappop</tt> in der i-ten Iteration der <tt>while</tt>-Schleife den Knoten u mit der Pfadlänge l<sub>u</sub>, und in der (i+1)-ten Iteration den Knoten v mit der Pfadlänge l<sub>v</sub>, so gilt stets l<sub>v</sub> &#8805; l<sub>u</sub>. Wir zeigen dies mit der Technik des indirekten Beweises, d.h. wir nehmen das Gegenteil an und führen diese Annahme zum Widerspruch. Wäre also l<sub>v</sub> &lt; l<sub>u</sub>, gäbe es zwei Möglichkeiten:
+</p>
+<ol>
+<li>Der Weg nach v mit der Länge l<sub>v</sub> war in der i-ten Iteration schon bekannt und somit bereits im Heap enthalten. Dann hätte <tt>heappop</tt> in dieser Iteration aber v zurückgegeben, im Widerspruch zur Annahme, dass u zurückgegeben wurde.</li>
+<li>Der Weg wurde erst bei der Expansion von u in der i-ten Iteration gefunden. Dann muss v ein Nachbar von u sein, und seine Weglänge berechnet sich als l<sub>v</sub> = l<sub>u</sub> + w<sub>u,v</sub>. Da für die Kantengewichte aber w<sub>u,v</sub> &#8805; 0 gefordert ist, kann l<sub>v</sub> &lt; l<sub>u</sub> nicht gelten.</li>
+</ol>
+<p>Diese Monotonieeigenschaft hat eine interessante Konsequenz: Beträgt der Abstand vom Start zum Zielknoten l<sub>z</sub>, so findet Dijsktra's Algorithmus als Nebenprodukt auch die kürzesten Wege zu allen näher gelegenen Knoten, also zu allen Knoten u, für deren Abstand l<sub>u</sub> &lt; l<sub>z</sub> gilt. Dies trifft auch dann zu, wenn diese Wege für den Benutzer gar nicht von Interesse sind. Der A*-Algorithmus, der weiter unten erklärt wird, versucht dem abzuhelfen.
+</p><p>Wir können nun mittels vollständiger Induktion die folgende Schleifen-Invariante beweisen: Falls <tt>parents[node]</tt> gesetzt (also ungleich <tt>None</tt>) ist, dann liefert das Zurückverfolgen des Weges von <tt>node</tt> nach <tt>startnode</tt> den kürzesten Weg. 
+</p>
+<dl><dt>Induktionsanfang</dt>
+<dd> <tt>parents[startnode]</tt> ist als einziges gesetzt. Zurückverfolgen liefert den trivialen Weg <tt>[startnode]</tt>, der mit Länge 0 offensichtlich der kürzeste Pfad ist &#8594; die Bedingung ist erfüllt.</dd>
+<dt>Induktionsschritt</dt>
+<dd> Wir zeigen wieder mit einem indirektem Beweis, dass wir immer einen kürzesten Weg bekommen, wenn <tt>parents[node]</tt> gesetzt wird.</dd>
+<dd>Sei <img class="mwe-math-fallback-image-inline tex" alt="S" src="../images/5dbc98dcc983a70728bd082d1a47546e.png" /> = <tt>{v | parents[v] is not None}</tt> die Menge aller Knoten, von denen wir den kürzesten Weg schon kennen (Induktionsvoraussetzung), und <tt>node</tt> der Knoten, der sich gerade an der Spitze des Heaps befindet. Dann ist <tt>predecessor</tt> der Vorgänger von <tt>node</tt> im aktuellen Weg, und es muss <tt>predecessor</tt><img class="mwe-math-fallback-image-inline tex" alt="\in S" src="../images/ad063f4d1afef88d8467ab4ef1ca813a.png" /> gelten, weil die Nachbarn von <tt>predecessor</tt> (und damit auch der aktuelle <tt>node</tt>) erst in dem Momemnt in den Heap eingefügt werden, wo der kürzeste Weg für <tt>predecessor</tt> gefunden wurde. Man beachte auch, dass wegen der Monotonieeigenschaft alle Knoten, die noch nicht in <img class="mwe-math-fallback-image-inline tex" alt="S" src="../images/5dbc98dcc983a70728bd082d1a47546e.png" /> enthalten sind, weiter vom Start entfernt sind als die Knoten in <img class="mwe-math-fallback-image-inline tex" alt="S" src="../images/5dbc98dcc983a70728bd082d1a47546e.png" />. </dd>
+<dd>Der indirekte Beweis nimmt jetzt an, dass der Weg <tt>node</tt> &#8594; <tt>predecessor</tt> &#8594; <tt>startnode</tt> nicht der kürzeste Weg ist. Dann muss es einen anderen, kürzeren Weg <tt>node</tt> &#8594; <tt>x</tt> &#8594; <tt>startnode</tt> geben. Für den Vorgänger <tt>x</tt> in diesem Weg unterscheiden wir zwei Fälle:
+<ul><li> <tt>x</tt><img class="mwe-math-fallback-image-inline tex" alt="\in S" src="../images/ad063f4d1afef88d8467ab4ef1ca813a.png" />: In diesem Fall ist die Länge des Weges <tt>node</tt> &#8594; <tt>x</tt> &#8594; <tt>startnode</tt> bereits bekannt, und dieser Weg ist im Heap enthalten. Dann kann er aber nicht der kürzeste sein, denn an der Spitze der Warteschlange war nach Voraussetzung der Weg <tt>node</tt> &#8594; <tt>predecessor</tt> &#8594; <tt>startnode</tt>.</li>
+<li> <tt>x</tt><img class="mwe-math-fallback-image-inline tex" alt="\notin S" src="../images/eb087ba4965f675c9db67f6f52896c3e.png" />: Wegen der Monotonieeigenschaft muss jetzt <tt>Kosten(x &#8594; startnode) &gt; Kosten(node &#8594; predecessor &#8594; startnode)</tt> gelten. Die Kosten des Weges <tt>node</tt> &#8594; <tt>x</tt> &#8594; <tt>startnode</tt> berechnen sich aber als <tt>Kosten(x &#8594; startnode) + weight[(x, node)]</tt>, und deshalb kann dieser Weg keinesfalls kürzer sein.</li></ul></dd></dl>
+<p>In beiden Fällen erhalten wir einen Widerspruch, und die Behauptung ist somit bewiesen. Da die Invariante insbesondere für den Weg zum Zielknoten <tt>destination</tt> erfüllt ist, folgt daraus auch die Korrektheit des Algorithmus von Dijkstra.
+</p>
+<h3><span class="mw-headline" id="A.2A-Algorithmus_-_Wie_kann_man_Dijkstra_noch_verbessern.3F">A*-Algorithmus - Wie kann man Dijkstra noch verbessern?</span></h3>
+<p>Eine wichtige Eigenschaft des Dijkstra-Algorithmus ist, dass neben dem kürzesten Weg vom Start zum Ziel auch die kürzesten Wege zu allen Knoten berechnet werden, die näher am Startknoten liegen als das Ziel, obwohl uns diese Wege gar nicht interessieren. Sucht man beispielsweise in einem Graphen mit den Straßenverbindungen in Deutschland den kürzesten Weg von Frankfurt (Main) nach Dresden (ca. 460 km), werden auch die kürzesten Wege von Frankfurt nach Köln (190 km), Dortmund (220 km) und Stuttgart (210 km) und vielen anderen Städten gefunden. Aufgrund der geographischen Lage dieser Städte ist eigentlich von vornherein klar, dass sie mit dem kürzesten Weg nach Dresden nicht das geringste zu tun haben. Anders sieht es mit Erfurt (260 km) oder Suhl (210 km) aus - diese Städte liegen zwischen Frankfurt und Dresden und kommen deshalb als Zwischenstationen des gesuchten Weges in Frage.
+</p><p>Damit Dijkstra korrekt funktioniert, würde es im Prinzip ausreichen, wenn man die kürzesten Wege nur für diejenigen Knoten ausrechnet, die auf dem kürzesten Weg vom Start zum Ziel liegen, denn nur diese Knoten braucht man, um den gesuchten Weg über die <tt>parent</tt>-Kette zurückzuverfolgen. Das Problem ist nur, dass man diese Knoten erst kennt, wenn der Algorithmus fertig durchgelaufen ist. Schließt man Knoten zu früh von der Betrachtung aus, kommt am Ende möglicherweise nicht der korrekte kürzeste Weg heraus. 
+</p><p>Der A*-Algorithmus löst dieses Dilemma mit folgender Idee: Ändere die Prioritäten für den Heap so ab, dass unwichtige Knoten nur mit geringerer Wahscheinlichkeit expandiert werden, aber stelle gleichzeitig sicher, dass alle wichtigen Knoten (also diejenigen auf dem korrekten kürzesten Weg) auf jeden Fall expandiert werden. Es zeigt sich, dass man diese Idee umsetzen kann, wenn eine <i>Schätzung für den Restweg</i> (also für die noch verbleibende Entfernung von jedem Knoten zum Ziel) verfügbar ist:
+</p>
+<pre>rest = guess(neighbor, destination)
+</pre>
+<p>Diese Schätzung addiert man einfach zur wahren Länge des Weges <tt>startnode &#8594; node</tt> dazu, um die verbesserte Priorität zu erhalten:
+</p>
+<pre>priority = newLength + guess(neighbor, destination)
+</pre>
+<p>(Im originalen Dijkstra-Algorithmus wird als Priorität nur <tt>newLength</tt> allein verwendet. Man beachte, dass man <tt>newLength</tt> jetzt zusätzlich im Heap speichern muss, weil man es für die Expansion des Knotens später noch benötigt.)
+</p><p>Damit sicher gestellt ist, dass der A*-Algorithmus immer noch die korrekten kürzesten Wege findet, darf die Schätzung den wahren Restweg <i>niemals überschätzen</i>. Es muss immer gelten:
+</p>
+<pre>0 &lt;= guess(node, destination) &lt;= trueDistance(node, destination)
+</pre>
+<p>Damit gilt insbesondere <tt>guess(destination, destination) = trueDistance(destination, destination) = 0</tt>, an der Priorität des Knotens <tt>destination</tt> ändert sich also nichts. Die Prioritäten aller anderen Knoten veschlechtern sich hingegen, weil zur bisherigen Priorität noch atwas addiert wird. Für die wichtigen Knoten auf dem kürzesten Weg vom Start nach Ziel gilt jedoch, dass deren neue Priorität immer noch besser ist als die Priorität des Zielknotens selbst. Für diese Knoten gilt nämlich
+</p>
+<pre>falls node auf dem kürzesten Weg von startnode nach destination liegt:
+trueDistance(startnode, node) + guess(node, destination) &lt;= trueDistance(startnode, destination)
+</pre>
+<p>weil der Weg von Start nach <tt>node</tt> ein Teil des kürzesten Wegs von Start nach Ziel ist und die Restschätzung die wahre Entfernung immer unterschätzt. Diese Knoten werden deshalb stets vor dem Zielknoten expandiert, so dass wir die <tt>parent</tt>-Kette immer noch korrekt zurückverfolgen können. Für alle anderen Knoten gilt idealerweise, dass die neue Priorität schlechter ist als die Priorität von <tt>destination</tt>, so dass man sich diese irrelevanten Knotenexpansionen sparen kann.
+</p><p>Für das Beispiel eines Straßennetzwerks bietet sich als Schätzung die Luftlinienentfernung an, weil Straßen nie kürzer sein können als die Luftlinie. Damit erreicht man in der Praxis deutliche Einsparungen. Generell gilt, dass der A*-Algorithmus im typischen Fall schneller ist als der Algorithmus von Dijkstra, aber man kann immer pathologische Fälle konstruieren, wo die Änderung der Prioritäten nichts bringt. Die Komplexität des A*-Algorithmus im ungünstigen Fall ist deshalb nach wie vor <img class="mwe-math-fallback-image-inline tex" alt="O(E\,\log\,V)" src="../images/84d0a3f3c0792ade821431302631f8fd.png" />.
+</p>
+<h2><span class="mw-headline" id="Minimaler_Spannbaum"><b>Minimaler Spannbaum</b></span></h2>
+<p><b>(engl.: minimum spanning tree; abgekürzt: MST)</b>
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="file_minimum_spanning_tree.html" class="image"><img alt="" src="../images/thumb2975.png" width="200" height="161" class="thumbimage" srcset="/images/Minimum_spanning_tree.png 1.5x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="file_minimum_spanning_tree.html" class="internal" title="Enlarge"></a></div>Ein minimal aufspannender Baum verbindet alle Punkte eines Graphen bei minimaler Kantenlänge (<a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Spannbaum">Quelle</a>)</div></div></div>
+<p><br />
+</p>
+<dl><dd><u><i>gegeben</i></u>: gewichteter Graph G, zusammenhängend<br /></dd>
+<dd><u><i>gesucht</i></u>: Untermenge <img class="mwe-math-fallback-image-inline tex" alt="E&#39;\subseteq E" src="../images/e509e6d2c9cdec0888b10a1e4512f2b7.png" /> der Kanten, so dass die Summe der Kantengewichte <img class="mwe-math-fallback-image-inline tex" alt="\sum_{e\in E&#39;} w_e" src="../images/31858040cde20663a7b9725525e603c7.png" /> minimal und der entstehende Graph G' zusammenhängend ist.<br /></dd></dl>
+<ul><li> G' definiert immer einen Baum, denn andernfalls könnte man eine Kante weglassen und dadurch die Summe <img class="mwe-math-fallback-image-inline tex" alt="\sum_{e\in E&#39;} w_e" src="../images/31858040cde20663a7b9725525e603c7.png" /> verringern, ohne dass sich am Zusammenhang von G' etwas ändert. <br /></li>
+<li> Wenn der Graph G nicht zusammenhängend ist, kann man den Spannbaum für jede Zusammenhangskomponente getrennt ausrechnen. Man erhält dann einen aufspannenden Wald. </li>
+<li> Der MST ist ähnlich wie der Dijkstra-Algorithmus: Dort ist ein Pfad gesucht, bei dem die Summe der Gewichte über den Pfad minimal ist. Beim MST suchen wir eine Lösung, bei der die Summe der Gewichte über den ganzen Graphen minimal ist. </li>
+<li> Das Problem des MST ist nahe verwandt mit der Bestimmung der Zusammenhangskomponente, z.B. über den Tiefensuchbaum. Für die Zusammenhangskomponenten genügt allerdings ein beliebiger Baum, während beim MST ein minimaler Baum gesucht ist.</li></ul>
+<h3><span class="mw-headline" id="Anwendungen">Anwendungen</span></h3>
+<h4><span class="mw-headline" id="Wie_verbindet_man_n_gegebene_Punkte_mit_m.C3.B6glichst_kurzen_Stra.C3.9Fen_.28Eisenbahnen.2C_Dr.C3.A4hten_.5Bbei_Schaltungen.5D_usw..29.3F">Wie verbindet man n gegebene Punkte mit möglichst kurzen Straßen (Eisenbahnen, Drähten [bei Schaltungen] usw.)?</span></h4>
+<p><br /><br /><br />
+</p>
+<table class="wikitable" style="text-align:center" border="0" cellpadding="5" cellspacing="0">
+<tr>
+<td>MST minimale Verbindung (Abb.1)
+</td>
+<td>MST = 2 (Länge = Kantengewicht)(Abb.2)
+</td></tr>
+<tr valign="top">
+<td> <a href="file_mst.html" class="image"><img alt="Mst.png" src="../images/mst.png" width="420" height="300" /></a>
+</td>
+<td> <a href="file_gleichseitigesdreieck.html" class="image"><img alt="Gleichseitigesdreieck.png" src="../images/gleichseitigesdreieck.png" width="800" height="563" /></a>
+</td></tr></table>
+<ul><li>In der Praxis: Die Festlegung, dass man nur die gegebenen Punkte verwenden darf, ist eine ziemliche starke Einschränkung. </li></ul>
+<ul><li> Wenn man sich vorstellt, es sind drei Punkte gegeben, die als gleichseitiges Dreieck angeordnet sind, dann ist der MST (siehe Abb.2, schwarz gezeichnet) und hat die Länge 2. Man kann hier die Länge als Kantengewicht verwenden. </li></ul>
+<ul><li> Wenn es erlaubt ist zusätzliche Punkte einzufügen, dann kann man in der Mitte einen neuen Punkt setzen <img class="mwe-math-fallback-image-inline tex" alt="\rightarrow" src="../images/83e37b7246fdfcb99b2754210ebeae27.png" /> neuer MST (siehe Abb.2, orange gezeichnet).<br /></li></ul>
+<ul><li> Höhe = <img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{2}\sqrt{3}" src="../images/e6cf7888eaed2a03a0387b1d492bd599.png" />, Schwerpunkt: teilt die Höhe des Dreiecks im Verhältnis 2:1; der Abstand von obersten Punkt bis zum neu eingeführten Punkt: <img class="mwe-math-fallback-image-inline tex" alt="\frac{2}{3}h = \frac{\sqrt{3}}{3}" src="../images/00453ba016b9bf71779d5b3994a75bf3.png" />, davon insgesamt 3 Stück, damit (gilt für den MST in orange eingezeichnet): MST = <img class="mwe-math-fallback-image-inline tex" alt="3\left(\frac{1}{3}\right) \sqrt{3} = \sqrt{3} \approx 1,7" src="../images/c924b99fcc9f733a90072cd2e0e76e2d.png" />&lt;br\&gt;</li></ul>
+<ul><li> Damit ist der MST in orange kürzer als der schwarz gezeichnete MST. &lt;br\&gt;</li></ul>
+<p><img class="mwe-math-fallback-image-inline tex" alt="\Rightarrow" src="df09aea884019cb88a2957126faba316.html" />Folgerung: MST kann kürzer werden, wenn man einen Punkt dazu nimmt. 
+</p>
+<ul><li> Umgekehrt kann der MST auch kürzer werden, wenn man einen Punkt aus dem Graphen entfernt, aber wie das Beipiel des gleichseitigen Dreiecks zeigt, ist dies nicht immer der Fall.</li></ul>
+<p><a href="file_bahn.html" class="image" title="Bahnstrecke Verbindung (Abb.3)"><img alt="Bahnstrecke Verbindung (Abb.3)" src="../images/bahn.png" width="420" height="300" /></a>
+</p>
+<ul><li> Methode der zusätzlichen Punkteinfügung hat man früher beim Bahnstreckenbau verwendet. Durch Einführung eines Knotenpunktes kann die Streckenlänge verkürzt werden (Dreiecksungleichung).</li></ul>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Bestimmung_von_Datenclustern">Bestimmung von Datenclustern</span></h4>
+<p><a href="file_cluster.html" class="image"><img alt="Cluster.png" src="../images/cluster.png" width="800" height="419" /></a>
+</p><p><br />
+</p>
+<ul><li> Daten (in der Abb.: Punkte) bilden Gruppen. </li></ul>
+<ul><li> In der Abbildung hat man 2 verschiedene Messungen gemacht (als x- und y-Achse aufgetragen), bspw. Größe und Gewicht von Personen. Für jede Person i wird ein Punkt an der Koordinate (Größe<sub>i</sub>, Gewicht<sub>i</sub>) gezeichnet (siehe Bild a). Dies bezeichnet man als <i>Scatter Plot</i>. Wenn bestimmte Wertkombinationen häufiger auftreten als andere, bilden sich mitunter Gruppen aus, bspw. eine Gruppe für "klein und schwer" etc.</li></ul>
+<ul><li> Durch Verbinden der Punkte mittels eines MST (siehe Abbildung (b)) sieht man, dass es kurze (innerhalb der Gruppen) und lange Kanten (zwischen den Gruppen) gibt. </li></ul>
+<ul><li> Wenn man geschickt eine Schwelle einführt und alle Kanten löscht, die länger sind als die Schwelle, dann bekommt man als Zusammenhangskomponente die einzelnen Gruppen. </li></ul>
+<h3><span class="mw-headline" id="Algorithmen">Algorithmen</span></h3>
+<p>Genau wie bei der Bestimmung von Zusammenhangskomponenten kann man auch das MST-Problem entweder nach dem Anlagerungsprinzip oder nach dem Verschmelzungsprinzip lösen (dazu gibt es noch weitere Möglichkeiten, z.B. den <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Algorithmus_von_Borůvka">Algorithmus von Boruvka</a>). Der Anlagerungsalgorithmus für MST wurde zuerst von Prim beschrieben und trägt deshalb seinen Namen, der Verschmelzungsalgorithmus stammt von Kruskal. Im Vergleich zu den Algorithmen für Zusammenhangskomponenten ändert sich im wesentlichen nur die Reihenfolge, in der die Kanten betrachtet werden: Eine Prioritätswarteschlange stellt jetzt sicher, dass am Ende wirklich der Baum mit den geringstmöglichen Kosten herauskommt.
+</p>
+<h4><span class="mw-headline" id="Algorithmus_von_Prim">Algorithmus von Prim</span></h4>
+<p><a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Algorithmus_von_Prim">Wikipedia (de)</a>
+<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Prim%27s_algorithm">(en)</a>
+</p><p>Der Algorithmus von Prim geht nach dem Anlagerungsprinzip vor (vgl. den Abschnitt <a href="graphen_und_graphenalgorithmen.html#L.C3.B6sung_mittels_Tiefensuche" title="Graphen und Graphenalgorithmen">Zusammenhangskomponenten mit Tiefensuche</a>): Starte an der Wurzel (ein willkürlich gewählter Knoten) und füge jeweils die günstigste Kante an die aktuellen Teillösung an, die keinen Zyklus verursacht. Die Sortierung der Kanten nach Priorität erfolgt analog zum Dijsktra-Algorithmus, aber die Definitionen, welche Kante die günstigste ist, unterscheiden sich. Die Konvention für die Bedeutung der Elemente des Heaps ist ebenfalls identisch: ein Tupel mit <tt>(priority, node, predecessor)</tt>. Die folgende Implementation verdeutlicht sehr schön die Ähnlichkeit der beiden Algorithmen. Das Ergebnis wird als property map <tt>parents</tt> zurückgegeben, in der für jeden Knoten sein Vorgänger im MST steht, wobei die Wurzel wie üblich auf sich selbst verweist.
+</p>
+<pre>import heapq
+
+def prim(graph, weights):             # Kantengewichte wie bei Dijkstra als property map
+    sum = 0.0                         # wird später das Gewicht des Spannbaums sein
+    start = 0                         # Knoten 0 wird willkürlich als Wurzel gewählt
+       
+    parents = [None]*len(graph)       # property map, die den resultierenden Baum kodiert
+    parents[start] = start            # Wurzel zeigt auf sich selbst
+       
+    heap = []                         # Heap für die Kanten des Graphen
+    for neighbor in graph[start]:     # besuche die Nachbarn von start
+        heapq.heappush(heap, (weights[(start, neighbor)], neighbor, start))  # und fülle Heap 
+    
+    while len(heap) &gt; 0:
+        w, node, predecessor = heapq.heappop(heap) # hole billigste Kante aus dem Heap
+        if parents[node] is not None: # die Kante würde einen Zyklus verursachen
+            continue                  #   =&gt; ignoriere diese Kante
+        parents[node] = predecessor   # füge Kante in den MST ein
+        sum += w                      # und aktualisiere das Gesamtgewicht 
+        for neighbor in graph[node]:  # besuche die Nachbarn von node
+            if parents[neighbor] is None:  # aber nur, wenn kein Zyklus entsteht
+                heapq.heappush(heap, (weights[(node,neighbor)], neighbor, node)) # füge Kandidaten in Heap ein
+    
+    return parents, sum               # MST und Gesamtgewicht zurückgeben
+</pre>
+<h4><span class="mw-headline" id="Algorithmus_von_Kruskal">Algorithmus von Kruskal</span></h4>
+<p><a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Algorithmus_von_Kruskal">Wikipedia (de)</a>
+<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Kruskal%27s_algorithm">(en)</a>
+</p><p>Die alternative Vorgehensweise ist das Verschmelzungsprinzip (vgl. den Abschnitt <a href="graphen_und_graphenalgorithmen.html#L.C3.B6sung_mittels_Union-Find-Algorithmus" title="Graphen und Graphenalgorithmen">Zusammenhangskomponenten mit Union-Find-Algorithmus</a>), das der Algorithmus von Kruskal verwendet. Jeder Knoten wird zunächst als trivialer Baum mit nur einem Knoten betrachtet, und alle Kanten werden aufsteigend nach Gewicht sortiert. Dann wird die billigste noch nicht betrachtete Kante in den MST eingefügt, falls sich dadurch kein Zyklus bildet (erkennbar daran, dass die Endknoten in verschiedenen Zusammenhangskomponenten liegen, das heisst verschiedene Anker haben). Da der fertige Baum (V-1) Kanten haben muss, wird dies (V-1) Mal zutreffen. Andernfalls wird diese Kante ignoriert. Anders ausgedrückt: Der Algorithmus beginnt mit <i>V</i> Bäumen; in (<i>V</i>-1) Verschmelzungsschritten kombiniert er jeweils zwei Bäume (unter Verwendung der kürzesten möglichen Kante), bis nur noch ein Baum übrig bleibt. Der einzige Unterschied zum einfachen Union-Find besteht darin, dass die Kanten in aufsteigender Reihenfolge betrachtet werden müssen, was wir hier durch eine Prioritätswarteschlange realisieren. Der Algorithmus von J.Kruskal ist seit 1956 bekannt. 
+</p>
+<pre>def kruskal(graph, weights):
+    anchors = range(len(graph))           # Initialisierung der property map: jeder Knoten ist sein eigener Anker
+    results = []                          # result wird später die Kanten des MST enthalten    
+    
+    heap = []                             # Heap zum Sortieren der Kanten nach Gewicht
+    for edge, w in weights.iteritems():   # alle Kanten einfügen
+        heapq.heappush(heap, (w, edge))
+    
+    while len(heap) &gt; 0:                  # solange noch Kanten vorhanden sind
+        w, edge = heapq.heappop(heap)     # billigste Kante aus dem Heap nehmen
+        a1 = findAnchor(anchors, edge[0]) # Anker von Startknoten der Kante
+        a2 = findAnchor(anchors, edge[1]) # ... und Endknoten bestimmen
+        if a1&#160;!= a2:                      # wenn die Knoten in verschiedenen Komponenten sind
+            anchors[a2] = a1              # Komponenten verschmelzen
+            result.append(edge)           # ... und Kante in MST einfügen
+    
+    return result                         # Kanten des MST zurückgeben
+</pre>
+<p>Die Funktion <tt>findAnchor()</tt> wurde im Abschnitt <a href="graphen_und_graphenalgorithmen.html#L.C3.B6sung_mittels_Union-Find-Algorithmus" title="Graphen und Graphenalgorithmen">Zusammenhangskomponenten mit Union-Find-Algorithmus</a> implementiert. Im Unterschied zum Algorithmus von Prim geben wir hier nicht die property map <tt>parents</tt> zurück, sondern einfach eine Liste der Kanten im MST.
+</p><p>Der Algorithmus eignet sich insbesondere für das Clusteringproblem, da der Schwellwert von vornerein als maximales Kantengewicht an den Algorithmus übergeben werden kann. Man hört mit dem Vereinigen auf, wenn das Gewicht der billigste Kante im Heap den Schwellwert überschreitet. Beim Algorithmus von Kruskal kann dann keine bessere Kante als der Schwellwert mehr kommen, da die Kanten vorher sortiert worden sind. 
+</p><p><b>Komplexität:</b> wie beim Dijkstra-Algorithmus, weil jede Kante genau einmal in den Heap kommt. Der Aufwand für das Sortieren ist somit <img class="mwe-math-fallback-image-inline tex" alt="O\left(E\log E\right)" src="../images/f1de99fbdab4d5b214eebd3f8aba3ef1.png" />, was sich zu <img class="mwe-math-fallback-image-inline tex" alt="O \left(E\,\log\,V\right)" src="../images/9387dd5c124181f573bb266c865d8562.png" /> reduziert, falls keine Mehrfachkanten vorhanden sind.
+</p><p>=&gt; geeignet für Übungsaufgabe
+</p>
+<h4><span class="mw-headline" id="Verwendung_einer_BucketPriorityQueue">Verwendung einer BucketPriorityQueue</span></h4>
+<p>Beide Algorithmen zur Bestimmung des minimalen Spannbaums benötigen eine Prioritätswarteschlange. Wenn die Kantengewichte ganze Zahlen im Bereich <tt>0...(m-1)</tt> sind, kann man die MST-Algorithmen deutlich beschleunigen, wenn man anstelle des Heaps eine <a href="priorit%c3%a4tswarteschlangen.html#Priorit.C3.A4tssuche_mit_dem_Bucket-Prinzip" title="Prioritätswarteschlangen"><tt>BucketPriorityQueue</tt></a> verwendet. Die Operationen zum Einfügen einer Kante in die Queue und zum Entfernen der billibsten Kante aus der Queue beschleunigen sich dadurch auf O(1) statt O(log V) (außer wenn die Gewichte sehr ungünstig auf die Kanten verteilt sind). In der Praxis erreicht man durch diese Änderung typischerweise deutliche Verbesserungen. In der Bildverarbeitung können die Prioritäten beispielsweise die Wahrscheinlichkeit kodieren, dass zwei benachbarte Pixel zu verschiedenen Objekten gehören. Bildet man jetzt den MST, und bricht bei einer bestimmten Wahrscheinlichkeit ab, erhält man Cluster von Pixeln, die wahrscheinlich zum selben Objekt gehören (weil der MST ja die Kanten mit minimalem Gewicht bevorzugt, und kleine Gewichte bedeuten kleine Wahrscheinlichkeit, dass benachbarte Pixel von einander getrennt werden). Da man die Wahrscheinlichkeiten nur mit einer Genauigkeit von ca. 1% berechnen kann, reichen hiefür 100 bis 200 Quantisierungstufen aus. Durch Verwendung der schnellen <tt>BucketPriorityQueue</tt> kann man jetzt wesentlich größere Bilder in akzeptabler Zeit bearbeiten als dies mit einem Heap möglich wäre.
+</p>
+<h2><span class="mw-headline" id="Algorithmen_f.C3.BCr_gerichtete_Graphen">Algorithmen für gerichtete Graphen</span></h2>
+<p>Zur Erinnerung: in einem gerichteten Graphen sind die Kanten (i &#8594; j) und (j &#8594; i) voneinander verschieden, und eventuell existiert nur eine der beiden Richtungen. Im allgemeinen unterscheidet sich der <a href="graphen_und_graphenalgorithmen.html#transposed_graph" title="Graphen und Graphenalgorithmen">transponierte Graph</a> G<sup>T</sup> also vom Originalgraphen G. Beim Traversieren des Graphen und bei der Pfadsuche dürfen Kanten nur in passender Richtung verwendet werden. Bei gewichteten Graphen tritt häufig der Fall auf, dass zwar Kanten in beiden Richtungen existieren, diese aber unterschiedliche Gewichte haben.
+</p><p>Gerichtete Graphen ergeben sich in natürlicher Weise aus vielen Anwendungsproblemen:
+</p>
+<ul><li> Routenplanung
+<ul><li> Bei Straßennetzwerken enstehen gerichtete Graphen, sobald es Einbahnstraßen gibt.</li>
+<li> Verwendet man Gewichte, um die erwarteten Fahrzeiten entlang einer Straße zu kodieren, gibt es Asymmetrien z.B. dann, wenn Straßen in einer Richtung bergab, in der anderen bergauf befahren werden. Hier existieren zwar Kanten in beiden Richtungen, sie haben aber unterschiedliche Gewichte. Ähnliches gilt für Flüge: Durch den Gegenwind des Jetstreams braucht man von Frankfurt nach New York länger als umgekehrt von New York nach Frankfurt.</li></ul></li>
+<li> zeitliche oder kausale Abhängigkeiten
+<ul><li> Wenn die Knoten Ereignisse repräsentieren, von denen einige die Ursache von anderen sind, diese wiederum die Ursache der nächsten usw., verbindet man die Knoten zweckmäßig durch gerichtete Kanten, die die Kausalitätsbeziehungen kodieren. Handelt es sich um logische "wenn-dann"-Regeln, erhält man einen <a href="graphen_und_graphenalgorithmen.html#Anwendung:_Das_Erf.C3.BCllbarkeitsproblem_in_Implikationengraphen" title="Graphen und Graphenalgorithmen">Implikationengraph</a> (siehe unten). Handelt es sich hingegen um Wahrscheinlichkeitsaussagen ("Wenn das Wetter schön ist, haben Studenten tendenziell gute Laune, wenn eine Prüfung bevorsteht eher schlechte usw."), erhält man ein <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Bayessches_Netz">Bayessches Netz</a>.</li>
+<li> Wenn bestimmte Aufgaben erst begonnen werden können, nachdem andere Aufgaben erledigt sind, erhält man einen Abhängigkeitsgraphen. Beispielsweise dürfen Sie erst an der Klausur teilnehmen, nachdem Sie die Übungsaufgaben gelöst haben, und Sie dürfen erst die Abschlussarbeit beginnen, nachdem Sie bestimmte Prüfungen bestanden haben. Ein anderes schönes Beispiel liefern die Regeln für das <a href="graphen_und_graphenalgorithmen.html#Anwendung:_Abh.C3.A4ngigkeitsgraph" title="Graphen und Graphenalgorithmen">Ankleiden</a> weiter unten.</li>
+<li> Gerichtete Graphen kodieren die Abhängigkeiten zwischen Programmbibliotheken. Beispielsweise benötigt das Pythonmodul <tt>json</tt> die internen Submodule <tt>json.encoder</tt> und <tt>json.decode</tt> sowie das externe Modul <tt>decimal</tt>. Die Submodule benötigen wiederum die externen Module <tt>re</tt> und <tt>sys</tt>, das Modul <tt>decimal</tt> braucht <tt>copy</tt> und <tt>collections</tt> usw.</li>
+<li> Das Internet kann als gerichteter Graph dargestellt werden, wobei die Webseiten die Knoten, und die Hyperlinks die Kanten sind.</li></ul></li>
+<li> Sequence Alignment
+<ul><li> Eine gute Rechtschreibprüfung markiert nicht nur fehlerhafte Wörter, sondern macht auch plausible Vorschläge, was eigentlich gemeint gewesen sein könnte. Dazu muss sie das gegebene Wort mit den Wörtern eines Wörterbuchs vergleichen und die Ähnlichkeit bewerten. Ein analoges Problem ergibt sich, wenn man DNA Fragmente mit der Information in einer Genomdatenbank abgleichen will. </li></ul></li></ul>
+<h3><span class="mw-headline" id="Anwendung:_Sequence_Alignment_.2F_Edit_Distance">Anwendung: Sequence Alignment / Edit Distance</span></h3>
+<dl><dd>gegeben: zwei Wörter (allgemein: beliebige Zeichenfolgen)</dd>
+<dd>gesucht: Wie kann man die Buchstaben am besten in Übereinstimmung bringen?</dd></dl>
+<dl><dd>Beispiel: WORTE – NORDEN</dd></dl>
+<p>Zwei mögliche Alignments sind
+</p>
+<pre> W<font color="red"><b>OR</b></font>T<font color="red"><b>E</b></font>.          W.ORTE
+ N<font color="red"><b>OR</b></font>D<font color="red"><b>E</b></font>N          NORDEN
+</pre>
+<p>wobei der Punkt anzeigt, dass der untere Buchstabe keinen Partner hat, und rote Buchstaben oben und unten übereinstimmen. Jede Nicht-Übereinstimmung verursacht nun gewisse Kosten. Dabei unterscheiden wir zwei Fälle:
+</p>
+<ol><li> Matche a[i] mit b[j]. Falls a[i] == b[j], ist das gut (rote Buchstaben), und es entstehen keine Kosten. Andernfalls entstehen Kosten U (schwarze Buchstaben).</li>
+<li> Wir überspringen a[i] oder b[j] (Buchstabe vs. Punkt). Dann entstehen Kosten V. (Manchmal unterscheidet man auch noch Kosten Va und Vb, wenn das Überspringen bei a und b unterschieldiche Signifikanz hat.)</li></ol>
+<p>Gesucht ist nun das <b>Alignment mit minimalen Kosten</b>
+</p><p>Diese Aufgabe kann man sehr schön als gerichteten Graphen darstellen: Wir definieren ein rechteckiges Gitter und schreiben das erste Wort über das Gitter und das andere links davon. Die Gitterpunkte verbinden wir mit Pfeilen (gerichteten Kanten), wobei ein Pfeil nach rechts bedeutet, dass wir beim oberen Wort einen Buchstaben überspringen, ein Pfeil nach unten, dass wir beim linken Wort einen Buchstaben überspringen, und ein diagonaler Pfeil, dass wir zwei Buchstaben matchen (und zwar die am Pfeilende). Die Farben der Pfeile symbolisieren die Kosten: rot für das Überspringen eines Buchstabens (Kosten V), blau für das Matchen, wenn die Buchstaben nicht übereinstimmen (Kosten U), und grün, wenn die Buchstaben übereinstimmen (keine Kosten). 
+</p><p><a href="file_sequence-alignment.html" class="image"><img alt="Sequence-alignment.png" src="../images/thumbc0c4.png" width="300" height="331" srcset="/thumb.php?f=Sequence-alignment.png&amp;width=450 1.5x, /images/Sequence-alignment.png 2x" /></a>
+</p><p>Lösung:
+</p>
+<dl><dd>Suche den kürzesten Pfad vom Knoten "START" (oben links) nach unten rechts. Dazu kann der <a href="graphen_und_graphenalgorithmen.html#Algorithmus_von_Dijkstra" title="Graphen und Graphenalgorithmen">Algorithmus von Dijkstra</a> verwendet werden, der auf gerichteten Graphen genauso funktioniert wie auf ungerichteten.</dd></dl>
+<p>Für unser Beispiel von oben erhalten wir die folgenden Pfade:
+</p><p><a href="file_sequence-alignment-weg1.html" class="image"><img alt="Sequence-alignment-weg1.png" src="../images/thumbbc8c.png" width="400" height="324" srcset="/thumb.php?f=Sequence-alignment-weg1.png&amp;width=600 1.5x, /images/Sequence-alignment-weg1.png 2x" /></a>&#160;&#160;&#160;&#160;&#160;<a href="file_sequence-alignment-weg2.html" class="image"><img alt="Sequence-alignment-weg2.png" src="../images/thumb22d9.png" width="400" height="333" srcset="/thumb.php?f=Sequence-alignment-weg2.png&amp;width=600 1.5x, /images/Sequence-alignment-weg2.png 2x" /></a>
+</p><p>Durch Addieren der Kosten entsprechend der Farben sieht man, dass der erste Weg die Kosten 2U+V und der zweite die Kosten 5U+V hat. Der erste Weg ist offensichtlich günstiger und entspricht dem besten Alignment.
+</p>
+<h3><span class="mw-headline" id="Anwendung:_Abh.C3.A4ngigkeitsgraph">Anwendung: Abhängigkeitsgraph</span></h3>
+<p><b>Beispiel: </b> Wie erklärt man einem zerstreuten Professor, wie er sich morgens anziehen soll? Der folgende Graph enthält einen Knoten für jede Aktion, und eine Kante (i &#8594; j) bedeutet, dass die Aktion i vor der Aktion j abgeschlossen werden muss.
+</p><p><a href="file_anziehen-graph.html" class="image"><img alt="Anziehen-graph.png" src="../images/thumb32c2.png" width="600" height="275" srcset="/images/Anziehen-graph.png 1.5x" /></a>
+</p><p>In derartigen Abhängigkeitsgraphen ist die wichtigste Frage immer, ob der Graph azyklisch ist. Wäre dies nämlich nicht der Fall, kann es keine Reihenfolge der Aktionen geben, die alle Abhängigkeiten erfüllt. Dies sieht man leicht, wenn man den einfachsten möglichen Zyklus betrachtet: es gibt sowohl eine Kante (i &#8594; j) als auch eine (j &#8594; i). Dann müsste man i vor j erledigen, aber ebenso j vor i, was offensichtlich unmöglich ist - das im Graph kodierte Problem ist dann unlösbar. Wegen ihrer Wichtigkeit wird für gerichtete azyklische Graphen oft die Abkürzung <b>DAG</b> (von <i>directed acyclic graph</i>) verwendet. Ein Graph ist genau dann ein DAG, wenn es eine topologische Sortierung gibt:
+</p>
+<dl><dt>topologische Sortierung</dt>
+<dd> Zeichne die Knoten so auf eine Gerade, dass alle Kanten (Pfeile) nach rechts zeigen. </dd></dl>
+<p>Arbeitet man die Aktionen nach einer (beliebigen) topologischen Sortierung ab, werden automatisch alle Abhängigkeiten eingehalten: Da alle Pfeile nach rechts zeigen, werden abhängige Aktionen immer später ausgeführt. Die topologische Sortierung ist im allgemeinen nicht eindeutig. Die folgende Skizze zeigt eine mögliche topologische Sortierung für das Anziehen:
+</p><p><a href="file_anziehen-topologische-sortierung.html" class="image"><img alt="Anziehen-topologische-sortierung.png" src="../images/thumb7e8e.png" width="600" height="153" srcset="/thumb.php?f=Anziehen-topologische-sortierung.png&amp;width=900 1.5x, /images/Anziehen-topologische-sortierung.png 2x" /></a>
+</p><p>Eine solche fest vorgegebene Reihenfolge ist für den zerstreuten Professor sicherlich eine größere Hilfe als der ursprüngliche Graph. Man erkennt, dass die Sortierung nicht eindeutig ist, beispielsweise bei der Uhr: Da für die Uhr keine Abhängigkeiten definiert sind, kann man diese Aktion an beliebiger Stelle einsortieren. Hier wurde willkürlich die letzte Stelle gewählt.
+</p>
+<h4><span class="mw-headline" id="Zwei_Algorithmen_zum_Finden_der_topologischen_Sortierung">Zwei Algorithmen zum Finden der topologischen Sortierung</span></h4>
+<p>Die folgenden Algorithmen finden entweder eine topologische Sortierung, oder signalisieren, dass der Graph zyklisch ist.
+</p>
+<h5><span class="mw-headline" id="Algorithmus_1">Algorithmus 1</span></h5>
+<ol><li> Suche einen Knoten mit Eingangsgrad 0 (ohne eingehende Pfeile) =&gt; in einem gerichteten azyklischen Graphen gibt es immer einen solchen Knoten</li>
+<li> Platziere diesen Knoten auf der Geraden (beliebig)</li>
+<li> Entferne den Knoten aus dem Graphen zusammen mit den ausgehenden Kanten</li>
+<li> Gehe zu 1., aber platziere in 2. immer rechts der Knoten, die schon auf der Geraden vorhanden sind.</li></ol>
+<dl><dd> =&gt; Wenn noch Knoten übrig sind, aber keiner Eingangsgrad 0 hat, muss der Graph zyklisch sein.</dd></dl>
+<p><a href="file_bild6.html" class="image"><img alt="Bild6.JPG" src="../images/bild6.jpg" width="117" height="124" /></a>
+</p><p>Beispiel für einen zyklischen Graphen: kein Knoten hat Eingangsgrad 0.
+</p><p>Um den Algorithmus zu implementieren, verwenden wir eine property map <tt>in_degree</tt>, die wir in einem ersten Durchlauf durch den Graphen füllen und die dann für jeden Knoten die Anzahl der eingehenden Kanten speichert. Dann gehen wir sukzessive zu allen Knoten mit <tt>in_degree == 0</tt>. Anstatt sie aber tatsächlich aus dem Graphen zu entfernen wie im obigen Pseudocode, dekrementieren wir nur den <tt>in_degree</tt> ihrer Nachbarn. Wird der <tt>in_degree</tt> eines Nachbarn dadurch 0, wird er ebenfalls in das Array der zu scannenden Knoten aufgenommen. Wenn der Graph azyklisch ist, enthält das Array am Ende alle Knoten des Graphen, und die Reihenfolge der Einfügungen definiert eine topologische Sortierung. Andernfalls ist das Array zu kurz, und wir signalisieren durch Zurückgeben von <tt>None</tt>, dass der Graph zyklisch ist:
+</p>
+<pre>def topological_sort(graph):              # ein gerichteter Graph
+    in_degree = [0]*len(graph)            # property map für den Eingangsgrad jeden Knotens
+    for node in range(len(graph)):        # besuche alle Knoten
+        for neighbor in graph[node]:      #  ... und deren Nachbarn
+            in_degree[neighbor] += 1      #  ... und inkrementiere den Eingangsgrad
+    
+    result = []                           # wird später die topologische Sortierung enthalten
+    for node in range(len(graph)):
+        if in_degree[node] == 0:
+            result.append(node)           # füge alle Knoten mit Eingangsgrad 0 in result ein
+    
+    k = 0
+    while k &lt; len(result):                # besuche alle Knoten mit Eingangsgrad 0
+        node = result[k]
+        k += 1
+        for neighbor in graph[node]:      # besuche alle Nachbarn
+            in_degree[neighbor] -= 1      # entferne 'virtuell' die eingehende Kante
+            if in_degree[neighbor] == 0:  # wenn neighbor jetzt Eingangsgrad 0 hat
+                result.append(neighbor)   #  ... füge ihn in result ein
+    
+    if len(result) == len(graph):         # wenn alle Knoten jetzt Eingangsgrad 0 haben
+        return result                     # ... ist result eine topologische Sortierung
+    else:
+        return None                       # andernfalls ist der Graph zyklisch
+</pre>
+<h5><span class="mw-headline" id="Algorithmus_2">Algorithmus 2</span></h5>
+<p>Der obige Algorithmus hat den Nachteil, dass er jeden Knoten zweimal expandiert. Man kann eine topologische Sortierung stattdessen auch mit Tiefensuche bestimmen. Es gilt nämlich der folgende
+</p>
+<dl><dt>Satz</dt>
+<dd> Wird ein DAG mittels Tiefensuche traversiert, definiert die <i>reverse post-order</i> eine topologische Sortierung.</dd></dl>
+<p>Zur Erinnerung: die post-order erhält man, indem man jeden Knoten ausgibt, <i>nachdem</i> die Rekursion zu allen seinen Nachbarn beendet ist, siehe unsere <a href="graphen_und_graphenalgorithmen.html#pre_and_post_order" title="Graphen und Graphenalgorithmen">Diskussion weiter oben</a>. Die reverse post-order ist gerade die Umkehrung dieser Reihenfolge. Die folgende Implementation verwendet die rekursive Version der Tiefensuche, in der Praxis wird man meist die iterative Version mit Stack bevorzugen, weil bei großen Graphen die Aufruftiefe sehr groß werden kann:
+</p>
+<pre>def reverse_post_order(graph):               # gerichteter Graph
+    result = []                              # enthält später die reverse post-order
+    visited = [False]*len(graph)             # Flags für bereits besuchte Knoten
+    
+    def visit(node):                         # besuche node
+        if not visited[node]:                # aber nur, wenn er noch nicht besucht wurde
+            visited[node] = True             # markiere ihn als besucht
+            for neighbor in graph[node]:     # und besuche die Nachbarn
+                visit(neighbor)
+            result.append(node)              # alle Nachbarn besucht =&gt; Anhängen an result liefert post-order
+    
+    for node in range(len(graph)):           # besuche alle Knoten
+        visit(node)
+    
+    result.reverse()                         # post-order =&gt; reverse post-order
+    return result
+</pre>
+<p>Die Tatsache, dass die reverse post-order tatsächlich eine topologische Sortierung liefert, leuchtet wahrscheinlich nicht unmittelbar ein. Bevor wir diese Tatsache beweisen. wollen wir uns anhand des Ankleidegraphen klar machen, dass die pre-order (die man intuitiv vielleicht eher wählen würde) keine topologische Sortierung ist. Startet man die Tiefensuche beim Knoten "Unterhemd", werden die Knoten in der Reihenfolge "Unterhemd", "Oberhemd", "Schlips", "Jackett", "Gürtel" gefunden. Da dann alle von "Unterhemd" erreichbaren Knoten erschöpft sind, startet man die Tiefensuche als nächstes bei "Unterhose" und erreicht von dort aus "Hose" und "Schuhe". Man erkennt sofort, dass diese Reihenfolge nicht funktioniert: "Hose" kommt nach "Gürtel", und "Jackett" kommt vor "Gürtel". Bei dieser Anordnung gibt es Pfeile nach links, die Abhängigkeitsbedingungen sind somit verletzt.
+</p><p>Damit die reverse post-order eine zulässige Sortierung sein kann, muss stets gelten, dass Knoten u vor Knoten v einsortiert wurde, wenn die Kante (u &#8594; v) existiert. Das ist aber äquivalent zur Forderung, dass in der ursprünglichen post-order (vor dem <tt>reverse</tt>) u hinter v stehen muss. Wir betrachten den <tt>visit</tt>-Aufruf, bei dem u expandiert wird. Gelangt man jetzt zu u's Nachbarn v, gibt es zwei Möglichkeiten: Wenn v bereits expandiert wurde, befindet es sich bereits im Array <tt>result</tt> und <tt>visit</tt> kehrt sofort zurück. Andernfalls wird v ebenfalls expandiert und demzufolge in <tt>result</tt> eingetragen, <i>bevor</i> der rekursive Aufruf <tt>visit(v)</tt> zurückkehrt. Knoten u wird aber erst in <tt>result</tt> eingefügt, <i>nachdem</i> alle rekursiven <tt>visit</tt>-Aufrufe seiner Nachbarn zurückgekehrt sind. In beiden Fällen steht u in der post-order wie gefordert hinter v, und daraus folgt die Behauptung.
+</p><p>Der obige Algorithmus liefert natürlich nur dann eine topologische Sortierung, wenn der Graph wirklich azyklisch ist (man kann ihn aber auch anwenden, um die reverse post-order für einen zyklischen Graphen zu bestimmen, siehe Abschnitt "<a href="graphen_und_graphenalgorithmen.html#Transitive_H.C3.BClle_und_stark_zusammenh.C3.A4ngende_Komponenten" title="Graphen und Graphenalgorithmen">Stark zusammenhängende Komponenten</a>"). Dieser Fall tritt in der Praxis häufig auf, weil zyklische Graphen bei vielen Anwendungen gar nicht erst entstehen können. Weiß man allerdings nicht, ob der Graph azyklisch ist oder nicht, muss man einen zusätzlichen Test auf Zyklen in den Algorithmus einbauen. 
+</p><p>Zyklische Graphen sind dadurch gekennzeichnet, dass es im obigen Beweis eine dritte Möglichkeit gibt: Während der Expansion von u wird rekursiv v expandiert, und es gibt eine Rückwärtskante (v &#8594; u). (Es spielt dabei keine Rolle, ob v von u aus direkt oder indirekt erreicht wurde.) Ein Zyklus wird also entdeckt, wenn die Tiefensuche zu u zurückkehrt, solange u noch <i>aktiv</i> ist, d.h. wenn die Rekursion von u aus gestartet und noch nicht beendet wurde. Dies kann man leicht feststellen, wenn man in der property map <tt>visited</tt> drei Werte zulässt: 0 für "noch nicht besucht", 1 für "aktiv" und 2 für "beendet". Wir signalisieren einen Zyklus, sobald <tt>visit</tt> für einen Knoten aufgerufen wird, der gerade aktiv ist:
+</p>
+<pre>def topological_sort_DFS(graph):             # gerichteter Graph
+    result = []                              # enthält später die topologische Sortierung
+    
+    not_visited, active, finished = 0, 1, 2  # drei Zustände für visited
+    visited = [not_visited]*len(graph)       # Flags für aktive und bereits besuchte Knoten
+    
+    def visit(node):                         # besuche node (gibt "True" zurück, wenn Zyklus gefunden wurde)
+        if visited[node] == not_visited:     # neuer Knoten gefunden:
+            visited[node] = active           #   markiere ihn als aktiv
+            for neighbor in graph[node]:     #   und besuche die Nachbarn
+                if visit(neighbor):          #   wenn rekursiv ein Zyklus gefunden wurde
+                    return True              #   ... brechen wir ab und signalisieren den Zyklus
+            visited[node] = finished         #   Rekursion beendet, node ist nicht mehr aktiv
+            result.append(node)              #   alle Nachbarn besucht =&gt; Anhängen an result liefert post-order
+            return False                     #   kein Zyklus gefunden
+        elif visited[node] == active:        # Rekursion erreicht einen noch aktiven Knoten
+            return True                      #   =&gt; Zyklus gefunden
+        else:
+            return False                     # node war bereits 'finished' =&gt; kein Zyklus
+    
+    for node in range(len(graph)):           # besuche alle Knoten
+        if visit(node):                      # wenn Zyklus gefunden wurde
+            return None                      # ... gibt es keine topologische Sortierung
+    
+    result.reverse()                         # post-order =&gt; reverse post-order (=topologische Sortierung)
+    return result
+</pre>
+<p>Man macht sich leicht klar, dass kein Zyklus vorliegt, wenn die Rekursion einen Knoten erreicht, der bereits auf <tt>finished</tt> gesetzt ist. Nehmen wir an, dass u gerade expandiert wird, und sein Nachbar v ist bereits <tt>finished</tt>. Wenn es einen Zyklus gäbe, müsste es einen Weg von v nach u geben. Dann wäre u aber bereits während der Expansion von v gefunden worden. Da v nicht mehr im Zustand <tt>active</tt> ist, muss die Expansion von v schon abgeschlossen gewesen sein, ohne dass u gefunden wurde. Folglich kann es keinen solchen Zyklus geben.
+</p>
+<h3><span class="mw-headline" id="Transitive_H.C3.BClle_und_stark_zusammenh.C3.A4ngende_Komponenten">Transitive Hülle und stark zusammenhängende Komponenten</span></h3>
+<p>Auch bei gerichteten Graphen ist die Frage, welche Knoten miteinander zusammenhängen, von großem Interesse. Wir betrachten dazu wieder die Relation "Knoten v ist von Knoten u aus erreichbar", die anzeigt, ob es einen Weg von u nach v gibt oder nicht. In ungerichteten Graphen ist diese Relation immer symmetrisch, weil jeder Weg in beiden Richtungen benutzt werden kann. In gerichteten Graphen gilt dies nicht. Man muss hier zwei Arten von Zusammenhangskomponenten unterscheiden:
+</p>
+<dl><dt>Transitive Hülle</dt>
+<dd> Die transitive Hülle eines Knotens u ist die Menge aller Knoten, die von u aus erreichbar sind:</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="T(u) = \{v\ |\ u \rightsquigarrow v\}" src="../images/2ca49077e3c598663acc42d716ec2b88.png" /></dd>
+<dt>Stark zusammenhängende Komponenten</dt>
+<dd> Die stark zusammenhängende Komponenten <img class="mwe-math-fallback-image-inline tex" alt="C_i" src="../images/6839c253419b2770304593fac4ef3ce5.png" /> eines gerichteten Graphen sind maximale Teilgraphen, so dass alle Knoten innerhalb einer Komponente von jedem anderen Knoten der selben Komponente aus erreichbar sind</dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="u,v \in C_i\ \ \Leftrightarrow\ \ u \rightsquigarrow v \wedge v \rightsquigarrow u" src="../images/6cc6bfeac84f0770ad5e63776784f0df.png" /></dd></dl>
+<p>Die erste Definition betrachtet den Zusammenhang asymmetrisch, ohne Beachtung der Frage, ob es auch einen Rückweg von Knoten v nach u gibt, die zweite hingegen symmetrisch.
+</p><p>Die <b>transitive Hülle</b> benötigt man, wenn man Fragen der Erreichbarkeit besonders effizient beantworten will. Wir hatten bespielsweise oben erwähnt, dass das Python-Modul <tt>json</tt> direkt und indirekt von mehreren anderen Module abhängt, die vorher installiert werden müssen, damit <tt>json</tt> funktioniert. Bittet man den Systemadministrator, das <tt>json</tt>-Paket zu installieren, will er diese Abhängigkeiten wahrscheinlich nicht erst mühsam rekursiv heraussuchen, sondern er verlangt eine Liste aller Pakete, die installiert werden müssen. Dies ist gerade die transitive Hülle von <tt>json</tt> im Abhängigkeitsgraphen. Damit man diese nicht manuell bestimmen muss, verwendet man Installationsprogramme wie z.B. <a rel="nofollow" class="external text" href="http://pypi.python.org/pypi/pip/">pip</a>, die die Abhängigkeiten automatisch herausfinden und installieren. 
+</p><p>Bei der Bestimmung der transitiven Hülle modifiziert man den gegebenen Graphen, indem man jedesmal eine neue Kante (u &#8594; v) einfügt, wenn diese Kante noch nicht existiert, aber v von u aus erreichbar ist. Dies gelingt mit einer sehr einfachen Variation der Tiefensuche: Wir rufen <tt>visit(k)</tt> für jeden Knoten k auf, aber setzen die property map <tt>visited</tt> zuvor auf <tt>False</tt> zurück. Alle Knoten, die während der Rekursion erreicht werden, sind im modifizierten Graphen Nachbarn von k. Ein etwas effizienterer Ansatz ist der <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/Algorithmus_von_Floyd_und_Warshall">Algorithmus von Floyd und Warshall</a>.
+</p><p>Die Bestimmung der <b>stark zusammenhängenden Komponenten</b> ist etwas schwieriger. Es existieren eine ganze Reihe von effizienten Algorithmen (siehe <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Strongly_connected_component">WikiPedia</a>), deren einfachster der Algorithmus von Kosaraju ist:
+</p><p><b>gegeben:</b> gerichteter Graph
+</p>
+<ol><li> Bestimme die reverse post-order (mit der Funktion <tt>reverse_post_order</tt>)</li>
+<li> Bilde den transponierten Graphen <img class="mwe-math-fallback-image-inline tex" alt="G^T" src="../images/119f971fe91009d9ceba14c40b081846.png" /> (mit der Funktion <tt>transposeGraph</tt>)</li>
+<li> Bestimme die Zusammenhangskomponenten von <img class="mwe-math-fallback-image-inline tex" alt="G^T" src="../images/119f971fe91009d9ceba14c40b081846.png" /> mittels Tiefensuche, aber betrachte die Knoten dabei in der reverse post-order aus Schritt 1 (dies kann mit einer minimalen Modifikation der Funktion <tt>connectedComponents</tt> geschehen, indem man die Zeile <tt>for node in range(len(graph)):</tt> einfach nach <tt>for node in ordered:</tt> abändert, wobei <tt>ordered</tt> das Ergebnis der Funktion <tt>reverse_post_order</tt> ist, also ein Array, das die Knoten in der gewünschten Reihenfolge enthält).</li></ol>
+<p>Die Zusammenhangskomponenten, die man in Schritt 3 findet, sind gerade die stark zusammenhängenden Komponenten des Originalgraphen G. Die folgende Skizze zeigt diese in grün für den schwarz gezeichneten gerichteten Graphen. 
+</p><p><a href="file_strongly-connected-components.html" class="image"><img alt="Strongly-connected-components.png" src="../images/thumb71f1.png" width="400" height="167" srcset="/images/Strongly-connected-components.png 1.5x" /></a>    
+</p><p>Zum Beweis der Korrektheit des Algorithmus von Kosaraju zeigen wir zwei Implikationen: 1. Wenn die Knoten u und v in der selben stark zusammenhängenden Komponente liegen, werden sie in Schritt 3 des Algorithmus auch der selben Komponente zugewiesen. 2. Wenn die Knoten u und v in Schritt 3 der selben Komponente zugewiesen wurden, müssen sie auch in der selben stark zusammenhängenden Komponente liegen. 
+</p>
+<ol><li> Knoten u und v gehören zur selben stark zusammenhängenden Komponente von G. Per Definition gilt, dass u von v aus erreichbar ist und umgekehrt. Dies muss auch im transponierten Graphen G<sup>T</sup> gelten (der Weg <img class="mwe-math-fallback-image-inline tex" alt="u \rightsquigarrow v" src="../images/eee5674996b38c0a346ecce1975a6638.png" /> wird jetzt zum Weg <img class="mwe-math-fallback-image-inline tex" alt="v \rightsquigarrow u" src="../images/9d20d1ab5dd69c5ef7f9f783eed887bf.png" /> und umgekehrt). Wird u bei der Tiefensuche in Schritt 3 vor v expandiert, ist v von u aus erreichbar und gehört somit zur selben Komponente. Das umgekehrte gilt, wenn v vor u expandiert wird. Daraus folgt die Behauptung 1.</li>
+<li> Knoten u und v werden in Schritt 3 der selben Komponente zugewiesen: Sei x der Anker dieser Komponente. Da u in der gleichen Komponente wie x liegt, muss es in G<sup>T</sup> einen Weg <img class="mwe-math-fallback-image-inline tex" alt="x \rightsquigarrow u" src="../images/ab6f5463fac57682e655bc14616ba76b.png" />, und demnach in G einen Weg <img class="mwe-math-fallback-image-inline tex" alt="u \rightsquigarrow x" src="../images/9ebf95f9217615de288be1d5674f899a.png" /> geben. Da x der Anker seiner Komponente ist, wissen wir aber auch, dass x in der reverse post-order <i>vor</i> u liegt (denn der Anker ist der Knoten, mit dem eine neue Komponente gestartet wird; er muss deshalb im Array <tt>ordered</tt> als erster Konten seiner Komponente gefunden worden sein). Wir unterscheiden jetzt im Schritt 1 des Algorithmus zwei Fälle:
+<ol><li> u wurde bei der Bestimmung der post-order vor x expandiert. Dann kann x nur dann in der reverse post-order <i>vor</i> u liegen (oder, einfacher ausgedrückt, x kann nur dann in der post-order <i>hinter</i> u liegen), wenn x im Graphen G nicht von u aus erreichbar war. Das ist aber unmöglich, weil wir ja schon wissen, dass es in G einen Weg <img class="mwe-math-fallback-image-inline tex" alt="u \rightsquigarrow x" src="../images/9ebf95f9217615de288be1d5674f899a.png" /> gibt.</li>
+<li> Folglich wurde u bei der Bestimmung der post-order nach x expandiert. Da x in der post-order hinter u liegt, muss u während der Expansion von x erreicht worden sein. Deshalb muss es in G auch einen Weg <img class="mwe-math-fallback-image-inline tex" alt="x \rightsquigarrow u" src="../images/ab6f5463fac57682e655bc14616ba76b.png" /> geben.</li></ol>
+<dl><dd>Somit sind x und u in der selben stark zusammenhängenden Komponente. Die gleiche Überlegung gilt für x und v. Wegen der Transitivität der Relation "ist erreichbar" folgt daraus, dass auch u und v in der selben Komponente liegen, also die Behauptung 2.</dd></dl></li></ol>
+<p>Die folgende Skizze illustriert den Komponentengraphen, den man erhält, indem man für jede Komponente <img class="mwe-math-fallback-image-inline tex" alt="C_i" src="../images/6839c253419b2770304593fac4ef3ce5.png" /> einen Knoten erzeugt (grün), und die Knoten i und j durch eine gerichtete Kante verbindet (rot), wenn es im Originalgraphen eine Kante (u &#8594; v) mit <img class="mwe-math-fallback-image-inline tex" alt="u \in C_i" src="../images/0d884cfb4f7c24317b4292a17ad60373.png" /> und <img class="mwe-math-fallback-image-inline tex" alt="v \in C_j" src="../images/b2272d8076339f1b34e9b0dc63ca444e.png" /> gibt. Man sieht leicht, dass der Komponentengraph stets azyklisch sein muss, denn wären <img class="mwe-math-fallback-image-inline tex" alt="C_i" src="../images/6839c253419b2770304593fac4ef3ce5.png" /> gleichzeitig von <img class="mwe-math-fallback-image-inline tex" alt="C_j" src="../images/6fc367191d9f3cb0d2f4bbfaf1337cb3.png" /> aus erreichbar, müssten sie eine gemeinsame stark zusammenhängende Komponente bilden. Daraus folgt auch, dass ein von vornherein azyklischer Graph nur triviale stark verbundene Komponenten haben kann, die aus einzelnen Knoten bestehen.
+</p><p><a href="file_strongly-connected-components-graph.html" class="image"><img alt="Strongly-connected-components-graph.png" src="../images/thumbfaea.png" width="400" height="167" srcset="/images/Strongly-connected-components-graph.png 1.5x" /></a>
+</p>
+<h2><span class="mw-headline" id="Weitere_wichtige_Graphenalgorithmen">Weitere wichtige Graphenalgorithmen</span></h2>
+<p>Eins der wichtigsten Einsatzgebiete für Graphen ist die Optimierung, also die Suche nach der <i>besten</i> Lösung für ein gegebenes Problem:
+</p>
+<ul><li> Das <i>interval scheduling</i> befasst sich damit, aus einer gegebenen Menge von Aufträgen die richtigen auszuwählen und sie geschickt auf die zur Verfügung stehenden Ressourcen aufzuteilen. Damit beschäftigen wir uns im Kapitel <a href="greedy-algorithmen_und_dynamische_programmierung.html" title="Greedy-Algorithmen und Dynamische Programmierung">Greedy-Algorithmen und Dynamische Programmierung</a>.</li>
+<li> Beim Problem des Handlungsreisenden sucht man nach der kürzesten Rundreise, die alle gegebenen Städte genau einmal besucht. Dieses Problem behandeln wir im Kapitel <a href="np-vollst%c3%a4ndigkeit.html" title="NP-Vollständigkeit">NP-Vollständigkeit</a>.</li>
+<li> Viele weitere Anwendungen können wir leider in der Vorlesung nicht mehr behandeln, z.B.
+<ul><li> Algorithmen für den <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Maximum_flow_problem">maximalen Fluss</a> beantworten die Frage, wie man die Durchflussmenge durch ein Netzwerk (z.B. von Ölpipelines) maximiert.</li>
+<li> Beim <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Assignment_problem">Problem der optimalen Paarung</a> ("matching problem" oder "assignment problem") sucht man nach einer Teilmenge der Kanten (also nach einem Teilgraphen), so dass jeder Knoten in diesem Teilgraphen höchstens den Grad 1 hat. Im neuen Graphen gruppieren die Kanten also je zwei Knoten zu einem Paar, und die Paarung soll nach jeweils anwendungsspezifischen Kriterien optimal sein. Dies benötigt man z.B. bei der optimalen Zuordnung von Gruppen, etwas beim Arbeitsamt (Zuordnung Arbeitssuchender - Stellenangebot) und in der Universität (Zuordnung Studenten - Übungsgruppen).</li>
+<li> In Statistik und maschinellem Lernen haben in den letzten Jahren die <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Graphical_model">graphischen Modelle</a> große Bedeutung erlangt.</li></ul></li>
+<li> usw. usf.</li></ul>
+<p><a href="randomisierte_algorithmen.html" title="Randomisierte Algorithmen">Nächstes Thema</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260825110959
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.117 seconds
+Real time usage: 0.384 seconds
+Preprocessor visited node count: 814/1000000
+Preprocessor generated node count: 1618/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key aldawiki3:pcache:idhash:76-0!canonical!math=0 and timestamp 20260825110959 and revision id 5712
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index559c.html">https://alda.iwr.uni-heidelberg.de/index.php?title=Graphen_und_Graphenalgorithmen&amp;oldid=5712</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+					</div>
+		<div id="column-one">
+			<h2>Navigation menu</h2>
+					<div id="p-cactions" class="portlet" role="navigation">
+			<h3>Views</h3>
+
+			<div class="pBody">
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="graphen_und_graphenalgorithmen.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk"><a href="talk_graphen_und_graphenalgorithmen.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index50b9.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="indexf256.html" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+				<div class="portlet" id="p-personal" role="navigation">
+				<h3>Personal tools</h3>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="index4aaa.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="main_page.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class="pBody">
+							<ul>
+											<li id="n-mainpage-description"><a href="main_page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="special_recentchanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="sandbox.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h3><label for="searchInput">Search</label></h3>
+
+			<div id="searchBody" class="pBody">
+				<form action="https://alda.iwr.uni-heidelberg.de/index.php" id="searchform">
+					<input type="hidden" name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search Alda" title="Search Alda [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h3>Tools</h3>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="graphen_und_graphenalgorithmen-2.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="graphen_und_graphenalgorithmen-3.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="special_specialpages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="index6e1f.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="index559c.html" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index66d7.html" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 2 July 2020, at 20:26.</li>
+									<li id="privacy"><a href="alda_privacy_policy.html" title="Alda:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="alda_about.html" title="Alda:About">About Alda</a></li>
+									<li id="disclaimer"><a href="alda_general_disclaimer.html" title="Alda:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.117","walltime":"0.384","ppvisitednodes":{"value":814,"limit":1000000},"ppgeneratednodes":{"value":1618,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260825110959","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":495});});</script></body>
+<!-- Mirrored from alda.iwr.uni-heidelberg.de/index.php/Graphen_und_Graphenalgorithmen by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2026 12:48:14 GMT -->
+</html>

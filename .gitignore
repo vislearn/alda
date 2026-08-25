@@ -1,1 +1,8 @@
-/html/user_talk*
+/web/html/user_talk*
+/web/html/user_*
+/web/html/special_*
+/web/images/api_help*
+/web/images/12345.jpg
+/web/images/mediawiki.ico
+/web/images/thumb*
+*.tmp
